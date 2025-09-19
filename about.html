@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • SafeMed Concierge</title>
+  <meta name="description" content="Meet the founder of SafeMed Concierge and learn why families trust us." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <div class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">SafeMed&nbsp;CONCIERGE</a>
+      <nav class="menu">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="javascript:void(0)" onclick="openCalendly()">Book consult</a>
+      </nav>
+      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+    </div>
+
+  <header class="hero">
+    <div class="container">
+      <span class="tag">Meet our founder</span>
+      <h1>Compassion. Expertise. Trust.</h1>
+      <p class="lead">Learn about the experience and mission behind SafeMed Concierge.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book a 30‑minute consult</a>
+        <a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492‑6837</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <article class="card">
+        <h2>Joseph Duldulao, Founder &amp; CEO</h2>
+        <p>Joseph Duldulao is a clinical services coordinator and nursing professional who founded SafeMed Concierge to bring dignity and consistency to seniors' medication routines. His diverse experience across home healthcare, treatment centers, and dialysis clinics equips him with the expertise to oversee medication management and equipment sanitization with compassion and precision.</p>
+        <ul class="bullets">
+          <li><strong>Clinical expertise:</strong> Coordinated care across clinicians, patients, and doctors, scheduled mobile visits and lab draws, and performed chart audits to ensure HIPAA-compliant documentation.</li>
+          <li><strong>Patient care background:</strong> Served as an overnight clinical assistant, monitoring patients every 15 minutes, administering medications as ordered, and providing mentorship to team members.</li>
+          <li><strong>Dialysis &amp; equipment proficiency:</strong> Administered dialysis treatments and trained new staff at a kidney care clinic, ensuring safe operation and patient comfort.</li>
+          <li><strong>Education &amp; certifications:</strong> Currently pursuing a nursing degree, with training in nursing assistant, phlebotomy, and behavioral therapy; certified in CPR, BLS and hemodialysis.</li>
+          <li><strong>Languages:</strong> Fluent in Ilocano and Tagalog, with advanced Spanish, enabling clear communication with diverse families.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Our Mission</h2>
+        <p>We believe every older adult deserves independence, dignity, and reliable support. SafeMed Concierge is dedicated to:</p>
+        <ul class="bullets">
+          <li>Keeping medications organized and doses on schedule.</li>
+          <li>Ensuring durable medical equipment is sanitized and safe.</li>
+          <li>Providing clear, timely updates to families and caregivers.</li>
+          <li>Coordinating with doctors, pharmacists and home health teams to streamline care.</li>
+          <li>Upholding HIPAA standards and protecting personal health information at every step.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Why SafeMed?</h2>
+        <p>Typical caregivers focus on daily living assistance. We focus on medication safety and equipment health. Here’s how we stand apart:</p>
+        <ul class="bullets">
+          <li><strong>Clinical oversight:</strong> Services are designed by a healthcare professional who understands physician orders and documentation.</li>
+          <li><strong>Medication-focused:</strong> Our visits prioritize pillbox organization, medication reconciliation, and reminders instead of general caregiving tasks.</li>
+          <li><strong>Equipment care:</strong> We sanitize CPAP equipment, walkers, nebulizers, and other devices according to manufacturer guidelines.</li>
+          <li><strong>Transparent updates:</strong> Each visit includes notes and photos that you can review, ensuring accountability and peace of mind.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section-panel">
+      <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;margin:0">
+        <div>
+          <h2 style="margin:0 0 6px">Ready to get started?</h2>
+          <p class="muted" style="margin:0">Book a no‑pressure 30‑minute virtual consult. We’ll answer questions and outline next steps.</p>
+        </div>
+        <div class="cta-row" style="margin:0">
+          <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book consult</a>
+          <a class="btn" style="background:#eef6f6;color:#075e60" href="tel:+13234926837">📞 Call/Text</a>
+          <a class="btn" style="background:#eef6f6;color:#075e60" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> SafeMed Concierge • All rights reserved</footer>
+  <nav class="action-bar" aria-label="Quick actions">
+    <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
+    <a class="ghost" href="tel:+13234926837">📞 Call</a>
+    <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>

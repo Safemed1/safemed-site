@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SafeMed Concierge • Best Care to Your Door</title>
+  <meta name="description" content="Private-pay senior health support. First Week Free. Weekly Medication Organization & Reminders. Monthly DME Sanitization. Book a 30-minute virtual consult." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <div class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" class="gallery-img">SafeMed&nbsp;CONCIERGE</a>
+      <nav class="menu">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="javascript:void(0)" onclick="openCalendly()">Book consult</a>
+      </nav>
+      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+    </div>
+
+  <header class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="tag">First Week Free</span>
+        <h1>Best care to your door</h1>
+        <p class="lead">Private-pay senior health support: Weekly Medication Organization &amp; Reminders, plus Monthly DME Sanitization for CPAP, walkers, and nebulizers.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book 30‑min Consult</a>
+          <a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492‑6837</a>
+          <a class="btn ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+        </div>
+        <div class="hero-card" style="margin-top:8px">Private-pay only · Transparent pricing · Cancel anytime · HIPAA-aware workflows</div>
+      </div>
+
+      <div style="position:relative;display:flex;justify-content:flex-end">
+        <picture>
+          <img class="hero-img" style="max-width:560px" src="assets/clinician-hero-920.webp" alt="Healthcare worker in teal scrubs and mask with SafeMed logo" class="gallery-img">
+        </picture>
+        <div class="logo-patch"><span style="background:#0c7e80;color:#fff;border-radius:6px;display:inline-grid;place-items:center;width:18px;height:18px;font-weight:900">＋</span> SafeMed</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="cards" aria-labelledby="services-label">
+      <article class="card">
+        <h2>What we do</h2>
+        <ul class="bullets">
+          <li>Weekly in-home <strong>Medication Organization</strong> (pillbox fill &amp; reconcile)</li>
+          <li>Proactive <strong>Medication Reminders</strong> via call/text</li>
+          <li><strong>Monthly DME Sanitization</strong>: CPAP masks/tubing, walkers, nebulizers</li>
+          <li>Caregiver updates so family stays in the loop</li>
+        </ul>
+        <p class="muted">Note: We are a private-pay concierge service (not a home health agency or Medicare provider).</p>
+      </article>
+
+      <article class="card">
+        <h2>Plans</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Basic</h3>
+            <div class="price">$450<span class="muted">/mo</span></div>
+            <ul class="bullets">
+              <li>Weekly pillbox setup (in‑home)</li>
+              <li>Weekly reminder check‑ins</li>
+              <li>First Week Free</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Comprehensive</h3>
+            <div class="price">$500<span class="muted">/mo</span></div>
+            <ul class="bullets">
+              <li>Everything in Basic</li>
+              <li>Monthly DME sanitization</li>
+              <li>Monthly caregiver report</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Book now</h2>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <img id="qr-img" alt="Scan to book your 30-minute virtual consultation" width="120" height="120" loading="lazy" class="gallery-img">
+          <div>
+            <p class="muted" style="margin:0 0 8px">Tap to open Calendly.</p>
+            <div class="cta-row" style="margin-top:0">
+              <a class="btn primary" target="_blank" rel="noopener" href="javascript:void(0)" onclick="openCalendly()">Open Calendly</a>
+              <a class="btn" style="background:#eef6f6;color:var(--teal-dark)" href="javascript:void(0)" onclick="openCalendly()">⚡ Quick‑Book Popup</a>
+            </div>
+          </div>
+        </div>
+        <hr style="margin:12px 0;border:none;border-top:1px solid #e5e7eb">
+        <div class="muted">
+          Phone: <a href="tel:+13234926837">(323) 492‑6837</a> · Email: <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a><br>
+          Hours: Mon–Sat • 8am–6pm (by appointment)
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Medication &amp; DME Gallery</h2>
+        <div class="slideshow" aria-roledescription="carousel" aria-label="Medication & DME images">
+          <div class="slides" id="slides">
+            <div class="slide">
+              <picture>
+                <source type="image/webp" srcset="assets/medication-1.webp">
+                <img src="assets/medication-1.jpg" alt="Medication organizer labeled by day" class="gallery-img">
+              </picture>
+            </div>
+            <div class="slide">
+              <picture>
+                <source type="image/webp" srcset="assets/dme-clean-1.webp">
+                <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" class="gallery-img">
+              </picture>
+            </div>
+            <div class="slide">
+              <picture>
+                <source type="image/webp" srcset="assets/medication-2.webp">
+                <img src="assets/medication-2.webp" alt="Clinician preparing blister packs" class="gallery-img">
+              </picture>
+            </div>
+          
+            <div class="slide"><img src="assets/hero-extra-1.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-2.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-3.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-4.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-5.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-6.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+          </div>
+          <div class="dots" id="dots" aria-hidden="true">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:8px">Tip: Hover to pause. We can timestamp cleaning and med actions by request.</p>
+      </article>
+    </section>
+
+    <section class="section-panel">
+      <h2 style="margin:0 0 8px">What families say</h2>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card" style="margin:0">
+          <strong>A. Kim • Burbank, CA — Daughter</strong>
+          <p style="margin:6px 0 0">“SafeMed takes the stress out of managing my mom's medications. Their weekly pillbox organization and daily check-ins ensure she never misses a dose, and I appreciate the prompt updates.”</p>
+        </div>
+        <div class="card" style="margin:0">
+          <strong>R. Zuniga • Glendale, CA — Son</strong>
+          <p style="margin:6px 0 0">“They sanitized Dad’s walker and oxygen equipment on schedule. Knowing his equipment is professionally cleaned each month helps us breathe easy.”</p>
+        </div>
+        <div class="card" style="margin:0">
+          <strong>M. Flores • Pasadena, CA — Caregiver</strong>
+          <p style="margin:6px 0 0">“The team keeps me informed with clear notes and photos after each visit. It’s reassuring to see exactly what was done.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel" id="contact">
+      <h2 style="margin:0 0 8px">Contact & Service Area</h2>
+      <p class="muted" style="margin-top:0">Serving Glendale, Burbank, Pasadena, and nearby communities.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:240px"><strong>Call/Text</strong><br><span class="muted"><a href="tel:+13234926837">(323) 492‑6837</a></span></div>
+        <div style="flex:1;min-width:240px"><strong>Email</strong><br><span class="muted"><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></span></div>
+        <div style="flex:1;min-width:240px"><strong>Hours</strong><br><span class="muted">Mon–Sat • 8am–6pm (by appointment)</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> SafeMed Concierge • All rights reserved</footer>
+
+  <nav class="action-bar" aria-label="Quick actions">
+    <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
+    <a class="ghost" href="tel:+13234926837">📞 Call</a>
+    <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  </nav>
+
+  <script src="script.js"></script>
+
+  <div id="lightbox" class="lightbox" style="display:none">
+    <span class="lightbox-close" aria-label="Close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Expanded view">
+    <div id="lightbox-caption"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Services • SafeMed Concierge</title>
+  <meta name="description" content="Explore the detailed services offered by SafeMed Concierge, including medication management and DME sanitization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <div class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">SafeMed&nbsp;CONCIERGE</a>
+      <nav class="menu">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="javascript:void(0)" onclick="openCalendly()">Book consult</a>
+      </nav>
+      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+    </div>
+
+  <header class="hero">
+    <div class="container">
+      <span class="tag">Our Services</span>
+      <h1>Comprehensive support for medication &amp; DME</h1>
+      <p class="lead">Discover how we organize medications, sanitize equipment, and keep families informed.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book a 30‑minute consult</a>
+        <a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492‑6837</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <article class="card">
+        <h2>Weekly Medication Organization</h2>
+        <p>We visit your home to fill pillboxes, reconcile medications with doctor orders, and ensure all prescriptions and supplements are up to date. Our organized approach prevents missed doses and medication errors.</p>
+        <ul class="bullets">
+          <li>Inventory review and reconciliation</li>
+          <li>Pillbox filling and labeling</li>
+          <li>Coordination with pharmacies and prescribers</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Proactive Medication Reminders</h2>
+        <p>Between visits, we provide call/text reminders tailored to your loved one's schedule. Our team monitors adherence and follows up promptly if doses are missed.</p>
+        <ul class="bullets">
+          <li>Daily reminder calls or texts</li>
+          <li>Custom schedule based on patient needs</li>
+          <li>Immediate follow‑up if a dose is delayed or missed</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Monthly DME Sanitization</h2>
+        <p>We clean and disinfect durable medical equipment—including CPAP masks and tubing, walkers, nebulizers, commodes, and more—using manufacturer‑recommended techniques to ensure safety and longevity.</p>
+        <ul class="bullets">
+          <li>CPAP and oxygen equipment</li>
+          <li>Walkers, canes, rollators, wheelchairs</li>
+          <li>Nebulizers and commodes</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Family &amp; Caregiver Updates</h2>
+        <p>Transparency builds trust. After each visit, we send concise notes and photos to keep families informed. You’ll know exactly what was done and when.</p>
+        <ul class="bullets">
+          <li>Summary of tasks performed</li>
+          <li>Photos of organized medications or sanitized equipment</li>
+          <li>Secure digital log accessible to authorized family members</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section-panel">
+      <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;margin:0">
+        <div>
+          <h2 style="margin:0 0 6px">Ready to experience the difference?</h2>
+          <p class="muted" style="margin:0">Schedule a consult to see how our services can simplify life for your family.</p>
+        </div>
+        <div class="cta-row" style="margin:0">
+          <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book consult</a>
+          <a class="btn" style="background:#eef6f6;color:#075e60" href="tel:+13234926837">📞 Call/Text</a>
+          <a class="btn" style="background:#eef6f6;color:#075e60" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> SafeMed Concierge • All rights reserved</footer>
+  <nav class="action-bar" aria-label="Quick actions">
+    <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
+    <a class="ghost" href="tel:+13234926837">📞 Call</a>
+    <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
