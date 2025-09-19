@@ -17,37 +17,3 @@
   .hero-image { height: 460px; object-position: center center; }
 }
 
-
-
-/* ==== SafeMed Gradient + Logo Pattern Backgrounds ==== */
-:root{
-  --sm-teal:#0c7e80;
-  --sm-deep:#085a5c;
-  --sm-ink:#063c3d;
-  --sm-grad: linear-gradient(160deg, var(--sm-teal) 0%, var(--sm-deep) 55%, var(--sm-ink) 100%);
-}
-
-html, body{
-  background: var(--sm-grad), url('assets/pattern-safemed.svg') repeat;
-  background-size: cover, 200px 200px;
-  background-attachment: fixed, fixed;
-}
-
-.section, section {
-  backdrop-filter: saturate(120%) blur(0px);
-  background: rgba(255,255,255,0.02);
-  border-radius: 18px;
-  padding: clamp(16px, 3vw, 28px);
-}
-
-.hero, header .hero, .hwrap {
-  background: var(--sm-grad), url('assets/pattern-safemed.svg') repeat;
-  background-size: cover, 200px 200px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
-  color:#fff !important;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
-}
