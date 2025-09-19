@@ -13,33 +13,38 @@
 <link href="assets/logo.svg" rel="icon" type="image/svg+xml"/>
 <meta content="#0f8e92" name="theme-color"/>
 <style>
-/* === SafeMed Bright Gradient + Subtle Logo Pattern (inline, global, FIXED order) === */
+/* === SafeMed Smooth Top→Bottom Teal to White + Subtle Logo Pattern === */
 :root{
   --sm-teal:#0c7e80;
-  --sm-grad: linear-gradient(165deg,
-    rgba(12,126,128,0.12) 0%,
-    rgba(12,126,128,0.08) 35%,
-    rgba(12,126,128,0.04) 65%,
-    rgba(255,255,255,0.00) 100%);
+  --sm-grad: linear-gradient(to bottom,
+    #0c7e80 0%,
+    #1f9698 10%,
+    #3db2b4 22%,
+    rgba(61,178,180,0.10) 38%,
+    #f2fbfb 72%,
+    #ffffff 100%
+  );
 }
 
-/* Pattern on top, gradient middle, solid white base at bottom */
+/* Pattern on top, gradient middle, white base bottom */
 html, body{
-  background: url('assets/pattern-safemed.svg') repeat, var(--sm-grad), #ffffff !important;
-  background-size: 300px 300px, cover, auto !important;
+  background-image: url('assets/pattern-safemed.svg'), var(--sm-grad), linear-gradient(#ffffff, #ffffff) !important;
+  background-repeat: repeat, no-repeat, no-repeat !important;
+  background-size: 320px 320px, cover, auto !important;
   background-attachment: fixed, fixed, fixed !important;
+  background-position: top left, top center, top left !important;
 }
 
-/* Keep elements bright */
+/* Keep the site bright and readable */
 .section, section { background: rgba(255,255,255,0.02); border-radius: 18px; }
 
-/* Hero text high-contrast */
+/* Hero text stays bright */
 .hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
   color:#ffffff !important;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.30);
 }
 
-/* Pill buttons */
+/* Pill buttons remain consistent */
 header nav a, footer a, footer .button {
   background:#ffffff !important;
   color:#0c7e80 !important;
