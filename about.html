@@ -1,155 +1,128 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <title>About • SafeMed Concierge</title>
+  <meta name="description" content="Meet our founder and why families choose SafeMed: medication organization, reminders, DME sanitization, and fast communication." />
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About • SafeMed Concierge</title>
-  <meta name="description" content="Meet the founder of SafeMed Concierge and learn why families trust us." />
-  <meta name="theme-color" content="#0c7e80">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <style>
-    :root{ --teal:#0c7e80; --teal-dark:#075e60; --ink:#0f172a; --muted:#5b6a74; --paper:#f6f9fc; --card:#ffffff; --radius:14px; --shadow:0 6px 18px rgba(0,0,0,.08); --edge:#eaf2f4; }
-    *{box-sizing:border-box;}
-    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);}
-    a{color:var(--teal-dark);text-decoration:none;}
-    .container{max-width:980px;margin:0 auto;padding:20px;}
-    header{background:#0c7e80;color:#fff;position:relative;}
-    .hwrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px;}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;}
-    .logo{width:32px;height:32px;border-radius:8px;background:#fff;display:grid;place-items:center;color:#0c7e80;}
-    /* nav buttons */
-    nav{display:flex;gap:12px;font-size:15px;}
-    nav a{color:#fff;opacity:.95;padding:6px 12px;border-radius:20px;background:rgba(255,255,255,0.15);transition:background .2s, opacity .2s;}
-    nav a:hover{background:rgba(255,255,255,.30);opacity:1;text-decoration:none;}
-    .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;}
-    @media (max-width:900px){
-      nav{display:none;flex-direction:column;background:rgba(0,0,0,0.5);position:absolute;top:60px;right:16px;border-radius:12px;padding:10px;}
-      nav.open{display:flex;}
-      .nav-toggle{display:block;}
-    }
-    .hero{background:linear-gradient(160deg,#0c7e80 0%,#14a3a6 100%);color:#fff;padding:30px 0;}
-    .hero h1{margin:8px 0 4px;font-size:32px;}
-    .hero p{margin:0;opacity:.95;}
-    .section{margin:18px 0;}
-    .card{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:18px;}
-    .muted{color:var(--muted);font-size:14px;}
-    .pill{display:inline-block;background:#e7f4f4;color:#075e60;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;}
-    .cta{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:999px;padding:12px 16px;font-weight:700;cursor:pointer;box-shadow:var(--shadow);font-size:15px;background:#0c7e80;color:#fff;}
-    footer{padding:28px 0 72px;text-align:center;color:var(--muted);font-size:13px;}
-    /* sticky action bar */
-    .action-bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffee;backdrop-filter:saturate(1.2) blur(6px);border-top:1px solid #e6eced;display:none;gap:8px;padding:8px;z-index:50;}
-    .action-bar a{flex:1;display:flex;justify-content:center;align-items:center;padding:12px;border-radius:12px;font-weight:700;}
-    .action-bar .primary{background:var(--teal);color:#fff;}
-    .action-bar .ghost{background:#e7f4f4;color:#075e60;}
-    @media (max-width:900px){ .action-bar{display:flex;} }
+    :root{ --teal:#0c7e80; --teal-2:#11959a; --teal-3:#14a3a6; --ink:#0f172a; --muted:#5b6a74; --paper:#f6f9fc; --card:#fff; --radius:16px; --shadow:0 10px 28px rgba(0,0,0,.10); }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+    a{color:var(--teal-2);text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:18px 18px}
+    header{background:linear-gradient(165deg,var(--teal) 0%, var(--teal-2) 60%, var(--teal-3) 100%);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.16)}
+    .header-wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.25px}
+    .brand .logo{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+    .logo::before{content:"＋";color:var(--teal);font-weight:900}
+    .nav{display:flex;gap:10px}
+    .nav a{display:inline-flex;align-items:center;gap:8px;background:#fffb;backdrop-filter:blur(6px);border:1px solid #d7ecee;padding:10px 14px;border-radius:999px;color:#0f3a3c;font-weight:800;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:.2s transform,.2s background}
+    .nav a:hover{transform:translateY(-1px);background:#fff}
+    .nav-toggle{display:none;align-items:center;gap:8px;background:#fffb;border:1px solid #d7ecee;color:#0f3a3c;padding:10px 14px;border-radius:12px;font-weight:800;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    @media (max-width:960px){ .nav{display:none} .nav-toggle{display:inline-flex} }
+    .drawer{position:fixed;inset:0;display:none}
+    .drawer.open{display:block}
+    .drawer .scrim{position:absolute;inset:0;background:rgba(0,0,0,.38);animation:fadeIn .25s ease both}
+    .drawer .panel{position:absolute;top:0;right:0;width:82%;max-width:380px;height:100%;background:#fff;border-left:1px solid #e6eef0;box-shadow:-8px 0 28px rgba(0,0,0,.18);padding:18px;animation:slideIn .28s ease both}
+    .drawer .panel a{display:block;margin:10px 0;padding:12px 14px;border-radius:12px;background:#eff8f8;color:#064a4d;font-weight:800;border:1px solid #d7ecee}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:center}
+    @media (max-width:960px){ .hero-grid{grid-template-columns:1fr} }
+    h1{font-size:38px;line-height:1.08;margin:10px 0 6px}
+    p.lead{font-size:17px;opacity:.98;margin:0 0 12px}
+    .hero-img{width:100%;border-radius:18px;box-shadow:0 10px 32px rgba(0,0,0,.22);animation:riseIn .6s .1s ease-out both}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:999px;padding:12px 16px;font-weight:800;cursor:pointer;box-shadow:var(--shadow);font-size:15px}
+    .btn.primary{background:#fff;color:var(--teal)} .btn.ghost{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .cards{display:grid;grid-template-columns:1.2fr 1fr .9fr;gap:14px}
+    @media (max-width:1100px){ .cards{grid-template-columns:1fr 1fr} } @media (max-width:720px){ .cards{grid-template-columns:1fr} }
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;animation:riseIn .6s ease-out both}
+    .muted{color:var(--muted)}
+    .price{font-weight:900;font-size:22px;color:#064a4d}
+    .section-tex-waves{background:url('assets/tex-waves.webp') center/cover no-repeat;border-radius:16px;padding:16px}
+    .section-tex-icons{background:url('assets/tex-icons.webp') center/cover no-repeat;border-radius:16px;padding:16px}
+    .section-tex-grid{background:url('assets/tex-grid.webp') center/cover no-repeat;border-radius:16px;padding:16px}
+    .slideshow{position:relative;overflow:hidden;border-radius:14px;border:1px solid #e6eff1;background:#f3f9f9;height:280px}
+    .slides{display:flex;transition:transform .5s ease} .slide{min-width:100%} .slide img{width:100%;height:280px;object-fit:cover}
+    .dots{position:absolute;right:10px;bottom:10px;display:flex;gap:6px}
+    .dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.85);border:1px solid rgba(0,0,0,.06)} .dot.active{background:#075e60}
+    @keyframes fadeIn{from{opacity:0} to{opacity:1}} @keyframes riseIn{from{transform:translateY(12px);opacity:0} to{transform:none;opacity:1}} @keyframes slideIn{from{transform:translateX(30px);opacity:.8} to{transform:none;opacity:1}}
+    footer{padding:20px 0 72px;text-align:center;color:var(--muted);font-size:13px}
   </style>
-</head>
-<body>
+
   <header>
-    <div class="hwrap">
-      <div class="brand"><div class="logo">＋</div> SafeMed&nbsp;CONCIERGE</div>
-      <button id="menu-toggle" class="nav-toggle" aria-label="Menu">☰</button>
-      <nav aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
-        <a href="mailto:safemed.joseph@gmail.com">Contact</a>
-      </nav>
+    <div class="container header-wrap">
+      <div class="brand"><div class="logo" aria-hidden="true"></div> SafeMed&nbsp;CONCIERGE</div>
+      <div>
+        <button id="menu-toggle" class="nav-toggle">☰ Menu</button>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a><a href="services.html">Our Services</a><a href="javascript:void(0)" onclick="openCalendly()">Book</a><a href="mailto:safemed.joseph@gmail.com">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <div class="scrim" id="scrim"></div>
+      <div class="panel">
+        <a href="index.html">Home</a><a href="services.html">Our Services</a><a href="javascript:void(0)" onclick="openCalendly()">Book</a><a href="mailto:safemed.joseph@gmail.com">Contact</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:8px">
+      <div class="hero-grid">
+        <div>
+          <h1>Best care to your door</h1>
+          <p class="lead">Medication organization & reminders, monthly DME sanitization, and fast family updates.</p>
+          <div class="cta-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+            <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book 30‑min Consult</a>
+            <a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492‑6837</a>
+            <a class="btn ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+          </div>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="assets/hero-about.webp" />
+          <img class="hero-img" src="assets/hero-about.jpg" alt="SafeMed clinician and client in a clean, friendly setting">
+        </picture>
+      </div>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="container">
-      <span class="pill">Meet our founder</span>
-      <h1>Compassion. Expertise. Trust.</h1>
-      <p>Learn about the experience and mission behind SafeMed Concierge.</p>
-      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="cta" href="javascript:void(0)" onclick="openCalendly()">📅 Book a 30-minute consult</a>
-        <a class="cta" style="background:#ffffff;color:#075e60" href="tel:+13234926837">📞 Call/Text (323) 492-6837</a>
-      </div>
-    </div>
-  </div>
-
   <main class="container">
-    <section class="section">
-      <div class="card">
-        <h2>Joseph Duldulao, Founder &amp; CEO</h2>
-        <p>Joseph Duldulao is a clinical services coordinator and nursing professional who founded SafeMed Concierge to bring dignity and consistency to seniors' medication routines. His diverse experience across home healthcare, treatment centers, and dialysis clinics equips him with the expertise to oversee medication management and equipment sanitization with compassion and precision.</p>
-        <ul>
-          <li><strong>Clinical expertise:</strong> Coordinated care across clinicians, patients, and doctors, scheduled mobile visits and lab draws, and performed chart audits to ensure HIPAA-compliant documentation.</li>
-          <li><strong>Patient care background:</strong> Served as an overnight clinical assistant, monitoring patients every 15 minutes, administering medications as ordered, and providing mentorship to team members.</li>
-          <li><strong>Dialysis &amp; equipment proficiency:</strong> Administered dialysis treatments and trained new staff at a kidney care clinic, ensuring safe operation and patient comfort.</li>
-          <li><strong>Education &amp; certifications:</strong> Currently pursuing a nursing degree, with training in nursing assistant, phlebotomy, and behavioral therapy; certified in CPR, BLS and hemodialysis.</li>
-          <li><strong>Languages:</strong> Fluent in Ilocano and Tagalog, with advanced Spanish, enabling clear communication with diverse families.</li>
-        </ul>
-      </div>
+    <section class="card section-tex-waves">
+      <h1 style="margin-top:0">Joseph Duldulao, Founder &amp; CEO</h1>
+      <p class="muted">Clinical services coordinator with hands-on patient care experience and a HIPAA-aware, detail-first mindset.</p>
+      <ul>
+        <li><strong>Clinical Services Coordinator</strong>, Lead Cordial Healthcare Providers (2025–present)</li>
+        <li><strong>Overnight Clinical Assistant</strong>, Paradigm Treatment Center, Malibu (2022–2024)</li>
+        <li><strong>Patient Care Technician</strong>, Fresenius Kidney Care, Pasadena (2020–2022)</li>
+      </ul>
+      <p>Joseph coordinates care planning, mobile provider scheduling, and rapid information flow to families and clinicians. He’s trained in dialysis operations, medication administration support, and documentation, and is currently a nursing student (expected graduation 2027). Certifications include CPR/BLS and Certified Hemodialysis Tech. Languages: Ilocano, Tagalog, and advanced Spanish.</p>
+      <p class="muted">Phone: <a href="tel:+13234926837">(323) 492‑6837</a> • Email: <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></p>
     </section>
-
-    <section class="section">
-      <div class="card">
-        <h2>Our Mission</h2>
-        <p>We believe every older adult deserves independence, dignity, and reliable support. SafeMed Concierge is dedicated to:</p>
-        <ul>
-          <li>Keeping medications organized and doses on schedule.</li>
-          <li>Ensuring durable medical equipment is sanitized and safe.</li>
-          <li>Providing clear, timely updates to families and caregivers.</li>
-          <li>Coordinating with doctors, pharmacists and home health teams to streamline care.</li>
-          <li>Upholding HIPAA standards and protecting personal health information at every step.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="card">
-        <h2>Why SafeMed?</h2>
-        <p>Typical caregivers focus on daily living assistance. We focus on medication safety and equipment health. Here’s how we stand apart:</p>
-        <ul>
-          <li><strong>Clinical oversight:</strong> Services are designed by a healthcare professional who understands physician orders and documentation.</li>
-          <li><strong>Medication-focused:</strong> Our visits prioritize pillbox organization, medication reconciliation, and reminders instead of general caregiving tasks.</li>
-          <li><strong>Equipment care:</strong> We sanitize CPAP equipment, walkers, nebulizers, and other devices according to manufacturer guidelines.</li>
-          <li><strong>Transparent updates:</strong> Each visit includes notes and photos that you can review, ensuring accountability and peace of mind.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between">
-        <div>
-          <h2 style="margin:0 0 6px">Ready to get started?</h2>
-          <p class="muted" style="margin:0">Book a no-pressure 30-minute virtual consult. We’ll answer questions and outline next steps.</p>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="cta" href="javascript:void(0)" onclick="openCalendly()">📅 Book consult</a>
-          <a class="cta" style="background:#eef6f6;color:#075e60" href="tel:+13234926837">📞 Call/Text</a>
-          <a class="cta" style="background:#eef6f6;color:#075e60" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-        </div>
-      </div>
+    <section class="card section-tex-grid">
+      <h2>Why SafeMed?</h2>
+      <ul>
+        <li><strong>Medication routines that stick</strong>: weekly pillbox organization + gentle reminders.</li>
+        <li><strong>Cleaner, safer devices</strong>: monthly CPAP, walker, and nebulizer sanitization.</li>
+        <li><strong>Fast, clear communication</strong>: short visit summaries with photos when helpful.</li>
+        <li><strong>Private‑pay simplicity</strong>: predictable pricing, no insurance red tape.</li>
+      </ul>
     </section>
   </main>
 
   <footer>© <span id="y"></span> SafeMed Concierge • All rights reserved</footer>
-
-  <!-- sticky mobile action bar -->
-  <nav class="action-bar" aria-label="Quick actions">
-    <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
-    <a class="ghost" href="tel:+13234926837">📞 Call</a>
-    <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-  </nav>
-
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     function calendlyUrl(){ const u=new URL("https://calendly.com/safemed-joseph/30min"); u.searchParams.set("embed_domain", location.hostname||"localhost"); return u.toString(); }
     function openCalendly(){ Calendly.initPopupWidget({ url: calendlyUrl() }); return false; }
-
-    // nav toggle for about page
     (function(){
-      const toggle = document.getElementById('menu-toggle');
-      const nav = document.querySelector('nav');
-      toggle.addEventListener('click', function(){ nav.classList.toggle('open'); });
+      const toggle=document.getElementById('menu-toggle');
+      const drawer=document.getElementById('drawer');
+      const scrim=document.getElementById('scrim');
+      if(toggle && drawer){ toggle.addEventListener('click',()=>{ drawer.classList.add('open'); }); }
+      if(scrim){ scrim.addEventListener('click',()=>{ drawer.classList.remove('open'); }); }
     })();
   </script>
 </body>
