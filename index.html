@@ -117,7 +117,7 @@
 <div class="hero-content">
 <div class="text">
 <span class="tag">First Week Free</span>
-<h1>Personalized In‑Home Medical Support Your Family Can Trust</h1>
+<h1>Personalized In-Home Medical Support Your Family Can Trust</h1>
 <p class="lead">SafeMed Concierge organizes medications, sanitizes and maintains DME, and coordinates care so families worry less and loved ones stay safer at home.</p>
 <div class="cta-row">
 <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book 30-min Consult</a>
@@ -139,34 +139,90 @@
 </div>
 </div>
 <main class="container">
-<section aria-labelledby="services-label" class="cards"><h2 style="margin-top:0">What we do</h2><div class="container">
-<div class="grid">
-<div class="card">
-<h3>Weekly Medication Organization</h3>
-<p>We sort and verify prescriptions into pillboxes, reconcile changes with providers, and label clearly to prevent errors.</p>
+<section aria-labelledby="services-label" class="cards">
+<article class="card" id="services-card">
+<h2 style="margin-top:0">What we do</h2>
+<ul class="bullets">
+<li>Weekly pillbox setup</li>
+<li>Daily text/call reminders</li>
+<li>Monthly DME sanitization</li>
+<li>Family summary after each visit</li>
+</ul>
+<p class="muted">Essential medication and DME support for one person.</p>
+</article>
+<article class="card" id="book-card">
+<h2 style="margin-top:0">Book now</h2>
+<div class="qr" style="display:flex;align-items:center;gap:12px;">
+<img alt="Scan to book your 30-minute virtual consultation" decoding="async" height="120" id="qr-img" loading="lazy" width="120">
+<div>
+<p class="muted" style="margin:0 0 8px">Start with a 20-minute consult. We’ll learn your goals, review medications and equipment, and outline a tailored plan.</p>
+<div class="cta-row" style="margin-top:0">
+<a class="btn primary" href="https://calendly.com/safemed-joseph/30min" rel="noopener" target="_blank">Open Calendly</a>
+<a class="btn" href="javascript:void(0)" onclick="openCalendly()" style="background:#eef6f6;color:var(--teal-dark)">⚡ Quick-Book Popup</a>
 </div>
-<div class="card">
-<h3>Daily Reminders &amp; Check‑ins</h3>
-<p>Text or call reminders and quick wellness check‑ins reduce missed doses and keep you in the loop.</p>
 </div>
-<div class="card">
-<h3>DME Cleaning &amp; Safety Checks</h3>
-<p>We sanitize home medical equipment (BP cuffs, glucose meters, nebulizers, walkers) and check for wear or malfunction.</p>
+</img></div>
+<hr style="margin:12px 0;border:none;border-top:1px solid #e5e7eb"/>
+<div class="muted">
+          Phone: <a href="tel:+13234926837">(323) 492-6837</a> · Email: <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a><br/>
+          Hours: Mon–Sat • 8am–6pm (by appointment)
+        </div>
+</article>
+<article class="card" id="gallery-card">
+<h2 style="margin-top:0">Medication &amp; DME Gallery</h2>
+<div aria-label="Medication &amp; DME images" aria-roledescription="carousel" class="slideshow">
+<div class="slides" id="slides">
+<div class="slide">
+<picture>
+<source srcset="assets/medication-1.webp" type="image/webp"/>
+<img alt="Medication organizers labeled by day" decoding="async" height="480" loading="lazy" src="assets/medication-1.jpg" width="800"/>
+</picture>
 </div>
-<div class="card">
+<div class="slide">
+<picture>
+<source srcset="assets/dme-clean-1.webp" type="image/webp"/>
+<img alt="Cleaning and disinfecting walker handles" decoding="async" height="480" loading="lazy" src="assets/dme-clean-1.jpg" width="800"/>
+</picture>
+</div>
+<div class="slide">
+<picture>
+<source srcset="assets/medication-2.webp" type="image/webp"/>
+<img alt="Clinician preparing blister packs" decoding="async" height="480" loading="lazy" src="assets/medication-2.jpg" width="800"/>
+</picture>
+</div>
+</div>
+<div aria-hidden="true" class="dots" id="dots">
+<div class="dot active"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+</div>
+</div>
+<p class="muted" style="margin-top:8px">We sanitize home medical equipment and check for wear or malfunction.</p>
+</article>
+<article class="card" id="plans-card">
+<h2 style="margin-top:0">Plans</h2>
+<div class="grid-2">
+<div>
 <h3>Care Coordination &amp; Advocacy</h3>
-<p>We help schedule appointments, prep questions, share updates, and make sure providers are aligned on the plan.</p>
+<div class="price">$450<span class="muted">/mo</span></div>
+<ul class="bullets">
+<li>Weekly pillbox setup (in-home)</li>
+<li>Weekly reminder check-ins</li>
+<li>First Week Free</li>
+</ul>
 </div>
-<div class="card">
-<h3>Hospital &amp; Clinic Transitions</h3>
-<p>Post‑visit, we review discharge instructions, update meds, and set reminders to support a smooth recovery.</p>
+<div>
+<h3>Comprehensive</h3>
+<div class="price">$500<span class="muted">/mo</span></div>
+<ul class="bullets">
+<li>Everything in Basic</li>
+<li>Monthly DME sanitization</li>
+<li>Monthly caregiver report</li>
+</ul>
 </div>
-<div class="card">
-<h3>Family Updates</h3>
-<p>Secure summaries after each visit—what we did, what we found, and what’s next.</p>
 </div>
-</div>
-</div></section>
+</article>
+</section>
 <section aria-labelledby="testimonials-heading" class="section-panel">
 <h2 id="testimonials-heading" style="margin:0 0 8px">What families say</h2>
 <div aria-label="Testimonials" class="testimonials" style="display:flex;flex-direction:column;gap:12px;">
@@ -202,11 +258,24 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="contact-heading" class="section-panel" id="contact"><h2 id="contact-heading" style="margin:0 0 8px">Contact &amp; Service Area</h2><div class="container">
-<p>We serve Glendale, Pasadena, Burbank, Eagle Rock, and nearby communities in Los Angeles.</p>
-<p>Prefer a quick text? We’re responsive and discreet—reach out and we’ll take it from there.</p>
-<a class="button" href="contact.html">Contact us</a>
-</div></section>
+<section aria-labelledby="contact-heading" class="section-panel" id="contact">
+<h2 id="contact-heading" style="margin:0 0 8px">Contact &amp; Service Area</h2>
+<p class="muted" style="margin-top:0">Serving Glendale, Burbank, Pasadena, and nearby communities.</p>
+<div style="display:flex;gap:16px;flex-wrap:wrap">
+<div style="flex:1;min-width:240px">
+<strong>Call/Text</strong><br>
+<span class="muted"><a href="tel:+13234926837">(323) 492-6837</a></span>
+</br></div>
+<div style="flex:1;min-width:240px">
+<strong>Email</strong><br/>
+<span class="muted"><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></span>
+</div>
+<div style="flex:1;min-width:240px">
+<strong>Hours</strong><br/>
+<span class="muted">Mon–Sat • 8am–6pm (by appointment)</span>
+</div>
+</div>
+</section>
 </main>
 <footer style="padding:28px 0 72px;text-align:center;color:var(--muted);font-size:13px;">© <span id="y"></span> SafeMed Concierge • All rights reserved</footer>
 <nav aria-label="Quick actions" class="action-bar">
