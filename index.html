@@ -58,11 +58,19 @@
     .logo-patch .mark{width:16px;height:16px;border-radius:5px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;}
     
 .hero-img-wrap{justify-content:center;}
-    #gallery-card{grid-column:span 2;}
+/* Ensure the gallery card spans only one column like other cards and retains height */
+#gallery-card{grid-column:span 1;}
 #gallery-card .slideshow{height:320px;}
 #gallery-card h2{text-align:center;}
 
-.hero-img{max-width:none;object-position:center center;}
+    /* Allow the hero image to occupy more horizontal space on larger screens */
+    /* Increase the hero image size so the clinician photo is more prominent. The max-width
+       of 720px allows the image to fill more of its grid column without breaking the layout. */
+    .hero-img{max-width:720px;object-position:center center;}
+
+    /* Make the plans card span a single column and match the gallery card's height. This ensures
+       the Plans card is the same width as the gallery and provides consistent proportions across cards. */
+    #plans-card{grid-column:span 1;min-height:320px;}
 .logo-patch{display:none;}
 
 
@@ -201,29 +209,23 @@
         <div class="slideshow" aria-roledescription="carousel" aria-label="Medication & DME images">
           <div class="slides" id="slides">
             <div class="slide">
-              <!-- Wrap image in a link so visitors can open the full photo -->
-              <a href="assets/medication-1.jpg" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="assets/medication-1.webp" />
-                  <img src="assets/medication-1.jpg" alt="Medication organizers labeled by day" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
-                </picture>
-              </a>
+              <!-- Clicking on a slide will advance to the next image (handled in script) -->
+              <picture>
+                <source type="image/webp" srcset="assets/medication-1.webp" />
+                <img src="assets/medication-1.jpg" alt="Medication organizers labeled by day" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
+              </picture>
             </div>
             <div class="slide">
-              <a href="assets/dme-clean-1.jpg" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="assets/dme-clean-1.webp" />
-                  <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
-                </picture>
-              </a>
+              <picture>
+                <source type="image/webp" srcset="assets/dme-clean-1.webp" />
+                <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
+              </picture>
             </div>
             <div class="slide">
-              <a href="assets/medication-2.jpg" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="assets/medication-2.webp" />
-                  <img src="assets/medication-2.jpg" alt="Clinician preparing blister packs" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
-                </picture>
-              </a>
+              <picture>
+                <source type="image/webp" srcset="assets/medication-2.webp" />
+                <img src="assets/medication-2.jpg" alt="Clinician preparing blister packs" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
+              </picture>
             </div>
           </div>
           <div class="dots" id="dots" aria-hidden="true">
@@ -372,6 +374,14 @@
       const host = slidesEl.parentElement;
       host.addEventListener('mouseenter', stop);
       host.addEventListener('mouseleave', ()=>{ if(!timer) start(); });
+
+      // When any slide is clicked, advance to the next image. This provides a simple gallery-like interaction without leaving the page.
+      slidesEl.addEventListener('click', () => {
+        next();
+        // restart the timer so the slideshow continues after manual navigation
+        stop();
+        start();
+      });
 
       show(0); start();
     })();
