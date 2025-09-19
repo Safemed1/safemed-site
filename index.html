@@ -153,7 +153,8 @@
           <picture>
             <source type="image/webp" srcset="assets/clinician-hero-920.webp" />
             <!-- fall back to the same WebP file if JPEG is unavailable -->
-            <img class="hero-img hero-image" src="assets/clinician-hero-920.webp" alt="Healthcare worker in mask and teal scrubs" width="440" height="520" decoding="async" loading="eager">
+            <!-- Remove fixed width/height so the hero image can fill available space -->
+            <img class="hero-img hero-image" src="assets/clinician-hero-920.webp" alt="Healthcare worker in mask and teal scrubs" decoding="async" loading="eager">
           </picture>
    
       </div>
@@ -172,31 +173,6 @@
           <li>Caregiver updates so family stays in the loop</li>
         </ul>
         <p class="muted">Note: We are a private-pay concierge service (not a home health agency or Medicare provider).</p>
-      </article>
-
-      <!-- Plans -->
-      <article class="card" id="plans-card">
-        <h2 style="margin-top:0">Plans</h2>
-        <div class="grid-2">
-          <div>
-            <h3>Basic</h3>
-            <div class="price">$450<span class="muted">/mo</span></div>
-            <ul class="bullets">
-              <li>Weekly pillbox setup (in-home)</li>
-              <li>Weekly reminder check-ins</li>
-              <li>First Week Free</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Comprehensive</h3>
-            <div class="price">$500<span class="muted">/mo</span></div>
-            <ul class="bullets">
-              <li>Everything in Basic</li>
-              <li>Monthly DME sanitization</li>
-              <li>Monthly caregiver report</li>
-            </ul>
-          </div>
-        </div>
       </article>
 
       <!-- Book now -->
@@ -225,24 +201,29 @@
         <div class="slideshow" aria-roledescription="carousel" aria-label="Medication & DME images">
           <div class="slides" id="slides">
             <div class="slide">
-              <picture>
-                <source type="image/webp" srcset="assets/medication-1.webp" />
-                <img src="assets/medication-1.jpg" alt="Medication organizers labeled by day" width="800" height="480" loading="lazy" decoding="async" sizes="(max-width:900px) 100vw, 520px">
-              </picture>
+              <!-- Wrap image in a link so visitors can open the full photo -->
+              <a href="assets/medication-1.jpg" target="_blank">
+                <picture>
+                  <source type="image/webp" srcset="assets/medication-1.webp" />
+                  <img src="assets/medication-1.jpg" alt="Medication organizers labeled by day" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
+                </picture>
+              </a>
             </div>
             <div class="slide">
-            
-
-              <picture>
-                <source type="image/webp" srcset="assets/dme-clean-1.webp" />
-                <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" width="800" height="480" loading="lazy" decoding="async" sizes="(max-width:900px) 100vw, 520px">
-              </picture>
+              <a href="assets/dme-clean-1.jpg" target="_blank">
+                <picture>
+                  <source type="image/webp" srcset="assets/dme-clean-1.webp" />
+                  <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
+                </picture>
+              </a>
             </div>
             <div class="slide">
-              <picture>
-                <source type="image/webp" srcset="assets/medication-2.webp" />
-                <img src="assets/medication-2.jpg" alt="Clinician preparing blister packs" width="800" height="480" loading="lazy" decoding="async" sizes="(max-width:900px) 100vw, 520px">
-              </picture>
+              <a href="assets/medication-2.jpg" target="_blank">
+                <picture>
+                  <source type="image/webp" srcset="assets/medication-2.webp" />
+                  <img src="assets/medication-2.jpg" alt="Clinician preparing blister packs" loading="lazy" decoding="async" width="800" height="480" sizes="(max-width:900px) 100vw, 520px">
+                </picture>
+              </a>
             </div>
           </div>
           <div class="dots" id="dots" aria-hidden="true">
@@ -252,6 +233,31 @@
           </div>
         </div>
         <p class="muted" style="margin-top:8px">Tip: Hover to pause. We can timestamp cleaning and med actions by request.</p>
+      </article>
+
+      <!-- Plans -->
+      <article class="card" id="plans-card">
+        <h2 style="margin-top:0">Plans</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Basic</h3>
+            <div class="price">$450<span class="muted">/mo</span></div>
+            <ul class="bullets">
+              <li>Weekly pillbox setup (in-home)</li>
+              <li>Weekly reminder check-ins</li>
+              <li>First Week Free</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Comprehensive</h3>
+            <div class="price">$500<span class="muted">/mo</span></div>
+            <ul class="bullets">
+              <li>Everything in Basic</li>
+              <li>Monthly DME sanitization</li>
+              <li>Monthly caregiver report</li>
+            </ul>
+          </div>
+        </div>
       </article>
     </section>
 
