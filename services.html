@@ -58,7 +58,7 @@
     .flow .step p{margin:0;font-size:14px;color:var(--muted);line-height:1.4;}
   </style>
 <style>
-/* === SafeMed Bright Gradient + Subtle Logo Pattern (inline, global) === */
+/* === SafeMed Bright Gradient + Subtle Logo Pattern (inline, global, FIXED order) === */
 :root{
   --sm-teal:#0c7e80;
   --sm-grad: linear-gradient(165deg,
@@ -68,20 +68,17 @@
     rgba(255,255,255,0.00) 100%);
 }
 
-/* Bright base with airy teal wash and subtle inlaid logos */
+/* Pattern on top, gradient middle, solid white base at bottom */
 html, body{
-  background: #ffffff, var(--sm-grad), url('assets/pattern-safemed.svg') repeat !important;
-  background-size: auto, cover, 300px 300px !important;
+  background: url('assets/pattern-safemed.svg') repeat, var(--sm-grad), #ffffff !important;
+  background-size: 300px 300px, cover, auto !important;
   background-attachment: fixed, fixed, fixed !important;
 }
 
-/* Keep content readable without heavy boxes */
-.section, section {
-  background: rgba(255,255,255,0.02);
-  border-radius: 18px;
-}
+/* Keep elements bright */
+.section, section { background: rgba(255,255,255,0.02); border-radius: 18px; }
 
-/* Hero text remains high-contrast per your earlier request */
+/* Hero text high-contrast */
 .hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
   color:#ffffff !important;
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
