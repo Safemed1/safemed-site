@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#E7F5F4"/>
+      <stop offset="100%" stop-color="#F3FAFA"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" rx="48" fill="url(#bg)"/>
+  <circle cx="450" cy="420" r="180" fill="#C8E7E5"/>
+  <rect x="250" y="660" width="400" height="360" rx="32" fill="#DFF3F2"/>
+  <text x="450" y="760" text-anchor="middle" font-family="Inter, Arial" font-size="48" fill="#0F766E" font-weight="700">Your Clinician</text>
+  <text x="450" y="820" text-anchor="middle" font-family="Inter, Arial" font-size="28" fill="#0B3B39">Add your photo at assets/clinician-hero-920.webp</text>
+</svg>
