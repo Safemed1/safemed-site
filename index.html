@@ -51,11 +51,20 @@
     .btn.primary{background:#fff;color:var(--teal-dark);}
     .btn.ghost{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35);}
     .hero-card{background:#ffffff14;border:1px solid #ffffff38;border-radius:var(--radius);padding:10px;color:#eaffff;font-size:12px;}
-    .hero-img-wrap{position:relative;display:flex;justify-content:flex-end;}
-    /* expand the hero image on desktop to make it more prominent */
+    .hero-img-wrap{position:relative;display:flex;centerjustify-content:flex-end;}
+    /* expand the hero image on desktop to makecenterit more prominent */
     .hero-img{width:100%;max-width:440px;border-radius:18px;box-shadow:0 8px 28px rgba(0,0,0,.22);object-fit:cover;object-position:center right;}
     .logo-patch{position:absolute;right:20px;top:40%;transform:translateY(-50%);background:#ffffff;color:var(--teal);border-radius:9px;padding:5px 8px;font-weight:800;box-shadow:0 3px 12px rgba(0,0,0,.25);display:flex;align-items:center;gap:6px;font-size:12px;}
     .logo-patch .mark{width:16px;height:16px;border-radius:5px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;}
+    
+.hero-img-wrap{justify-content:center;}
+    #gallery-card{grid-column:span 2;}
+#gallery-card .slideshow{height:320px;}
+#gallery-card h2{text-align:center;}
+
+.hero-img{max-width:none;object-position:center center;}
+.logo-patch{display:none;}
+
 
     main{margin-top:-12px;}
 
@@ -146,10 +155,10 @@
             <!-- fall back to the same WebP file if JPEG is unavailable -->
             <img class="hero-img hero-image" src="assets/clinician-hero-920.webp" alt="Healthcare worker in mask and teal scrubs" width="440" height="520" decoding="async" loading="eager">
           </picture>
-        <div class="logo-patch"><span class="mark">＋
+   
       </div>
     </div>
-  </header>
+  </header
 
   <main class="container">
     <section class="cards" aria-labelledby="services-label">
@@ -222,6 +231,8 @@
               </picture>
             </div>
             <div class="slide">
+            
+
               <picture>
                 <source type="image/webp" srcset="assets/dme-clean-1.webp" />
                 <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" width="800" height="480" loading="lazy" decoding="async" sizes="(max-width:900px) 100vw, 520px">
