@@ -43,3 +43,63 @@ document.addEventListener('DOMContentLoaded', () => {
     show(0); start();
   }
 });
+
+// Lightbox functionality
+document.addEventListener('DOMContentLoaded', ()=>{
+  const imgs=document.querySelectorAll('.gallery-img');
+  const lightbox=document.getElementById('lightbox');
+  const lightboxImg=document.getElementById('lightbox-img');
+  const caption=document.getElementById('lightbox-caption');
+  const closeBtn=document.querySelector('.lightbox-close');
+  imgs.forEach(img=>{
+    img.addEventListener('click', ()=>{
+      lightbox.style.display='flex';
+      lightboxImg.src=img.src;
+      caption.textContent=img.alt;
+    });
+  });
+  closeBtn.addEventListener('click', ()=>{ lightbox.style.display='none'; });
+  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox){ lightbox.style.display='none'; } });
+});
+
+
+// LIGHTBOX
+document.addEventListener('DOMContentLoaded', () => {
+  const slidesWrap = document.querySelector('.slideshow .slides');
+  const imgs = slidesWrap ? Array.from(slidesWrap.querySelectorAll('img')) : [];
+  const lb = document.getElementById('lightbox');
+  if(!lb || imgs.length === 0) return;
+
+  const lbImg = document.getElementById('lightbox-img');
+  const btnClose = lb.querySelector('.lb-close');
+  const btnPrev = lb.querySelector('.lb-prev');
+  const btnNext = lb.querySelector('.lb-next');
+  let index = 0;
+  const open = (i)=>{
+    index = i;
+    lbImg.src = imgs[index].currentSrc || imgs[index].src;
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  };
+  const close = ()=>{
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  };
+  const prev = ()=> open((index - 1 + imgs.length) % imgs.length);
+  const next = ()=> open((index + 1) % imgs.length);
+
+  imgs.forEach((img,i)=> img.addEventListener('click', ()=> open(i)));
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
+  lb.addEventListener('click', (e)=>{ if(e.target === lb) close(); });
+  document.addEventListener('keydown', (e)=>{
+    if(lb.classList.contains('open')){
+      if(e.key === 'Escape') close();
+      if(e.key === 'ArrowLeft') prev();
+      if(e.key === 'ArrowRight') next();
+    }
+  });
+});

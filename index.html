@@ -16,7 +16,7 @@
 <body>
   <div class="nav">
     <div class="container inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">SafeMed&nbsp;CONCIERGE</a>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" class="gallery-img">SafeMed&nbsp;CONCIERGE</a>
       <nav class="menu">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
@@ -44,7 +44,7 @@
 
       <div style="position:relative;display:flex;justify-content:flex-end">
         <picture>
-          <img class="hero-img" style="max-width:560px" src="assets/clinician-hero-920.webp" alt="Healthcare worker in teal scrubs and mask with SafeMed logo">
+          <img class="hero-img" style="max-width:560px" src="assets/clinician-hero-920.webp" alt="Healthcare worker in teal scrubs and mask with SafeMed logo" class="gallery-img">
         </picture>
         <div class="logo-patch"><span style="background:#0c7e80;color:#fff;border-radius:6px;display:inline-grid;place-items:center;width:18px;height:18px;font-weight:900">＋</span> SafeMed</div>
       </div>
@@ -91,7 +91,7 @@
       <article class="card">
         <h2>Book now</h2>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-          <img id="qr-img" alt="Scan to book your 30-minute virtual consultation" width="120" height="120" loading="lazy">
+          <img id="qr-img" alt="Scan to book your 30-minute virtual consultation" width="120" height="120" loading="lazy" class="gallery-img">
           <div>
             <p class="muted" style="margin:0 0 8px">Tap to open Calendly.</p>
             <div class="cta-row" style="margin-top:0">
@@ -114,31 +114,40 @@
             <div class="slide">
               <picture>
                 <source type="image/webp" srcset="assets/medication-1.webp">
-                <img src="assets/medication-1.jpg" alt="Medication organizer labeled by day">
+                <img src="assets/medication-1.jpg" alt="Medication organizer labeled by day" class="gallery-img">
               </picture>
             </div>
             <div class="slide">
               <picture>
                 <source type="image/webp" srcset="assets/dme-clean-1.webp">
-                <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles">
+                <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" class="gallery-img">
               </picture>
             </div>
             <div class="slide">
               <picture>
                 <source type="image/webp" srcset="assets/medication-2.webp">
-                <img src="assets/medication-2.webp" alt="Clinician preparing blister packs">
+                <img src="assets/medication-2.webp" alt="Clinician preparing blister packs" class="gallery-img">
               </picture>
             </div>
           
-            <div class="slide"><img src="assets/hero-extra-1.png" alt="SafeMed in-home care" loading="lazy"></div>
-            <div class="slide"><img src="assets/hero-extra-2.png" alt="SafeMed in-home care" loading="lazy"></div>
-            <div class="slide"><img src="assets/hero-extra-3.png" alt="SafeMed in-home care" loading="lazy"></div>
-            <div class="slide"><img src="assets/hero-extra-4.png" alt="SafeMed in-home care" loading="lazy"></div>
-            <div class="slide"><img src="assets/hero-extra-5.png" alt="SafeMed in-home care" loading="lazy"></div>
-            <div class="slide"><img src="assets/hero-extra-6.png" alt="SafeMed in-home care" loading="lazy"></div>
+            <div class="slide"><img src="assets/hero-extra-1.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-2.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-3.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-4.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-5.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
+            <div class="slide"><img src="assets/hero-extra-6.png" alt="SafeMed in-home care" loading="lazy" class="gallery-img"></div>
           </div>
           <div class="dots" id="dots" aria-hidden="true">
             <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
@@ -205,5 +214,11 @@
   </nav>
 
   <script src="script.js"></script>
+
+  <div id="lightbox" class="lightbox" style="display:none">
+    <span class="lightbox-close" aria-label="Close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Expanded view">
+    <div id="lightbox-caption"></div>
+  </div>
 </body>
 </html>
