@@ -20,7 +20,9 @@
     *{box-sizing:border-box;}
     html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);}
     a{color:var(--teal-dark);text-decoration:none;}
-    .container{max-width:1080px;margin:0 auto;padding:16px 18px;}
+    /* Reduce the overall page width and increase side padding so all
+       content remains comfortably within the red guide lines shown in the design. */
+    .container{max-width:960px;margin:0 auto;padding:16px 24px;}
 
     header{background:linear-gradient(165deg,var(--teal) 0%, #11959a 60%, #14a3a6 100%);color:#fff;position:relative;overflow:hidden;}
     header .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center;}
@@ -65,8 +67,8 @@
 
     /* Allow the hero image to occupy more horizontal space on larger screens */
     /* Increase the hero image size so the clinician photo is more prominent. The max-width
-       of 720px allows the image to fill more of its grid column without breaking the layout. */
-    .hero-img{max-width:720px;object-position:center center;}
+       of 820px allows the image to fill more of its grid column without breaking the layout. */
+    .hero-img{max-width:820px;object-position:center center;}
 
     /* Make the plans card span a single column and match the gallery card's height. This ensures
        the Plans card is the same width as the gallery and provides consistent proportions across cards. */
