@@ -6,6 +6,7 @@
   <title>SafeMed Concierge • Practical, respectful support</title>
   <meta name="description" content="Practical, respectful support that keeps meds on track. Book a 30-minute consult or call/text (323) 492-6837." />
   <meta name="theme-color" content="#0b6f71">
+  
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
       --shadow:0 12px 38px rgba(6,58,60,.18);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);}
+    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper)}
     a{color:#074547;text-decoration:none}
     .container{max-width:1120px;margin:0 auto;padding:16px 18px}
     header.hero-wrap{
@@ -27,7 +28,8 @@
         radial-gradient(1200px 520px at -20% 0%, #1a8f8b 0%, transparent 55%),
         linear-gradient(165deg, #0b6f71 0%, #0d8f92 55%, #12a0a4 100%);
       color:#fff; position:relative; overflow:hidden;
-      padding:24px 0 0; border-bottom-left-radius:24px; border-bottom-right-radius:24px;
+      padding:24px 0 0;
+      border-bottom-left-radius:24px; border-bottom-right-radius:24px;
     }
     .brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
@@ -46,15 +48,16 @@
     .hero-photo .frame{overflow:hidden;border-radius:22px;box-shadow:0 14px 44px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.28)}
     .hero-photo img{display:block;width:min(520px,92vw);height:auto;object-fit:cover}
     .shelf{background:#fff;border-top-left-radius:18px;border-top-right-radius:18px;margin-top:20px;box-shadow:0 -6px 24px rgba(0,0,0,.08)}
-    main.container{margin-top:0}
     .action-bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffee;backdrop-filter:saturate(1.2) blur(6px);border-top:1px solid #e6eced;display:none;gap:8px;padding:8px;z-index:50}
     .action-bar a{flex:1;display:flex;justify-content:center;align-items:center;padding:12px;border-radius:12px;font-weight:700}
     .action-bar .primary{background:var(--teal);color:#fff}
     .action-bar .ghost{background:#e7f4f4;color:#075e60}
     @media (max-width:900px){ .action-bar{display:flex} }
   </style>
+
 </head>
 <body>
+
   <header class="hero-wrap">
     <div class="container">
       <div class="brandbar">
@@ -74,8 +77,8 @@
         <div class="hero-photo">
           <div class="frame">
             <picture>
-              <source type="image/webp" srcset="assets/clinician-hero-920.webp" />
-              <img src="assets/clinician-hero-920.jpg" alt="Clinician in branded uniform at home visit" width="520" height="640" loading="eager" decoding="async">
+              <source type="image/webp" srcset="assets/img/clinician-portrait-livingroom.webp" />
+              <img src="assets/img/clinician-portrait-livingroom.png" alt="SafeMed clinician" width="520" height="640" loading="eager" decoding="async">
             </picture>
           </div>
         </div>
@@ -84,16 +87,15 @@
     <div class="shelf">&nbsp;</div>
   </header>
 
-  
-
   <footer>© <span id="y"></span> SafeMed Concierge • All rights reserved</footer>
   <nav class="action-bar" aria-label="Quick actions">
     <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
     <a class="ghost" href="tel:+13234926837">📞 Call</a>
     <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
   </nav>
+
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());
     function calendlyUrl(){
       const u = new URL("https://calendly.com/safemed-joseph/30min");
       u.searchParams.set("embed_domain", location.hostname||"localhost");
@@ -104,5 +106,6 @@
       return false;
     }
   </script>
+
 </body>
 </html>
