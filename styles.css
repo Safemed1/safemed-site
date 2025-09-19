@@ -185,3 +185,20 @@ footer .button:hover {
   background: #0c7e80;
   color: #ffffff;
 }
+
+
+/* --- Hero & Section Headings/Text in White --- */
+.hero h1,
+.hero h2,
+.hero p,
+.hero .subtext,
+header .hero-content h1,
+header .hero-content p {
+  color: #ffffff !important;  /* Force white text */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* Adds contrast/pop */
+}
+
+/* Optionally make ALL headings in hero white */
+.hero h1, .hero h2 {
+  font-weight: 800;
+}
