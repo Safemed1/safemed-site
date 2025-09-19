@@ -17,3 +17,74 @@
   .hero-image { height: 460px; object-position: center center; }
 }
 
+
+
+/* --- Enhanced Navigation Button Styles --- */
+
+/* Navigation links */
+nav a {
+  background: #ffffff;          /* White pill background */
+  color: #0c7e80;              /* Teal text */
+  padding: 8px 16px;
+  border-radius: 9999px;       /* Fully rounded pill */
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background: #0c7e80;         /* Invert on hover */
+  color: #ffffff;
+}
+
+/* Book Now button (standout) */
+nav a.cta {
+  background: #ffffff;
+  color: #0c7e80;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+nav a.cta:hover {
+  background: #0c7e80;
+  color: #ffffff;
+}
+
+/* Hamburger menu button */
+.burger,
+.nav-toggle {
+  background: #ffffff;         /* White bubble */
+  color: #0c7e80;             /* Teal icon */
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+.burger:hover,
+.nav-toggle:hover {
+  background: #0c7e80;
+  color: #ffffff;
+}
+
+
+/* --- Footer Button Styles --- */
+footer a,
+footer .button {
+  background: #ffffff;
+  color: #0c7e80;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer .button:hover {
+  background: #0c7e80;
+  color: #ffffff;
+}
