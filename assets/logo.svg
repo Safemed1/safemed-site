@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 48' width='160' height='38' aria-label='Safemed logo'>
+  <rect x='0' y='0' width='200' height='48' fill='none'/>
+  <g fill='#0b5c5f' font-family='Inter, Arial, sans-serif'>
+    <text x='0' y='33' font-size='32' font-weight='700'>safe</text>
+    <text x='88' y='33' font-size='32' font-weight='700' fill='#0f8e92'>med</text>
+  </g>
+</svg>

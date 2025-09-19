@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · Safemed</title>
+  <meta name="description" content="Safemed helps families with medication management, pillbox setup, and DME cleaning with rapid info sharing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <meta name="theme-color" content="#0f8e92">
+</head>
+<body>
+<div class="nav">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Safemed logo"><span>Safemed</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://calendly.com/safemed/consult" target="_blank" rel="noopener">Book Now</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu" role="menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="cta" href="https://calendly.com/safemed/consult" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+
+<div class="container hero">
+  <div class="visual">
+    <img src="assets/img/clinician-hero-920.svg" alt="Healthcare professional wearing Safemed logo" style="width:100%;height:100%;object-fit:cover">
+  </div>
+  <div class="copy">
+    <h1 class="h1">Less chaos. More care.</h1>
+    <p class="p">We help families organize medications, set up pill boxes, and sanitize DME (durable medical equipment) — with rapid updates for loved ones and clinicians.</p>
+    <div class="kpis">
+      <div class="kpi"><div style="font-weight:800;font-size:22px">24‑48h</div><div class="notice">Setup turnaround</div></div>
+      <div class="kpi"><div style="font-weight:800;font-size:22px">HIPAA‑aware</div><div class="notice">Secure info sharing</div></div>
+      <div class="kpi"><div style="font-weight:800;font-size:22px">On‑site</div><div class="notice">Home &amp; facility visits</div></div>
+    </div>
+    <div class="grid-2">
+      <div class="card booking">
+        <h3>Book a consult</h3>
+        <form onsubmit="goCalendly(event)">
+          <div class="field"><label>Your name</label><input required placeholder="Full name"></div>
+          <div class="field"><label>Phone</label><input required placeholder="(###) ###‑####"></div>
+          <div class="field"><label>Service</label>
+            <select>
+              <option>Medication Management</option>
+              <option>DME Cleaning</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <input id="calendlyLink" type="hidden" value="https://calendly.com/safemed/consult">
+          <button class="cta" type="submit">Book on Calendly</button>
+        </form>
+        <p class="notice" style="margin-top:8px">No payment required to book.</p>
+      </div>
+      <div>
+        <div class="gallery">
+          <img src="assets/img/medication-organizing.jpg" alt="Medication organizing (placeholder)">
+          <img src="assets/img/dme-cleaning.jpg" alt="DME cleaning (placeholder)">
+        </div>
+        <p class="notice">These are placeholders — we will replace with realistic generated images of your team performing services with the Safemed logo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section container">
+  <h2>What we do</h2>
+  <div class="list">
+    <div class="row"><span class="badge">Pillbox setup</span><span>Weekly med planners filled accurately and labeled clearly.</span></div>
+    <div class="row"><span class="badge">Medication list audit</span><span>We compile a current list for doctors and family.</span></div>
+    <div class="row"><span class="badge">DME cleaning</span><span>CPAP, wheelchairs, walkers, bathroom safety equipment and more.</span></div>
+    <div class="row"><span class="badge">Rapid info sharing</span><span>Secure updates to the care team after each visit.</span></div>
+  </div>
+</div>
+
+<div class="section container">
+  <h2>Testimonials</h2>
+  <div class="testimonials">
+    <div class="quote">“Safemed brought order to mom’s medication routine in one afternoon. They also sanitized her walker and shower chair. Huge relief for our family.” — <strong>A.L.</strong></div>
+    <div class="quote">“Clear updates after each visit and no more missed doses. We feel supported and informed.” — <strong>R.M.</strong></div>
+  </div>
+</div>
+
+<div class="footer container">
+  <div class="grid-2">
+    <div>
+      <strong>Safemed</strong><br>
+      Medication Management &amp; DME Cleaning<br>
+      <span class="notice">Serving Glendale · Pasadena · Burbank</span>
+    </div>
+    <div style="text-align:right">
+      <a class="badge" href="https://calendly.com/safemed/consult" target="_blank" rel="noopener">Book a free 15‑min consult</a><br>
+      <span class="notice">© 2025 Safemed. All rights reserved.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
