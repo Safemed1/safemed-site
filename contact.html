@@ -1,69 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact • SafeMed Concierge</title>
-  <meta name="description" content="Safemed helps families with medication management, pillbox setup, and DME cleaning with rapid info sharing." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Safemed</title>
+  <meta name="description" content="Safemed helps families with medication management, pillbox setup, and DME cleaning with rapid info sharing.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <meta name="theme-color" content="#0f8e92">
 </head>
 <body>
-  <div class="nav">
-    <div class="container inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">SafeMed&nbsp;CONCIERGE</a>
-      <nav class="menu">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
-        <a href="contact.html">Contact</a>
-        <a class="cta" href="javascript:void(0)" onclick="openCalendly()">Book consult</a>
-      </nav>
-      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-    </div>
-    </div>
+<div class="nav">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Safemed logo"><span>Safemed</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://calendly.com/safemed/consult" target="_blank" rel="noopener">Book Now</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu" role="menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="cta" href="https://calendly.com/safemed/consult" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
 
-  <header class="hero">
-    <div class="container">
-      <span class="tag">Contact</span>
-      <h1>We respond quickly</h1>
-      <p class="lead">Reach out to schedule or ask questions. Serving Glendale · Pasadena · Burbank.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book on Calendly</a>
-        <a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492‑6837</a>
-      </div>
+<div class="container section">
+  <h2>Contact</h2>
+  <p class="p">Reach out to schedule or ask questions. We respond quickly.</p>
+  <div class="grid-2">
+    <div class="card booking">
+      <h3>Message us</h3>
+      <form onsubmit="goCalendly(event)">
+        <div class="field"><label>Your name</label><input required placeholder="Full name"></div>
+        <div class="field"><label>Email</label><input required placeholder="you@example.com"></div>
+        <div class="field"><label>How can we help?</label><textarea rows="4" placeholder="Tell us about your needs"></textarea></div>
+        <input id="calendlyLink" type="hidden" value="https://calendly.com/safemed/consult">
+        <button class="cta" type="submit">Book on Calendly</button>
+      </form>
+      <p class="notice" style="margin-top:8px">Prefer phone? Include your number and best time — we’ll call.</p>
     </div>
-  </header>
+    <div>
+      <div class="quote">“They set up weekly medications and cleaned dad’s CPAP parts the same day.” — <strong>T.J.</strong></div>
+      <br>
+      <div class="quote">“Professional, kind, and fast. The updates help our whole family stay coordinated.” — <strong>M.P.</strong></div>
+    </div>
+  </div>
+</div>
 
-  <main class="container">
-    <section class="cards">
-      <article class="card">
-        <h2>Message us</h2>
-        <p class="muted">Prefer phone? Include your number and best time — we’ll call.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">Book on Calendly</a>
-          <a class="btn" style="background:#eef6f6;color:#075e60" href="mailto:safemed.joseph@gmail.com">✉️ Email us</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2>Contact details</h2>
-        <p class="muted">Phone: <a href="tel:+13234926837">(323) 492‑6837</a><br>
-        Email: <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a><br>
-        Hours: Mon–Sat • 8am–6pm (by appointment)</p>
-      </article>
-    </section>
-  </main>
-
-  <footer class="footer">© <span id="year"></span> SafeMed Concierge • All rights reserved</footer>
-  <nav class="action-bar" aria-label="Quick actions">
-    <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
-    <a class="ghost" href="tel:+13234926837">📞 Call</a>
-    <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-  </nav>
-  <script src="script.js"></script>
+<div class="footer container">
+  <div class="grid-2">
+    <div>
+      <strong>Safemed</strong><br>
+      Medication Management &amp; DME Cleaning<br>
+      <span class="notice">Serving Glendale · Pasadena · Burbank</span>
+    </div>
+    <div style="text-align:right">
+      <a class="badge" href="https://calendly.com/safemed/consult" target="_blank" rel="noopener">Book a free 15-min consult</a><br>
+      <span class="notice">© 2025 Safemed. All rights reserved.</span>
+    </div>
+  </div>
+</div>
 </body>
 </html>
