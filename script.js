@@ -103,3 +103,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+// Mobile menu toggle (fixed)
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.getElementById('menu-toggle');
+  var nav = document.getElementById('primary-nav');
+  if(btn && nav){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      document.body.classList.toggle('nav-open');
+    });
+    // Close when clicking a link
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ document.body.classList.remove('nav-open'); });
+    });
+    // Close when clicking outside
+    document.addEventListener('click', function(e){
+      if(!document.body.classList.contains('nav-open')) return;
+      if(nav.contains(e.target) || btn.contains(e.target)) return;
+      document.body.classList.remove('nav-open');
+    });
+    // Close on ESC
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ document.body.classList.remove('nav-open'); }
+    });
+  }
+});
