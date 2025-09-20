@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SafeMed Concierge • Best care to your door</title>
-    <meta name="description" content="Private‑pay senior health support. First Week Free. Weekly medication organisation &amp; reminders plus monthly DME sanitisation. Book a 30‑minute virtual consult.">
-    <!-- Load Inter font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>SafeMed Concierge – Reliable Medication Management &amp; DME Cleaning</title>
+    <meta name="description" content="SafeMed Concierge keeps medications on schedule and medical equipment clean, safe and ready. Discover why Los Angeles families trust our non‑clinical support for seniors." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
     <!-- Calendly widget styles -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
     <!-- Site styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script async src="https://assets.calendly.com/assets/external/widget.js"></script>
   </head>
   <body>
-    <!-- Top promo and quick contact bar -->
+    <!-- Top promo and contact bar -->
     <div class="topbar">
-      <div class="promo">First Week Free – Experience our care with no commitment</div>
+      <div class="promo">First Week Free – Experience our care with no commitment</div>
       <div class="contacts">
-        <a href="tel:+13234926837">📞 (323) 492‑6837</a>
-        <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+        <a href="tel:+13234926837">📞 (323) 492‑6837</a>
+        <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
       </div>
     </div>
-    <!-- Header with brand and navigation -->
+    <!-- Main header with logo and navigation -->
     <header>
       <div class="hwrap">
         <div class="brand">
@@ -35,197 +35,183 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
-          <a href="#plans">Plans</a>
+          <a href="pricing.html">Plans</a>
           <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
         </nav>
       </div>
     </header>
     <!-- Hero section -->
-    <section class="hero">
+    <section class="hero home-hero">
       <div class="container">
         <div class="hero-text">
-          <span class="tag" style="background: #083c3d; color: #eaffff; padding: 6px 10px; border-radius: 10px; font-weight: 700; font-size: 12px;">Private‑pay senior support</span>
-          <h1>Best care to your door</h1>
-          <p class="lead">Weekly medication organisation &amp; reminders plus monthly equipment sanitisation for CPAP, walkers and nebulisers. Transparent updates keep your loved ones safe and your mind at ease.</p>
+          <span class="tag" style="background:#083c3d;color:#eaffff;padding:6px 10px;border-radius:10px;font-weight:700;font-size:12px;">Senior medication &amp; equipment support</span>
+          <h1>Reliable Medication Management &amp; DME Cleaning</h1>
+          <p class="lead">Professional support that keeps medications on schedule and medical equipment clean, safe and ready—so families can breathe easier.</p>
           <div class="hero-cta">
-            <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book 30‑min Consult</a>
-            <a class="btn secondary" href="tel:+13234926837">📞 Call/Text</a>
-            <a class="btn secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+            <a class="btn primary" href="pricing.html">💳 Explore Plans</a>
+            <a class="btn secondary" href="javascript:void(0)" onclick="openCalendly()">📅 Book Consultation</a>
           </div>
         </div>
         <div class="hero-image">
-          <img src="assets/clinician-hero-920.webp" alt="Healthcare worker in mask and teal scrubs" loading="eager" decoding="async">
+          <img src="assets/clinician-hero-920.webp" alt="Healthcare professional preparing medication" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>
-    <!-- Call to action cards row -->
-    <section class="cta-row">
-      <div class="cta-grid">
-        <a href="services.html#medication" class="cta-card">
-          <span class="icon">💊</span>
+    <!-- Why families choose us -->
+    <section class="section" id="why">
+      <h2>Why Families Choose SafeMed Concierge</h2>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <article class="card">
+          <h3>Accuracy you can trust</h3>
+          <p class="muted">Pillboxes filled correctly, tracked consistently and refills coordinated with your pharmacy.</p>
+        </article>
+        <article class="card">
+          <h3>Cleaner, safer equipment</h3>
+          <p class="muted">CPAP machines, oxygen concentrators, nebulisers and mobility aids sanitised per manufacturer guidance.</p>
+        </article>
+        <article class="card">
+          <h3>Respectful partnership</h3>
+          <p class="muted">We keep adult children informed without adding more work to their plate. You’re always in the loop.</p>
+        </article>
+      </div>
+    </section>
+    <!-- What we do -->
+    <section class="section" id="what-we-do">
+      <h2>What We Do</h2>
+      <div class="cards">
+        <article class="card">
           <h3>Medication Management</h3>
-          <p>Weekly and biweekly pillbox prep, reconciliation and refill coordination.</p>
-        </a>
-        <a href="services.html#cleaning" class="cta-card">
-          <span class="icon">🧼</span>
+          <ul class="bullets">
+            <li>Weekly/biweekly pillbox setup with clear labelling</li>
+            <li>Medication list reconciliation and refill coordination</li>
+            <li>Simple updates sent to the family after each visit</li>
+          </ul>
+        </article>
+        <article class="card">
           <h3>DME Cleaning</h3>
-          <p>Sanitisation of CPAP, oxygen concentrators, nebulisers, walkers and more.</p>
-        </a>
-        <a href="#gallery" class="cta-card">
-          <span class="icon">📷</span>
-          <h3>See Our Work</h3>
-          <p>Browse our gallery of medication organisation and equipment care.</p>
-        </a>
-        <a href="javascript:void(0)" onclick="openCalendly()" class="cta-card">
-          <span class="icon">📞</span>
-          <h3>Book Now</h3>
-          <p>Schedule a free virtual consult to start your first week free.</p>
-        </a>
+          <ul class="bullets">
+            <li>Monthly/biweekly cleaning and sanitisation of essential devices</li>
+            <li>Includes CPAPs, oxygen concentrators, nebulisers, walkers and canes</li>
+            <li>Visual inspection and maintenance reminders</li>
+          </ul>
+        </article>
       </div>
     </section>
-    <!-- Services & booking cards -->
-    <main>
-      <section class="section" id="services">
-        <h2>What we do</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Medication Management</h3>
-            <ul class="bullets">
-              <li>Weekly/biweekly pillbox setup with clear labels</li>
-              <li>Medication list reconciliation and refill coordination</li>
-              <li>Secure updates after every visit</li>
-            </ul>
-            <p class="muted">Non‑clinical support. We do not prescribe, diagnose or replace medical care.</p>
-          </article>
-          <article class="card">
-            <h3>DME Cleaning</h3>
-            <ul class="bullets">
-              <li>Monthly/biweekly sanitisation of CPAP and oxygen equipment</li>
-              <li>Cleaning of walkers, wheelchairs, nebulisers and canes</li>
-              <li>Safety checks and maintenance reminders</li>
-            </ul>
-            <p class="muted">Equipment is cleaned according to manufacturer guidance for optimal safety.</p>
-          </article>
+    <!-- Call to action -->
+    <section class="section" id="cta-home">
+      <div class="cards" style="grid-template-columns: 1fr;">
+        <article class="card" style="display:flex;flex-direction:column;gap:16px;align-items:start;">
+          <h3 style="margin:0;color:var(--teal-dark);">Your loved one’s safety shouldn’t depend on guesswork</h3>
+          <p class="muted" style="margin:0;">Book a consultation today to start a reliable routine.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book Consult</a>
+            <a class="btn secondary" href="tel:+13234926837">📞 Call/Text</a>
+          </div>
+          <p class="muted" style="font-size:12px;margin-top:12px;">SafeMed Concierge provides non‑clinical support; we do not prescribe, diagnose or replace medical care.</p>
+        </article>
+      </div>
+    </section>
+    <!-- Plans summary -->
+    <section class="section" id="plans-summary">
+      <h2>Plan Summary</h2>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <article class="card">
+          <h3>Medication Management Only</h3>
+          <div class="price">$400<span class="muted">/mo</span></div>
+          <ul class="bullets">
+            <li>Weekly pillbox setup</li>
+            <li>Refill coordination</li>
+            <li>Family updates</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>DME Cleaning Only</h3>
+          <div class="price">$250<span class="muted">/mo</span></div>
+          <ul class="bullets">
+            <li>Monthly/biweekly sanitisation</li>
+            <li>All essential devices</li>
+            <li>Maintenance reminders</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Full Concierge</h3>
+          <div class="price">$600<span class="muted">/mo+</span></div>
+          <ul class="bullets">
+            <li>Medication management &amp; DME cleaning</li>
+            <li>Customized to device count &amp; frequency</li>
+            <li>Comprehensive support</li>
+          </ul>
+        </article>
+      </div>
+      <p class="muted" style="text-align:center;margin-top:10px;">Each client begins with a <strong>90‑day agreement</strong> to establish consistent routines; services renew month‑to‑month thereafter.</p>
+    </section>
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <h2>What families say</h2>
+      <div class="testimonials">
+        <div class="testi">
+          <div class="meta">
+            <div class="avatar">AK</div>
+            <div>
+              <div class="who" style="font-weight:700;">A. Kim</div>
+              <div class="where" style="color:var(--muted);font-size:12px;">Burbank, CA — Daughter</div>
+            </div>
+          </div>
+          <p>“SafeMed takes the stress out of managing my mom's medications. Their weekly pillbox organisation and daily check‑ins ensure she never misses a dose, and I appreciate the prompt updates.”</p>
         </div>
-      </section>
-      <!-- Book now & pricing -->
-      <section class="section" id="plans">
-        <h2>Plans</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Basic</h3>
-            <div class="price">$450<span class="muted">/mo</span></div>
-            <ul class="bullets">
-              <li>Weekly pillbox setup (in‑home)</li>
-              <li>Weekly reminder check‑ins</li>
-              <li>First Week Free</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Comprehensive</h3>
-            <div class="price">$500<span class="muted">/mo</span></div>
-            <ul class="bullets">
-              <li>Everything in Basic</li>
-              <li>Monthly DME sanitisation</li>
-              <li>Monthly caregiver report</li>
-            </ul>
-          </article>
+        <div class="testi">
+          <div class="meta">
+            <div class="avatar">RZ</div>
+            <div>
+              <div class="who" style="font-weight:700;">R. Zuniga</div>
+              <div class="where" style="color:var(--muted);font-size:12px;">Glendale, CA — Son</div>
+            </div>
+          </div>
+          <p>“They sanitised Dad’s walker and oxygen equipment on schedule. Knowing his equipment is professionally cleaned each month helps us breathe easy.”</p>
         </div>
-      </section>
-      <!-- Gallery section -->
-      <section class="section" id="gallery">
-        <h2>Medication &amp; DME Gallery</h2>
-        <div class="slideshow" aria-label="Medication &amp; DME images" aria-roledescription="carousel">
-          <div class="slides" id="slides">
-            <div class="slide">
-              <img src="assets/medication-1.jpg" alt="Medication organisers labelled by day" loading="lazy" decoding="async">
-            </div>
-            <div class="slide">
-              <img src="assets/dme-clean-1.jpg" alt="Cleaning and disinfecting walker handles" loading="lazy" decoding="async">
-            </div>
-            <div class="slide">
-              <img src="assets/medication-2.webp" alt="Clinician preparing blister packs" loading="lazy" decoding="async">
+        <div class="testi">
+          <div class="meta">
+            <div class="avatar">MF</div>
+            <div>
+              <div class="who" style="font-weight:700;">M. Flores</div>
+              <div class="where" style="color:var(--muted);font-size:12px;">Pasadena, CA — Caregiver</div>
             </div>
           </div>
-          <div class="dots" id="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
+          <p>“The team keeps me informed with clear notes and photos after each visit. It’s reassuring to see exactly what was done.””</p>
         </div>
-        <p class="muted" style="margin-top: 8px; text-align:center;">Tip: Hover to pause. We can timestamp cleaning and med actions by request.</p>
-      </section>
-      <!-- Testimonials -->
-      <section class="section" id="testimonials">
-        <h2>What families say</h2>
-        <div class="testimonials">
-          <div class="testi">
-            <div class="meta">
-              <div class="avatar">AK</div>
-              <div>
-                <div class="who" style="font-weight:700;">A. Kim</div>
-                <div class="where" style="color: var(--muted); font-size: 12px;">Burbank, CA — Daughter</div>
-              </div>
-            </div>
-            <p>“SafeMed takes the stress out of managing my mom's medications. Their weekly pillbox organisation and daily check‑ins ensure she never misses a dose, and I appreciate the prompt updates.”</p>
-          </div>
-          <div class="testi">
-            <div class="meta">
-              <div class="avatar">RZ</div>
-              <div>
-                <div class="who" style="font-weight:700;">R. Zuniga</div>
-                <div class="where" style="color: var(--muted); font-size: 12px;">Glendale, CA — Son</div>
-              </div>
-            </div>
-            <p>“They sanitised Dad’s walker and oxygen equipment on schedule. Knowing his equipment is professionally cleaned each month helps us breathe easy.”</p>
-          </div>
-          <div class="testi">
-            <div class="meta">
-              <div class="avatar">MF</div>
-              <div>
-                <div class="who" style="font-weight:700;">M. Flores</div>
-                <div class="where" style="color: var(--muted); font-size: 12px;">Pasadena, CA — Caregiver</div>
-              </div>
-            </div>
-            <p>“The team keeps me informed with clear notes and photos after each visit. It’s reassuring to see exactly what was done.”</p>
-          </div>
+      </div>
+    </section>
+    <!-- Contact & service area -->
+    <section class="section" id="contact">
+      <h2>Contact &amp; Service Area</h2>
+      <p class="muted" style="text-align:center;margin-top:-10px;">Serving Glendale, Burbank, Pasadena and nearby communities.</p>
+      <div class="contact-grid" style="display:flex;flex-wrap:wrap;gap:20px;max-width:720px;margin:0 auto;justify-content:center;">
+        <div class="contact-item">
+          <strong>Phone</strong>
+          <span class="muted"><a href="tel:+13234926837">(323) 492‑6837</a></span>
         </div>
-      </section>
-      <!-- Contact & Service Area -->
-      <section class="section" id="contact">
-        <h2>Contact &amp; Service Area</h2>
-        <p class="muted" style="text-align:center; margin-top:-10px;">Serving Glendale, Burbank, Pasadena and nearby communities.</p>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <strong>Call/Text</strong>
-            <span class="muted"><a href="tel:+13234926837">(323) 492‑6837</a></span>
-          </div>
-          <div class="contact-item">
-            <strong>Email</strong>
-            <span class="muted"><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></span>
-          </div>
-          <div class="contact-item">
-            <strong>Hours</strong>
-            <span class="muted">Mon–Sat • 8am–6pm (by appointment)</span>
-          </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <span class="muted"><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></span>
         </div>
-      </section>
-    </main>
+        <div class="contact-item">
+          <strong>Service Area</strong>
+          <span class="muted">Glendale, CA 91205 &amp; nearby communities</span>
+        </div>
+        <div class="contact-item">
+          <strong>Hours</strong>
+          <span class="muted">Mon–Sat • 8am–6pm (by appointment)</span>
+        </div>
+      </div>
+    </section>
     <footer>
-      © <span id="y"></span> SafeMed Concierge • All rights reserved
+      © <span id="y"></span> SafeMed Concierge • All rights reserved
     </footer>
-    <!-- Sticky mobile action bar -->
-    <nav aria-label="Quick actions" class="action-bar">
-      <a class="ghost" href="index.html">🏠 Home</a>
-      <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
-      <a class="ghost" href="tel:+13234926837">📞 Call</a>
-      <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-    </nav>
     <!-- Scripts -->
     <script>
-      // Update copyright year
+      // Update year in footer
       document.getElementById('y').textContent = new Date().getFullYear();
-      // Calendly popup wrapper
+      // Calendly embed helper
       function calendlyUrl() {
         const u = new URL('https://calendly.com/safemed-joseph/30min');
         u.searchParams.set('embed_domain', location.hostname || 'localhost');
@@ -244,48 +230,6 @@
             nav.classList.toggle('open');
           });
         }
-      })();
-      // Slideshow functionality
-      (function() {
-        const slidesEl = document.getElementById('slides');
-        if (!slidesEl) return;
-        const dots = Array.from(document.querySelectorAll('#dots .dot'));
-        let index = 0;
-        let timer = null;
-        const total = slidesEl.children.length;
-        const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        function show(i) {
-          index = (i + total) % total;
-          slidesEl.style.transform = 'translateX(' + (-index * 100) + '%)';
-          dots.forEach((d, di) => d.classList.toggle('active', di === index));
-        }
-        function next() {
-          show(index + 1);
-        }
-        function start() {
-          if (!prefersReduce) timer = setInterval(next, 3500);
-        }
-        function stop() {
-          clearInterval(timer);
-          timer = null;
-        }
-        dots.forEach((d, i) => d.addEventListener('click', () => {
-          show(i);
-          stop();
-          start();
-        }));
-        const host = slidesEl.parentElement;
-        host.addEventListener('mouseenter', stop);
-        host.addEventListener('mouseleave', () => {
-          if (!timer) start();
-        });
-        slidesEl.addEventListener('click', () => {
-          next();
-          stop();
-          start();
-        });
-        show(0);
-        start();
       })();
     </script>
   </body>

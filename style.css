@@ -135,6 +135,11 @@ nav a:hover {
   opacity: 1;
   text-decoration: none;
 }
+/* Active navigation link */
+nav a.active {
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+}
 /* Mobile nav toggle */
 .nav-toggle {
   display: none;
@@ -440,7 +445,8 @@ nav a:hover {
 
 /* Footer */
 footer {
-  padding: 40px 0 80px;
+  /* Reduce bottom padding now that the mobile action bar has been removed */
+  padding: 40px 0;
   text-align: center;
   color: var(--muted);
   font-size: 13px;
@@ -448,17 +454,8 @@ footer {
 
 /* Sticky mobile action bar */
 .action-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #ffffffee;
-  backdrop-filter: saturate(1.2) blur(6px);
-  border-top: 1px solid #e6eced;
+  /* Hide the legacy mobile quick action bar completely */
   display: none;
-  gap: 8px;
-  padding: 8px;
-  z-index: 50;
 }
 .action-bar a {
   flex: 1;
