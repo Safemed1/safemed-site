@@ -98,39 +98,81 @@
     @media (max-width:900px){ .action-bar{display:flex;} }
   </style>
 <style>
-/* === SafeMed Copy & Type Upgrade v2 (bigger) === */
-:root { --sm-base: 18.5px; }
-body { font-size: var(--sm-base) !important; line-height: 1.68 !important; }
-section p, .card p { font-size: 1.15rem !important; line-height: 1.82 !important; }
-section li, .card li { font-size: 1.08rem !important; line-height: 1.75 !important; }
-h1 { font-size: clamp(2.5rem, 6.2vw, 3.6rem) !important; line-height: 1.12 !important; }
-h2 { font-size: clamp(1.8rem, 4.2vw, 2.45rem) !important; line-height: 1.18 !important; }
-h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
-.lead { font-size: 1.22rem !important; line-height: 1.9 !important; }
+/* Calendly CTA styles (minimal) */
+.sm-cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.sm-btn { background:#ffffff; color:#0c7e80; border-radius:9999px; padding:10px 16px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+.sm-btn:hover { background:#0c7e80; color:#ffffff; }
+.sm-btn.secondary { box-shadow:none; border:2px solid #0c7e80; }
+@media (max-width:520px){ .sm-btn{ width:100%; } }
+.booknow-copy { margin-top:8px; }
+.booknow-copy ul { margin:8px 0 12px 18px; }
 </style><style>
-/* === SafeMed Mobile Nav Fix (embedded) === */
-@media (max-width: 1024px){
-  header nav ul,
-  header nav .menu,
-  nav .menu, nav ul, .site-nav, .nav-list { display: none !important; }
-  .sm-collapsible-nav.is-open,
-  header nav ul.is-open,
-  header nav .menu.is-open,
-  nav .menu.is-open,
-  nav ul.is-open,
-  .site-nav.is-open,
-  .nav-list.is-open { display: block !important; }
-  .nav-toggle, .burger {
-    display: inline-flex !important; align-items:center; justify-content:center;
-    background:#ffffff !important; color:#0c7e80 !important;
-    border:none !important; border-radius:50% !important;
-    padding:10px !important; font-size:22px !important;
-    box-shadow:0 2px 6px rgba(0,0,0,.2) !important; z-index:1001;
-  }
-  .nav-toggle.nav-fixed { position: fixed; top: 12px; right: 12px; }
-  body.nav-open { overflow:hidden; }
-  header nav ul.is-open li, nav ul.is-open li { display:block; padding:8px 0; }
+/* === SafeMed Smooth Top→Bottom Teal→White + Subtle Logo Pattern (inline) === */
+:root{
+  --sm-teal:#0c7e80;
+  --sm-grad: linear-gradient(to bottom,
+    #0c7e80 0%,
+    #1f9698 12%,
+    #3db2b4 26%,
+    rgba(61,178,180,0.10) 44%,
+    #f6fefe 76%,
+    #ffffff 100%
+  );
 }
+/* Layer order: pattern (top), gradient (middle), white base (bottom) */
+html, body{
+  background-image: url('assets/pattern-safemed.svg'), var(--sm-grad), linear-gradient(#ffffff, #ffffff) !important;
+  background-repeat: repeat, no-repeat, no-repeat !important;
+  background-size: 320px 320px, cover, auto !important;
+  background-attachment: fixed, fixed, fixed !important;
+  background-position: top left, top center, top left !important;
+}
+/* Keep heroes readable */
+.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
+  color:#ffffff !important;
+  text-shadow:0 2px 6px rgba(0,0,0,.30);
+}
+</style><style>
+/* === Force CTA/Nav styles & hero contrast (global) === */
+header nav a {
+  background:#ffffff !important; color:#0c7e80 !important;
+  padding:8px 16px !important; border-radius:9999px !important;
+  font-weight:600 !important; text-decoration:none !important;
+  transition:background .3s,color .3s;
+}
+header nav a:hover { background:#0c7e80 !important; color:#ffffff !important; }
+header nav a.cta { box-shadow:0 2px 6px rgba(0,0,0,.15) !important; font-weight:700 !important; }
+
+/* Hamburger bubble */
+.burger, .nav-toggle {
+  background:#ffffff !important; color:#0c7e80 !important;
+  border:none !important; border-radius:50% !important;
+  padding:10px !important; font-size:22px !important;
+  box-shadow:0 2px 6px rgba(0,0,0,.2) !important;
+}
+
+/* Footer buttons/links */
+footer a, footer .button {
+  background:#ffffff !important; color:#0c7e80 !important;
+  padding:6px 14px !important; border-radius:9999px !important;
+  font-weight:600 !important; text-decoration:none !important;
+  transition:background .3s,color .3s;
+}
+footer a:hover, footer .button:hover { background:#0c7e80 !important; color:#ffffff !important; }
+
+/* Hero text contrast (keep) */
+.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
+  color:#ffffff !important; text-shadow:0 2px 6px rgba(0,0,0,.30);
+}
+
+/* Book-now CTA styles */
+.sm-cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.sm-btn { background:#ffffff; color:#0c7e80; border-radius:9999px; padding:10px 16px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+.sm-btn:hover { background:#0c7e80; color:#ffffff; }
+.sm-btn.secondary { box-shadow:none; border:2px solid #0c7e80; }
+@media (max-width:520px){ .sm-btn{ width:100%; } }
+.booknow-copy { margin-top:8px; }
+.booknow-copy ul { margin:8px 0 12px 18px; }
 </style></head>
 <body>
 <header>
@@ -152,7 +194,7 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <div class="text">
 <span class="tag">First Week Free</span>
 <h1>Best care to your door</h1>
-<p class="lead">SafeMed Concierge delivers  that keeps families confident and loved ones . Our team organizes medications with clinical precision, sanitizes and maintains home medical equipment, and coordinates with providers so care plans are crystal clear. You get fewer surprises, faster answers, and a calmer home—without having to play case manager on top of everything else.</p>
+<p class="lead">Private-pay senior health support: Weekly Medication Organization &amp; Reminders, plus Monthly DME Sanitization for CPAP, walkers, and nebulizers.</p>
 <div class="cta-row">
 <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book 30-min Consult</a>
 <a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492-6837</a>
@@ -176,21 +218,16 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <section aria-labelledby="services-label" class="cards">
 <article class="card" id="services-card">
 <h2 style="margin-top:0">What we do</h2>
-<ul class="bullets"><li>Weekly pillbox setup with labels &amp; schedule notes</li><li>Daily reminder texts or calls that fit your routine</li><li>Monthly DME sanitization and function check</li><li>After‑visit summaries delivered to the family</li></ul>
-<p class="muted">Essential weekly support that makes home care safer and simpler for one person. We handle the entire medication cycle, keep equipment clean and reliable, and communicate clearly with the family.</p>
+<ul class="bullets">
+<li>Weekly in-home <strong>Medication Organization</strong> (pillbox fill &amp; reconcile)</li>
+<li>Proactive <strong>Medication Reminders</strong> via call/text</li>
+<li><strong>Monthly DME Sanitization</strong>: CPAP masks/tubing, walkers, nebulizers</li>
+<li>Caregiver updates so family stays in the loop</li>
+</ul>
+<p class="muted">Note: We are a private-pay concierge service (not a home health agency or Medicare provider).</p>
 </article>
 <article class="card" id="book-card">
 <h2 style="margin-top:0">Book now</h2><div class="card booknow-copy"><p>Start with a <strong>free 20‑minute consult</strong>. We’ll review medications and DME, identify quick wins, and build a simple plan so your loved one stays <em>safer at home</em>—with less stress for the family.</p><ul><li>Weekly pillbox setup done right</li><li>Daily reminders that actually fit your routine</li><li>Monthly DME sanitization &amp; safety checks</li><li>Clear visit summaries for the family</li></ul><div class="sm-cta"><a class="sm-btn open-calendly" href="https://calendly.com/safemed-joseph/30min" rel="noopener" target="_blank">Open Calendly</a><a class="sm-btn secondary quick-cal" data-calendly-url="https://calendly.com/safemed-joseph/30min" href="#">Quick‑Book Popup</a></div></div>
-<div class="qr" style="display:flex;align-items:center;gap:12px;">
-<img alt="Scan to book your 30-minute virtual consultation" decoding="async" height="120" id="qr-img" loading="lazy" width="120">
-<div>
-<p class="muted" style="margin:0 0 8px">Our most complete option for families who want maximum peace of mind. Everything in Basic, plus hands‑on coordination, transition support, and priority access when you need us fast.</p>
-<div class="cta-row" style="margin-top:0">
-<a class="btn primary" href="https://calendly.com/safemed-joseph/30min" rel="noopener" target="_blank">Open Calendly</a>
-<a class="btn" href="javascript:void(0)" onclick="openCalendly()" style="background:#eef6f6;color:var(--teal-dark)">⚡ Quick-Book Popup</a>
-</div>
-</div>
-</img></div>
 <hr style="margin:12px 0;border:none;border-top:1px solid #e5e7eb"/>
 <div class="muted">
           Phone: <a href="tel:+13234926837">(323) 492-6837</a> · Email: <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a><br/>
@@ -226,13 +263,13 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <div class="dot"></div>
 </div>
 </div>
-<p class="muted" style="margin-top:8px">We deep‑clean and sanitize home medical equipment, swap disposables as needed, and log serials/settings. Catching wear or malfunction early prevents downtime and keeps home care safe.</p>
+<p class="muted" style="margin-top:8px">Tip: Hover to pause. We can timestamp cleaning and med actions by request.</p>
 </article>
 <article class="card" id="plans-card">
 <h2 style="margin-top:0">Plans</h2>
 <div class="grid-2">
 <div>
-<h3>Care Coordination &amp; Advocacy</h3>
+<h3>Basic</h3>
 <div class="price">$450<span class="muted">/mo</span></div>
 <ul class="bullets">
 <li>Weekly pillbox setup (in-home)</li>
@@ -292,9 +329,9 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <p class="muted" style="margin-top:0">Serving Glendale, Burbank, Pasadena, and nearby communities.</p>
 <div style="display:flex;gap:16px;flex-wrap:wrap">
 <div style="flex:1;min-width:240px">
-<strong>Call/Text</strong><br>
+<strong>Call/Text</strong><br/>
 <span class="muted"><a href="tel:+13234926837">(323) 492-6837</a></span>
-</br></div>
+</div>
 <div style="flex:1;min-width:240px">
 <strong>Email</strong><br/>
 <span class="muted"><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></span>
@@ -370,35 +407,47 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
     })();
   </script>
 <script>
-// === SafeMed Mobile Nav Toggle (embedded) ===
-(function(){
-  function $(sel, root){ return (root||document).querySelector(sel); }
-  function $all(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
-  var toggle = $('.nav-toggle') || $('.burger');
-  var header = $('header') || document.body;
-  if(!toggle){
-    toggle = document.createElement('button');
-    toggle.className = 'nav-toggle nav-fixed';
-    toggle.setAttribute('aria-label','Menu');
-    toggle.setAttribute('aria-expanded','false');
-    toggle.textContent = '\u2630';
-    header.insertBefore(toggle, header.firstChild);
-  }
-  var candidates = ['header nav ul','header nav .menu','nav .menu','nav ul','.site-nav','.nav-list'];
-  var menu = null;
-  for(var i=0;i<candidates.length;i++){ var el=$(candidates[i]); if(el){ menu=el; break; } }
-  if(!menu){ return; }
-  menu.classList.add('sm-collapsible-nav');
-  menu.classList.remove('open','opened','active','show','is-open');
-  toggle.setAttribute('aria-controls', menu.id || 'site-nav');
-  if(!menu.id) menu.id = 'site-nav';
-  function closeMenu(){ menu.classList.remove('is-open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }
-  function openMenu(){ menu.classList.add('is-open'); document.body.classList.add('nav-open'); toggle.setAttribute('aria-expanded','true'); }
-  function toggleMenu(){ (menu.classList.contains('is-open')?closeMenu:openMenu)(); }
-  toggle.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
-  $all('a', menu).forEach(function(a){ a.addEventListener('click', closeMenu); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); } });
-  closeMenu();
-})();
+document.querySelectorAll('.quick-cal').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var url = btn.getAttribute('data-calendly-url');
+    function openPopup(){
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function'){
+        window.Calendly.initPopupWidget({ url: url });
+      } else {
+        window.open(url, '_blank', 'noopener');
+      }
+    }
+    if (!document.querySelector('script[src*="assets.calendly.com/assets/external/widget.js"]')){
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true; s.onload = openPopup; document.head.appendChild(s);
+    } else { openPopup(); }
+  });
+});
+</script><script>
+// Calendly popup handler (no badge)
+document.querySelectorAll('.quick-cal').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var url = btn.getAttribute('data-calendly-url');
+    function openPopup(){
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function'){
+        window.Calendly.initPopupWidget({ url: url });
+      } else {
+        window.open(url, '_blank', 'noopener');
+      }
+    }
+    if (!document.querySelector('script[src*="assets.calendly.com/assets/external/widget.js"]')){
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true; s.onload = openPopup; document.head.appendChild(s);
+    } else { openPopup(); }
+  });
+});
+// Remove any floating badge if injected
+new MutationObserver(function(){
+  document.querySelectorAll('.calendly-badge-widget, .calendly-badge-content, [data-testid="floating_badge"]').forEach(function(n){ n.remove(); });
+}).observe(document.documentElement, {childList:true, subtree:true});
 </script></body>
 </html>

@@ -53,39 +53,72 @@
     @media (max-width:900px){ .action-bar{display:flex;} }
   </style>
 <style>
-/* === SafeMed Copy & Type Upgrade v2 (bigger) === */
-:root { --sm-base: 18.5px; }
-body { font-size: var(--sm-base) !important; line-height: 1.68 !important; }
-section p, .card p { font-size: 1.15rem !important; line-height: 1.82 !important; }
-section li, .card li { font-size: 1.08rem !important; line-height: 1.75 !important; }
-h1 { font-size: clamp(2.5rem, 6.2vw, 3.6rem) !important; line-height: 1.12 !important; }
-h2 { font-size: clamp(1.8rem, 4.2vw, 2.45rem) !important; line-height: 1.18 !important; }
-h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
-.lead { font-size: 1.22rem !important; line-height: 1.9 !important; }
-</style><style>
-/* === SafeMed Mobile Nav Fix (embedded) === */
-@media (max-width: 1024px){
-  header nav ul,
-  header nav .menu,
-  nav .menu, nav ul, .site-nav, .nav-list { display: none !important; }
-  .sm-collapsible-nav.is-open,
-  header nav ul.is-open,
-  header nav .menu.is-open,
-  nav .menu.is-open,
-  nav ul.is-open,
-  .site-nav.is-open,
-  .nav-list.is-open { display: block !important; }
-  .nav-toggle, .burger {
-    display: inline-flex !important; align-items:center; justify-content:center;
-    background:#ffffff !important; color:#0c7e80 !important;
-    border:none !important; border-radius:50% !important;
-    padding:10px !important; font-size:22px !important;
-    box-shadow:0 2px 6px rgba(0,0,0,.2) !important; z-index:1001;
-  }
-  .nav-toggle.nav-fixed { position: fixed; top: 12px; right: 12px; }
-  body.nav-open { overflow:hidden; }
-  header nav ul.is-open li, nav ul.is-open li { display:block; padding:8px 0; }
+/* === SafeMed Smooth Top→Bottom Teal→White + Subtle Logo Pattern (inline) === */
+:root{
+  --sm-teal:#0c7e80;
+  --sm-grad: linear-gradient(to bottom,
+    #0c7e80 0%,
+    #1f9698 12%,
+    #3db2b4 26%,
+    rgba(61,178,180,0.10) 44%,
+    #f6fefe 76%,
+    #ffffff 100%
+  );
 }
+/* Layer order: pattern (top), gradient (middle), white base (bottom) */
+html, body{
+  background-image: url('assets/pattern-safemed.svg'), var(--sm-grad), linear-gradient(#ffffff, #ffffff) !important;
+  background-repeat: repeat, no-repeat, no-repeat !important;
+  background-size: 320px 320px, cover, auto !important;
+  background-attachment: fixed, fixed, fixed !important;
+  background-position: top left, top center, top left !important;
+}
+/* Keep heroes readable */
+.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
+  color:#ffffff !important;
+  text-shadow:0 2px 6px rgba(0,0,0,.30);
+}
+</style><style>
+/* === Force CTA/Nav styles & hero contrast (global) === */
+header nav a {
+  background:#ffffff !important; color:#0c7e80 !important;
+  padding:8px 16px !important; border-radius:9999px !important;
+  font-weight:600 !important; text-decoration:none !important;
+  transition:background .3s,color .3s;
+}
+header nav a:hover { background:#0c7e80 !important; color:#ffffff !important; }
+header nav a.cta { box-shadow:0 2px 6px rgba(0,0,0,.15) !important; font-weight:700 !important; }
+
+/* Hamburger bubble */
+.burger, .nav-toggle {
+  background:#ffffff !important; color:#0c7e80 !important;
+  border:none !important; border-radius:50% !important;
+  padding:10px !important; font-size:22px !important;
+  box-shadow:0 2px 6px rgba(0,0,0,.2) !important;
+}
+
+/* Footer buttons/links */
+footer a, footer .button {
+  background:#ffffff !important; color:#0c7e80 !important;
+  padding:6px 14px !important; border-radius:9999px !important;
+  font-weight:600 !important; text-decoration:none !important;
+  transition:background .3s,color .3s;
+}
+footer a:hover, footer .button:hover { background:#0c7e80 !important; color:#ffffff !important; }
+
+/* Hero text contrast (keep) */
+.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
+  color:#ffffff !important; text-shadow:0 2px 6px rgba(0,0,0,.30);
+}
+
+/* Book-now CTA styles */
+.sm-cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.sm-btn { background:#ffffff; color:#0c7e80; border-radius:9999px; padding:10px 16px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+.sm-btn:hover { background:#0c7e80; color:#ffffff; }
+.sm-btn.secondary { box-shadow:none; border:2px solid #0c7e80; }
+@media (max-width:520px){ .sm-btn{ width:100%; } }
+.booknow-copy { margin-top:8px; }
+.booknow-copy ul { margin:8px 0 12px 18px; }
 </style></head>
 <body>
 <header>
@@ -105,7 +138,7 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <div class="container">
 <span class="pill">Meet our founder</span>
 <h1>Compassion. Expertise. Trust.</h1>
-<p>SafeMed exists to make home care . We manage the clinical details with the diligence we’d give our own family—so days feel calmer and decisions are easier. When everyone has clear information, better care follows.</p>
+<p>Learn about the experience and mission behind SafeMed Concierge.</p>
 <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
 <a class="cta" href="javascript:void(0)" onclick="openCalendly()">📅 Book a 30-minute consult</a>
 <a class="cta" href="tel:+13234926837" style="background:#ffffff;color:#075e60">📞 Call/Text (323) 492-6837</a>
@@ -129,7 +162,7 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <section class="section">
 <div class="card">
 <h2>Our Mission</h2>
-<p>Reduce avoidable medication errors and equipment issues at home by providing consistent, professional support that families can rely on week after week. We believe trust is built on clarity, follow‑through, and measurable results.</p>
+<p>We believe every older adult deserves independence, dignity, and reliable support. SafeMed Concierge is dedicated to:</p>
 <ul>
 <li>Keeping medications organized and doses on schedule.</li>
 <li>Ensuring durable medical equipment is sanitized and safe.</li>
@@ -143,7 +176,7 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <section class="section">
 <div class="card">
 <h2 style="margin-top:0">Behind the scenes</h2>
-<p class="muted" style="margin-bottom:12px">Every visit runs on checklists. We label, organize, sanitize, and verify—then we document what we did and what we found. Photos and summaries show the quiet work that keeps home care safe and smooth.</p>
+<p class="muted" style="margin-bottom:12px">A peek at how we serve our clients: pillbox prep, telehealth check‑ins, equipment sanitizing and compassionate companionship.</p>
 <div class="gallery-grid">
 <img alt="Medication sorting into weekly pillbox" src="assets/about-1.png"/>
 <img alt="Clinician helping a senior organize pills" src="assets/about-5.png"/>
@@ -156,7 +189,7 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <section class="section">
 <div class="card">
 <h2>Why SafeMed?</h2>
-<p>Hospital‑level diligence without the hospital hassle. We bring order to the details, advocate at appointments, and translate medical instructions into workable daily routines.</p>
+<p>Typical caregivers focus on daily living assistance. We focus on medication safety and equipment health. Here’s how we stand apart:</p>
 <ul>
 <li><strong>Clinical oversight:</strong> Services are designed by a healthcare professional who understands physician orders and documentation.</li>
 <li><strong>Medication-focused:</strong> Our visits prioritize pillbox organization, medication reconciliation, and reminders instead of general caregiving tasks.</li>
@@ -169,7 +202,7 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
 <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between">
 <div>
 <h2 style="margin:0 0 6px">Ready to get started?</h2>
-<p class="muted" style="margin:0">Tell us what’s not working—missed doses, confusing instructions, equipment acting up—and we’ll map the fastest path to calm and control. Most families notice relief in the very first week.</p>
+<p class="muted" style="margin:0">Book a no-pressure 30-minute virtual consult. We’ll answer questions and outline next steps.</p>
 </div>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
 <a class="cta" href="javascript:void(0)" onclick="openCalendly()">📅 Book consult</a>
@@ -202,36 +235,5 @@ h3 { font-size: clamp(1.22rem, 2.6vw, 1.55rem) !important; }
       }
     })();
   </script>
-<script>
-// === SafeMed Mobile Nav Toggle (embedded) ===
-(function(){
-  function $(sel, root){ return (root||document).querySelector(sel); }
-  function $all(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
-  var toggle = $('.nav-toggle') || $('.burger');
-  var header = $('header') || document.body;
-  if(!toggle){
-    toggle = document.createElement('button');
-    toggle.className = 'nav-toggle nav-fixed';
-    toggle.setAttribute('aria-label','Menu');
-    toggle.setAttribute('aria-expanded','false');
-    toggle.textContent = '\u2630';
-    header.insertBefore(toggle, header.firstChild);
-  }
-  var candidates = ['header nav ul','header nav .menu','nav .menu','nav ul','.site-nav','.nav-list'];
-  var menu = null;
-  for(var i=0;i<candidates.length;i++){ var el=$(candidates[i]); if(el){ menu=el; break; } }
-  if(!menu){ return; }
-  menu.classList.add('sm-collapsible-nav');
-  menu.classList.remove('open','opened','active','show','is-open');
-  toggle.setAttribute('aria-controls', menu.id || 'site-nav');
-  if(!menu.id) menu.id = 'site-nav';
-  function closeMenu(){ menu.classList.remove('is-open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }
-  function openMenu(){ menu.classList.add('is-open'); document.body.classList.add('nav-open'); toggle.setAttribute('aria-expanded','true'); }
-  function toggleMenu(){ (menu.classList.contains('is-open')?closeMenu:openMenu)(); }
-  toggle.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
-  $all('a', menu).forEach(function(a){ a.addEventListener('click', closeMenu); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); } });
-  closeMenu();
-})();
-</script></body>
+</body>
 </html>
