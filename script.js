@@ -103,3 +103,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+
+/* ===== Calendly-only fixes (compact, single inline, no floating badge) ===== */
+(function(){
+  function applyCalendlyFixes(){
+    try {
+      // Inject compact styles + hide floating badge
+      if (!document.getElementById('calendly-fix-css')) {
+        var style = document.createElement('style');
+        style.id = 'calendly-fix-css';
+        style.textContent = [
+          '.calendly-badge-widget, .calendly-badge-content, [data-testid="floating_badge"]{display:none !important;}',
+          '.calendly-inline-widget{height:520px !important;max-width:880px;margin:12px auto;border-radius:12px;overflow:hidden;}',
+          '@media (max-width:520px){.calendly-inline-widget{height:480px !important;}}'
+        ].join('\\n');
+        document.head && document.head.appendChild(style);
+      }
+
+      // Neutralize floating badge initializer if present
+      if (window.Calendly && typeof window.Calendly.initBadgeWidget === 'function') {
+        try { window.Calendly.initBadgeWidget = function(){ /* disabled */ }; } catch(e){}
+      }
+
+      // Keep only the first inline widget (hide duplicates)
+      var widgets = document.querySelectorAll('.calendly-inline-widget');
+      if (widgets.length > 1) {
+        for (var i=1; i<widgets.length; i++) {
+          widgets[i].style.display = 'none';
+        }
+      }
+    } catch(e){ /* ignore */ }
+  }
+
+  // Observe DOM in case Calendly injects badge later
+  var obs = new MutationObserver(function(){
+    var badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content, [data-testid="floating_badge"]');
+    if (badge) { badge.parentNode && badge.parentNode.removeChild(badge); }
+    applyCalendlyFixes();
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){
+      applyCalendlyFixes();
+      obs.observe(document.documentElement, {childList:true, subtree:true});
+    });
+  } else {
+    applyCalendlyFixes();
+    obs.observe(document.documentElement, {childList:true, subtree:true});
+  }
+
+  window.addEventListener('load', applyCalendlyFixes);
+})();
