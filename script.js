@@ -1,1 +1,1 @@
-// Hamburger removed; no JS needed for nav.
+// Nav hamburger removed; no JS required.
