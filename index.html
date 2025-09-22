@@ -1,452 +1,335 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>SafeMed Concierge • Best Care to Your Door</title>
-<meta content="Private-pay senior health support. First Week Free. Weekly Medication Organization &amp; Reminders. Monthly DME Sanitization. Book a 30-minute virtual consult." name="description"/>
-<meta content="#0c7e80" name="theme-color"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="preload"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
-<script async="" src="https://assets.calendly.com/assets/external/widget.js"></script>
-<style>
-    :root{
-      --teal:#0c7e80;
-      --teal-dark:#075e60;
-      --ink:#0f172a;
-      --muted:#5b6a74;
-      --paper:#f6f9fc;
-      --card:#ffffff;
-      --radius:14px;
-      --shadow:0 6px 18px rgba(0,0,0,.08);
-      --edge:#eaf2f4;
-      --panel:rgba(255,255,255,0.95);
-    }
-    *{box-sizing:border-box;}
-    html,body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--ink);
-      background:var(--paper);
-    }
-    a{color:var(--teal-dark);text-decoration:none;}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SafeMed Concierge • Glendale Medication Management & DME Cleaning</title>
+  <meta name="description" content="SafeMed Concierge provides in‑home medication management and DME cleaning in Glendale, CA. Accurate pillbox setup, refill coordination, and CPAP/concentrator sanitation for family peace of mind." />
+  <meta name="theme-color" content="#0c7e80" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    /* Centered layout with generous side padding */
-    .container{max-width:980px;margin:0 auto;padding:20px;}
-
-    /* Header/navigation */
-    header{background:#0c7e80;color:#fff;position:relative;}
-    .hwrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px;}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;}
-    .logo{width:32px;height:32px;border-radius:8px;background:#fff;display:grid;place-items:center;color:#0c7e80;}
-    nav{display:flex;gap:12px;font-size:15px;}
-    nav a{color:#fff;opacity:.95;padding:6px 12px;border-radius:20px;background:rgba(255,255,255,0.15);transition:background .2s, opacity .2s;}
-    nav a:hover{background:rgba(255,255,255,.30);opacity:1;text-decoration:none;}
-    .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;}
-    @media (max-width:900px){
-      nav{display:none;flex-direction:column;background:rgba(0,0,0,0.5);position:absolute;top:60px;right:16px;border-radius:12px;padding:10px;}
-      nav.open{display:flex;}
-      .nav-toggle{display:block;}
-    }
-
-    /* Hero section */
-    .hero{background:linear-gradient(160deg,#0c7e80 0%,#14a3a6 100%);color:#fff;padding:30px 0;}
-    .hero-content{display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
-    .hero-content .text{flex:1;min-width:280px;}
-    .hero-content .image{flex:1;min-width:280px;display:flex;justify-content:center;}
-    .hero-image{width:100%;max-width:600px;height:auto;border-radius:20px;object-fit:cover;box-shadow:var(--shadow);}
-    .tag{display:inline-block;background:#083c3d;color:#eaffff;padding:6px 10px;border-radius:10px;font-weight:700;font-size:12px;}
-    h1{font-size:36px;line-height:1.12;margin:8px 0 4px;}
-    p.lead{margin:0;opacity:.95;}
-    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
-    .btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:999px;padding:12px 16px;font-weight:700;cursor:pointer;box-shadow:var(--shadow);font-size:15px;}
-    .btn.primary{background:#fff;color:var(--teal-dark);}
-    .btn.ghost{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35);}
-    .hero-card{background:#ffffff14;border:1px solid #ffffff38;border-radius:var(--radius);padding:10px;color:#eaffff;font-size:12px;margin-top:8px;}
-
-    /* Cards grid and styling */
-    .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-    @media (max-width:900px){ .cards{grid-template-columns:1fr;} }
-    .card{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:18px;}
-    .card h2,.card h3{margin:0 0 8px;}
-    .bullets{margin:0;padding-left:18px;font-size:15px;line-height:1.45;}
-    .price{font-weight:800;font-size:22px;color:var(--teal-dark);}
-    .muted{color:var(--muted);font-size:14px;}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-    @media (max-width:560px){ .grid-2{grid-template-columns:1fr;} }
-
-    /* Gallery (slideshow) styles */
-    .slideshow{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--edge);background:#f2f7f8;height:240px;}
-    .slides{display:flex;transition:transform .5s ease;}
-    .slide{min-width:100%;}
-    .slide img{width:100%;height:240px;object-fit:cover;}
-    .dots{position:absolute;right:10px;bottom:10px;display:flex;gap:6px;}
-    .dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.85);border:1px solid rgba(0,0,0,.06);}
-    .dot.active{background:#075e60;}
-
-    /* Section panels for testimonials and contact */
-    .section-panel{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(2,24,33,.05);margin:16px 0;}
-
-    /* Sticky mobile action bar */
-    .action-bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffee;backdrop-filter:saturate(1.2) blur(6px);border-top:1px solid #e6eced;display:none;gap:8px;padding:8px;z-index:50;}
-    .action-bar a{flex:1;display:flex;justify-content:center;align-items:center;padding:12px;border-radius:12px;font-weight:700;}
-    .action-bar .primary{background:var(--teal);color:#fff;}
-    .action-bar .ghost{background:#e7f4f4;color:#075e60;}
-    @media (max-width:900px){ .action-bar{display:flex;} }
-  </style>
-<style>
-/* Calendly CTA styles (minimal) */
-.sm-cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
-.sm-btn { background:#ffffff; color:#0c7e80; border-radius:9999px; padding:10px 16px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
-.sm-btn:hover { background:#0c7e80; color:#ffffff; }
-.sm-btn.secondary { box-shadow:none; border:2px solid #0c7e80; }
-@media (max-width:520px){ .sm-btn{ width:100%; } }
-.booknow-copy { margin-top:8px; }
-.booknow-copy ul { margin:8px 0 12px 18px; }
-</style><style>
-/* === SafeMed Smooth Top→Bottom Teal→White + Subtle Logo Pattern (inline) === */
-:root{
-  --sm-teal:#0c7e80;
-  --sm-grad: linear-gradient(to bottom,
-    #0c7e80 0%,
-    #1f9698 12%,
-    #3db2b4 26%,
-    rgba(61,178,180,0.10) 44%,
-    #f6fefe 76%,
-    #ffffff 100%
-  );
-}
-/* Layer order: pattern (top), gradient (middle), white base (bottom) */
-html, body{
-  background-image: url('assets/pattern-safemed.svg'), var(--sm-grad), linear-gradient(#ffffff, #ffffff) !important;
-  background-repeat: repeat, no-repeat, no-repeat !important;
-  background-size: 320px 320px, cover, auto !important;
-  background-attachment: fixed, fixed, fixed !important;
-  background-position: top left, top center, top left !important;
-}
-/* Keep heroes readable */
-.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
-  color:#ffffff !important;
-  text-shadow:0 2px 6px rgba(0,0,0,.30);
-}
-</style><style>
-/* === Force CTA/Nav styles & hero contrast (global) === */
-header nav a {
-  background:#ffffff !important; color:#0c7e80 !important;
-  padding:8px 16px !important; border-radius:9999px !important;
-  font-weight:600 !important; text-decoration:none !important;
-  transition:background .3s,color .3s;
-}
-header nav a:hover { background:#0c7e80 !important; color:#ffffff !important; }
-header nav a.cta { box-shadow:0 2px 6px rgba(0,0,0,.15) !important; font-weight:700 !important; }
-
-/* Hamburger bubble */
-.burger, .nav-toggle {
-  background:#ffffff !important; color:#0c7e80 !important;
-  border:none !important; border-radius:50% !important;
-  padding:10px !important; font-size:22px !important;
-  box-shadow:0 2px 6px rgba(0,0,0,.2) !important;
-}
-
-/* Footer buttons/links */
-footer a, footer .button {
-  background:#ffffff !important; color:#0c7e80 !important;
-  padding:6px 14px !important; border-radius:9999px !important;
-  font-weight:600 !important; text-decoration:none !important;
-  transition:background .3s,color .3s;
-}
-footer a:hover, footer .button:hover { background:#0c7e80 !important; color:#ffffff !important; }
-
-/* Hero text contrast (keep) */
-.hero h1, .hero h2, .hero p, .hwrap h1, .hwrap p {
-  color:#ffffff !important; text-shadow:0 2px 6px rgba(0,0,0,.30);
-}
-
-/* Book-now CTA styles */
-.sm-cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
-.sm-btn { background:#ffffff; color:#0c7e80; border-radius:9999px; padding:10px 16px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
-.sm-btn:hover { background:#0c7e80; color:#ffffff; }
-.sm-btn.secondary { box-shadow:none; border:2px solid #0c7e80; }
-@media (max-width:520px){ .sm-btn{ width:100%; } }
-.booknow-copy { margin-top:8px; }
-.booknow-copy ul { margin:8px 0 12px 18px; }
-</style></head>
-<body>
-<header>
-<div class="hwrap">
-<div class="brand"><div class="logo">＋</div> SafeMed CONCIERGE</div><nav aria-label="Primary" id="primary-nav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="javascript:void(0)" onclick="openCalendly()">Book</a>
-<a href="mailto:safemed.joseph@gmail.com">Contact</a>
-</nav>
-</div>
-</header>
-<div class="hero">
-<div class="container">
-<div class="hero-content">
-<div class="text">
-<span class="tag">First Week Free</span>
-<h1>Best care to your door</h1>
-<p class="lead">Private-pay senior health support: Weekly Medication Organization &amp; Reminders, plus Monthly DME Sanitization for CPAP, walkers, and nebulizers.</p>
-<div class="cta-row">
-<a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book 30-min Consult</a>
-<a class="btn ghost" href="tel:+13234926837">📞 Call/Text (323) 492-6837</a>
-<a class="btn ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-</div>
-<div class="hero-card">
-<div class="caps">Private-pay only</div>
-            Transparent pricing • Cancel anytime • HIPAA-aware workflows
-          </div>
-</div>
-<div class="image">
-<picture>
-<source srcset="assets/clinician-hero-920.webp" type="image/webp"/>
-<img alt="Healthcare worker in mask and teal scrubs" class="hero-image" decoding="async" loading="eager" src="assets/clinician-hero-920.webp"/>
-</picture>
-</div>
-</div>
-</div>
-</div>
-<main class="container">
-<section aria-labelledby="services-label" class="cards">
-<article class="card" id="services-card">
-<h2 style="margin-top:0">What we do</h2>
-<ul class="bullets">
-<li>Weekly in-home <strong>Medication Organization</strong> (pillbox fill &amp; reconcile)</li>
-<li>Proactive <strong>Medication Reminders</strong> via call/text</li>
-<li><strong>Monthly DME Sanitization</strong>: CPAP masks/tubing, walkers, nebulizers</li>
-<li>Caregiver updates so family stays in the loop</li>
-</ul>
-<p class="muted">Note: We are a private-pay concierge service (not a home health agency or Medicare provider).</p>
-<p>Our only focus is medications and equipment. By staying specialized, we deliver accuracy and consistency at every visit.</p>
-</article>
-<article class="card" id="book-card">
-<h2 style="margin-top:0">Book now</h2><div class="card booknow-copy"><p>Start with a <strong>free 20‑minute consult</strong>. We’ll review medications and DME, identify quick wins, and build a simple plan so your loved one stays <em>safer at home</em>—with less stress for the family.</p><ul><li>Weekly pillbox setup done right</li><li>Daily reminders that actually fit your routine</li><li>Monthly DME sanitization &amp; safety checks</li><li>Clear visit summaries for the family</li></ul><div class="sm-cta"><a class="sm-btn open-calendly" href="https://calendly.com/safemed-joseph/30min" rel="noopener" target="_blank">Open Calendly</a><a class="sm-btn secondary quick-cal" data-calendly-url="https://calendly.com/safemed-joseph/30min" href="#">Quick‑Book Popup</a></div></div>
-<hr style="margin:12px 0;border:none;border-top:1px solid #e5e7eb"/>
-<div class="muted">
-          Phone: <a href="tel:+13234926837">(323) 492-6837</a> · Email: <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a><br/>
-          Hours: Mon–Sat • 8am–6pm (by appointment)
-        </div>
-</article>
-<article class="card" id="gallery-card">
-<h2 style="margin-top:0">Medication &amp; DME Gallery</h2>
-<div aria-label="Medication &amp; DME images" aria-roledescription="carousel" class="slideshow">
-<div class="slides" id="slides">
-<div class="slide">
-<picture>
-<source srcset="assets/medication-1.webp" type="image/webp"/>
-<img alt="Medication organizers labeled by day" decoding="async" height="480" loading="lazy" src="assets/medication-1.jpg" width="800"/>
-</picture>
-</div>
-<div class="slide">
-<picture>
-<source srcset="assets/dme-clean-1.webp" type="image/webp"/>
-<img alt="Cleaning and disinfecting walker handles" decoding="async" height="480" loading="lazy" src="assets/dme-clean-1.jpg" width="800"/>
-</picture>
-</div>
-<div class="slide">
-<picture>
-<source srcset="assets/medication-2.webp" type="image/webp"/>
-<img alt="Clinician preparing blister packs" decoding="async" height="480" loading="lazy" src="assets/medication-2.jpg" width="800"/>
-</picture>
-</div>
-</div>
-<div aria-hidden="true" class="dots" id="dots">
-<div class="dot active"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-</div>
-</div>
-<p class="muted" style="margin-top:8px">Tip: Hover to pause. We can timestamp cleaning and med actions by request.</p>
-</article>
-<article class="card" id="plans-card">
-<h2 style="margin-top:0">Plans</h2>
-<div class="grid-2">
-<div>
-<h3>Basic</h3>
-<div class="price">$450<span class="muted">/mo</span></div>
-<ul class="bullets">
-<li>Weekly pillbox setup (in-home)</li>
-<li>Weekly reminder check-ins</li>
-<li>First Week Free</li>
-</ul>
-</div>
-<div>
-<h3>Comprehensive</h3>
-<div class="price">$500<span class="muted">/mo</span></div>
-<ul class="bullets">
-<li>Everything in Basic</li>
-<li>Monthly DME sanitization</li>
-<li>Monthly caregiver report</li>
-</ul>
-</div>
-</div>
-</article>
-</section>
-<section aria-labelledby="testimonials-heading" class="section-panel">
-<h2 id="testimonials-heading" style="margin:0 0 8px">What families say</h2>
-<div aria-label="Testimonials" class="testimonials" style="display:flex;flex-direction:column;gap:12px;">
-<div class="testi" style="background:#fff;border:1px solid var(--edge);border-radius:12px;padding:12px;">
-<div class="meta" style="display:flex;gap:10px;align-items:center;">
-<div class="avatar" style="width:40px;height:40px;border-radius:8px;background:#e7f6f6;display:flex;align-items:center;justify-content:center;font-weight:800;color:#075e60;">AK</div>
-<div>
-<div class="who" style="font-weight:700;">A. Kim</div>
-<div class="where" style="color:var(--muted);font-size:12px;">Burbank, CA — Daughter</div>
-</div>
-</div>
-<p style="margin:8px 0 0;color:#41525c;">“SafeMed takes the stress out of managing my mom's medications. Their weekly pillbox organization and daily check-ins ensure she never misses a dose, and I appreciate the prompt updates.”</p>
-</div>
-<div class="testi" style="background:#fff;border:1px solid var(--edge);border-radius:12px;padding:12px;">
-<div class="meta" style="display:flex;gap:10px;align-items:center;">
-<div class="avatar" style="width:40px;height:40px;border-radius:8px;background:#e7f6f6;display:flex;align-items:center;justify-content:center;font-weight:800;color:#075e60;">RZ</div>
-<div>
-<div class="who" style="font-weight:700;">R. Zuniga</div>
-<div class="where" style="color:var(--muted);font-size:12px;">Glendale, CA — Son</div>
-</div>
-</div>
-<p style="margin:8px 0 0;color:#41525c;">“They sanitized Dad’s walker and oxygen equipment on schedule. Knowing his equipment is professionally cleaned each month helps us breathe easy.”</p>
-</div>
-<div class="testi" style="background:#fff;border:1px solid var(--edge);border-radius:12px;padding:12px;">
-<div class="meta" style="display:flex;gap:10px;align-items:center;">
-<div class="avatar" style="width:40px;height:40px;border-radius:8px;background:#e7f6f6;display:flex;align-items:center;justify-content:center;font-weight:800;color:#075e60;">MF</div>
-<div>
-<div class="who" style="font-weight:700;">M. Flores</div>
-<div class="where" style="color:var(--muted);font-size:12px;">Pasadena, CA — Caregiver</div>
-</div>
-</div>
-<p style="margin:8px 0 0;color:#41525c;">“The team keeps me informed with clear notes and photos after each visit. It’s reassuring to see exactly what was done.”</p>
-</div>
-</div>
-</section>
-<section aria-labelledby="contact-heading" class="section-panel" id="contact">
-<h2 id="contact-heading" style="margin:0 0 8px">Contact &amp; Service Area</h2>
-<p class="muted" style="margin-top:0">Serving Glendale, Burbank, Pasadena, and nearby communities.</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap">
-<div style="flex:1;min-width:240px">
-<strong>Call/Text</strong><br/>
-<span class="muted"><a href="tel:+13234926837">(323) 492-6837</a></span>
-</div>
-<div style="flex:1;min-width:240px">
-<strong>Email</strong><br/>
-<span class="muted"><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></span>
-</div>
-<div style="flex:1;min-width:240px">
-<strong>Hours</strong><br/>
-<span class="muted">Mon–Sat • 8am–6pm (by appointment)</span>
-</div>
-</div>
-</section>
-</main>
-<footer style="padding:28px 0 72px;text-align:center;color:var(--muted);font-size:13px;">© <span id="y"></span> SafeMed Concierge • All rights reserved</footer>
-<nav aria-label="Quick actions" class="action-bar">
-<a class="ghost" href="index.html">🏠 Home</a>
-<a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
-<a class="ghost" href="tel:+13234926837">📞 Call</a>
-<a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-</nav>
-<script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    function calendlyUrl(){
-      const u = new URL("https://calendly.com/safemed-joseph/30min");
-      u.searchParams.set("embed_domain", location.hostname || "localhost");
-      return u.toString();
-    }
-    function openCalendly(){
-      Calendly.initPopupWidget({ url: calendlyUrl() });
-      return false;
-    }
-    // Generate QR code
-    (function(){
-      var url = calendlyUrl(), img = document.getElementById('qr-img');
-      if(img){
-        img.src = "https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=0&data=" + encodeURIComponent(url);
+  <!-- Tailwind (for layout & utility classes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfbfb', 100: '#c9f3f4', 200: '#a5eaec', 300: '#7fe0e4',
+              400: '#59d5db', 500: '#32cad2', 600: '#20aeb7', 700: '#16888f',
+              800: '#0f6368', 900: '#0c4c51'
+            }
+          },
+          boxShadow: { soft: '0 10px 30px rgba(12,126,128,0.12)' }
+        }
       }
-    })();
-    // Slideshow functionality
-    (function(){
-      const slidesEl = document.getElementById('slides');
-      if(!slidesEl) return;
-      const dots = Array.from(document.querySelectorAll('#dots .dot'));
-      let index = 0, timer = null;
-      const total = slidesEl.children.length;
-      const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      function show(i){
-        index = (i + total) % total;
-        slidesEl.style.transform = 'translateX(' + (-index * 100) + '%)';
-        dots.forEach((d, di) => d.classList.toggle('active', di === index));
-      }
-      function next(){ show(index + 1); }
-      function start(){ if(!prefersReduce) timer = setInterval(next, 3500); }
-      function stop(){ clearInterval(timer); timer = null; }
-      dots.forEach((d,i)=> d.addEventListener('click', () => { show(i); stop(); start(); }));
-      const host = slidesEl.parentElement;
-      host.addEventListener('mouseenter', stop);
-      host.addEventListener('mouseleave', () => { if(!timer) start(); });
-      slidesEl.addEventListener('click', () => {
-        next();
-        stop();
-        start();
-      });
-      show(0); start();
-    })();
-    // Navigation toggle
-    (function(){
-      const toggle = document.getElementById('menu-toggle');
-      const nav = document.getElementById('primary-nav');
-      if(toggle && nav){
-        toggle.addEventListener('click', function(){
-          nav.classList.toggle('open');
-        });
-      }
-    })();
+    }
   </script>
-<script>
-document.querySelectorAll('.quick-cal').forEach(function(btn){
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    var url = btn.getAttribute('data-calendly-url');
-    function openPopup(){
-      if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function'){
-        window.Calendly.initPopupWidget({ url: url });
-      } else {
-        window.open(url, '_blank', 'noopener');
-      }
-    }
-    if (!document.querySelector('script[src*="assets.calendly.com/assets/external/widget.js"]')){
-      var s = document.createElement('script');
-      s.src = 'https://assets.calendly.com/assets/external/widget.js';
-      s.async = true; s.onload = openPopup; document.head.appendChild(s);
-    } else { openPopup(); }
-  });
-});
-</script><script>
-// Calendly popup handler (no badge)
-document.querySelectorAll('.quick-cal').forEach(function(btn){
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    var url = btn.getAttribute('data-calendly-url');
-    function openPopup(){
-      if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function'){
-        window.Calendly.initPopupWidget({ url: url });
-      } else {
-        window.open(url, '_blank', 'noopener');
-      }
-    }
-    if (!document.querySelector('script[src*="assets.calendly.com/assets/external/widget.js"]')){
-      var s = document.createElement('script');
-      s.src = 'https://assets.calendly.com/assets/external/widget.js';
-      s.async = true; s.onload = openPopup; document.head.appendChild(s);
-    } else { openPopup(); }
-  });
-});
-// Remove any floating badge if injected
-new MutationObserver(function(){
-  document.querySelectorAll('.calendly-badge-widget, .calendly-badge-content, [data-testid="floating_badge"]').forEach(function(n){ n.remove(); });
-}).observe(document.documentElement, {childList:true, subtree:true});
-</script></body>
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="text-slate-800 bg-slate-50">
+  <!-- Top Announcement -->
+  <div class="w-full bg-brand-700 text-white text-center text-sm py-2 px-3">Now serving Glendale • Burbank • Pasadena</div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="mx-auto container px-4 md:px-6 flex items-center justify-between h-16">
+      <a href="#home" class="flex items-center gap-2">
+        <img src="assets/logo.svg" alt="SafeMed Concierge logo" class="h-7 w-7" onerror="this.style.display='none'">
+        <span class="font-bold tracking-tight text-slate-900">SafeMed Concierge</span>
+      </a>
+
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border px-3 py-2 text-slate-700 hover:bg-slate-100" aria-controls="mobileMenu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <span class="sr-only">Toggle menu</span>
+      </button>
+
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a href="#about" class="hover:text-brand-700">About</a></li>
+        <li><a href="#services" class="hover:text-brand-700">Services</a></li>
+        <li><a href="#accuracy" class="hover:text-brand-700">Accuracy</a></li>
+        <li><a href="#approach" class="hover:text-brand-700">Approach</a></li>
+        <li><a href="#faq" class="hover:text-brand-700">FAQ</a></li>
+        <li><a href="https://calendly.com/safemed-joseph/30min" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-brand-600 text-brand-700 px-3 py-1.5 hover:bg-brand-50">Let’s Talk</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden border-t border-slate-200 bg-white" aria-hidden="true">
+      <ul class="px-4 py-3 space-y-2 text-sm">
+        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#about">About</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#services">Services</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#accuracy">Accuracy</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#approach">Approach</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#faq">FAQ</a></li>
+        <li><a class="block px-2 py-2 rounded bg-brand-600 text-white" href="#contact">Let’s Talk</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="mx-auto container px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center py-14 md:py-20">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Welcome to <span class="text-brand-700">SafeMed Concierge</span></h1>
+        <p class="mt-4 text-base md:text-lg text-slate-700 max-w-prose">Private‑pay in‑home <strong>medication management</strong> and <strong>DME cleaning</strong> in Glendale, CA. We set up pillboxes, coordinate refills with your pharmacy and providers, and sanitize CPAPs, concentrators, and mobility aids — so your family can relax.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 text-white px-5 py-3 shadow-soft hover:bg-brand-800">Book a free consult</a>
+          <a href="#services" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 hover:bg-slate-100">See services</a>
+        </div>
+        <div class="mt-6 flex items-center gap-6 text-sm text-slate-600">
+          <div class="flex items-center gap-2"><span class="font-bold text-slate-900">HIPAA‑aware workflows</span></div>
+          <div class="flex items-center gap-2"><span class="font-bold text-slate-900">Background‑checked</span></div>
+        </div>
+      </div>
+      <div class="relative h-64 md:h-[420px] rounded-2xl overflow-hidden shadow-soft">
+        <img class="hero-img w-full h-full" src="assets/clinician-hero-920.webp" alt="Compassionate healthcare professional in teal scrubs with SafeMed logo" />
+        <div class="hidden md:block absolute bottom-4 left-4 bg-white/90 backdrop-blur rounded-xl p-4 shadow-soft">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Featured Service</p>
+          <p class="font-semibold text-slate-900">Weekly medication setup + refill coordination</p>
+        </div>
+      </div>
+    </div>
+    <div class="pointer-events-none absolute inset-x-0 -bottom-40 h-80 bg-gradient-to-t from-brand-50 via-transparent to-transparent"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Our Mission</h2>
+        <p class="mt-4 text-slate-700">We deliver professional, reliable support that keeps loved ones safe at home: accurate med management, clean and functioning equipment, and clear communication with families.</p>
+        <ul class="mt-6 space-y-3 text-slate-700">
+          <li class="flex gap-3"><span class="text-brand-700">✓</span> Pillbox setup and weekly checks</li>
+          <li class="flex gap-3"><span class="text-brand-700">✓</span> Refill coordination with pharmacy/providers</li>
+          <li class="flex gap-3"><span class="text-brand-700">✓</span> CPAP / concentrator / mobility DME cleaning</li>
+          <li class="flex gap-3"><span class="text-brand-700">✓</span> Family updates after every visit</li>
+        </ul>
+        <a href="#services" class="mt-6 inline-block rounded-xl border px-4 py-2 hover:bg-slate-100">How we can help →</a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <img class="rounded-xl shadow-soft" src="assets/service-medication.webp" alt="Medication management" />
+        <img class="rounded-xl shadow-soft" src="assets/service-dme.webp" alt="DME cleaning" />
+        <img class="rounded-xl shadow-soft" src="assets/service-family.webp" alt="Family peace of mind" />
+        <img class="rounded-xl shadow-soft" src="assets/service-home.webp" alt="In‑home care setting" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="bg-white border-y border-slate-200">
+    <div class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+      <div class="md:flex md:items-end md:justify-between">
+        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Our Services</h2>
+        <a href="#contact" class="mt-3 md:mt-0 inline-flex items-center gap-2 rounded-xl bg-brand-700 text-white px-4 py-2 shadow-soft hover:bg-brand-800">Get Started</a>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <h3 class="font-semibold text-lg">Medication Management</h3>
+          <p class="mt-2 text-slate-700">Weekly pillbox setup, med reconciliation, and refill coordination so doses are timely and accurate.</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600 list-disc list-inside">
+            <li>Pillbox setup & weekly checks</li>
+            <li>Refill & prior auth coordination</li>
+            <li>Provider/pharmacy communication</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <h3 class="font-semibold text-lg">DME Cleaning</h3>
+          <p class="mt-2 text-slate-700">Sanitization of CPAPs, oxygen concentrators, nebulizers, and mobility aids to reduce risk.</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600 list-disc list-inside">
+            <li>Monthly deep clean & safety checks</li>
+            <li>Replacement schedule guidance</li>
+            <li>Documentation for the family</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <h3 class="font-semibold text-lg">Family Peace of Mind</h3>
+          <p class="mt-2 text-slate-700">After‑visit summaries and responsive support so families always know what’s happening.</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600 list-disc list-inside">
+            <li>Text/email updates after visits</li>
+            <li>Clear escalation paths</li>
+            <li>Care coordination tips</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section id="accuracy" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Ensuring Accuracy</h2>
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="rounded-2xl border bg-white p-6 text-center shadow-soft">
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">$10M+</p>
+        <p class="text-slate-600">Medication Value Managed*</p>
+      </div>
+      <div class="rounded-2xl border bg-white p-6 text-center shadow-soft">
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">90%+</p>
+        <p class="text-slate-600">Client Satisfaction</p>
+      </div>
+      <div class="rounded-2xl border bg-white p-6 text-center shadow-soft">
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">100%</p>
+        <p class="text-slate-600">Family Peace of Mind</p>
+      </div>
+      <div class="rounded-2xl border bg-white p-6 text-center shadow-soft">
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">10+</p>
+        <p class="text-slate-600">Years Combined Experience</p>
+      </div>
+    </div>
+    <p class="mt-3 text-xs text-slate-500">*Illustrative metric; customize with your real numbers.</p>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="bg-gradient-to-b from-brand-50/70 to-transparent">
+    <div class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Our Approach</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <p class="text-xs uppercase tracking-wide text-slate-500">01</p>
+          <h3 class="mt-1 font-semibold">Personalized Service</h3>
+          <p class="mt-2 text-slate-700">We tailor visits to the client’s meds, devices, and routines.</p>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <p class="text-xs uppercase tracking-wide text-slate-500">02</p>
+          <h3 class="mt-1 font-semibold">Professional Support</h3>
+          <p class="mt-2 text-slate-700">Clear documentation and provider coordination.</p>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <p class="text-xs uppercase tracking-wide text-slate-500">03</p>
+          <h3 class="mt-1 font-semibold">Family Updates</h3>
+          <p class="mt-2 text-slate-700">After‑visit summaries keep everyone aligned.</p>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <p class="text-xs uppercase tracking-wide text-slate-500">04</p>
+          <h3 class="mt-1 font-semibold">Continuous Assurance</h3>
+          <p class="mt-2 text-slate-700">We adapt plans as needs change over time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Client Experiences</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <figure class="rounded-2xl border bg-white p-6 shadow-soft">
+        <blockquote class="text-slate-700">“SafeMed Concierge brought us peace of mind. Highly recommend.”</blockquote>
+        <figcaption class="mt-4 text-sm text-slate-600">— Linda J.</figcaption>
+      </figure>
+      <figure class="rounded-2xl border bg-white p-6 shadow-soft">
+        <blockquote class="text-slate-700">“Professional, reliable, and very thorough with meds and CPAP.”</blockquote>
+        <figcaption class="mt-4 text-sm text-slate-600">— Robert S.</figcaption>
+      </figure>
+      <figure class="rounded-2xl border bg-white p-6 shadow-soft">
+        <blockquote class="text-slate-700">“The weekly updates keep our whole family in sync.”</blockquote>
+        <figcaption class="mt-4 text-sm text-slate-600">— Emily D.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-white border-y border-slate-200">
+    <div class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">FAQ</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <details class="rounded-xl border bg-white p-5 shadow-soft">
+          <summary class="font-semibold cursor-pointer">Do you accept insurance?</summary>
+          <p class="mt-3 text-slate-700">We’re private‑pay only. We’re happy to provide superbills upon request.</p>
+        </details>
+        <details class="rounded-xl border bg-white p-5 shadow-soft">
+          <summary class="font-semibold cursor-pointer">Where do you operate?</summary>
+          <p class="mt-3 text-slate-700">Glendale, Eagle Rock, and Pasadena. Other areas by request.</p>
+        </details>
+        <details class="rounded-xl border bg-white p-5 shadow-soft">
+          <summary class="font-semibold cursor-pointer">How do visits work?</summary>
+          <p class="mt-3 text-slate-700">We start with a consult, build a plan, then schedule visits weekly or monthly.</p>
+        </details>
+        <details class="rounded-xl border bg-white p-5 shadow-soft">
+          <summary class="font-semibold cursor-pointer">Is equipment cleaning on‑site?</summary>
+          <p class="mt-3 text-slate-700">Yes, we clean and sanitize DME at home using safe, manufacturer‑aligned methods.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <!-- TODO: Replace phone, email, address, and Calendly URL with your real details. -->
+  <section id="contact" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Let’s Talk</h2>
+        <p class="mt-3 text-slate-700">Use the form or book directly on our Calendly. Prefer the phone? Call <a class="text-brand-700 font-semibold" href="tel:+18185550123">(323) 492-6837</a>.</p>
+        <ul class="mt-4 text-slate-700 space-y-2">
+          <li><strong>Email:</strong> <a class="text-brand-700" href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></li>
+          <li><strong>Address:</strong> Glendale • Burbank • Pasadena</li>
+        </ul>
+        <ul class="mt-2 text-slate-700"><li><strong>Hours:</strong> Mon–Sat • 8am–6pm (by appointment)</li></ul>
+        <div class="mt-6 rounded-xl overflow-hidden border">
+          <iframe title="Calendly" src="https://calendly.com/safemed-joseph/30min" class="w-full h-80"></iframe>
+        </div>
+      </div>
+      <form action="https://formspree.io/f/yourcode" method="POST" class="rounded-2xl border bg-white p-6 shadow-soft">
+        <div class="grid gap-4">
+          <div>
+            <label class="text-sm text-slate-600" for="first">First name*</label>
+            <input id="first" name="first" required class="mt-1 w-full rounded-xl border px-3 py-2" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600" for="last">Last name*</label>
+            <input id="last" name="last" required class="mt-1 w-full rounded-xl border px-3 py-2" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600" for="email">Email*</label>
+            <input id="email" type="email" name="email" required class="mt-1 w-full rounded-xl border px-3 py-2" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600" for="message">Message</label>
+            <textarea id="message" name="message" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2"></textarea>
+          </div>
+          <button class="rounded-xl bg-brand-700 text-white px-5 py-3 shadow-soft hover:bg-brand-800" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-200">
+    <div class="mx-auto container px-4 md:px-6 py-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <p class="font-bold">SafeMed Concierge</p>
+        <p class="mt-2 text-sm text-slate-400">© <span id="year"></span> SafeMed Concierge. All rights reserved.</p>
+      </div>
+      <div>
+        <p class="font-semibold">Company</p>
+        <ul class="mt-2 space-y-2 text-sm">
+          <li><a class="hover:text-white" href="#about">About</a></li>
+          <li><a class="hover:text-white" href="#services">Services</a></li>
+          <li><a class="hover:text-white" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Connect</p>
+        <ul class="mt-2 space-y-2 text-sm">
+          <li><a class="hover:text-white" href="#contact">Contact</a></li>
+          <li><a class="hover:text-white" href="https://x.com/" target="_blank" rel="noreferrer">X</a></li>
+          <li><a class="hover:text-white" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a></li>
+          <li><a class="hover:text-white" href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Service Area</p>
+        <p class="mt-2 text-sm text-slate-400">Glendale • Burbank • Pasadena</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
