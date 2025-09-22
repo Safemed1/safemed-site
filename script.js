@@ -8,21 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   scrim?.addEventListener('click', close);
   document.querySelectorAll('#drawer a').forEach(a => a.addEventListener('click', close));
 
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href').slice(1);
-      const el = document.getElementById(id);
-      if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
-    });
-  });
-
-  const calendlyLinks = document.querySelectorAll('a[data-calendly]');
-  calendlyLinks.forEach(a => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      const url = a.dataset.calendly || a.getAttribute('href');
-      if (url && url !== 'javascript:void(0)') window.open(url, '_blank');
-      else window.location.href = 'mailto:safemed.joseph@gmail.com';
-    });
+  document.querySelectorAll('a[data-calendly]').forEach(a => {
+    a.setAttribute('href', 'https://calendly.com/safemed-joseph/30min');
+    a.setAttribute('target', '_blank');
   });
 });
