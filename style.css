@@ -1,24 +1,485 @@
-/* Auto-created stylesheet */
+/*
+  SafeMed Concierge – Modern website styles
+  This stylesheet defines the base colours, layout utilities and
+  component styles used across the SafeMed website. The design
+  draws inspiration from high‑end healthcare and dental practices
+  without borrowing any proprietary assets or content. Colours,
+  fonts and spacing have been tuned to feel welcoming and
+  professional while highlighting the existing SafeMed copy.
 
+  Variables
+  ---------
+  The CSS custom properties defined on `:root` make it easy to
+  adjust the brand palette in one place. `--teal` and its
+  complementary tones drive buttons and highlights, while
+  `--ink`, `--muted` and `--paper` provide neutral type and
+  backgrounds. `--radius` controls rounded corners globally.
 
-/* Center the hero clinician image on all devices */
+  Layout helpers
+  --------------
+  Utility classes like `.container`, `.grid` and `.section` help
+  organise content with predictable spacing. These classes are
+  reused on every page to maintain a cohesive rhythm.
+*/
+
+/* Brand palette */
+:root {
+  --teal: #0c7e80;
+  --teal-dark: #075e60;
+  --teal-light: #e7f4f4;
+  --ink: #0f172a;
+  --muted: #5b6a74;
+  --paper: #f7fbfc;
+  --card: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --edge: #eaf2f4;
+}
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Top bar used across pages for promos and quick contact */
+.topbar {
+  background: var(--teal-dark);
+  color: #ffffff;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.topbar .promo {
+  font-weight: 600;
+}
+.topbar .contacts a {
+  color: #ffffff;
+  margin-left: 12px;
+  font-weight: 600;
+}
+.topbar .contacts a:hover {
+  text-decoration: underline;
+}
+
+/* Header and navigation */
+header {
+  background: var(--teal);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+.hwrap {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 20px;
+}
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  font-size: 26px;
+  font-weight: 700;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+}
+nav a {
+  color: #ffffff;
+  opacity: 0.95;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background .2s, opacity .2s;
+  font-weight: 500;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  text-decoration: none;
+}
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 16px;
+    top: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 12px;
+    backdrop-filter: blur(8px);
+  }
+  nav.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(160deg, var(--teal) 0%, #14a3a6 100%);
+  color: #ffffff;
+  padding: 40px 0 60px;
+}
+.hero .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+.hero-text h1 {
+  font-size: 40px;
+  margin: 10px 0 8px;
+  line-height: 1.1;
+}
+.hero-text p.lead {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.96;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform .1s;
+}
+.btn.primary {
+  background: #ffffff;
+  color: var(--teal-dark);
+}
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
 .hero-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
   width: 100%;
-  height: 560px;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
+  max-width: 600px;
+  height: auto;
   border-radius: 20px;
-}
-@media (max-width: 1024px) {
-  .hero-image { height: 520px; object-position: center center; }
-}
-@media (max-width: 768px) {
-  .hero-image { height: 460px; object-position: center center; }
+  object-fit: cover;
+  box-shadow: var(--shadow);
 }
 
+/* Call‑to‑action cards row */
+.cta-row {
+  background: var(--paper);
+  padding: 40px 0;
+}
+.cta-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.cta-card {
+  background: var(--teal-light);
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  transition: background .2s;
+}
+.cta-card:hover {
+  background: #d8eeee;
+}
+.cta-card span.icon {
+  font-size: 28px;
+}
+.cta-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+.cta-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.4;
+}
 
+/* Sections */
+.section {
+  padding: 40px 0;
+}
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--teal-dark);
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+.card h3 {
+  margin-top: 0;
+  color: var(--teal-dark);
+}
+.bullets {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.bullets li {
+  margin-bottom: 8px;
+}
+.price {
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--teal-dark);
+}
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 560px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
 
-/* Responsive images inside cards */
-.card img{ display:block; width:100%; height:auto; border-radius:12px; }
-.plan-blurb{ margin-top:8px; color:#2b3340; }
+/* Gallery slideshow */
+.slideshow {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--edge);
+  background: #f2f7f8;
+  height: 240px;
+}
+.slides {
+  display: flex;
+  transition: transform .5s ease;
+}
+.slide {
+  min-width: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.dots {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 6px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+.dot.active {
+  background: var(--teal-dark);
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.testi {
+  background: #ffffff;
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.testi .meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--teal-dark);
+  font-size: 14px;
+}
+.testi p {
+  margin: 8px 0 0;
+  color: #41525c;
+  line-height: 1.5;
+}
+
+/* Contact section */
+.contact-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.contact-item {
+  flex: 1;
+  min-width: 240px;
+}
+.contact-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0 80px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Sticky mobile action bar */
+.action-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffffee;
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-top: 1px solid #e6eced;
+  display: none;
+  gap: 8px;
+  padding: 8px;
+  z-index: 50;
+}
+.action-bar a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.action-bar .primary {
+  background: var(--teal);
+  color: #ffffff;
+}
+.action-bar .ghost {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+}
+@media (max-width: 900px) {
+  .action-bar {
+    display: flex;
+  }
+}
