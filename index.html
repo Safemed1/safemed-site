@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script data-src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -30,7 +30,7 @@
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <nav class="mx-auto container px-4 md:px-6 flex items-center justify-between h-16">
       <a href="#home" class="flex items-center gap-2">
-        <img src="assets/logo.svg" alt="SafeMed Concierge logo" class="h-7 w-7" onerror="this.style.display='none'">
+        <img data-data-src="logo.svg" alt="SafeMed Concierge logo" class="h-7 w-7" onerror="this.style.display='none'">
         <span class="font-bold tracking-tight text-slate-900">SafeMed Concierge</span>
       </a>
       <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border px-3 py-2 text-slate-700 hover:bg-slate-100" aria-controls="mobileMenu" aria-expanded="false">
@@ -59,7 +59,7 @@
   <!-- HERO with slideshow -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 opacity-40">
-      <img src="assets/pattern-safemed.svg" alt="" class="w-full h-full object-cover">
+      <img data-data-src="pattern-safemed.svg" alt="" class="w-full h-full object-cover">
     </div>
     <div class="relative mx-auto container px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center py-14 md:py-20">
       <div>
@@ -73,7 +73,7 @@
         <div class="mt-6 text-sm text-slate-600">Call/Text <a class="font-semibold text-brand-700" href="tel:+13234926837">(323) 492‑6837</a> • <a class="font-semibold text-brand-700" href="mailto:safemed.joseph@gmail.com">Email</a></div>
       </div>
       <div class="relative h-64 md:h-[420px] rounded-2xl overflow-hidden shadow-soft">
-        <img id="heroSlide" class="hero-img w-full h-full fade-in" src="assets/clinician-hero-920.webp" alt="Hero">
+        <img id="heroSlide" class="hero-img w-full h-full fade-in" data-data- alt="Hero">
       </div>
     </div>
   </section>
@@ -86,17 +86,17 @@
         <article class="rounded-2xl border bg-white p-6 shadow-soft">
           <h3 class="font-semibold text-lg">Weekly Medication Organization</h3>
           <p class="mt-2 text-slate-700">In‑home pillbox fill & reconciliation so doses are timely and accurate.</p>
-          <img class="mt-4 rounded-xl" src="assets/medication-1.webp" alt="Medication setup" onerror="this.src='assets/medication-1.jpg'">
+          <img class="mt-4 rounded-xl" data-data-src="medication-1.webp" alt="Medication setup" onerror="this.src='assets/medication-1.jpg'">
         </article>
         <article class="rounded-2xl border bg-white p-6 shadow-soft">
           <h3 class="font-semibold text-lg">Proactive Reminders</h3>
           <p class="mt-2 text-slate-700">Call/text nudges shaped to your routine, reducing missed doses.</p>
-          <img class="mt-4 rounded-xl" src="assets/medication-2.webp" alt="Reminders">
+          <img class="mt-4 rounded-xl" data-data-src="medication-2.webp" alt="Reminders">
         </article>
         <article class="rounded-2xl border bg-white p-6 shadow-soft">
           <h3 class="font-semibold text-lg">Monthly DME Sanitization</h3>
           <p class="mt-2 text-slate-700">CPAP masks, tubing, walkers, nebulizers — cleaned & safety‑checked.</p>
-          <img class="mt-4 rounded-xl" src="assets/dme-clean-1.webp" alt="DME cleaning" onerror="this.src='assets/dme-clean-1.jpg'">
+          <img class="mt-4 rounded-xl" data-data-src="dme-clean-1.webp" alt="DME cleaning" onerror="this.src='assets/dme-clean-1.jpg'">
         </article>
       </div>
       <p class="mt-6 text-slate-600">We are a private‑pay concierge service (not a home health agency). Specializing only in meds and equipment allows for accuracy & consistency.</p>
@@ -107,7 +107,7 @@
   <section id="plans" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
     <div class="md:flex md:items-end md:justify-between">
       <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Plans</h2>
-      <img src="assets/plans-illustration.jpg" class="hidden md:block h-20 rounded-lg opacity-90" alt="Plans illustration">
+      <img data-data-src="plans-illustration.jpg" class="hidden md:block h-20 rounded-lg opacity-90" alt="Plans illustration">
     </div>
     <div class="mt-8 grid md:grid-cols-2 gap-6">
       <article class="rounded-2xl border bg-white p-6 shadow-soft">
@@ -176,23 +176,23 @@
   <section id="gallery" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
     <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Gallery</h2>
     <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-1.png" alt="About 1">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-2.png" alt="About 2">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-3.png" alt="About 3">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-4.png" alt="About 4">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-5.png" alt="About 5">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/medication-1.webp" alt="Medication 1" onerror="this.src='assets/medication-1.jpg'">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/medication-2.webp" alt="Medication 2">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/medication-pillbox.jpg" alt="Pillbox">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/dme-clean-1.webp" alt="DME clean 1" onerror="this.src='assets/dme-clean-1.jpg'">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/dme-cleaning.jpg" alt="DME cleaning">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/senior-family.jpg" alt="Senior family">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/contact-care.jpg" alt="Contact care">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-2.png" alt="Hero extra 2">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-3.png" alt="Hero extra 3">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-4.png" alt="Hero extra 4">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-5.png" alt="Hero extra 5">
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-6.png" alt="Hero extra 6">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="about-1.png" alt="About 1">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="about-2.png" alt="About 2">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="about-3.png" alt="About 3">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="about-4.png" alt="About 4">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="about-5.png" alt="About 5">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="medication-1.webp" alt="Medication 1" onerror="this.src='assets/medication-1.jpg'">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="medication-2.webp" alt="Medication 2">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="medication-pillbox.jpg" alt="Pillbox">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="dme-clean-1.webp" alt="DME clean 1" onerror="this.src='assets/dme-clean-1.jpg'">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="dme-cleaning.jpg" alt="DME cleaning">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="senior-family.jpg" alt="Senior family">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="contact-care.jpg" alt="Contact care">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="hero-extra-2.png" alt="Hero extra 2">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="hero-extra-3.png" alt="Hero extra 3">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="hero-extra-4.png" alt="Hero extra 4">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="hero-extra-5.png" alt="Hero extra 5">
+      <img loading="lazy" class="rounded-xl shadow-soft" data-data-src="hero-extra-6.png" alt="Hero extra 6">
     </div>
   </section>
 
@@ -208,11 +208,11 @@
           <li><strong>Hours:</strong> Mon–Sat • 8am–6pm (by appointment)</li>
         </ul>
         <div class="mt-6 rounded-xl overflow-hidden border">
-          <iframe title="Calendly" src="https://calendly.com/safemed-joseph/30min" class="w-full h-80"></iframe>
+          <iframe title="Calendly" data-src="https://calendly.com/safemed-joseph/30min" class="w-full h-80"></iframe>
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden border shadow-soft">
-        <img src="assets/clinician-hero.jpg" alt="Clinician" class="w-full h-full object-cover">
+        <img data-data-src="clinician-hero.jpg" alt="Clinician" class="w-full h-full object-cover">
       </div>
     </div>
   </section>
@@ -246,6 +246,34 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script data-src="script.js"></script>
+
+<script>
+// --- Robust image path resolver ---
+// Tries 'assets/', './', and the common misspelling 'assessts/' until an image loads.
+// Usage: set <img data-src="filename.ext"> and we'll assign a working src automatically.
+(function(){
+  const BASES = ["assets/", "./", "assessts/"]; // order of preference
+  function tryLoad(img, bases, filename, idx){
+    if(idx >= bases.length){ return; }
+    const candidate = bases[idx] + filename;
+    const test = new Image();
+    test.onload = function(){ img.src = candidate; };
+    test.onerror = function(){ tryLoad(img, bases, filename, idx+1); };
+    test.src = candidate;
+  }
+  function init(){
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      const filename = img.getAttribute('data-src');
+      // Skip if already has a src from previous pass
+      if(img.getAttribute('src')) return;
+      tryLoad(img, BASES, filename, 0);
+    });
+  }
+  if(document.readyState === "complete" || document.readyState === "interactive"){ init(); }
+  else { document.addEventListener("DOMContentLoaded", init); }
+})();
+</script>
+
 </body>
 </html>
