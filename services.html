@@ -1,10 +1,19 @@
-<!doctype html><html><head>
+<!doctype html>
+<html lang="en">
+<head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services</title>
+  <meta name="theme-color" content="#0c7e80">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/pattern-safemed.svg">
+  <title>Our Services • SafeMed Concierge</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-</head><body>
+
+</head>
+<body>
 <header class="site">
   <div class="container nav">
     <a href="index.html" class="brand" style="color:#fff"><span class="logo">S</span> SafeMed Concierge</a>
@@ -14,11 +23,12 @@
     <div class="actions">
       <a href="tel:+13234926837" class="btn">📞 Call</a>
       <a href="mailto:safemed.joseph@gmail.com" class="btn">✉️ Email</a>
-      <a data-calendly class="btn">📅 Book</a>
+      <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn" target="_blank">📅 Book</a>
     </div>
     <button id="burger" aria-label="Open menu">☰</button>
   </div>
 </header>
+
 
 <div id="scrim"></div>
 <aside id="drawer" aria-hidden="true">
@@ -28,14 +38,76 @@
   <a href="index.html#plans">Plans</a>
   <a href="tel:+13234926837">📞 Call</a>
   <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-  <a href="#" data-calendly class="btn primary">📅 Book</a>
+  <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn primary" target="_blank">📅 Book</a>
 </aside>
 
-<section class="section"><div class="container"><div class="card"><h2>Content</h2><p>Page copy…</p><a data-calendly class="btn primary">Book</a></div></div></section>
+
+<section class="section white" id="medication">
+  <div class="container grid" style="grid-template-columns:1fr 1fr;gap:20px;align-items:center;">
+    <img src="assets/medication-1.jpg" class="heroimg" alt="Medication organised"/>
+    <div class="card">
+      <h2>Medication Management</h2>
+      <p>We maintain an accurate medication list, prepare pillboxes (7‑day or 14‑day) with double‑checks, and coordinate refills before supplies run out. Families receive concise updates and photo proof every visit—so nothing slips through the cracks.</p>
+      <ul>
+        <li>Reconciliation with provider orders</li>
+        <li>Pillbox prep with clear labels and safety double‑check</li>
+        <li>Refill coordination and escalation if issues arise</li>
+        <li>Visit notes + photos to the family</li>
+      </ul>
+      <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn primary" target="_blank">Book Medication Management</a>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="cleaning">
+  <div class="container grid" style="grid-template-columns:1fr 1fr;gap:20px;align-items:center;">
+    <div class="card">
+      <h2>DME Cleaning & Care (All Devices Covered)</h2>
+      <p>We sanitise <strong>all durable medical equipment in the home</strong>—CPAP systems, oxygen concentrators, nebulisers, walkers, wheelchairs, canes, commodes, and more—following manufacturer guidance to reduce infection risk and keep equipment dependable.</p>
+      <ul>
+        <li>Full‑home DME cleaning each visit (no per‑item fees)</li>
+        <li>Manufacturer‑guided methods + safety checks</li>
+        <li>Photo proof and replacement recommendations</li>
+        <li>Monthly or bi‑weekly cadence</li>
+      </ul>
+      <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn primary" target="_blank">Book DME Cleaning</a>
+    </div>
+    <img src="assets/dme-clean-1.jpg" class="heroimg" alt="DME cleaning"/>
+  </div>
+</section>
+
+<section class="section white spacious">
+  <div class="container">
+    <span class="badge">Compare Your Options</span>
+    <h2>DIY vs. Generic Care vs. SafeMed</h2>
+    <table class="compare">
+      <tr><th>DIY / Generic Care</th><th>SafeMed Concierge</th></tr>
+      <tr><td>Pillboxes assembled when time allows; errors go unnoticed.</td><td>Scheduled, double‑checked prep with reconciliation to provider orders.</td></tr>
+      <tr><td>Equipment wiped occasionally; uncertain what’s required.</td><td>All DME sanitised every visit using manufacturer‑guided methods.</td></tr>
+      <tr><td>Family unsure what happened during visits.</td><td>Notes + photo proof delivered after each appointment.</td></tr>
+      <tr><td>Insurance delays and rigid schedules.</td><td>Direct booking, flexible windows, private‑pay simplicity.</td></tr>
+      <tr><td>One service at a time.</td><td>Medication + DME together, or bundled for full peace of mind.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container card" style="box-shadow:none">
+    <h3>Ready to get started?</h3>
+    <p>We serve Glendale, Pasadena, Eagle Rock, Burbank, and nearby LA neighborhoods.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn primary" target="_blank">Book a 30‑minute consult</a>
+      <a href="tel:+13234926837" class="btn ghost">Call/Text</a>
+      <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">Email</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
     <div>© SafeMed Concierge • All rights reserved</div>
-    <div><a href="tel:+13234926837">📞 (323) 492-6837</a> · <a href="mailto:safemed.joseph@gmail.com">✉️ safemed.joseph@gmail.com</a></div>
+    <div><a href="tel:+13234926837">📞 (323) 492-6837</a> · <a href="mailto:safemed.joseph@gmail.com">✉️ safemed.joseph@gmail.com</a> · 📍 Glendale • Pasadena • Eagle Rock • Burbank</div>
   </div>
 </footer>
-</body></html>
+</body>
+</html>
