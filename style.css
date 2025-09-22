@@ -127,3 +127,12 @@ header .actions .btn{padding:8px 14px; font-size:14px; border-radius:999px; box-
 
 /* ===== Compact global btn ===== */
 .btn{padding:10px 16px}
+
+/* Slim inline contact bar under hero */
+.inline-contact{
+  margin-top:10px;
+  font-size:15px;
+  color:#eaf6f6;
+  opacity:0.95;
+}
+.inline-contact a{ color:#ffffff; text-decoration:underline; }
