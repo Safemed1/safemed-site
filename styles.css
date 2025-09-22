@@ -1,5 +1,8 @@
-/* Custom tweaks that complement Tailwind */
+/* Keep the teal theme consistent */
 html { scroll-behavior: smooth; }
 .container { max-width: 1200px; }
 .mobile-menu[aria-hidden="true"] { display: none; }
 .hero-img { object-fit: cover; object-position: 50% 40%; }
+/* Small polish */
+details summary { list-style: none; }
+details summary::-webkit-details-marker { display: none; }
