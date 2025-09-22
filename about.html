@@ -1,182 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About • SafeMed Concierge</title>
-    <meta name="description" content="Meet the founder of SafeMed Concierge and learn why families trust us." />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script async src="https://assets.calendly.com/assets/external/widget.js"></script>
-  </head>
-  <body>
-    <div class="topbar">
-      <div class="promo">First Week Free – Experience our care with no commitment</div>
-      <div class="contacts">
-        <a href="tel:+13234926837">📞 (323) 492‑6837</a>
-        <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-      </div>
-    </div>
-    <header>
-      <div class="hwrap">
-        <div class="brand">
-          <div class="logo">＋</div> SafeMed&nbsp;CONCIERGE
-        </div>
-        <button class="nav-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
-        <nav id="primary-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="index.html#plans">Plans</a>
-          <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
-        </nav>
-      </div>
-    </header>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-text">
-          <span class="tag" style="background:#083c3d;color:#eaffff;padding:6px 10px;border-radius:10px;font-weight:700;font-size:12px;">Meet our founder</span>
-          <h1>Compassion. Expertise. Trust.</h1>
-          <p class="lead">Learn about the experience and mission behind SafeMed Concierge.</p>
-          <div class="hero-cta">
-            <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book a 30‑minute consult</a>
-            <a class="btn secondary" href="tel:+13234926837">📞 Call/Text</a>
-            <a class="btn secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="assets/about-4.png" alt="Clinician smiling with arms crossed" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-    <main>
-      <!-- Mission and values -->
-      <section class="section">
-        <h2>Our Mission</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <p>To protect the health and comfort of seniors by managing medications with precision and keeping medical equipment clean and safe—so families can focus on time together.</p>
-          </article>
-        </div>
-      </section>
-      <!-- What makes us different -->
-      <section class="section">
-        <h2>What Makes Us Different</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Focused expertise</h3>
-            <p class="muted">Medication management and DME cleaning only.</p>
-          </article>
-          <article class="card">
-            <h3>Professional standards</h3>
-            <p class="muted">Privacy‑minded, detail‑oriented and reliable.</p>
-          </article>
-          <article class="card">
-            <h3>Clear communication</h3>
-            <p class="muted">Brief updates after each visit; collaborative decisions with family.</p>
-          </article>
-          <article class="card">
-            <h3>Dignity &amp; respect</h3>
-            <p class="muted">We work at the client’s pace with patience and compassion.</p>
-          </article>
-        </div>
-      </section>
-      <!-- Founder bio -->
-      <section class="section">
-        <h2>Joseph Duldulao, Founder &amp; CEO</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <p>Joseph Duldulao is a clinical services coordinator and nursing professional who founded SafeMed Concierge to bring dignity and consistency to seniors' medication routines. His diverse experience across home healthcare, treatment centres and dialysis clinics equips him with the expertise to oversee medication management and equipment sanitisation with compassion and precision.</p>
-            <ul class="bullets">
-              <li><strong>Clinical expertise:</strong> Coordinated care across clinicians, patients and doctors, scheduled mobile visits and lab draws, and performed chart audits to ensure HIPAA‑compliant documentation.</li>
-              <li><strong>Patient care background:</strong> Served as an overnight clinical assistant, monitoring patients every 15 minutes, administering medications as ordered and providing mentorship to team members.</li>
-              <li><strong>Dialysis &amp; equipment proficiency:</strong> Administered dialysis treatments and trained new staff at a kidney care clinic, ensuring safe operation and patient comfort.</li>
-              <li><strong>Education &amp; certifications:</strong> Currently pursuing a nursing degree, with training in nursing assistant, phlebotomy and behavioural therapy; certified in CPR, BLS and hemodialysis.</li>
-              <li><strong>Languages:</strong> Fluent in Ilocano and Tagalog, with advanced Spanish, enabling clear communication with diverse families.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- Behind the scenes gallery -->
-      <section class="section">
-        <h2>Behind the scenes</h2>
-        <p class="muted" style="text-align:center; max-width:720px; margin:0 auto 20px;">A peek at how we serve our clients: pillbox prep, telehealth check‑ins, equipment sanitising and compassionate companionship.</p>
-        <div class="cta-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-          <img src="assets/about-1.png" alt="Medication sorting into weekly pillbox" style="width:100%;height:180px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow);">
-          <img src="assets/about-5.png" alt="Clinician helping a senior organise pills" style="width:100%;height:180px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow);">
-          <img src="assets/about-3.png" alt="Sanitising a walker with spray and wipe" style="width:100%;height:180px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow);">
-          <img src="assets/about-2.png" alt="Telehealth consultation with a patient on a tablet" style="width:100%;height:180px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow);">
-          <img src="assets/about-4.png" alt="Clinician smiling with arms crossed" style="width:100%;height:180px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow);">
-        </div>
-      </section>
-      <!-- Why SafeMed -->
-      <section class="section">
-        <h2>Why SafeMed?</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Clinical oversight</h3>
-            <p class="muted">Services are designed by a healthcare professional who understands physician orders and documentation.</p>
-          </article>
-          <article class="card">
-            <h3>Medication‑focused</h3>
-            <p class="muted">Our visits prioritise pillbox organisation, medication reconciliation and reminders instead of general caregiving tasks.</p>
-          </article>
-          <article class="card">
-            <h3>Equipment care</h3>
-            <p class="muted">We sanitise CPAP equipment, walkers, nebulisers and other devices according to manufacturer guidelines.</p>
-          </article>
-          <article class="card">
-            <h3>Transparent updates</h3>
-            <p class="muted">Each visit includes notes and photos that you can review, ensuring accountability and peace of mind.</p>
-          </article>
-        </div>
-      </section>
-      <!-- Ready CTA -->
-      <section class="section">
-        <div class="cards">
-          <article class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;justify-content:space-between;">
-            <div>
-              <h3 style="margin:0 0 6px;color:var(--teal-dark);">Ready to get started?</h3>
-              <p class="muted" style="margin:0;">Book a no‑pressure 30‑minute virtual consult. We’ll answer questions and outline next steps.</p>
-            </div>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-              <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book consult</a>
-              <a class="btn secondary" href="tel:+13234926837">📞 Call/Text</a>
-              <a class="btn secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-    <footer>© <span id="y"></span> SafeMed Concierge • All rights reserved</footer>
-    <nav aria-label="Quick actions" class="action-bar">
-      <a class="ghost" href="index.html">🏠 Home</a>
-      <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
-      <a class="ghost" href="tel:+13234926837">📞 Call</a>
-      <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c7e80">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/pattern-safemed.svg">
+  <title>About • SafeMed Concierge</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+<header class="site">
+  <div class="container nav" id="nav">
+    <a href="index.html" class="brand"><span class="logo">S</span> SafeMed Concierge</a>
+    <nav class="navlinks">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="index.html#plans">Plans</a>
     </nav>
-    <script>
-      document.getElementById('y').textContent = new Date().getFullYear();
-      function calendlyUrl() {
-        const u = new URL('https://calendly.com/safemed-joseph/30min');
-        u.searchParams.set('embed_domain', location.hostname || 'localhost');
-        return u.toString();
-      }
-      function openCalendly() {
-        Calendly.initPopupWidget({ url: calendlyUrl() });
-        return false;
-      }
-      (function() {
-        const toggle = document.getElementById('menu-toggle');
-        const nav = document.getElementById('primary-nav');
-        if (toggle && nav) {
-          toggle.addEventListener('click', function() {
-            nav.classList.toggle('open');
-          });
-        }
-      })();
-    </script>
-  </body>
+    <div class="actions">
+      <a href="tel:+13234926837" class="btn ghost">📞 Call</a>
+      <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
+      <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
+    </div>
+    <button id="burger">☰</button>
+  </div>
+</header>
+<section class="hero">
+  <div class="container grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:24px;">
+    <div class="card">
+      <span class="kicker">About SafeMed</span>
+      <h1>Families trust us because details matter</h1>
+      <p class="lede">About • SafeMed Concierge First Week Free – Experience our care with no commitment 📞 (323) 492‑6837 ✉️ Email ＋ SafeMed CONCIERGE ☰ Home About Services Plans Book Meet our founder Compassion. Expertise. Trust. Learn about the experience and mission behind SafeMed Concierge. 📅 Book a 30‑minute consult 📞 Call/Text ✉️ Email Our Mission To protect the health and comfort of seniors by managing medications with precision and keeping medical equipment clean and safe—so families can focus on time together. What Makes Us Different Focused expertise Medication management and DME cleaning only.…</p>
+      <div style="margin-top:8px"><a href="javascript:void(0)" data-calendly="" class="btn primary">Book a consult</a></div>
+    </div>
+    <img src="assets/about-1.png" class="heroimg" alt="At‑home visit"/>
+  </div>
+</section>
+<section class="section">
+  <div class="container grid-3">
+    <div class="card"><h3>Compassion</h3><p>We meet clients where they are—with patience, clarity, and respect.</p></div>
+    <div class="card"><h3>Consistency</h3><p>Checklists, photo proof, and proactive follow‑ups keep everything on track.</p></div>
+    <div class="card"><h3>Communication</h3><p>Simple updates after each visit for families and care teams.</p></div>
+  </div>
+</section>
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <div>© SafeMed Concierge • All rights reserved</div>
+    <div><a href="tel:+13234926837">Call</a> · <a href="mailto:safemed.joseph@gmail.com">Email</a></div>
+  </div>
+</footer>
+</body>
 </html>

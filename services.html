@@ -1,194 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Services • SafeMed Concierge</title>
-    <meta name="description" content="Explore the detailed services offered by SafeMed Concierge, including medication management and DME sanitisation." />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script async src="https://assets.calendly.com/assets/external/widget.js"></script>
-  </head>
-  <body>
-    <div class="topbar">
-      <div class="promo">First Week Free – Experience our care with no commitment</div>
-      <div class="contacts">
-        <a href="tel:+13234926837">📞 (323) 492‑6837</a>
-        <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-      </div>
-    </div>
-    <header>
-      <div class="hwrap">
-        <div class="brand">
-          <div class="logo">＋</div> SafeMed&nbsp;CONCIERGE
-        </div>
-        <button class="nav-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
-        <nav id="primary-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="index.html#plans">Plans</a>
-          <a href="javascript:void(0)" onclick="openCalendly()">Book</a>
-        </nav>
-      </div>
-    </header>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-text">
-          <span class="tag" style="background:#083c3d;color:#eaffff;padding:6px 10px;border-radius:10px;font-weight:700;font-size:12px;">Our Services</span>
-          <h1>Comprehensive support for medication &amp; DME</h1>
-          <p class="lead">Discover how we organise medications, sanitise equipment and keep families informed.</p>
-          <div class="hero-cta">
-            <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book a 30‑minute consult</a>
-            <a class="btn secondary" href="tel:+13234926837">📞 Call/Text</a>
-            <a class="btn secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="assets/dme-clean-1.jpg" alt="Cleaning durable medical equipment" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-    <main>
-      <!-- Medication Management -->
-      <section class="section" id="medication">
-        <h2>Medication Management</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <p>We review and organise prescriptions, set up weekly/biweekly pillboxes with clear labelling, coordinate refills (with signed authorisation) and send simple updates after each visit.</p>
-            <ul class="bullets">
-              <li>Medication list reconciliation</li>
-              <li>Pillbox filling and labelling</li>
-              <li>Refill coordination &amp; med synchronisation</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- DME Cleaning -->
-      <section class="section" id="cleaning">
-        <h2>DME Cleaning</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <p>We clean and sanitise essential durable medical equipment—CPAP machines, oxygen concentrators, nebulisers, walkers, wheelchairs and canes—following manufacturer guidance to support safety and comfort.</p>
-            <ul class="bullets">
-              <li>Sanitisation of CPAP, concentrators &amp; nebulisers</li>
-              <li>Cleaning of walkers, wheelchairs &amp; canes</li>
-              <li>Inspection and maintenance reminders</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- Monthly Sanitisation -->
-      <section class="section">
-        <h2>Monthly DME Sanitisation</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <p>We clean and disinfect durable medical equipment—including CPAP masks and tubing, walkers, nebulisers, commodes and more—using manufacturer‑recommended techniques to ensure safety and longevity.</p>
-            <ul class="bullets">
-              <li>CPAP and oxygen equipment</li>
-              <li>Walkers, canes, rollators &amp; wheelchairs</li>
-              <li>Nebulisers and commodes</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- Family & caregiver updates -->
-      <section class="section">
-        <h2>Family &amp; Caregiver Updates</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <p>Transparency builds trust. After each visit, we send concise notes and photos to keep families informed. You’ll know exactly what was done and when.</p>
-            <ul class="bullets">
-              <li>Summary of tasks performed</li>
-              <li>Photos of organised medications or sanitised equipment</li>
-              <li>Secure digital log accessible to authorised family members</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- How we differ -->
-      <section class="section">
-        <h2>How we differ from traditional caregivers</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Medication expertise</h3>
-            <p class="muted">We understand dosing, drug interactions and proper storage.</p>
-          </article>
-          <article class="card">
-            <h3>Clinical oversight</h3>
-            <p class="muted">Our founder is experienced in clinical services coordination and dialysis treatment.</p>
-          </article>
-          <article class="card">
-            <h3>Detailed documentation</h3>
-            <p class="muted">Visit notes and photos keep everyone informed.</p>
-          </article>
-          <article class="card">
-            <h3>Flexible, private‑pay model</h3>
-            <p class="muted">No insurance barriers—families get the support they need, when they need it.</p>
-          </article>
-        </div>
-      </section>
-      <!-- Our process -->
-      <section class="section">
-        <h2>Our process, step by step</h2>
-        <div class="cards">
-          <article class="card" style="grid-column: span 2;">
-            <ul class="bullets">
-              <li><strong>Intake &amp; Onboarding:</strong> We gather health history, current medications and prescriber information. A clinician visits to meet you and set up your plan.</li>
-              <li><strong>Weekly Pillbox Prep:</strong> We reconcile prescriptions, fill pillboxes and label doses. Any discrepancies are checked with your pharmacist or doctor.</li>
-              <li><strong>Daily Reminders:</strong> Custom call or text reminders ensure doses aren’t missed. We follow up quickly if a dose is delayed.</li>
-              <li><strong>Monthly Sanitisation:</strong> We clean CPAP masks, walkers and nebulisers using manufacturer guidelines to maximise safety and lifespan.</li>
-              <li><strong>Reporting &amp; Updates:</strong> After each visit you receive notes and photos. We coordinate with your care team and adjust plans as needed.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- Ready CTA -->
-      <section class="section">
-        <div class="cards">
-          <article class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;justify-content:space-between;">
-            <div>
-              <h3 style="margin:0 0 6px;color:var(--teal-dark);">Ready to experience the difference?</h3>
-              <p class="muted" style="margin:0;">Schedule a consult to see how our services can simplify life for your family.</p>
-            </div>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-              <a class="btn primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book consult</a>
-              <a class="btn secondary" href="tel:+13234926837">📞 Call/Text</a>
-              <a class="btn secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-    <footer>© <span id="y"></span> SafeMed Concierge • All rights reserved</footer>
-    <nav aria-label="Quick actions" class="action-bar">
-      <a class="ghost" href="index.html">🏠 Home</a>
-      <a class="primary" href="javascript:void(0)" onclick="openCalendly()">📅 Book</a>
-      <a class="ghost" href="tel:+13234926837">📞 Call</a>
-      <a class="ghost" href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c7e80">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/pattern-safemed.svg">
+  <title>Our Services • SafeMed Concierge</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+<header class="site">
+  <div class="container nav" id="nav">
+    <a href="index.html" class="brand"><span class="logo">S</span> SafeMed Concierge</a>
+    <nav class="navlinks">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="index.html#plans">Plans</a>
     </nav>
-    <script>
-      document.getElementById('y').textContent = new Date().getFullYear();
-      function calendlyUrl() {
-        const u = new URL('https://calendly.com/safemed-joseph/30min');
-        u.searchParams.set('embed_domain', location.hostname || 'localhost');
-        return u.toString();
-      }
-      function openCalendly() {
-        Calendly.initPopupWidget({ url: calendlyUrl() });
-        return false;
-      }
-      (function() {
-        const toggle = document.getElementById('menu-toggle');
-        const nav = document.getElementById('primary-nav');
-        if (toggle && nav) {
-          toggle.addEventListener('click', function() {
-            nav.classList.toggle('open');
-          });
-        }
-      })();
-    </script>
-  </body>
+    <div class="actions">
+      <a href="tel:+13234926837" class="btn ghost">📞 Call</a>
+      <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
+      <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
+    </div>
+    <button id="burger">☰</button>
+  </div>
+</header>
+
+<section class="section" id="medication">
+  <div class="container grid" style="grid-template-columns:1fr 1fr;gap:20px;align-items:center;">
+    <img src="assets/medication-1.jpg" class="heroimg" alt="Medication organised"/>
+    <div>
+      <h2>Medication Management</h2>
+      <p>Our Services • SafeMed Concierge First Week Free – Experience our care with no commitment 📞 (323) 492‑6837 ✉️ Email ＋ SafeMed CONCIERGE ☰ Home About Services Plans Book Our Services Comprehensive support for medication & DME Discover how we organise medications, sanitise equipment and keep families informed. 📅 Book a 30‑minute consult 📞 Call/Text ✉️ Email Medication Management We review and organise prescriptions, set up weekly/biweekly pillboxes with clear labelling, coordinate refills (with signed authorisation) and send simple updates after each visit. Medication list reconciliation…</p>
+      <ul>
+        <li>Complete med list reconciliation</li>
+        <li>Pillbox prep (7‑day / 14‑day)</li>
+        <li>Refill & pickup coordination</li>
+        <li>Communication with providers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cleaning">
+  <div class="container grid" style="grid-template-columns:1fr 1fr;gap:20px;align-items:center;">
+    <div>
+      <h2>DME Cleaning</h2>
+      <p>Hospital‑grade sanitisation for CPAP, oxygen concentrators, nebulisers, walkers, and more—reducing infection risk and keeping equipment dependable.</p>
+      <ul>
+        <li>Clean & disinfect per manufacturer guidance</li>
+        <li>Visual inspection and safety check</li>
+        <li>Photo proof after visit</li>
+        <li>Recommendations for replacement parts</li>
+      </ul>
+    </div>
+    <img src="assets/dme-clean-1.jpg" class="heroimg" alt="DME cleaning"/>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container card">
+    <h3>Ready to get started?</h3>
+    <p>We serve Glendale, Pasadena, Eagle Rock, Burbank, and nearby LA neighborhoods.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="javascript:void(0)" data-calendly="" class="btn primary">Book a 30‑minute consult</a>
+      <a href="tel:+13234926837" class="btn ghost">Call/Text</a>
+      <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <div>© SafeMed Concierge • All rights reserved</div>
+    <div><a href="tel:+13234926837">Call</a> · <a href="mailto:safemed.joseph@gmail.com">Email</a></div>
+  </div>
+</footer>
+</body>
 </html>
