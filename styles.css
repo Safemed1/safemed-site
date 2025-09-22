@@ -1,8 +1,18 @@
-/* Keep the teal theme consistent */
+/* Teal theme + slideshow animation */
 html { scroll-behavior: smooth; }
 .container { max-width: 1200px; }
 .mobile-menu[aria-hidden="true"] { display: none; }
 .hero-img { object-fit: cover; object-position: 50% 40%; }
-/* Small polish */
-details summary { list-style: none; }
-details summary::-webkit-details-marker { display: none; }
+
+body {
+  background: linear-gradient(180deg, #ecfbfb 0%, #ffffff 40%) fixed;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadein 600ms ease forwards;
+}
+@keyframes fadein { to { opacity: 1; } }
+
+/* Cards + borders pop on light teal */
+.border { border-color: rgba(2, 55, 60, 0.12) !important; }

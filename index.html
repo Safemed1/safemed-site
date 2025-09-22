@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SafeMed Concierge • Best Care to Your Door</title>
-  <meta name="description" content="Private-pay senior health support: Weekly Medication Organization & Reminders, plus Monthly DME Sanitization for CPAP, walkers, and nebulizers." />
+  <meta name="description" content="Private‑pay medication management and DME cleaning. Weekly pillbox setup, reminders, and monthly equipment sanitization." />
   <meta name="theme-color" content="#0c7e80" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
@@ -25,10 +25,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="text-slate-800 bg-slate-50">
-  <!-- Top strip -->
-  <div class="w-full bg-brand-700 text-white text-center text-sm py-2 px-3">Private‑pay only • Transparent pricing • HIPAA‑aware workflows</div>
+  <div class="w-full bg-brand-700 text-white text-center text-sm py-2 px-3">Serving Glendale • Burbank • Pasadena — Private‑pay only</div>
 
-  <!-- NAV -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <nav class="mx-auto container px-4 md:px-6 flex items-center justify-between h-16">
       <a href="#home" class="flex items-center gap-2">
@@ -40,8 +38,7 @@
         <span class="sr-only">Toggle menu</span>
       </button>
       <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#about" class="hover:text-brand-700">About</a></li>
-        <li><a href="#services" class="hover:text-brand-700">Services</a></li>
+        <li><a href="#services" class="hover:text-brand-700">What we do</a></li>
         <li><a href="#plans" class="hover:text-brand-700">Plans</a></li>
         <li><a href="#flow" class="hover:text-brand-700">Flow</a></li>
         <li><a href="#gallery" class="hover:text-brand-700">Gallery</a></li>
@@ -50,8 +47,7 @@
     </nav>
     <div id="mobileMenu" class="mobile-menu md:hidden border-t border-slate-200 bg-white" aria-hidden="true">
       <ul class="px-4 py-3 space-y-2 text-sm">
-        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#about">About</a></li>
-        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#services">Services</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#services">What we do</a></li>
         <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#plans">Plans</a></li>
         <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#flow">Flow</a></li>
         <li><a class="block px-2 py-2 rounded hover:bg-slate-100" href="#gallery">Gallery</a></li>
@@ -60,51 +56,59 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO with slideshow -->
   <section id="home" class="relative overflow-hidden">
-    <div class="mx-auto container px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center py-14 md:py-20">
+    <div class="absolute inset-0 opacity-40">
+      <img src="assets/pattern-safemed.svg" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="relative mx-auto container px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center py-14 md:py-20">
       <div>
         <p class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1 text-xs font-semibold">First Week Free</p>
         <h1 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Best care to your door</h1>
-        <p class="mt-4 text-base md:text-lg text-slate-700 max-w-prose">Private‑pay senior health support: Weekly Medication Organization & Reminders, plus Monthly DME Sanitization for CPAP, walkers, and nebulizers.</p>
+        <p class="mt-4 text-base md:text-lg text-slate-700 max-w-prose">Weekly Medication Organization & Reminders + Monthly DME Sanitization (CPAP, walker, nebulizer). Private‑pay only.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 text-white px-5 py-3 shadow-soft hover:bg-brand-800">Book 30‑min consult</a>
           <a href="#services" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 hover:bg-slate-100">What we do</a>
         </div>
-        <div class="mt-6 text-sm text-slate-600">Call/Text <a class="font-semibold text-brand-700" href="tel:+13234926837">(323) 492-6837</a> • <a class="font-semibold text-brand-700" href="mailto:safemed.joseph@gmail.com">Email</a></div>
+        <div class="mt-6 text-sm text-slate-600">Call/Text <a class="font-semibold text-brand-700" href="tel:+13234926837">(323) 492‑6837</a> • <a class="font-semibold text-brand-700" href="mailto:safemed.joseph@gmail.com">Email</a></div>
       </div>
       <div class="relative h-64 md:h-[420px] rounded-2xl overflow-hidden shadow-soft">
-        <img class="hero-img w-full h-full" src="assets/clinician-hero-920.webp" alt="Healthcare worker in mask and teal scrubs with SafeMed logo" />
+        <img id="heroSlide" class="hero-img w-full h-full fade-in" src="assets/clinician-hero-920.webp" alt="Hero">
       </div>
     </div>
-    <div class="pointer-events-none absolute inset-x-0 -bottom-40 h-80 bg-gradient-to-t from-brand-50 via-transparent to-transparent"></div>
   </section>
 
-  <!-- ABOUT / WHAT WE DO -->
+  <!-- WHAT WE DO -->
   <section id="services" class="bg-white border-y border-slate-200">
     <div class="mx-auto container px-4 md:px-6 py-12 md:py-16">
       <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">What we do</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <article class="rounded-2xl border bg-white p-6 shadow-soft">
           <h3 class="font-semibold text-lg">Weekly Medication Organization</h3>
-          <p class="mt-2 text-slate-700">Pillbox fill & reconcile done in‑home, so doses are timely and accurate.</p>
+          <p class="mt-2 text-slate-700">In‑home pillbox fill & reconciliation so doses are timely and accurate.</p>
+          <img class="mt-4 rounded-xl" src="assets/medication-1.webp" alt="Medication setup" onerror="this.src='assets/medication-1.jpg'">
         </article>
         <article class="rounded-2xl border bg-white p-6 shadow-soft">
           <h3 class="font-semibold text-lg">Proactive Reminders</h3>
           <p class="mt-2 text-slate-700">Call/text nudges shaped to your routine, reducing missed doses.</p>
+          <img class="mt-4 rounded-xl" src="assets/medication-2.webp" alt="Reminders">
         </article>
         <article class="rounded-2xl border bg-white p-6 shadow-soft">
           <h3 class="font-semibold text-lg">Monthly DME Sanitization</h3>
-          <p class="mt-2 text-slate-700">CPAP masks & tubing, walkers, nebulizers — cleaned and safety‑checked.</p>
+          <p class="mt-2 text-slate-700">CPAP masks, tubing, walkers, nebulizers — cleaned & safety‑checked.</p>
+          <img class="mt-4 rounded-xl" src="assets/dme-clean-1.webp" alt="DME cleaning" onerror="this.src='assets/dme-clean-1.jpg'">
         </article>
       </div>
-      <p class="mt-6 text-slate-600">Note: We are a private‑pay concierge service (not a home health agency or Medicare provider). Our only focus is medications and equipment. By staying specialized, we deliver accuracy and consistency at every visit.</p>
+      <p class="mt-6 text-slate-600">We are a private‑pay concierge service (not a home health agency). Specializing only in meds and equipment allows for accuracy & consistency.</p>
     </div>
   </section>
 
   <!-- PLANS -->
   <section id="plans" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
-    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Plans</h2>
+    <div class="md:flex md:items-end md:justify-between">
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Plans</h2>
+      <img src="assets/plans-illustration.jpg" class="hidden md:block h-20 rounded-lg opacity-90" alt="Plans illustration">
+    </div>
     <div class="mt-8 grid md:grid-cols-2 gap-6">
       <article class="rounded-2xl border bg-white p-6 shadow-soft">
         <h3 class="font-semibold text-lg">Basic</h3>
@@ -130,7 +134,7 @@
     </div>
   </section>
 
-  <!-- PROCESS FLOWCHART -->
+  <!-- FLOW (as requested) -->
   <section id="flow" class="bg-gradient-to-b from-brand-50/70 to-transparent">
     <div class="mx-auto container px-4 md:px-6 py-12 md:py-16">
       <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Simple care flow</h2>
@@ -168,42 +172,27 @@
     </div>
   </section>
 
-  <!-- GALLERY (use everything you place in /assets with these names) -->
+  <!-- GALLERY using the user's files -->
   <section id="gallery" class="mx-auto container px-4 md:px-6 py-12 md:py-16">
-    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Medication & DME Gallery</h2>
-    <p class="mt-2 text-slate-600">Tip: rename your images to match the list below and drop them into <code>/assets</code>. All images are lazy‑loaded for speed.</p>
+    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Gallery</h2>
     <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-      <!-- Add or remove <img> lines as you add files to assets/ -->
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/service-medication.webp" alt="Medication organizers labeled by day" />
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/service-dme.webp" alt="Cleaning and disinfecting walker handles" />
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/service-family.webp" alt="Clinician preparing blister packs" />
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/service-home.webp" alt="In-home care setting" />
-      <!-- Optional extras if present -->
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/gallery-1.webp" alt="Gallery photo 1" onerror="this.style.display='none'"/>
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/gallery-2.webp" alt="Gallery photo 2" onerror="this.style.display='none'"/>
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/gallery-3.webp" alt="Gallery photo 3" onerror="this.style.display='none'"/>
-      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/gallery-4.webp" alt="Gallery photo 4" onerror="this.style.display='none'"/>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS (from previous site) -->
-  <section class="bg-white border-y border-slate-200">
-    <div class="mx-auto container px-4 md:px-6 py-12 md:py-16">
-      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">What families say</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <figure class="rounded-2xl border bg-white p-6 shadow-soft">
-          <figcaption class="text-sm text-slate-600 font-semibold">A. Kim — Burbank, CA (Daughter)</figcaption>
-          <blockquote class="mt-2 text-slate-700">“SafeMed takes the stress out of managing my mom's medications. Their weekly pillbox organization and daily check-ins ensure she never misses a dose, and I appreciate the prompt updates.”</blockquote>
-        </figure>
-        <figure class="rounded-2xl border bg-white p-6 shadow-soft">
-          <figcaption class="text-sm text-slate-600 font-semibold">R. Zuniga — Glendale, CA (Son)</figcaption>
-          <blockquote class="mt-2 text-slate-700">“They sanitized Dad’s walker and oxygen equipment on schedule. Knowing his equipment is professionally cleaned each month helps us breathe easy.”</blockquote>
-        </figure>
-        <figure class="rounded-2xl border bg-white p-6 shadow-soft">
-          <figcaption class="text-sm text-slate-600 font-semibold">M. Flores — Pasadena, CA (Caregiver)</figcaption>
-          <blockquote class="mt-2 text-slate-700">“The team keeps me informed with clear notes and photos after each visit. It’s reassuring to see exactly what was done.”</blockquote>
-        </figure>
-      </div>
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-1.png" alt="About 1">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-2.png" alt="About 2">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-3.png" alt="About 3">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-4.png" alt="About 4">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/about-5.png" alt="About 5">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/medication-1.webp" alt="Medication 1" onerror="this.src='assets/medication-1.jpg'">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/medication-2.webp" alt="Medication 2">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/medication-pillbox.jpg" alt="Pillbox">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/dme-clean-1.webp" alt="DME clean 1" onerror="this.src='assets/dme-clean-1.jpg'">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/dme-cleaning.jpg" alt="DME cleaning">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/senior-family.jpg" alt="Senior family">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/contact-care.jpg" alt="Contact care">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-2.png" alt="Hero extra 2">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-3.png" alt="Hero extra 3">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-4.png" alt="Hero extra 4">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-5.png" alt="Hero extra 5">
+      <img loading="lazy" class="rounded-xl shadow-soft" src="assets/hero-extra-6.png" alt="Hero extra 6">
     </div>
   </section>
 
@@ -212,9 +201,9 @@
     <div class="grid md:grid-cols-2 gap-10">
       <div>
         <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Book now</h2>
-        <p class="mt-3 text-slate-700">Start with a free 20‑minute consult. We’ll review medications and DME, identify quick wins, and build a simple plan so your loved one stays safer at home—with less stress for the family.</p>
+        <p class="mt-3 text-slate-700">Start with a free 20‑minute consult. We’ll review medications and DME, identify quick wins, and build a simple plan.</p>
         <ul class="mt-4 text-slate-700 space-y-2">
-          <li><strong>Phone:</strong> <a class="text-brand-700" href="tel:+13234926837">(323) 492-6837</a></li>
+          <li><strong>Phone:</strong> <a class="text-brand-700" href="tel:+13234926837">(323) 492‑6837</a></li>
           <li><strong>Email:</strong> <a class="text-brand-700" href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></li>
           <li><strong>Hours:</strong> Mon–Sat • 8am–6pm (by appointment)</li>
         </ul>
@@ -222,31 +211,12 @@
           <iframe title="Calendly" src="https://calendly.com/safemed-joseph/30min" class="w-full h-80"></iframe>
         </div>
       </div>
-      <form action="https://formspree.io/f/yourcode" method="POST" class="rounded-2xl border bg-white p-6 shadow-soft">
-        <div class="grid gap-4">
-          <div>
-            <label class="text-sm text-slate-600" for="first">First name*</label>
-            <input id="first" name="first" required class="mt-1 w-full rounded-xl border px-3 py-2" />
-          </div>
-          <div>
-            <label class="text-sm text-slate-600" for="last">Last name*</label>
-            <input id="last" name="last" required class="mt-1 w-full rounded-xl border px-3 py-2" />
-          </div>
-          <div>
-            <label class="text-sm text-slate-600" for="email">Email*</label>
-            <input id="email" type="email" name="email" required class="mt-1 w-full rounded-xl border px-3 py-2" />
-          </div>
-          <div>
-            <label class="text-sm text-slate-600" for="message">Message</label>
-            <textarea id="message" name="message" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2"></textarea>
-          </div>
-          <button class="rounded-xl bg-brand-700 text-white px-5 py-3 shadow-soft hover:bg-brand-800" type="submit">Submit</button>
-        </div>
-      </form>
+      <div class="rounded-2xl overflow-hidden border shadow-soft">
+        <img src="assets/clinician-hero.jpg" alt="Clinician" class="w-full h-full object-cover">
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="bg-slate-900 text-slate-200">
     <div class="mx-auto container px-4 md:px-6 py-10 grid md:grid-cols-4 gap-8">
       <div>
