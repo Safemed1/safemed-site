@@ -103,3 +103,27 @@ footer a{color:#e8f8f8;opacity:.95}
   box-shadow:0 2px 10px rgba(0,0,0,.12);
 }
 .navlinks a:hover{ background:#eaf6f6; }
+
+/* ===== Accessibility & Readability ===== */
+html, body{font-size:18px; line-height:1.65;}
+p{margin:0 0 12px 0;}
+a:focus-visible, button:focus-visible {outline:3px solid #ffffff; outline-offset:2px; border-radius:12px}
+@media (min-width: 1200px){
+  html, body{font-size:19px;}
+}
+
+/* ===== Smaller, tidy nav buttons ===== */
+header .actions .btn{padding:8px 14px; font-size:14px; border-radius:999px; box-shadow:0 2px 8px rgba(0,0,0,.10)}
+.navlinks a{padding:6px 12px; font-size:14px; border-radius:999px; box-shadow:0 2px 8px rgba(0,0,0,.10)}
+
+/* ===== Compact contact box ===== */
+#contact-info .card{
+  padding:16px !important;
+  box-shadow:0 6px 18px rgba(0,0,0,.08) !important;
+  border:1px solid rgba(12,126,128,.12);
+}
+#contact-info ul{margin:8px 0 0 0}
+#contact-info li{margin:2px 0}
+
+/* ===== Compact global btn ===== */
+.btn{padding:10px 16px}
