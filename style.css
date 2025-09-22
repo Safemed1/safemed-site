@@ -1,23 +1,25 @@
 
 :root{
   --primary:#0c7e80; --accent:#0fb9b9; --dark:#083f41;
-  --bg:#0c7e80; --muted:#e2f5f5; --card:#ffffff; --text:#0d1b1b;
-  --radius:18px;
+  --bg:#0c7e80; --muted:#e2f5f5; --card:#ffffff; --text:#0d1b1b; --radius:18px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
 a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 .btn{display:inline-block;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:600}
-.btn.primary{background:var(--card);color:var(--primary);border-color:transparent}
-.btn.ghost{border-color:var(--card);color:var(--card);background:transparent}
-.btn.invert{background:var(--primary);color:#fff;border-color:transparent}
+.btn.primary{background:#ffffff;color:#0c7e80;border-color:transparent}
+.btn.primary:hover{background:#eaf6f6}
+.btn.invert{background:#0c7e80;color:#fff;border-color:transparent}
+.btn.invert:hover{background:#0a6365;color:#fff}
 header.site{position:sticky;top:0;background:rgba(12,126,128,.92);backdrop-filter:saturate(180%) blur(6px);z-index:30;border-bottom:1px solid rgba(255,255,255,.15)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:64px;color:#fff}
 .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px}
 .brand .logo{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,#0fb9b9,#0c7e80);display:grid;place-items:center;color:white;font-size:18px}
 .navlinks a{margin:0 10px;color:#fff;opacity:.95}
 .actions{display:flex;gap:10px;align-items:center}
+header .actions .btn{background:#ffffff;color:#0c7e80;border-color:transparent}
+header .actions .btn:hover{background:#eaf6f6}
 #burger{display:none;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer;color:#fff}
 .hero{padding:64px 0}
 .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
@@ -25,18 +27,7 @@ header.site{position:sticky;top:0;background:rgba(12,126,128,.92);backdrop-filte
 .kicker{color:var(--primary);font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-size:12px}
 h1{font-size:42px;margin:8px 0 10px;line-height:1.08;color:#0f2222}
 .lede{color:#355;opacity:.95;font-size:18px}
-.heroimg{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:0 12px 40px rgba(0,0,0,.22)}
 .section{padding:56px 0}
-.section .card h2, .section .card h3{color:#0f2222}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#e6f9f9;color:#0c4c4d;font-weight:600;font-size:13px}
-.pricing .price{font-size:36px;font-weight:800;color:#0a2f30}
-ul{padding-left:18px}
-footer{padding:40px 0;background:#093c3d;color:#e8f8f8;margin-top:40px}
-footer a{color:#e8f8f8;opacity:.95}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;cursor:zoom-in}
-.gallery a{display:block}
 .white{background:transparent}
 .white .container > *{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:0 8px 30px rgba(0,0,0,.18)}
 .white .container > h2{background:none;box-shadow:none;padding:0;margin-bottom:12px;color:#fff}
@@ -45,13 +36,16 @@ footer a{color:#e8f8f8;opacity:.95}
 .compare{width:100%;border-collapse:separate;border-spacing:0 10px;margin-top:10px}
 .compare th, .compare td{padding:14px 16px;vertical-align:top;background:#fff;border:1px solid rgba(12,126,128,.12)}
 .compare th{background:#eaf6f6;text-align:left;font-weight:800}
-.lead{font-size:20px;color:#e2f5f5}
-.stack{display:flex;flex-direction:column;gap:12px}
-.hr{height:1px;background:rgba(12,126,128,.12);margin:14px 0}
+/* Teal sections text to white for contrast */
+.section:not(.white) h1,
+.section:not(.white) h2,
+.section:not(.white) h3,
+.section:not(.white) p,
+.section:not(.white) .lead { color:#ffffff !important; }
+/* Drawer hidden on desktop */
+#drawer{display:none}
+#scrim{display:none}
 @media (max-width: 900px){
-  .hero .grid{grid-template-columns:1fr;gap:16px}
-  .grid-3{grid-template-columns:1fr}
-  .grid-4{grid-template-columns:2fr 2fr}
   .navlinks, .actions{display:none}
   #burger{display:block}
   #drawer{
