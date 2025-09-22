@@ -1,10 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('#burger');
-  const nav = document.querySelector('#nav');
-  burger?.addEventListener('click', () => nav.classList.toggle('open'));
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('drawer');
+  const scrim = document.getElementById('scrim');
+  const close = () => { drawer?.classList.remove('open'); scrim?.classList.remove('show'); };
+  burger?.addEventListener('click', () => { drawer?.classList.add('open'); scrim?.classList.add('show'); });
+  scrim?.addEventListener('click', close);
+  document.querySelectorAll('#drawer a').forEach(a => a.addEventListener('click', close));
 
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href').slice(1);
@@ -13,18 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Calendly open (if present)
   const calendlyLinks = document.querySelectorAll('a[data-calendly]');
   calendlyLinks.forEach(a => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
       const url = a.dataset.calendly || a.getAttribute('href');
-      if (url && url !== 'javascript:void(0)') {
-        window.open(url, '_blank');
-      } else {
-        // fallback to email compose
-        window.location.href = 'mailto:safemed.joseph@gmail.com';
-      }
+      if (url && url !== 'javascript:void(0)') window.open(url, '_blank');
+      else window.location.href = 'mailto:safemed.joseph@gmail.com';
     });
   });
 });

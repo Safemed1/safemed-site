@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0c7e80">
@@ -11,11 +10,10 @@
   <title>Our Services • SafeMed Concierge</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
 </head>
 <body>
 <header class="site">
-  <div class="container nav" id="nav">
+  <div class="container nav">
     <a href="index.html" class="brand"><span class="logo">S</span> SafeMed Concierge</a>
     <nav class="navlinks">
       <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="index.html#plans">Plans</a>
@@ -25,21 +23,32 @@
       <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
       <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
     </div>
-    <button id="burger">☰</button>
+    <button id="burger" aria-label="Open menu">☰</button>
   </div>
 </header>
+
+<div id="scrim"></div>
+<aside id="drawer" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#plans">Plans</a>
+  <a href="tel:+13234926837">📞 Call</a>
+  <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
+</aside>
 
 <section class="section" id="medication">
   <div class="container grid" style="grid-template-columns:1fr 1fr;gap:20px;align-items:center;">
     <img src="assets/medication-1.jpg" class="heroimg" alt="Medication organised"/>
     <div>
       <h2>Medication Management</h2>
-      <p>Our Services • SafeMed Concierge First Week Free – Experience our care with no commitment 📞 (323) 492‑6837 ✉️ Email ＋ SafeMed CONCIERGE ☰ Home About Services Plans Book Our Services Comprehensive support for medication & DME Discover how we organise medications, sanitise equipment and keep families informed. 📅 Book a 30‑minute consult 📞 Call/Text ✉️ Email Medication Management We review and organise prescriptions, set up weekly/biweekly pillboxes with clear labelling, coordinate refills (with signed authorisation) and send simple updates after each visit. Medication list reconciliation…</p>
+      <p>We maintain an accurate medication list, prepare pillboxes (7‑day or 14‑day) with double‑checks, and coordinate refills before supplies run out. Families receive concise updates and photo proof every visit—so nothing slips through the cracks.</p>
       <ul>
-        <li>Complete med list reconciliation</li>
-        <li>Pillbox prep (7‑day / 14‑day)</li>
-        <li>Refill & pickup coordination</li>
-        <li>Communication with providers</li>
+        <li>Reconciliation with provider orders</li>
+        <li>Pillbox prep with clear labels and safety double‑check</li>
+        <li>Refill coordination and escalation if issues arise</li>
+        <li>Visit notes + photos to the family</li>
       </ul>
     </div>
   </div>
@@ -48,16 +57,31 @@
 <section class="section" id="cleaning">
   <div class="container grid" style="grid-template-columns:1fr 1fr;gap:20px;align-items:center;">
     <div>
-      <h2>DME Cleaning</h2>
-      <p>Hospital‑grade sanitisation for CPAP, oxygen concentrators, nebulisers, walkers, and more—reducing infection risk and keeping equipment dependable.</p>
+      <h2>DME Cleaning & Care (All Devices Covered)</h2>
+      <p>We sanitise <strong>all durable medical equipment in the home</strong>—CPAP systems, oxygen concentrators, nebulisers, walkers, wheelchairs, canes, commodes, and more—following manufacturer guidance to reduce infection risk and keep equipment dependable.</p>
       <ul>
-        <li>Clean & disinfect per manufacturer guidance</li>
-        <li>Visual inspection and safety check</li>
-        <li>Photo proof after visit</li>
-        <li>Recommendations for replacement parts</li>
+        <li>Full‑home DME cleaning each visit (no per‑item fees)</li>
+        <li>Manufacturer‑guided methods + safety checks</li>
+        <li>Photo proof and replacement recommendations</li>
+        <li>Monthly or bi‑weekly cadence</li>
       </ul>
     </div>
     <img src="assets/dme-clean-1.jpg" class="heroimg" alt="DME cleaning"/>
+  </div>
+</section>
+
+<section class="section spacious">
+  <div class="container">
+    <span class="badge">Compare Your Options</span>
+    <h2>DIY vs. Generic Care vs. SafeMed</h2>
+    <table class="compare">
+      <tr><th>DIY / Generic Care</th><th>SafeMed Concierge</th></tr>
+      <tr><td>Pillboxes assembled when time allows; errors go unnoticed.</td><td>Scheduled, double‑checked prep with reconciliation to provider orders.</td></tr>
+      <tr><td>Equipment wiped occasionally; uncertain what’s required.</td><td>All DME sanitised every visit using manufacturer‑guided methods.</td></tr>
+      <tr><td>Family unsure what happened during visits.</td><td>Notes + photo proof delivered after each appointment.</td></tr>
+      <tr><td>Insurance delays and rigid schedules.</td><td>Direct booking, flexible windows, private‑pay simplicity.</td></tr>
+      <tr><td>One service at a time.</td><td>Medication + DME together, or bundled for full peace of mind.</td></tr>
+    </table>
   </div>
 </section>
 

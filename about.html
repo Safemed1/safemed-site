@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0c7e80">
@@ -11,11 +10,10 @@
   <title>About • SafeMed Concierge</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
 </head>
 <body>
 <header class="site">
-  <div class="container nav" id="nav">
+  <div class="container nav">
     <a href="index.html" class="brand"><span class="logo">S</span> SafeMed Concierge</a>
     <nav class="navlinks">
       <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="index.html#plans">Plans</a>
@@ -25,27 +23,57 @@
       <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
       <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
     </div>
-    <button id="burger">☰</button>
+    <button id="burger" aria-label="Open menu">☰</button>
   </div>
 </header>
+
+<div id="scrim"></div>
+<aside id="drawer" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#plans">Plans</a>
+  <a href="tel:+13234926837">📞 Call</a>
+  <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
+</aside>
+
 <section class="hero">
   <div class="container grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:24px;">
     <div class="card">
       <span class="kicker">About SafeMed</span>
-      <h1>Families trust us because details matter</h1>
-      <p class="lede">About • SafeMed Concierge First Week Free – Experience our care with no commitment 📞 (323) 492‑6837 ✉️ Email ＋ SafeMed CONCIERGE ☰ Home About Services Plans Book Meet our founder Compassion. Expertise. Trust. Learn about the experience and mission behind SafeMed Concierge. 📅 Book a 30‑minute consult 📞 Call/Text ✉️ Email Our Mission To protect the health and comfort of seniors by managing medications with precision and keeping medical equipment clean and safe—so families can focus on time together. What Makes Us Different Focused expertise Medication management and DME cleaning only.…</p>
+      <h1>Clinical standards. Concierge experience.</h1>
+      <p class="lede">SafeMed Concierge is a team of certified healthcare professionals delivering reliable in‑home medication management and comprehensive DME care. Our approach blends hospital‑level checklists with warm, respectful service—so families never wonder what happened or what’s next.</p>
       <div style="margin-top:8px"><a href="javascript:void(0)" data-calendly="" class="btn primary">Book a consult</a></div>
     </div>
-    <img src="assets/about-1.png" class="heroimg" alt="At‑home visit"/>
+    <img src="assets/about-1.png" class="heroimg" alt="At-home visit"/>
   </div>
 </section>
-<section class="section">
+
+<section class="section spacious">
   <div class="container grid-3">
-    <div class="card"><h3>Compassion</h3><p>We meet clients where they are—with patience, clarity, and respect.</p></div>
-    <div class="card"><h3>Consistency</h3><p>Checklists, photo proof, and proactive follow‑ups keep everything on track.</p></div>
-    <div class="card"><h3>Communication</h3><p>Simple updates after each visit for families and care teams.</p></div>
+    <div class="card"><h3>Certified Team</h3><p>All team members hold current certifications (e.g., BLS/CPR) and have extensive clinical care experience. Staff are trained on medication reconciliation, safe pillbox preparation, and manufacturer‑guided equipment cleaning.</p></div>
+    <div class="card"><h3>Documented Protocols</h3><p>Every visit follows a structured checklist. We reconcile medications against provider orders, prepare pillboxes with double‑checks, and sanitise all DME using step‑by‑step methods.</p></div>
+    <div class="card"><h3>Transparent Updates</h3><p>Families receive concise notes and photo proof after each visit. Issues are escalated promptly and recommendations are clearly documented.</p></div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container card">
+    <h3>Accountability & Scope</h3>
+    <div class="stack">
+      <p>SafeMed operates as a coordinated team. Care is delivered by certified professionals under documented procedures, so responsibilities are clear and quality is consistent.</p>
+      <p>We do not replace your medical provider. We follow existing orders, coordinate refills, and keep your care team informed. When something looks unsafe or unclear, we flag it early.</p>
+    </div>
+    <div class="hr"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book a 30‑minute consult</a>
+      <a href="tel:+13234926837" class="btn ghost">📞 Call/Text</a>
+      <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
     <div>© SafeMed Concierge • All rights reserved</div>

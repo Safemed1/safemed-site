@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0c7e80">
@@ -11,14 +10,11 @@
   <title>SafeMed Concierge</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
 </head>
 <body>
 <header class="site">
-  <div class="container nav" id="nav">
-    <a href="index.html" class="brand">
-      <span class="logo">S</span> SafeMed Concierge
-    </a>
+  <div class="container nav">
+    <a href="index.html" class="brand"><span class="logo">S</span> SafeMed Concierge</a>
     <nav class="navlinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -30,17 +26,28 @@
       <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
       <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
     </div>
-    <button id="burger">☰</button>
+    <button id="burger" aria-label="Open menu">☰</button>
   </div>
 </header>
 
+<div id="scrim"></div>
+<aside id="drawer" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="#plans">Plans</a>
+  <a href="tel:+13234926837">📞 Call</a>
+  <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book</a>
+</aside>
+
 <section class="hero">
-  <div class="container grid grid-2 grid hero-grid">
+  <div class="container grid">
     <div class="card">
       <span class="kicker">Best care to your door</span>
-      <h1>Private Medication Management & DME Cleaning for LA Families</h1>
-      <p class="lede">We help seniors stay safe, organised, and independent—while giving their families peace of mind.</p>
-      <div style="display:flex;gap:10px;margin-top:10px;">
+      <h1>Hospital‑level Medication & Equipment Care — At Home</h1>
+      <p class="lede">On‑time meds. Sanitised equipment. Clear updates. We bring hospital‑grade reliability to Glendale, Pasadena, Eagle Rock, and Burbank homes—giving seniors independence and families true peace of mind.</p>
+      <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
         <a href="javascript:void(0)" data-calendly="" class="btn primary">📅 Book consult</a>
         <a href="services.html" class="btn ghost">Explore services</a>
       </div>
@@ -60,62 +67,67 @@
   <div class="container">
     <h2>What we do</h2>
     <div class="grid-3">
-      <div class="card">
-        <h3>💊 Medication Management</h3>
-        <p>Weekly/biweekly pillbox prep, medication reconciliation, refill coordination, and clear communication with family and providers.</p>
-        <a href="services.html#medication" class="btn ghost">Learn more →</a>
-      </div>
-      <div class="card">
-        <h3>🧼 DME Cleaning</h3>
-        <p>Sanitisation of CPAP, oxygen concentrators, nebulisers, walkers, and more to reduce infection risk and keep equipment working.</p>
-        <a href="services.html#cleaning" class="btn ghost">Learn more →</a>
-      </div>
-      <div class="card">
-        <h3>📅 Easy Booking</h3>
-        <p>Online consults and in‑home visits across Glendale, Pasadena, Eagle Rock, Burbank and nearby LA neighborhoods.</p>
-        <a href="javascript:void(0)" data-calendly="" class="btn ghost">Book a consult →</a>
-      </div>
+      <div class="card"><h3>💊 Medication Management</h3><p>Accurate pillbox prep (weekly or biweekly), medication reconciliation with providers, and proactive refill coordination—so doses aren’t missed.</p><a href="services.html" class="btn ghost">Learn more →</a></div><div class="card"><h3>🧼 DME Cleaning & Care</h3><p>Complete sanitisation of all durable medical equipment—CPAP, oxygen, nebulisers, walkers, wheelchairs, commodes—guided by manufacturer methods.</p><a href="services.html" class="btn ghost">Learn more →</a></div><div class="card"><h3>📅 Concierge Access</h3><p>Fast booking, flexible visits, private‑pay simplicity, and clear documentation with every appointment.</p><a href="services.html" class="btn ghost">Learn more →</a></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="plans">
   <div class="container">
-    <h2>Simple plans</h2>
+    <h2>Simple, transparent plans</h2>
     <div class="grid-3 pricing">
       <div class="card">
         <h3>Medication Management</h3>
-        <p class="price">$400–$500<span style="font-size:16px;font-weight:600"> / month</span></p>
+        <p class="price">$500 / month</p>
         <ul>
-          <li>Weekly/Biweekly pillbox prep</li>
-          <li>Refill coordination & updates</li>
-          <li>Family communication</li>
+          <li>Weekly/biweekly pillbox prep with double‑checks</li>
+          <li>Refill coordination & pickup plan</li>
+          <li>Family check‑in after each visit</li>
         </ul>
         <a href="javascript:void(0)" data-calendly="" class="btn primary">Get started</a>
       </div>
       <div class="card">
-        <h3>DME Cleaning</h3>
-        <p class="price">$250–$350<span style="font-size:16px;font-weight:600"> / month</span></p>
+        <h3>DME Cleaning & Care</h3>
+        <p class="price">$400 / month</p>
         <ul>
-          <li>CPAP, O2 concentrators, nebulisers</li>
-          <li>Sanitise & safety check</li>
-          <li>Photo proof each visit</li>
+          <li>All DME in the home (CPAP, oxygen, nebulisers, walkers, wheelchairs, commodes, more)</li>
+          <li>Manufacturer‑guided cleaning & safety check</li>
+          <li>Photo proof sent after visit</li>
         </ul>
         <a href="javascript:void(0)" data-calendly="" class="btn primary">Get started</a>
       </div>
       <div class="card">
         <h3>Concierge Bundle</h3>
-        <p class="price">Custom</p>
+        <p class="price">$800 / month</p>
         <ul>
-          <li>Combine meds + DME</li>
+          <li>Medication + DME together</li>
           <li>Priority scheduling</li>
-          <li>Best for active caseloads</li>
+          <li>Integrated monthly report</li>
         </ul>
-        <a href="mailto:safemed.joseph@gmail.com" class="btn primary">Email us</a>
+        <a href="javascript:void(0)" data-calendly="" class="btn primary">Get started</a>
       </div>
     </div>
+    <p class="lead" style="margin-top:10px">Better than DIY or generic care: we document every visit with notes and photos for full accountability.</p>
   </div>
 </section>
+
+
+<section class="section spacious">
+  <div class="container">
+    <span class="badge">Why Choose SafeMed</span>
+    <h2>More convenient. More complete. More accountable.</h2>
+    <p class="lead">Families switch to SafeMed because we combine hospital‑level discipline with concierge convenience—without insurance delays.</p>
+    <table class="compare">
+      <tr><th>Other Options</th><th>SafeMed Concierge</th></tr>
+      <tr><td>Families juggle pillboxes and hope nothing is missed.</td><td><strong>Professional pillbox prep</strong> (weekly/biweekly) with double‑checks and clear labels.</td></tr>
+      <tr><td>Caregivers tidy equipment but skip medical details.</td><td><strong>All DME sanitised every visit</strong>—no per‑item fees.</td></tr>
+      <tr><td>No updates or unclear handwriting.</td><td><strong>Photo proof + visit notes</strong> sent to the family after each appointment.</td></tr>
+      <tr><td>Insurance red tape and restricted schedules.</td><td><strong>Private‑pay simplicity</strong>: fast booking, flexible windows, direct support.</td></tr>
+      <tr><td>One‑size‑fits‑all.</td><td><strong>Custom plans</strong> and a combined bundle for full peace of mind.</td></tr>
+    </table>
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container">
