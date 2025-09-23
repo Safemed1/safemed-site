@@ -69,3 +69,65 @@ footer a{color:#e8f8f8;opacity:.95}
   }
   #scrim.show{opacity:1; pointer-events:auto}
 }
+
+
+/* === Readability & Senior-Friendly Defaults (SafeMed v1) === */
+:root{
+  --safe-teal: #0c7e80;
+  --safe-teal-700:#0a6a6b;
+  --card-bg:#ffffff;
+  --card-radius: 18px;
+  --text-color:#0c2a2b;
+}
+html{ font-size: 18px; } /* base up from 16px */
+@media (min-width: 1024px){ html{ font-size: 19px; } }
+body{
+  color: var(--text-color);
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+p{ margin: 0.8rem 0; font-size: 1.05rem; }
+h1,h2,h3{ line-height: 1.25; letter-spacing: 0.3px; }
+h1{ font-size: clamp(1.9rem, 2.6vw + 1.2rem, 2.6rem); }
+h2{ font-size: clamp(1.5rem, 1.8vw + 1rem, 2.1rem); }
+h3{ font-size: clamp(1.25rem, 1.2vw + 0.9rem, 1.6rem); }
+
+/* Buttons larger, high-contrast */
+.button, .btn, button, a.button, a.btn{
+  font-size: 1.05rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 14px;
+  border: 2px solid #fff3;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.button--primary, .btn-primary{
+  background: #ffffff;
+  color: var(--safe-teal);
+  border-color: #ffffff;
+}
+.button--teal, .btn-teal{
+  background: var(--safe-teal);
+  color: #fff;
+  border-color: var(--safe-teal);
+}
+
+/* Cards to group floating headings with content */
+.card{
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  padding: clamp(1rem, 2vw, 2rem);
+  border: 1px solid rgba(12,42,43,0.06);
+}
+
+/* Table improvements (bigger text/spacing) */
+table{ width: 100%; border-collapse: separate; border-spacing: 0; font-size: 1.02rem; }
+th, td{ padding: 0.9rem 1rem; border-bottom: 1px solid #e9f2f2; }
+th{ background: #eff8f8; text-align: left; font-weight: 700; }
+tr:last-child td{ border-bottom: none; }
+
+/* Utility */
+.container{ max-width: 1100px; margin-inline: auto; padding-inline: 1rem; }
+.muted{ opacity: .85; }
+.lead{ font-size: 1.2rem; }
+.small{ font-size: 1rem; }
