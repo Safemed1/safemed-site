@@ -1,85 +1,130 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact • SafeMed Concierge</title>
-
-  <link rel="icon" href="assets/safemed-logo.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact • SafeMed Concierge">
-  <meta property="og:description" content="Contact SafeMed Concierge to book your free consultation.">
-  <meta property="og:image" content="assets/safemed-card-1200x630.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact • SafeMed Concierge">
-  <meta name="twitter:description" content="Contact SafeMed Concierge to book your free consultation.">
-  <meta name="twitter:image" content="assets/safemed-card-1200x630.png">
-
-  <meta name="description" content="Contact SafeMed Concierge to book your free consultation.">
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0c7e80">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-<header class="site" role="banner">
-  <div class="container nav" aria-label="Primary">
-    <a href="index.html" class="logo" aria-label="SafeMed Concierge"><img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px; width:auto; display:block;"></a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html#book">Contact</a></li>
-      </ul>
-    </nav>
-    <div>
-      <a href="contact.html#book" class="btn cta">Book a Consult</a>
-      <button class="mobile-toggle" aria-label="Open Menu" aria-expanded="false"><span class="kbd">≡</span></button>
+  <header class="container">
+    <div class="nav">
+      <a href="index.html" class="brand" aria-label="SafeMed home">
+        <img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px; vertical-align:middle">
+      </a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html#book">Contact</a>
+      </nav>
+      <a class="btn cta" href="#book">Book a Consult</a>
     </div>
-  </div>
-  <div class="mobile-panel container" role="dialog" aria-modal="true" aria-label="Mobile menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html#book">Contact</a>
-    <a href="contact.html#book" class="btn">Book a Consult</a>
-  </div>
-</header>
+  </header>
 
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>Reach out with any questions or book your free 15‑minute consult. We serve Glendale, Pasadena, Burbank, Eagle Rock, and nearby.</p>
 
-<section class="section">
-  <div class="container" id="book">
-    <h1>Contact</h1>
-    <p>Reach out with any questions or book your free 15-minute consult. We serve Glendale, Pasadena, Burbank, Eagle Rock, and nearby.</p>
-      <div class="pills">
-        <span class="badge">• Licensed & background-checked</span>
-        <span class="badge">• HIPAA-aware workflows</span>
-        <span class="badge">• Home & virtual</span>
+        <div class="contact-cards">
+          <a class="card mini" href="tel:+13234926837">
+            <h4>Call</h4>
+            <p>(323) 492‑6837</p>
+          </a>
+          <a class="card mini" href="mailto:safemed.joseph@gmail.com">
+            <h4>Email</h4>
+            <p>safemed.joseph@gmail.com</p>
+          </a>
+          <a class="card mini" href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener">
+            <h4>Calendly</h4>
+            <p>Book directly</p>
+          </a>
+        </div>
       </div>
-    </div>
-    <div>
-      <p><strong>Pages</strong></p>
-      <p><a href="index.html">Home</a><br><a href="services.html">Services</a><br><a href="about.html">About</a><br><a href="contact.html#book">Contact</a></p>
-    </div>
-    <div>
-      <p><strong>Contact</strong></p>
-      <p><span data-contact-city="true">Glendale, CA</span><br>
-      <a href="tel:+13234926837">(323) 492-6837</a><br>
-      <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></p>
-    </div>
-  </div>
-  <div class="container" style="margin-top:10px;font-size:.9rem;">© <span id="year"></span> SafeMed Concierge. All rights reserved.</div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </section>
 
-<script src="script.js"></script>
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Left column: Form -->
+          <div class="contact-pane">
+            <h2>Send a message</h2>
+            <div class="contactbox" role="form" aria-labelledby="contact-form">
+              <form id="contact-form" action="https://formspree.io/f/your-id" method="POST" novalidate>
+                <div class="row">
+                  <div>
+                    <label for="name">Full name</label>
+                    <input id="name" name="name" autocomplete="name" required placeholder="Your name">
+                    <small class="hint">Required</small>
+                  </div>
+                  <div>
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(323) 492‑6837" pattern="^[0-9()\-\s+]{7,}$">
+                    <small class="hint">Numbers only is fine</small>
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" autocomplete="email" required placeholder="safemed.joseph@gmail.com">
+                    <small class="hint">We'll reply within 1 business day</small>
+                  </div>
+                  <div>
+                    <label for="city">City</label>
+                    <input id="city" name="city" autocomplete="address-level2" placeholder="Glendale, CA">
+                  </div>
+                  <div>
+                    <label for="service">Interested in</label>
+                    <select id="service" name="service">
+                      <option>Medication Management</option>
+                      <option>DME Cleaning</option>
+                      <option>Bundle (Medication + DME)</option>
+                      <option>Other / Not sure</option>
+                    </select>
+                  </div>
+                  <div style="grid-column:1/-1">
+                    <label for="msg">How can we help?</label>
+                    <textarea id="msg" name="message" rows="6" placeholder="Tell us about your medication or device needs…"></textarea>
+                  </div>
+                </div>
+                <div class="row" style="grid-template-columns:1fr auto; align-items:center;">
+                  <label style="display:flex;align-items:center;gap:10px;">
+                    <input type="checkbox" name="consent" value="ok" required> I agree to be contacted about my inquiry.
+                  </label>
+                  <button class="btn" type="submit">Send</button>
+                </div>
+                <p class="muted" style="margin-top:8px">Prefer email or a call? Use the quick links above.</p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right column: Calendly -->
+          <div class="contact-pane" id="book">
+            <h2>Book a consultation</h2>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/safemed-joseph/30min" style="min-width:100%; height:860px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <p class="muted" style="margin-top:8px">If the scheduler doesn’t load, <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener">open Calendly</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container grid" style="grid-template-columns:1fr auto">
+      <div>
+        <strong>SafeMed Concierge</strong><br>
+        Glendale, CA · (323) 492‑6837 · <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a>
+      </div>
+      <nav class="muted">
+        <a href="index.html">Home</a> ·
+        <a href="services.html">Services</a> ·
+        <a href="about.html">About</a> ·
+        <a href="contact.html#book">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
