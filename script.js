@@ -7,7 +7,6 @@ if (mobileToggle && mobilePanel) {
     mobileToggle.setAttribute('aria-expanded', mobilePanel.classList.contains('open'));
   });
 }
-
 document.addEventListener('click', (e) => {
   if (mobilePanel && mobilePanel.classList.contains('open')) {
     if (!mobilePanel.contains(e.target) && e.target !== mobileToggle) {
@@ -16,8 +15,7 @@ document.addEventListener('click', (e) => {
     }
   }
 });
-
-// Simple lightbox for gallery
+// Simple lightbox
 const galleryLinks = document.querySelectorAll('.gallery a');
 if (galleryLinks.length) {
   const overlay = document.createElement('div');
