@@ -107,3 +107,43 @@ h1, h2, h3, h4, h5, h6 {
 .compare td, .compare th {
   color: #0f172a !important;
 }
+
+
+
+/* === Global reset for white background + black text === */
+html, body {
+  background: #ffffff !important;
+  color: #0f172a !important; /* dark ink */
+}
+
+/* All headings and paragraphs default dark */
+h1, h2, h3, h4, h5, h6, p, li {
+  color: #0f172a !important;
+}
+
+/* --- Teal callout boxes --- */
+.teal-box,
+.section.teal,
+.hero.teal,
+.badge.teal,
+.cta-stripe.teal {
+  background: #0c7e80 !important;
+  color: #ffffff !important;
+}
+.teal-box h1, .teal-box h2, .teal-box h3,
+.section.teal h1, .section.teal h2, .section.teal h3,
+.section.teal p, .hero.teal p {
+  color: #ffffff !important;
+}
+
+/* --- Buttons --- */
+.btn.primary {
+  background: #0c7e80 !important;
+  color: #ffffff !important;
+  border: 1px solid #0c7e80 !important;
+}
+.btn.ghost {
+  background: #ffffff !important;
+  color: #0c7e80 !important;
+  border: 1px solid #0c7e80 !important;
+}
