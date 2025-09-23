@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header (same as other pages) -->
+  <!-- SAME HEADER AS OTHER PAGES -->
   <header class="container">
     <div class="nav">
-      <a href="index.html" class="brand" aria-label="SafeMed home">
+      <a class="brand" href="index.html" aria-label="SafeMed home">
         <img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px;vertical-align:middle" />
       </a>
       <nav class="links">
@@ -30,39 +30,29 @@
         <h1>Contact</h1>
         <p>Reach out with any questions or book your free 15-minute consult. We serve Glendale, Pasadena, Burbank, Eagle Rock, and nearby.</p>
 
-        <!-- Big, obvious actions -->
         <div class="contact-actions">
           <a class="btn btn-lg" href="tel:+13234926837">📞 Call (323) 492-6837</a>
           <a class="btn btn-lg secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email us</a>
           <a class="btn btn-lg" href="#book">🗓️ Open scheduler</a>
         </div>
 
-        <!-- Two-column: form + Calendly -->
         <div class="contact-layout">
           <div class="contact-pane">
             <h2>Send a message</h2>
             <div class="contactbox" role="form">
-              <!-- Replace Formspree endpoint with your real ID -->
-              <form action="https://formspree.io/f/your-id" method="POST" novalidate>
+              <!-- Swap to Web3Forms or Formspree as we discussed -->
+              <form action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+                <input type="hidden" name="subject" value="New SafeMed inquiry" />
+                <input type="hidden" name="from_name" value="SafeMed Concierge" />
+                <!-- <input type="hidden" name="redirect" value="https://YOURDOMAIN.com/thank-you.html" /> -->
+
                 <div class="row">
-                  <div>
-                    <label for="name">Full name</label>
-                    <input id="name" name="name" required placeholder="Your name" />
-                  </div>
-                  <div>
-                    <label for="phone">Phone</label>
-                    <input id="phone" name="phone" inputmode="tel" placeholder="(323) 492-6837" />
-                  </div>
-                  <div>
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" required placeholder="safemed.joseph@gmail.com" />
-                  </div>
-                  <div>
-                    <label for="city">City</label>
-                    <input id="city" name="city" placeholder="Glendale, CA" />
-                  </div>
-                  <div>
-                    <label for="service">Interested in</label>
+                  <div><label for="name">Full name</label><input id="name" name="name" required placeholder="Your name" /></div>
+                  <div><label for="phone">Phone</label><input id="phone" name="phone" inputmode="tel" placeholder="(323) 492-6837" /></div>
+                  <div><label for="email">Email</label><input id="email" type="email" name="email" required placeholder="safemed.joseph@gmail.com" /></div>
+                  <div><label for="city">City</label><input id="city" name="city" placeholder="Glendale, CA" /></div>
+                  <div><label for="service">Interested in</label>
                     <select id="service" name="service">
                       <option>Medication Management</option>
                       <option>DME Cleaning</option>
@@ -83,7 +73,6 @@
                   </label>
                   <button class="btn" type="submit">Send</button>
                 </div>
-                <p class="muted" style="margin-top:8px">Prefer email or a call? Use the quick links above.</p>
               </form>
             </div>
           </div>
@@ -103,11 +92,10 @@
     </section>
   </main>
 
-  <!-- Footer (unchanged) -->
   <footer class="footer">
     <div class="container grid" style="grid-template-columns:1fr auto">
       <div>
-        <strong>SafeMed Concierge</strong><br />
+        <strong>SafeMed Concierge</strong><br>
         Glendale, CA · (323) 492-6837 · <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a>
       </div>
       <nav class="muted">
@@ -118,14 +106,5 @@
       </nav>
     </div>
   </footer>
-
-  <script>
-    // Ensure the correct nav link is highlighted even if templates differ
-    document.querySelectorAll('.links a').forEach(a=>{
-      if(a.getAttribute('href') && location.pathname.endsWith(a.getAttribute('href'))) {
-        a.classList.add('active'); a.setAttribute('aria-current','page');
-      }
-    });
-  </script>
 </body>
 </html>
