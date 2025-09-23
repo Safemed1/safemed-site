@@ -101,3 +101,21 @@ header.site { position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%)
   .calendly-inline-widget { height: 920px !important; }
   .grid[style*="grid-template-columns:1.2fr"] { grid-template-columns: 1fr !important; }
 }
+
+
+/* Equal-height pricing cards */
+.pricing .grid { align-items: stretch; }
+.price { display: flex; flex-direction: column; height: 100%; }
+.price h3 { margin-bottom: 8px; }
+.price .num { margin: 6px 0 12px; }
+.price ul { margin: 0 0 18px 0; }
+.price .btn { margin-top: auto; } /* push CTA to bottom so all buttons line up */
+
+
+/* Testimonials */
+.testimonials .quote{background:#f5fbfb;border:1px solid #d8efed;border-radius:16px;padding:18px;box-shadow:0 10px 18px rgba(0,0,0,.04)}
+.testimonials .quote p{margin:0 0 10px 0; font-size:1.02rem; line-height:1.55}
+.testimonials .quote footer{color:#4b5563}
+@media (max-width: 860px){
+  .testimonials .grid{grid-template-columns:1fr !important}
+}
