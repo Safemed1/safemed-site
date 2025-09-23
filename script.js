@@ -28,7 +28,7 @@ if (galleryLinks.length) {
   galleryLinks.forEach(a => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
-      img.src = a.getAttribute('href') || a.querySelector('img').src;
+      img.src = a.querySelector('img').src;
       overlay.style.display = 'flex';
     });
   });
