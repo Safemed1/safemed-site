@@ -1,186 +1,183 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SafeMed Concierge</title>
-  <meta name="description" content="Private-pay medication management and DME cleaning for families in Glendale and nearby.">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c7e80">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <style>
-:root{
-  --teal:#0c7e80;
-  --teal-900:#094c4d;
-  --ink:#0c2a2b;
-  --ink-soft:#1a3c3d;
-  --bg:#f7fbfb;
-  --card:#ffffff;
-  --radius:18px;
-}
-*{box-sizing:border-box}
-html{font-size:16px}
-@media (min-width:1024px){ html{font-size:16.5px} }
-body{
-  margin:0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.65;
-}
-a{color:var(--teal);text-decoration:none}
-.container{max-width:1120px;margin:0 auto;padding:0 1rem}
-.header{
-  position:sticky;top:0;z-index:50;
-  background:linear-gradient(0deg, rgba(12,126,128,.92), rgba(9,76,77,.96));
-  backdrop-filter:saturate(1.2) blur(6px);
-  color:#fff; box-shadow:0 2px 12px rgba(0,0,0,.12);
-}
-.header .bar{display:flex;align-items:center;gap:.8rem;justify-content:space-between;padding:.75rem 0}
-.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.3px}
-.brand .dot{width:26px;height:26px;border-radius:8px;background:#fff3;color:transparent;display:inline-block;box-shadow:inset 0 0 0 2px #fff6}
-.nav{display:flex;flex-wrap:wrap;gap:.6rem}
-.nav a{
-  background:#fff; color:var(--teal); padding:.5rem .8rem; border-radius:999px;
-  font-weight:600; font-size:.95rem; box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-.hero{
-  background: radial-gradient(1200px 500px at 50% -10%, #0c7e80 0%, #094c4d 70%);
-  color:#fff; padding:3.2rem 0 2.4rem;
-}
-.hero .h1{font-size:clamp(1.9rem,2.2vw + 1rem,2.4rem);font-weight:800;margin:0 0 .6rem}
-.hero p{font-size:1.05rem;opacity:.95;margin:.4rem 0 0}
-.cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
-.btn{border:none;cursor:pointer;font-weight:700;padding:.7rem 1rem;border-radius:14px}
-.btn-light{background:#fff;color:var(--teal)}
-.btn-dark{background:#073b3c;color:#fff;border:1px solid #0a5b5c}
-.card{
-  background:var(--card); border-radius:var(--radius); box-shadow:0 8px 28px rgba(0,0,0,.12);
-  border:1px solid rgba(12,42,43,.06); padding:1.1rem;
-}
-.section{padding:2rem 0}
-.section h2{font-size:clamp(1.35rem,1.6vw + .8rem,1.8rem);margin:0 0 .6rem}
-.grid{display:grid;gap:1rem}
-.grid-2{grid-template-columns:repeat(auto-fit, minmax(260px,1fr))}
-figure{margin:0}
-figure img{width:100%;height:300px;object-fit:cover;border-radius:14px 14px 0 0;display:block}
-figure figcaption{padding:.8rem 1rem}
-.table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid #e5efef}
-.table th,.table td{padding:.9rem 1rem;border-bottom:1px solid #e8f2f2;text-align:left}
-.table th{background:#eff8f8;font-weight:800}
-.table tr:last-child td{border-bottom:none}
-.why .lead{font-size:1.05rem;margin:.3rem 0 0;color:var(--ink-soft)}
-.footer{background:linear-gradient(0deg,#0a6a6b,#094c4d);color:#cfe8e8;padding:1.4rem 0;margin-top:2rem}
-.small{font-size:.95rem;opacity:.95}
-/* See How We Help above the footer */
-.help{margin-top:1.8rem}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/pattern-safemed.svg">
+  <title>SafeMed Concierge</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <link rel="stylesheet" href="safemed-hotfix.css" />
 </head>
 <body>
-  
-<header class="header">
-  <div class="container bar">
-    <div class="brand"><span class="dot"></span> SafeMed Concierge</div><div class="textsize" id="textsize"><button class="aa-small" data-step="-1" aria-label="Decrease text">A</button><button class="aa-large" data-step="1" aria-label="Increase text">A</button></div>
-    <nav class="nav">
+<header class="site">
+  <div class="container nav">
+    <a href="index.html" class="brand" style="color:#fff"><span class="logo">S</span> SafeMed Concierge</a>
+    <nav class="navlinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="plans.html">Plans</a>
-      <a href="tel:+13234926837">📞 Call</a>
-      <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
-      <a href="https://calendly.com/" target="_blank" rel="noopener">📅 Book</a>
+      <a href="#plans">Plans</a>
     </nav>
+    <div class="actions">
+      <a href="tel:+13234926837" class="btn ghost">📞 Call</a>
+      <a href="mailto:safemed.joseph@gmail.com" class="btn ghost">✉️ Email</a>
+      <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn primary" target="_blank">📅 Book</a>
+    </div>
+    <button id="burger" aria-label="Open menu">☰</button>
   </div>
 </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="card" style="background:#ffffff12;border-color:#ffffff22">
-        <div class="h1">Best Care to Your Door</div>
-        <p>Professional medication prep and DME cleaning—scheduled around your family, without insurance delays.</p>
-        <div class="cta-row">
-          <a class="btn btn-light" href="https://calendly.com/" target="_blank" rel="noopener">Book a consult</a>
-          <a class="btn btn-dark" href="tel:+13234926837">Call (323) 492‑6837</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-<section class="section" style="padding:0.6rem 0 0.8rem;">
-  <div class="container" style="text-align:center;">
-    <img src="assets/icons-contact-teal-strip.png" alt="Call, checklist, message icons" style="max-width:860px;width:100%;height:120px;object-fit:contain;opacity:.95;filter:drop-shadow(0 4px 12px rgba(0,0,0,.08));border-radius:12px;">
-  </div>
-</section>
+<div id="scrim"></div>
+<aside id="drawer" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#plans">Plans</a>
+  <a href="tel:+13234926837">📞 Call</a>
+  <a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+  <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn primary" target="_blank">📅 Book</a>
+</aside>
 
-  <section class="section">
-    <div class="container">
-      <div class="card why">
-        <h2>Why Choose SafeMed</h2>
-        <div class="card" style="background:#fff">
-          <h3 style="margin:0 0 .3rem">More convenient. More complete. More accountable.</h3>
-          <p class="lead">Families switch to SafeMed because we combine hospital‑level discipline with concierge convenience—without insurance delays.</p>
-        </div>
-        <div style="height:.6rem"></div>
-        <table class="table">
-          <thead><tr><th>Other Options</th><th>SafeMed Concierge</th></tr></thead>
-          <tbody>
-            <tr><td>Families juggle pillboxes and hope nothing is missed.</td><td><strong>Professional pillbox prep</strong> (weekly/biweekly) with double‑checks and clear labels.</td></tr>
-            <tr><td>Caregivers tidy equipment but skip medical details.</td><td><strong>All DME sanitised every visit</strong>—no per‑item fees.</td></tr>
-            <tr><td>No updates or unclear handwriting.</td><td><strong>Photo proof + visit notes</strong> sent to the family after each appointment.</td></tr>
-            <tr><td>Insurance red tape and restricted schedules.</td><td><strong>Private‑pay simplicity</strong>: fast booking, flexible windows, direct support.</td></tr>
-            <tr><td>One‑size‑fits‑all.</td><td><strong>Custom plans</strong> and a combined bundle for full peace of mind.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
-  
-<section class="section help">
-  <div class="container">
+<section class="hero">
+  <div class="container grid">
     <div class="card">
-      <h2>See How We Help</h2>
-      <div class="grid grid-2">
-        <figure class="card" style="padding:0">
-          <img src="assets/nurse-phone-portrait.jpg" alt="Professional phone consult">
-          <figcaption>Friendly check-ins and quick scheduling by phone.</figcaption>
-        </figure>
-        <figure class="card" style="padding:0">
-          <img src="assets/dme-cleaning-closeup.jpg" alt="DME cleaning and sanitization">
-          <figcaption>Thorough DME cleaning every visit—safer, fresher equipment.</figcaption>
-        </figure>
+      <span class="kicker">Best care to your door</span>
+      <h1>Hospital‑level Medication & Equipment Care — At Home</h1>
+      <p class="lede">On‑time meds. Sanitised equipment. Clear updates. We bring hospital‑grade reliability to Glendale, Pasadena, Eagle Rock, and Burbank homes—giving seniors independence and families true peace of mind.</p>
+      <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+        <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn invert" target="_blank">📅 Book consult</a>
+        <a href="services.html" class="btn primary">Explore services</a>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+        <span class="pill">💊 Meds organised</span>
+        <span class="pill">🧼 DME sanitised</span>
+        <span class="pill">📞 Family updates</span>
+      </div>
+    </div>
+    <div>
+      <img src="assets/clinician-hero-920.webp" alt="Clinician visiting at home" class="heroimg"/>
+    </div>
+  </div>
+</section>
+<section class="section white" id="plans">
+  <div class="container">
+    <h2 style="color:#fff;background:none;box-shadow:none;padding:0;margin:0 0 14px 0">Simple, transparent plans</h2>
+    <div class="grid-3 pricing">
+      <div class="card">
+        <h3>Medication Management</h3>
+        <p class="price">$500 / month</p>
+        <ul>
+          <li>Weekly/biweekly pillbox prep with double‑checks</li>
+          <li>Refill coordination & pickup plan</li>
+          <li>Family check‑in after each visit</li>
+        </ul>
+        <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn invert" target="_blank">Get started</a>
+      </div>
+      <div class="card">
+        <h3>DME Cleaning & Care</h3>
+        <p class="price">$400 / month</p>
+        <ul>
+          <li>All DME in the home (CPAP, oxygen, nebulisers, walkers, wheelchairs, commodes, more)</li>
+          <li>Manufacturer‑guided cleaning & safety check</li>
+          <li>Photo proof sent after visit</li>
+        </ul>
+        <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn invert" target="_blank">Get started</a>
+      </div>
+      <div class="card">
+        <h3>Concierge Bundle</h3>
+        <p class="price">$800 / month</p>
+        <ul>
+          <li>Medication + DME together</li>
+          <li>Priority scheduling</li>
+          <li>Integrated monthly report</li>
+        </ul>
+        <a href="https://calendly.com/safemed-joseph/30min" data-calendly class="btn invert" target="_blank">Get started</a>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:10px;color:#dff7f7">Prefer to talk first? Call <a href="tel:+13234926837" style="color:#fff;text-decoration:underline">(323) 492-6837</a> or email <a href="mailto:safemed.joseph@gmail.com" style="color:#fff;text-decoration:underline">safemed.joseph@gmail.com</a>.</p>
+  </div>
+</section>
+
+
+<section class="section white spacious">
+  <div class="container">
+    <span class="badge">Why Choose SafeMed</span>
+    <h2 style="color:#0f2222">More convenient. More complete. More accountable.</h2>
+    <p class="lead" style="color:#355">Families switch to SafeMed because we combine hospital‑level discipline with concierge convenience—without insurance delays.</p>
+    <table class="compare">
+      <tr><th>Other Options</th><th>SafeMed Concierge</th></tr>
+      <tr><td>Families juggle pillboxes and hope nothing is missed.</td><td><strong>Professional pillbox prep</strong> (weekly/biweekly) with double‑checks and clear labels.</td></tr>
+      <tr><td>Caregivers tidy equipment but skip medical details.</td><td><strong>All DME sanitised every visit</strong>—no per‑item fees.</td></tr>
+      <tr><td>No updates or unclear handwriting.</td><td><strong>Photo proof + visit notes</strong> sent to the family after each appointment.</td></tr>
+      <tr><td>Insurance red tape and restricted schedules.</td><td><strong>Private‑pay simplicity</strong>: fast booking, flexible windows, direct support.</td></tr>
+      <tr><td>One‑size‑fits‑all.</td><td><strong>Custom plans</strong> and a combined bundle for full peace of mind.</td></tr>
+    </table>
+  </div>
+</section>
+
+
+<section class="section white spacious" id="reviews">
+  <div class="container">
+    <span class="badge">Customer Reviews</span>
+    <h2 style="color:#0f2222">Trusted by LA families</h2>
+    <p class="lead" style="color:#355">Real feedback from clients who wanted safety, clarity, and peace of mind at home.</p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>★★★★★</h3>
+        <p>"They organised Mom’s medications perfectly and caught a refill issue before it became a problem. We get a text and photo after every visit."</p>
+        <p style="font-weight:600;margin:0">— Melissa R., Glendale</p>
+      </div>
+      <div class="card">
+        <h3>★★★★★</h3>
+        <p>"All of Dad’s equipment is actually clean now. The team follows manufacturer instructions and explains what they did in plain English."</p>
+        <p style="font-weight:600;margin:0">— Andrew K., Pasadena</p>
+      </div>
+      <div class="card">
+        <h3>★★★★★</h3>
+        <p>"Professional, punctual, and transparent. The monthly summary helps our whole family stay on the same page."</p>
+        <p style="font-weight:600;margin:0">— Sofia L., Eagle Rock</p>
       </div>
     </div>
   </div>
 </section>
 
-  
-<footer class="footer">
-  <div class="container small">© SafeMed Concierge • All rights reserved • Glendale • Pasadena • Eagle Rock • Burbank</div>
+
+<section class="section white">
+  <div class="container">
+    <h2 style="color:#0f2222">In the home</h2>
+    <div class="grid-4 gallery">
+      <a href="assets/dme-clean-1.jpg" target="_blank"><img src="assets/dme-clean-1.jpg" alt=""></a>
+      <a href="assets/about-1.png" target="_blank"><img src="assets/about-1.png" alt=""></a>
+      <a href="assets/about-2.png" target="_blank"><img src="assets/about-2.png" alt=""></a>
+      <a href="assets/about-3.png" target="_blank"><img src="assets/about-3.png" alt=""></a>
+      <a href="assets/about-4.png" target="_blank"><img src="assets/about-4.png" alt=""></a>
+      <a href="assets/about-5.png" target="_blank"><img src="assets/about-5.png" alt=""></a>
+      <a href="assets/medication-1.jpg" target="_blank"><img src="assets/medication-1.jpg" alt=""></a>
+      <a href="assets/medication-2.webp" target="_blank"><img src="assets/medication-2.webp" alt=""></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center">
+    <div>© SafeMed Concierge • All rights reserved</div>
+    <nav style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tel:+13234926837">📞 (323) 492-6837</a>
+      <a href="mailto:safemed.joseph@gmail.com">✉️ safemed.joseph@gmail.com</a>
+      <span>📍 Glendale • Pasadena • Eagle Rock • Burbank</span>
+    </nav>
+  </div>
 </footer>
-
-
-<script>
-(function(){
-  try{
-    const key='safemed_font_base';
-    const root=document.documentElement;
-    const cur = parseFloat(getComputedStyle(root).getPropertyValue('--base-font')) || 16;
-    const saved = localStorage.getItem(key);
-    if(saved){ root.style.setProperty('--base-font', saved + 'px'); }
-    const box=document.getElementById('textsize');
-    if(box){
-      box.addEventListener('click', (e)=>{
-        const btn=e.target.closest('button'); if(!btn) return;
-        let base=parseFloat(getComputedStyle(root).getPropertyValue('--base-font'))||16;
-        const step = btn.dataset.step==='1' ? 1 : -1;
-        base = Math.min(19, Math.max(14, base + step));
-        root.style.setProperty('--base-font', base+'px');
-        try{ localStorage.setItem(key, base); }catch(_){}
-      });
-    }
-  }catch(e){}
-})();
-</script>
-
 </body>
 </html>
