@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="160" viewBox="0 0 900 160">
+<rect width="900" height="160" rx="18" fill="#ffffff"/>
+<g font-family="Inter, Arial" font-size="18" fill="#0f172a" text-anchor="middle">
+<text x="150" y="90">Glendale</text><text x="350" y="90">Pasadena</text><text x="550" y="90">Eagle Rock</text><text x="750" y="90">Burbank</text>
+</g>
+<g fill="#0c7e80"><circle cx="150" cy="60" r="6"/><circle cx="350" cy="60" r="6"/><circle cx="550" cy="60" r="6"/><circle cx="750" cy="60" r="6"/></g>
+</svg>

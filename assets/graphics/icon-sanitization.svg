@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+<rect width="160" height="160" rx="24" fill="#0c7e80"/><g transform="translate(20,25)" fill="#ffffff">
+<circle cx="40" cy="50" r="24"/><rect x="64" y="30" width="40" height="40" rx="8"/><path d="M10 90h100v16H10z"/></g>
+<text x="80" y="150" fill="#ffffff" font-family="Inter, Arial" font-size="14" text-anchor="middle">Sanitization</text></svg>
