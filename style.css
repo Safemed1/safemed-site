@@ -84,3 +84,26 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
 }
 
+
+/* --- Headers stay dark in white cards, but white on teal --- */
+
+/* Force white headers + text ONLY when the section has teal background */
+.section:not(.white) h1,
+.section:not(.white) h2,
+.section:not(.white) h3,
+.section:not(.white) h4,
+.section:not(.white) h5,
+.section:not(.white) h6,
+.section:not(.white) p,
+.section:not(.white) .lead {
+  color: #ffffff !important;
+}
+
+/* Keep text inside cards/boxes dark */
+.card, .compare, .pricing .card {
+  color: #0f172a !important;
+}
+.card h1, .card h2, .card h3, .card p,
+.compare td, .compare th {
+  color: #0f172a !important;
+}
