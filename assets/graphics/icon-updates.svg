@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
-<rect width="160" height="160" rx="24" fill="#0c7e80"/><g transform="translate(28,32)" fill="#ffffff">
-<rect x="0" y="0" width="104" height="64" rx="10"/><rect x="12" y="80" width="80" height="8" rx="4"/>
+<rect width="160" height="160" rx="24" fill="#0c7e80"/>
+<g transform="translate(28,32)" fill="#ffffff">
+<rect x="0" y="0" width="104" height="64" rx="10"/>
+<rect x="12" y="80" width="80" height="8" rx="4"/>
 <rect x="12" y="96" width="64" height="8" rx="4"/></g>
-<text x="80" y="150" fill="#ffffff" font-family="Inter, Arial" font-size="14" text-anchor="middle">Family Updates</text></svg>
+<title>Family updates</title>
+</svg>
