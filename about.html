@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header (same structure as other pages) -->
+  <!-- SAME HEADER AS HOME -->
   <header class="container">
     <div class="nav">
-      <a href="index.html" class="brand" aria-label="SafeMed home">
+      <a class="brand" href="index.html" aria-label="SafeMed home">
         <img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px;vertical-align:middle" />
       </a>
       <nav class="links">
@@ -30,11 +30,11 @@
       <div class="container">
         <span class="badge">Private, concierge practice</span>
         <h1>Hospital-grade care, delivered at home.</h1>
-        <p class="lead">We keep medications organized and home medical equipment safe—so visits are calm, predictable, and compliant.</p>
+        <p class="lead">We keep medications organized and medical equipment safe—so every visit is calm, predictable, and compliant.</p>
       </div>
     </section>
 
-    <!-- Two-column story -->
+    <!-- Two-column story + mosaic images -->
     <section class="section">
       <div class="container grid two">
         <div>
@@ -54,8 +54,17 @@
           </ul>
         </div>
 
-        <div>
-          <div class="card" style="padding:18px">
+        <!-- Right column: image mosaic + CTA card -->
+        <aside>
+          <div class="about-mosaic">
+            <!-- Use your existing images in /assets/. Update names only if yours differ. -->
+            <img src="assets/gallery-01-family-education.jpg" alt="Explaining medication plan to family">
+            <img src="assets/gallery-03-cpap-cleaning-sink.jpg" alt="Cleaning a CPAP mask">
+            <img src="assets/gallery-04-hospital-bed-cleaning-wide.jpg" alt="Disinfecting hospital bed rail">
+            <img src="assets/gallery-06-family-consult.jpg" alt="Family consult discussing services">
+          </div>
+
+          <div class="card" style="padding:18px;margin-top:16px">
             <h3>How it works</h3>
             <ol class="steps">
               <li><strong>Free consult:</strong> review meds/devices, goals, and fit.</li>
@@ -68,7 +77,7 @@
               <a class="btn secondary" href="services.html">See services</a>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -85,29 +94,20 @@
     </section>
   </main>
 
-  <!-- Footer (unchanged) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container grid" style="grid-template-columns:1fr auto">
       <div>
-        <strong>SafeMed Concierge</strong><br />
+        <strong>SafeMed Concierge</strong><br>
         Glendale, CA · (323) 492-6837 · <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a>
       </div>
       <nav class="muted">
         <a href="index.html">Home</a> ·
         <a href="services.html">Services</a> ·
-        <a href="about.html">About</a> ·
+        <a href="about.html" aria-current="page">About</a> ·
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </footer>
-
-  <!-- Optional: auto-highlight active nav if templates vary -->
-  <script>
-    document.querySelectorAll('.links a').forEach(a=>{
-      if(a.getAttribute('href') && location.pathname.endsWith(a.getAttribute('href'))) {
-        a.classList.add('active'); a.setAttribute('aria-current','page');
-      }
-    });
-  </script>
 </body>
 </html>
