@@ -88,7 +88,8 @@ footer a:hover, footer .button:hover { background:#0c7e80 !important; color:#fff
 @media (max-width:520px){ .sm-btn{ width:100%; } }
 .booknow-copy { margin-top:8px; }
 .booknow-copy ul { margin:8px 0 12px 18px; }
-</style></head>
+</style>  <link rel="stylesheet" href="safemed-fixes.css" />
+</head>
 <body>
 <div class="nav">
 <div class="inner">
@@ -191,7 +192,8 @@ document.querySelectorAll('.quick-cal').forEach(function(btn){
 new MutationObserver(function(){
   document.querySelectorAll('.calendly-badge-widget, .calendly-badge-content, [data-testid="floating_badge"]').forEach(function(n){ n.remove(); });
 }).observe(document.documentElement, {childList:true, subtree:true});
-</script></body>
+</script>  <script defer src="safemed-fixes.js"></script>
+</body>
 </html>
 
 <section class="section"><div class="card"><h2>What to Prepare for Your Consultation</h2><ul><li>Medication list or pill bottles</li><li>Equipment used at home (CPAP, oxygen, mobility aids)</li><li>Emergency contacts</li><li>Pharmacy name and location</li></ul><p>Our goal is to make life easier for you and safer for your loved one. Let’s take this step together.</p></div></section>

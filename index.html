@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 
+  <link rel="stylesheet" href="safemed-fixes.css" />
 </head>
 <body>
 <header class="site">
@@ -177,6 +178,12 @@
       <a href="assets/medication-1.jpg" target="_blank"><img src="assets/medication-1.jpg" alt=""></a>
       <a href="assets/medication-2.webp" target="_blank"><img src="assets/medication-2.webp" alt=""></a>
     </div>
+<dialog class="lightbox" aria-label="Expanded image">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img class="lightbox-img" alt="" />
+  <p class="lightbox-caption" aria-live="polite"></p>
+</dialog>
+
   </div>
 </section>
 
@@ -193,5 +200,6 @@
     </nav>
   </div>
 </footer>
+  <script defer src="safemed-fixes.js"></script>
 </body>
 </html>

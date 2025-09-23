@@ -1,0 +1,93 @@
+/* === SafeMed Fixes (triple-checked) === */
+:root{
+  --sm-teal:#0c7e80;
+  --sm-teal-600:#0a6a6b;
+  --sm-white:#ffffff;
+  --sm-ink:#0f172a;
+  --sm-ring:#0b0b0c;
+}
+
+/* Baseline readability */
+html, body{
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.6;
+}
+:focus-visible{ outline:3px solid var(--sm-ring); outline-offset:2px }
+
+/* Global teal background */
+body{ background: var(--bg, var(--sm-teal)) !important; color: var(--text, var(--sm-ink)); }
+
+/* Secondary/top bar text should be white */
+.topbar, .topbar a, .promo, .promo a, .topbar .contacts a{ color:#fff !important; }
+.topbar{ background: rgba(12,126,128,.95); padding: 6px 10px; display:flex; justify-content:space-between; align-items:center; }
+
+/* Header transparency + legibility */
+header.site, header{
+  background: rgba(12,126,128,.92) !important;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+/* Primary nav links look like white buttons */
+.navlinks a,
+header nav a,
+#primary-nav a{
+  background: #ffffff !important;
+  color: var(--primary, var(--sm-teal)) !important;
+  border: 1px solid rgba(0,0,0,.08);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  display:inline-block;
+}
+.navlinks a:hover,
+header nav a:hover,
+#primary-nav a:hover{ transform: translateY(-1px) }
+.navlinks a:active,
+header nav a:active,
+#primary-nav a:active{ transform: translateY(0) }
+
+/* Hero: keep image wide, not boxed */
+.hero{ padding: 56px 0; }
+.heroimg{ width:100%; height:auto; display:block; border-radius: 16px; object-fit: cover; }
+.hero .card{ border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.12) }
+
+/* CTA stripe alternative to big contact box */
+.cta-stripe{
+  margin: 16px auto;
+  background: linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,255,255,.7));
+  color: var(--sm-ink);
+  padding: .8rem 1rem;
+  text-align:center;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+/* Tame any oversized contact boxes */
+#contact, .contact, .contact-box, .contact-card, section.contact{
+  background: #ffffff;
+  color: var(--sm-ink);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  padding: 16px;
+}
+/* If there was a huge bordered panel, slim it down */
+.big-contact, .contact-panel{ padding: 12px !important; border: none !important; background: transparent !important; box-shadow:none !important; }
+
+/* Mobile nav behavior for alt headers (pricing/contact) */
+@media (max-width: 900px){
+  #primary-nav{ display:none }
+  #primary-nav.open{ display:block; position:absolute; right:6%; top:64px;
+    background:#fff; border-radius:12px; padding:.5rem; box-shadow:0 8px 24px rgba(0,0,0,.2); }
+}
+
+/* Gallery thumbnails + lightbox baseline (if present) */
+.gallery img{ border-radius:12px; border:1px solid rgba(0,0,0,.06); cursor:pointer }
+dialog.lightbox{ border:none; border-radius:12px; padding:0; max-width:min(92vw, 1000px) }
+dialog.lightbox::backdrop{ background: rgba(0,0,0,.6) }
+.lightbox-img{ width:100%; height:auto; display:block; border-radius:12px 12px 0 0 }
+.lightbox-close{ position:absolute; top:.25rem; right:.5rem; background:#fff; border:none; font-size:2rem; width:44px; height:44px; border-radius:8px; cursor:pointer }
+.lightbox-caption{ margin:.5rem 1rem 1rem; color:#334155 }
