@@ -84,24 +84,3 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
 }
 
-
-/* === Force white text on teal backgrounds, keep boxes black === */
-
-/* Headers always white */
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff !important;
-}
-
-/* Paragraphs & lead text inside teal sections */
-.section:not(.white) p,
-.section:not(.white) .lead {
-  color: #ffffff !important;
-}
-
-/* But keep text inside cards/tables dark */
-.card, .compare, .pricing .card {
-  color: #0f172a !important; /* dark ink */
-}
-.card p, .card li, .compare td, .compare th {
-  color: #0f172a !important;
-}
