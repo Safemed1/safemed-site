@@ -57,11 +57,11 @@
         <!-- Right column: image mosaic + CTA card -->
         <aside>
           <div class="about-mosaic">
-            <!-- Use your existing images in /assets/. Update names only if yours differ. -->
             <img src="assets/gallery-01-family-education.jpg" alt="Explaining medication plan to family">
             <img src="assets/gallery-03-cpap-cleaning-sink.jpg" alt="Cleaning a CPAP mask">
             <img src="assets/gallery-04-hospital-bed-cleaning-wide.jpg" alt="Disinfecting hospital bed rail">
-            <img src="assets/gallery-06-family-consult.jpg" alt="Family consult discussing services">
+            <!-- REPLACED TILE #4: use a real photo, not the screenshot -->
+            <img src="assets/gallery-02-medication-management.jpg" alt="Weekly pillbox setup and medication management">
           </div>
 
           <div class="card" style="padding:18px;margin-top:16px">
@@ -109,5 +109,21 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Auto-highlight active nav (works on every page) -->
+  <script>
+    (function() {
+      var path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.links a').forEach(function(a){
+        var href = a.getAttribute('href');
+        if (!href) return;
+        var clean = href.split('#')[0];
+        if (path === clean || (path === 'index.html' && clean === './')) {
+          a.classList.add('active');
+          a.setAttribute('aria-current','page');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
