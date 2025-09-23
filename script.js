@@ -33,3 +33,31 @@ if (galleryLinks.length) {
     });
   });
 }
+
+
+<script>
+(function () {
+  // Normalize a URL path or href to a comparable slug (e.g., "about")
+  function slugify(url) {
+    if (!url) return "";
+    url = url.split('#')[0].split('?')[0];          // strip hash/query
+    url = url.replace(/\/+$/, "");                   // strip trailing slash
+    url = url.split("/").pop();                      // take last segment
+    if (!url || url === "." ) url = "index.html";
+    if (!/\.html$/i.test(url)) url += ".html";       // add .html if missing
+    return url.toLowerCase();
+  }
+
+  var page = slugify(location.pathname);
+  // Some hosts serve "/" as index.html
+  if (page === "" || page === ".html") page = "index.html";
+
+  document.querySelectorAll(".links a").forEach(function (a) {
+    var href = slugify(a.getAttribute("href"));
+    var isActive = (href === page);
+    a.classList.toggle("active", isActive);
+    if (isActive) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+})();
+</script>
