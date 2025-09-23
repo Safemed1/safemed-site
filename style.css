@@ -72,3 +72,14 @@ footer a{color:#e8f8f8;opacity:.95}
 
 /* hero card text dark */
 .hero .card h1, .hero .card p{ color: var(--text) }
+
+
+/* force headers white */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+.section.white h2,
+.section.white h3,
+.section.white h4 {
+  color: #ffffff !important;
+}
