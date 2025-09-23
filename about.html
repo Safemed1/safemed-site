@@ -1,161 +1,113 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>About • SafeMed Concierge</title>
-
-  <link rel="icon" href="assets/safemed-logo.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="About • SafeMed Concierge">
-  <meta property="og:description" content="Meet the founder of SafeMed Concierge and learn why families trust us.">
-  <meta property="og:image" content="assets/safemed-card-1200x630.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About • SafeMed Concierge">
-  <meta name="twitter:description" content="Meet the founder of SafeMed Concierge and learn why families trust us.">
-  <meta name="twitter:image" content="assets/safemed-card-1200x630.png">
-
-  <meta name="description" content="Meet the founder of SafeMed Concierge and learn why families trust us.">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0c7e80">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
+  <title>About • SafeMed Concierge</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="site" role="banner">
-  <div class="container nav" aria-label="Primary">
-    <a href="index.html" class="logo" aria-label="SafeMed Concierge"><img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px; width:auto; display:block;"></a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html#book">Contact</a></li>
-      </ul>
-    </nav>
-    <div>
-      <a href="contact.html#book" class="btn cta">Book a Consult</a>
-      <button class="mobile-toggle" aria-label="Open Menu" aria-expanded="false"><span class="kbd">≡</span></button>
+  <!-- Header (same structure as other pages) -->
+  <header class="container">
+    <div class="nav">
+      <a href="index.html" class="brand" aria-label="SafeMed home">
+        <img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px;vertical-align:middle" />
+      </a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn cta" href="contact.html#book">Book a Consult</a>
     </div>
-  </div>
-  <div class="mobile-panel container" role="dialog" aria-modal="true" aria-label="Mobile menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html#book">Contact</a>
-    <a href="contact.html#book" class="btn">Book a Consult</a>
-  </div>
-</header>
+  </header>
 
-<section class="section">
-  <div class="container grid split">
-    <div>
-      <h1>Why families choose SafeMed</h1>
-      <p>After years supporting seniors and their caregivers, we built SafeMed to bring hospital-level discipline into everyday homes—without the insurance delays. We focus on clarity, safety, and dignity.</p>
-      <ul>
-        <li>Experienced in home-based senior support</li>
-        <li>Clear, large-type guides and labels</li>
-        <li>Trust-first: background-checked & insured</li>
-      </ul>
-      <a class="btn" href="contact.html#book">Book a consult</a>
-    </div>
-    <div class="visual">
-      <img src='assets/about-1.png' alt='Founder supporting a family at home'/>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container cols">
-    <div>
-      <strong>SafeMed Concierge</strong>
-      <p>Hospital-level discipline, concierge convenience. Medication management & DME cleaning for families in Glendale, Pasadena, and nearby.</p>
-      <div class="pills">
-        <span class="badge">• Licensed & background-checked</span>
-        <span class="badge">• HIPAA-aware workflows</span>
-        <span class="badge">• Home & virtual</span>
+  <main>
+    <!-- Hero -->
+    <section class="section">
+      <div class="container">
+        <span class="badge">Private, concierge practice</span>
+        <h1>Hospital-grade care, delivered at home.</h1>
+        <p class="lead">We keep medications organized and home medical equipment safe—so visits are calm, predictable, and compliant.</p>
       </div>
-    </div>
-    <div>
-      <p><strong>Pages</strong></p>
-      <p><a href="index.html">Home</a><br><a href="services.html">Services</a><br><a href="about.html">About</a><br><a href="contact.html#book">Contact</a></p>
-    </div>
-    <div>
-      <p><strong>Contact</strong></p>
-      <p><span data-contact-city="true">Glendale, CA</span><br>
-      <a href="tel:+13234926837">(323) 492-6837</a><br>
-      <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></p>
-    </div>
-  </div>
-  <div class="container" style="margin-top:10px;font-size:.9rem;">© <span id="year"></span> SafeMed Concierge. All rights reserved.</div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Two-column story -->
+    <section class="section">
+      <div class="container grid two">
+        <div>
+          <h2>Who you’ll work with</h2>
+          <p><strong>Joseph</strong> is the founder and your direct point of contact. No call centers or rotating contractors—just reliable, one-to-one care.</p>
+          <ul class="checklist">
+            <li>Background-checked & insured</li>
+            <li>HIPAA-aware workflows and secure practices</li>
+            <li>Clear documentation after each visit</li>
+          </ul>
 
-<main>
-  <section class="section">
-    <div class="container">
-      <span class="badge">Private, concierge practice</span>
-      <h1>Hospital‑grade care, delivered at home.</h1>
-      <p class="lead">SafeMed Concierge helps families keep medications organized and devices safe—so every visit is calm, predictable, and compliant.</p>
-    </div>
-  </section>
+          <h2 style="margin-top:24px">Why families choose SafeMed</h2>
+          <ul class="bullets">
+            <li><strong>Medication confidence:</strong> weekly pillbox setup, refills & changes, MD/pharmacy coordination, family updates.</li>
+            <li><strong>DME protected:</strong> hospital-level cleaning for CPAP, nebulizers, mobility gear, and hospital beds.</li>
+            <li><strong>Concierge access:</strong> fast responses by text/email and predictable scheduling.</li>
+          </ul>
+        </div>
 
-  <section class="section">
-    <div class="container grid two">
-      <div>
-        <h2>Who you'll work with</h2>
-        <p><strong>Joseph</strong>, SafeMed’s founder, is your direct point of contact from day one. No call centers or rotating contractors—just reliable, one‑to‑one care.</p>
-        <ul class="checklist">
-          <li>Background‑checked and insured</li>
-          <li>HIPAA‑aware workflows and secure practices</li>
-          <li>Clear notes after each visit</li>
-        </ul>
-
-        <h2>Why families choose SafeMed</h2>
-        <ul class="bullets">
-          <li><strong>Medication confidence:</strong> weekly pillbox setup, refills & changes, MD/pharmacy coordination, family updates.</li>
-          <li><strong>DME protected:</strong> hospital‑level cleaning for CPAP, nebulizers, mobility gear, and hospital beds.</li>
-          <li><strong>Concierge access:</strong> fast responses by text/email, predictable scheduling.</li>
-        </ul>
-      </div>
-      <div>
-        <div class="card" style="padding:18px">
-          <h3>How it works</h3>
-          <ol class="steps">
-            <li><strong>Free consult:</strong> review meds/devices, goals, and fit.</li>
-            <li><strong>Setup visit:</strong> organize your pill system and deep‑clean devices.</li>
-            <li><strong>Monthly care:</strong> ongoing fills, cleanings, and coordination.</li>
-          </ol>
-          <p class="muted" style="margin-top:8px">Service area: Glendale, Pasadena, Burbank, Eagle Rock, and nearby.</p>
-          <div class="stack">
-            <a class="btn" href="contact.html#book">Book a consult</a>
-            <a class="btn secondary" href="services.html">See services</a>
+        <div>
+          <div class="card" style="padding:18px">
+            <h3>How it works</h3>
+            <ol class="steps">
+              <li><strong>Free consult:</strong> review meds/devices, goals, and fit.</li>
+              <li><strong>Setup visit:</strong> organize your pill system and deep-clean devices.</li>
+              <li><strong>Monthly care:</strong> ongoing fills, cleanings, and proactive coordination.</li>
+            </ol>
+            <p class="muted" style="margin-top:8px">Service area: Glendale, Pasadena, Burbank, Eagle Rock, and nearby.</p>
+            <div class="stack">
+              <a class="btn" href="contact.html#book">Book a consult</a>
+              <a class="btn secondary" href="services.html">See services</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Standards & safety</h2>
-      <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px;">
-        <div class="pill">• Licensed & background‑checked</div>
-        <div class="pill">• HIPAA‑aware workflows</div>
-        <div class="pill">• Hospital‑grade cleaning</div>
+    <!-- Standards -->
+    <section class="section">
+      <div class="container">
+        <h2>Standards & safety</h2>
+        <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+          <div class="pill">• Licensed & background-checked</div>
+          <div class="pill">• HIPAA-aware workflows</div>
+          <div class="pill">• Hospital-grade cleaning</div>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
+  <!-- Footer (unchanged) -->
+  <footer class="footer">
+    <div class="container grid" style="grid-template-columns:1fr auto">
+      <div>
+        <strong>SafeMed Concierge</strong><br />
+        Glendale, CA · (323) 492-6837 · <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a>
+      </div>
+      <nav class="muted">
+        <a href="index.html">Home</a> ·
+        <a href="services.html">Services</a> ·
+        <a href="about.html">About</a> ·
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Optional: auto-highlight active nav if templates vary -->
+  <script>
+    document.querySelectorAll('.links a').forEach(a=>{
+      if(a.getAttribute('href') && location.pathname.endsWith(a.getAttribute('href'))) {
+        a.classList.add('active'); a.setAttribute('aria-current','page');
+      }
+    });
+  </script>
 </body>
 </html>
