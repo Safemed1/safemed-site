@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Plans • SafeMed Concierge</title>
+<style>
+:root{
+  --teal:#0c7e80;
+  --teal-900:#094c4d;
+  --ink:#0c2a2b;
+  --ink-soft:#1a3c3d;
+  --bg:#f7fbfb;
+  --card:#ffffff;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{font-size:16px}
+@media (min-width:1024px){ html{font-size:16.5px} }
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+}
+a{color:var(--teal);text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 1rem}
+.header{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(0deg, rgba(12,126,128,.92), rgba(9,76,77,.96));
+  backdrop-filter:saturate(1.2) blur(6px);
+  color:#fff; box-shadow:0 2px 12px rgba(0,0,0,.12);
+}
+.header .bar{display:flex;align-items:center;gap:.8rem;justify-content:space-between;padding:.75rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.3px}
+.brand .dot{width:26px;height:26px;border-radius:8px;background:#fff3;color:transparent;display:inline-block;box-shadow:inset 0 0 0 2px #fff6}
+.nav{display:flex;flex-wrap:wrap;gap:.6rem}
+.nav a{
+  background:#fff; color:var(--teal); padding:.5rem .8rem; border-radius:999px;
+  font-weight:600; font-size:.95rem; box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.hero{
+  background: radial-gradient(1200px 500px at 50% -10%, #0c7e80 0%, #094c4d 70%);
+  color:#fff; padding:3.2rem 0 2.4rem;
+}
+.hero .h1{font-size:clamp(1.9rem,2.2vw + 1rem,2.4rem);font-weight:800;margin:0 0 .6rem}
+.hero p{font-size:1.05rem;opacity:.95;margin:.4rem 0 0}
+.cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{border:none;cursor:pointer;font-weight:700;padding:.7rem 1rem;border-radius:14px}
+.btn-light{background:#fff;color:var(--teal)}
+.btn-dark{background:#073b3c;color:#fff;border:1px solid #0a5b5c}
+.card{
+  background:var(--card); border-radius:var(--radius); box-shadow:0 8px 28px rgba(0,0,0,.12);
+  border:1px solid rgba(12,42,43,.06); padding:1.1rem;
+}
+.section{padding:2rem 0}
+.section h2{font-size:clamp(1.35rem,1.6vw + .8rem,1.8rem);margin:0 0 .6rem}
+.grid{display:grid;gap:1rem}
+.grid-2{grid-template-columns:repeat(auto-fit, minmax(260px,1fr))}
+figure{margin:0}
+figure img{width:100%;height:300px;object-fit:cover;border-radius:14px 14px 0 0;display:block}
+figure figcaption{padding:.8rem 1rem}
+.table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid #e5efef}
+.table th,.table td{padding:.9rem 1rem;border-bottom:1px solid #e8f2f2;text-align:left}
+.table th{background:#eff8f8;font-weight:800}
+.table tr:last-child td{border-bottom:none}
+.why .lead{font-size:1.05rem;margin:.3rem 0 0;color:var(--ink-soft)}
+.footer{background:linear-gradient(0deg,#0a6a6b,#094c4d);color:#cfe8e8;padding:1.4rem 0;margin-top:2rem}
+.small{font-size:.95rem;opacity:.95}
+/* See How We Help above the footer */
+.help{margin-top:1.8rem}
+</style>
+<link href="data:application/octet-stream;base64,Ci8qID09PSBTYWZlTWVkIE1vYmlsZSArIENvbnRyYXN0IEZpeGVzICh2MjAyNS0wOS0yMykgPT09ICovCgovKiAwKSBDb2xvciB0b2tlbnMgKi8KOnJvb3R7CiAgLS1zbS1pbms6IzBmMTcyYTsKICAtLXNtLWluay1zdHJvbmc6IzBiMWIxYzsKICAtLXNtLXRlYWw6IzBjN2U4MDsKICAtLXNtLXN1cmZhY2U6I2ZmZmZmZjsKfQoKLyogMSkgRW5zdXJlIHJlYWRhYmxlIHRleHQgd2hlbiBiYWNrZ3JvdW5kIGlzIHRlYWwgKi8KYm9keSxoZWFkZXIuc2l0ZSxoZWFkZXIsLnRvcGJhcnsKICBjb2xvcjogdmFyKC0tc20taW5rKSAhaW1wb3J0YW50Owp9Ci50ZWFsIGgxLC50ZWFsIGgyLC50ZWFsIGgzLC50ZWFsIHAsLnRlYWwgbGksLm9uLXRlYWwgaDEsLm9uLXRlYWwgaDIsLm9uLXRlYWwgaDMsLm9uLXRlYWwgcCwub24tdGVhbCBsaXsKICBjb2xvcjogdmFyKC0tc20taW5rKSAhaW1wb3J0YW50Owp9CgovKiAyKSBQbGFjZSBrZXkgdGV4dCBvbiBhIHdoaXRlIGNhcmQgd2hlbiBpbnNpZGUgdGVhbCBzZWN0aW9ucyAqLwoKCi8qIDMpIEJ1dHRvbnM6IG1ha2UgcHJpbWFyeSBidXR0b25zIHRlYWwgb24gd2hpdGU7IGdob3N0IHJlYWRhYmxlIG9uIHRlYWwgKi8KLmJ0bi5wcmltYXJ5eyBiYWNrZ3JvdW5kOiNmZmZmZmY7IGNvbG9yOnZhcigtLXNtLXRlYWwpOyBib3JkZXItY29sb3I6I2ZmZmZmZiB9Ci5idG4uZ2hvc3R7IGJhY2tncm91bmQ6dHJhbnNwYXJlbnQ7IGJvcmRlci1jb2xvcjojZmZmZmZmOyBjb2xvcjojZmZmZmZmIH0KaGVhZGVyIC5idG4sLm5hdiAuYnRueyBmb250LXNpemU6IDAuOTVyZW07IHBhZGRpbmc6IDEwcHggMTRweCB9CgovKiA0KSBIZXJvIGltYWdlIGNlbnRlcmluZyAqLwoKCi8qIDUpIE1vYmlsZSB0eXBlIHNjYWxlICYgc3BhY2luZyAqLwpAbWVkaWEgKG1heC13aWR0aDogNDgwcHgpewogIGgxeyBmb250LXNpemU6IGNsYW1wKDI2cHgsIDh2dywgMzRweCk7IGxpbmUtaGVpZ2h0OjEuMjsgfQogIGgyeyBmb250LXNpemU6IGNsYW1wKDIwcHgsIDZ2dywgMjhweCk7IH0KICAubGVhZHsgZm9udC1zaXplOiAxcmVtOyBsaW5lLWhlaWdodDogMS41NTsgfQogIC5idG57IGZvbnQtc2l6ZTogLjk1cmVtOyBwYWRkaW5nOjEwcHggMTRweCB9CiAgLmJhZGdleyBmb250LXNpemU6IC44NXJlbTsgcGFkZGluZzogNnB4IDEwcHggfQogIC5oZXJvIC5jYXJkeyBwYWRkaW5nOiAxNnB4IH0KICAKICAKICAKfQoKLyogNikgSW1wcm92ZSBjb250cmFzdCBmb3IgbGlua3Mgb24gdGVhbCAqLwphLGE6dmlzaXRlZHsgY29sb3I6IGluaGVyaXQgfQoub24tdGVhbCBhLGhlYWRlciBheyBjb2xvcjojMDgzNDM2OyBmb250LXdlaWdodDo2MDAgfQoub24tdGVhbCBhLmJ0bixoZWFkZXIgYS5idG57IGNvbG9yOnZhcigtLXNtLXRlYWwpIH0K" rel="stylesheet"/>
+</head>
+<body>
+<header class="header">
+<div class="container bar">
+<div class="brand"><span class="dot"></span> SafeMed Concierge</div><div class="textsize" id="textsize"><button aria-label="Decrease text" class="aa-small" data-step="-1">A</button><button aria-label="Increase text" class="aa-large" data-step="1">A</button></div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="tel:+13234926837">📞 Call</a>
+<a href="mailto:safemed.joseph@gmail.com">✉️ Email</a>
+<a href="https://calendly.com/" rel="noopener" target="_blank">📅 Book</a>
+</nav>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<div class="card">
+<h2>Simple Plans</h2>
+<div class="grid grid-2">
+<div class="card">
+<h3>Medication Only</h3>
+<p class="small">Weekly or bi‑weekly pillbox prep, med list updates, and family notes.</p>
+<p><strong>$450 / month</strong></p>
+</div>
+<div class="card">
+<h3>DME Cleaning Only</h3>
+<p class="small">Full sanitisation and safety check of DME devices—every visit.</p>
+<p><strong>$250–350 / month</strong></p>
+</div>
+<div class="card">
+<h3>Complete Bundle</h3>
+<p class="small">Medication + DME together for full peace of mind.</p>
+<p><strong>$500 / month</strong></p>
+</div>
+<div class="card">
+<h3>What’s included in every plan</h3>
+<ul>
+<li>Friendly reminders and flexible booking windows</li>
+<li>Photo proof + easy‑to‑read visit notes after each appointment</li>
+<li>No per‑item fees for DME cleaning</li>
+<li>Direct phone/text support between visits</li>
+</ul>
+</div>
+</div>
+<div class="cta-row">
+<a class="btn btn-light" href="https://calendly.com/" rel="noopener" target="_blank">Book a consult</a>
+<a class="btn btn-dark" href="tel:+13234926837">Call (323) 492‑6837</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section help">
+<div class="container">
+<div class="card">
+<h2>See How We Help</h2>
+<div class="grid grid-2">
+<figure class="card" style="padding:0">
+<img alt="Professional phone consult" src="assets/nurse-phone-portrait.jpg"/>
+<figcaption>Friendly check-ins and quick scheduling by phone.</figcaption>
+</figure>
+<figure class="card" style="padding:0">
+<img alt="DME cleaning and sanitization" src="assets/dme-cleaning-closeup.jpg"/>
+<figcaption>Thorough DME cleaning every visit—safer, fresher equipment.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container small">© SafeMed Concierge • All rights reserved • Glendale • Pasadena • Eagle Rock • Burbank</div>
+</footer>
+<script>
+(function(){
+  try{
+    const key='safemed_font_base';
+    const root=document.documentElement;
+    const cur = parseFloat(getComputedStyle(root).getPropertyValue('--base-font')) || 16;
+    const saved = localStorage.getItem(key);
+    if(saved){ root.style.setProperty('--base-font', saved + 'px'); }
+    const box=document.getElementById('textsize');
+    if(box){
+      box.addEventListener('click', (e)=>{
+        const btn=e.target.closest('button'); if(!btn) return;
+        let base=parseFloat(getComputedStyle(root).getPropertyValue('--base-font'))||16;
+        const step = btn.dataset.step==='1' ? 1 : -1;
+        base = Math.min(19, Math.max(14, base + step));
+        root.style.setProperty('--base-font', base+'px');
+        try{ localStorage.setItem(key, base); }catch(_){}
+      });
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

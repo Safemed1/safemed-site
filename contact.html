@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Contact • SafeMed Concierge</title>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- SAME HEADER AS OTHER PAGES -->
+<header class="site" role="banner">
+<div aria-label="Primary" class="container nav">
+<a aria-label="SafeMed Concierge" class="logo" href="index.html"><img alt="SafeMed Concierge logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgNDIwIDEyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBjN2U4MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMjljYTAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHJ4PSIxOCIgcnk9IjE4IiB4PSI2IiB5PSIxOCIgd2lkdGg9Ijg0IiBoZWlnaHQ9Ijg0IiBmaWxsPSJ1cmwoI2cpIi8+CiAgPGcgZmlsbD0iI2ZmZmZmZiI+CiAgICA8Y2lyY2xlIGN4PSIzNCIgY3k9IjYwIiByPSI3Ii8+CiAgICA8cmVjdCB4PSI0NSIgeT0iNDgiIHdpZHRoPSI4IiBoZWlnaHQ9IjI0IiByeD0iNCIvPgogICAgPHJlY3QgeD0iMjYiIHk9IjY5IiB3aWR0aD0iMzAiIGhlaWdodD0iOCIgcng9IjQiLz4KICA8L2c+CiAgPHRleHQgeD0iMTA4IiB5PSI3NiIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIzNCIgZmlsbD0iIzBjN2U4MCI+U2FmZU1lZDwvdGV4dD4KICA8dGV4dCB4PSIxMDgiIHk9IjEwMiIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjYwMCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzEyOWNhMCI+Q29uY2llcmdlPC90ZXh0Pgo8L3N2Zz4K" style="height:56px; width:auto; display:block;"/></a>
+<nav aria-label="Main">
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html#book">Contact</a></li>
+</ul>
+</nav>
+<div>
+<a class="btn cta" href="contact.html#book">Book a Consult</a>
+<button aria-expanded="false" aria-label="Open Menu" class="mobile-toggle"><span class="kbd">≡</span></button>
+</div>
+</div>
+<div aria-label="Mobile menu" aria-modal="true" class="mobile-panel container" role="dialog">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html#book">Contact</a>
+<a class="btn" href="contact.html#book">Book a Consult</a>
+</div>
+</header>
+<main>
+<section class="section">
+<div class="container">
+<h1>Contact</h1>
+<p>Reach out with any questions or book your free 15-minute consult. We serve Glendale, Pasadena, Burbank, Eagle Rock, and nearby.</p>
+<div class="contact-actions">
+<a class="btn btn-lg" href="tel:+13234926837">📞 Call (323) 492-6837</a>
+<a class="btn btn-lg secondary" href="mailto:safemed.joseph@gmail.com">✉️ Email us</a>
+<a class="btn btn-lg" href="#book">🗓️ Open scheduler</a>
+</div>
+<div class="contact-layout">
+<div class="contact-pane">
+<h2>Send a message</h2>
+<div class="contactbox" role="form">
+<!-- Swap to Web3Forms or Formspree as we discussed -->
+<form action="https://api.web3forms.com/submit" method="POST" novalidate="">
+<input name="access_key" type="hidden" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+<input name="subject" type="hidden" value="New SafeMed inquiry"/>
+<input name="from_name" type="hidden" value="SafeMed Concierge"/>
+<!-- <input type="hidden" name="redirect" value="https://YOURDOMAIN.com/thank-you.html" /> -->
+<div class="row">
+<div><label for="name">Full name</label><input id="name" name="name" placeholder="Your name" required=""/></div>
+<div><label for="phone">Phone</label><input id="phone" inputmode="tel" name="phone" placeholder="(323) 492-6837"/></div>
+<div><label for="email">Email</label><input id="email" name="email" placeholder="safemed.joseph@gmail.com" required="" type="email"/></div>
+<div><label for="city">City</label><input id="city" name="city" placeholder="Glendale, CA"/></div>
+<div><label for="service">Interested in</label>
+<select id="service" name="service">
+<option>Medication Management</option>
+<option>DME Cleaning</option>
+<option>Bundle (Medication + DME)</option>
+<option>Other / Not sure</option>
+</select>
+</div>
+<div style="grid-column:1/-1">
+<label for="msg">How can we help?</label>
+<textarea id="msg" name="message" placeholder="Tell us about your medication or device needs…" rows="6"></textarea>
+</div>
+</div>
+<div class="row" style="grid-template-columns:1fr auto;align-items:center">
+<label style="display:flex;align-items:center;gap:10px">
+<input name="consent" required="" type="checkbox" value="ok"/>
+                    I agree to be contacted about my inquiry.
+                  </label>
+<button class="btn" type="submit">Send</button>
+</div>
+</form>
+</div>
+</div>
+<div class="contact-pane" id="book">
+<h2>Book a consultation</h2>
+<div class="calendly-inline-widget" data-url="https://calendly.com/safemed-joseph/30min" style="min-width:100%;height:860px"></div>
+<script async="" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<p class="muted" style="margin-top:8px">
+              If the scheduler doesn’t load, <a href="https://calendly.com/safemed-joseph/30min" rel="noopener" target="_blank">open Calendly</a>.
+            </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container grid" style="grid-template-columns:1fr auto">
+<div>
+<strong>SafeMed Concierge</strong><br/>
+        Glendale, CA · (323) 492-6837 · <a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a>
+</div>
+<nav class="muted">
+<a href="index.html">Home</a> ·
+        <a href="services.html">Services</a> ·
+        <a href="about.html">About</a> ·
+        <a aria-current="page" href="contact.html">Contact</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>
