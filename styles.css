@@ -330,3 +330,11 @@ header.site { position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%)
 /* Optional: a faint bar shadow under the whole header */
 .header-elevated{ box-shadow:0 12px 24px -18px rgba(0,0,0,.25); }
 
+/* Mobile button resize */
+@media (max-width: 768px) {
+  .btn.cta {
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 10px;
+  }
+}
