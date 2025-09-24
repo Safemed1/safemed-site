@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
-<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-<stop offset="0%" stop-color="#0c7e80" stop-opacity="1"/><stop offset="100%" stop-color="#0c7e80" stop-opacity=".6"/></linearGradient></defs>
-<rect width="900" height="200" rx="18" fill="url(#g)"/>
-<text x="450" y="110" text-anchor="middle" font-family="Inter, Arial" font-size="26" fill="#ffffff">Flat, Transparent Pricing — No Surprises</text>
-</svg>
