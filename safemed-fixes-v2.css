@@ -11,11 +11,11 @@ html,body{ font-size: clamp(17px, 1.8vw, 19px); line-height:1.6 }
 :focus-visible{ outline:3px solid var(--sm-ring); outline-offset:2px }
 
 /* Global teal page background */
-body{ background: var(--bg, var(--sm-teal)) !important; color: var(--text, var(--sm-ink)) }
+body{ background: #0F7B79 !important; var(--bg, var(--sm-teal)) !important; color: var(--text, var(--sm-ink)) }
 
 /* ===== Header bar: white to prevent washout ===== */
 header.site,header{
-  background:#ffffff !important;
+  background: #0F7B79 !important;#ffffff !important;
   color: var(--sm-ink) !important;
   border-bottom:1px solid rgba(0,0,0,.06);
   box-shadow: 0 6px 18px rgba(0,0,0,.06);
@@ -23,11 +23,11 @@ header.site,header{
 
 /* Brand + links default color */
 header .brand,header .brand:link,header .brand:visited{ color: var(--sm-teal) !important; text-decoration:none }
-header .brand .logo{ background: var(--sm-teal) !important }
+header .brand .logo{ background: #0F7B79 !important; var(--sm-teal) !important }
 
 /* ===== Primary nav buttons: SCALE DOWN ===== */
 .navlinks a,header nav a,#primary-nav a{
-  background:#ffffff !important;
+  background: #0F7B79 !important;#ffffff !important;
   color: var(--sm-teal) !important;
   border:1px solid rgba(0,0,0,.08);
   padding:6px 12px;             /* smaller */
@@ -55,13 +55,13 @@ header .brand .logo{ background: var(--sm-teal) !important }
   #drawer{
     display:block !important;
     position:fixed; inset:0 0 0 auto; width:min(88vw,360px);
-    background:#ffffff; box-shadow:-6px 0 30px rgba(0,0,0,.25);
+    background: #0F7B79 !important;#ffffff; box-shadow:-6px 0 30px rgba(0,0,0,.25);
     transform:translateX(100%); transition: transform .2s ease;
     padding:14px;
     z-index:60;
   }
   #drawer.open{ transform:translateX(0) }
-  #scrim{ display:block !important; position:fixed; inset:0; background:rgba(0,0,0,.35); z-index:50; opacity:0; transition:opacity .2s ease }
+  #scrim{ display:block !important; position:fixed; inset:0; background: #0F7B79 !important;rgba(0,0,0,.35); z-index:50; opacity:0; transition:opacity .2s ease }
   #scrim.show{ opacity:1 }
 }
 
@@ -75,7 +75,8 @@ header .brand .logo{ background: var(--sm-teal) !important }
 /* ===== Lightbox styles (if gallery present) ===== */
 .gallery img{ border-radius:12px; border:1px solid rgba(0,0,0,.06); cursor:pointer }
 dialog.lightbox{ border:none; border-radius:12px; padding:0; max-width:min(92vw,1000px) }
-dialog.lightbox::backdrop{ background:rgba(0,0,0,.6) }
+dialog.lightbox::backdrop{ background: #0F7B79 !important;rgba(0,0,0,.6) }
 .lightbox-img{ width:100%; height:auto; display:block; border-radius:12px 12px 0 0 }
-.lightbox-close{ position:absolute; top:.25rem; right:.5rem; background:#fff; border:none; font-size:2rem; width:44px; height:44px; border-radius:8px; cursor:pointer }
+.lightbox-close{ position:absolute; top:.25rem; right:.5rem; background: #0F7B79 !important;#fff; border:none; font-size:2rem; width:44px; height:44px; border-radius:8px; cursor:pointer }
 .lightbox-caption{ margin:.5rem 1rem 1rem; color:#334155 }
+body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }

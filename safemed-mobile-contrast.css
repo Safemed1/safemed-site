@@ -21,8 +21,8 @@ body,header.site,header,.topbar{
 
 
 /* 3) Buttons: make primary buttons teal on white; ghost readable on teal */
-.btn.primary{ background:#ffffff; color:var(--sm-teal); border-color:#ffffff }
-.btn.ghost{ background:transparent; border-color:#ffffff; color:#ffffff }
+.btn.primary{ background: #0F7B79 !important;#ffffff; color:var(--sm-teal); border-color:#ffffff }
+.btn.ghost{ background: #0F7B79 !important;transparent; border-color:#ffffff; color:#ffffff }
 header .btn,.nav .btn{ font-size: 0.95rem; padding: 10px 14px }
 
 /* 4) Hero image centering */
@@ -45,3 +45,5 @@ header .btn,.nav .btn{ font-size: 0.95rem; padding: 10px 14px }
 a,a:visited{ color: inherit }
 .on-teal a,header a{ color:#083436; font-weight:600 }
 .on-teal a.btn,header a.btn{ color:var(--sm-teal) }
+
+body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }

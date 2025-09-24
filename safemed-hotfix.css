@@ -3,7 +3,7 @@
 
 /* 1) Header: white bar for readability */
 header.site,header{
-  background:#ffffff !important;
+  background: #0F7B79 !important;#ffffff !important;
   color:var(--sm-ink) !important;
   border-bottom:1px solid rgba(0,0,0,.06);
   box-shadow:0 6px 18px rgba(0,0,0,.06);
@@ -11,7 +11,7 @@ header.site,header{
 
 /* 2) Primary nav & header actions: white buttons, teal text, smaller */
 .navlinks a,header nav a,#primary-nav a,.actions .btn,.actions a.btn{
-  background:#ffffff !important;
+  background: #0F7B79 !important;#ffffff !important;
   color:var(--sm-teal) !important;
   border:1px solid rgba(0,0,0,.08) !important;
   padding:6px 12px !important;
@@ -24,7 +24,7 @@ header.site,header{
 
 /* 3) Secondary/top bar: make text white if present */
 .topbar,.topbar a{ color:#ffffff !important }
-.topbar{ background:rgba(12,126,128,.95) !important; padding:6px 10px !important }
+.topbar{ background: #0F7B79 !important;rgba(12,126,128,.95) !important; padding:6px 10px !important }
 
 /* 4) Kill duplicate drawer menu on desktop only; keep on mobile */
 @media (min-width: 901px){
@@ -36,13 +36,14 @@ header.site,header{
 @media (max-width: 900px){
   #drawer{
     position:fixed; inset:0 0 0 auto; width:min(88vw,360px);
-    background:#ffffff; box-shadow:-6px 0 30px rgba(0,0,0,.25);
+    background: #0F7B79 !important;#ffffff; box-shadow:-6px 0 30px rgba(0,0,0,.25);
     transform:translateX(100%); transition: transform .2s ease;
     padding:14px; z-index:60;
   }
   #drawer.open{ transform:translateX(0) }
-  #scrim{ position:fixed; inset:0; background:rgba(0,0,0,.35); z-index:50; opacity:0; transition:opacity .2s ease }
+  #scrim{ position:fixed; inset:0; background: #0F7B79 !important;rgba(0,0,0,.35); z-index:50; opacity:0; transition:opacity .2s ease }
   #scrim.show{ opacity:1 }
 }
 
 /* No other global color overrides to avoid collateral changes */
+body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }

@@ -2,7 +2,7 @@
 
 /* Header bar stays teal */
 header.site,header{
-  background: var(--sm-teal,#0c7e80) !important;
+  background: #0F7B79 !important; var(--sm-teal,#0c7e80) !important;
   color:#ffffff !important;
   border-bottom:1px solid rgba(255,255,255,.15);
   box-shadow:0 6px 18px rgba(0,0,0,.08);
@@ -15,7 +15,7 @@ header .brand,header .brand:link,header .brand:visited{
 
 /* Nav + Action buttons: teal background + white text */
 .navlinks a,header nav a,#primary-nav a,.actions .btn,.actions a.btn{
-  background: var(--sm-teal,#0c7e80) !important;
+  background: #0F7B79 !important; var(--sm-teal,#0c7e80) !important;
   color:#ffffff !important;
   border:1px solid rgba(255,255,255,.2);
   padding:6px 12px;
@@ -26,9 +26,10 @@ header .brand,header .brand:link,header .brand:visited{
   box-shadow:0 4px 12px rgba(0,0,0,.12);
   display:inline-block;
 }
-.navlinks a:hover,header nav a:hover,#primary-nav a:hover,.actions .btn:hover{ background:#0a6a6b !important }
+.navlinks a:hover,header nav a:hover,#primary-nav a:hover,.actions .btn:hover{ background: #0F7B79 !important;#0a6a6b !important }
 
 /* Ensure readability in hero text etc */
 .hero h1,.hero h2,.hero p,.hero .pill,.hero .btn{
   color:#ffffff !important;
 }
+body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }

@@ -8,7 +8,7 @@
 
 /* Header: teal bar, white text, subtle border */
 header.site,header{
-  background: var(--sm-teal) !important;
+  background: #0F7B79 !important; var(--sm-teal) !important;
   color: var(--sm-white) !important;
   border-bottom: 1px solid rgba(255,255,255,.15);
   box-shadow: 0 4px 14px rgba(0,0,0,.15);
@@ -16,11 +16,11 @@ header.site,header{
 header .brand,header .brand:link,header .brand:visited{
   color: var(--sm-white) !important;
 }
-header .brand .logo{ background: var(--sm-white) !important; color: var(--sm-teal) !important }
+header .brand .logo{ background: #0F7B79 !important; var(--sm-white) !important; color: var(--sm-teal) !important }
 
 /* Nav + action buttons: pill, consistent sizing */
 .navlinks a,header nav a,#primary-nav a,.actions .btn,.actions a.btn{
-  background: rgba(255,255,255,.12) !important;
+  background: #0F7B79 !important; rgba(255,255,255,.12) !important;
   color: var(--sm-white) !important;
   border: 1px solid rgba(255,255,255,.35) !important;
   padding: 8px 14px !important;
@@ -33,7 +33,7 @@ header .brand .logo{ background: var(--sm-white) !important; color: var(--sm-tea
 }
 /* hover/focus */
 .navlinks a:hover,header nav a:hover,#primary-nav a:hover,.actions .btn:hover{
-  background: rgba(255,255,255,.18) !important;
+  background: #0F7B79 !important; rgba(255,255,255,.18) !important;
 }
 :focus-visible{ outline: 3px solid rgba(255,255,255,.6); outline-offset: 2px }
 
@@ -63,3 +63,125 @@ header .brand .logo{ background: var(--sm-white) !important; color: var(--sm-tea
 
 /* Tables/cards subtle elevation */
 .card{ box-shadow: 0 10px 30px rgba(0,0,0,.10); border-radius: 16px }
+body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }
+
+
+/* === SafeMed Teal Blend Theme — Sectioned + Blended (2025-09-24) === */
+/* Palette */
+:root{
+  --sm-teal: #0F7B79;
+  --sm-navy: #0F477B;
+  --sm-green:#0F7B43;
+  --sm-text:#FFFFFF;
+  --sm-text-dim: rgba(255,255,255,0.85);
+  --sm-glass: rgba(255,255,255,0.08);
+  --sm-line: rgba(255,255,255,0.18);
+}
+
+/* Global text color */
+html, body {
+  color: var(--sm-text) !important;
+  background: linear-gradient(180deg, #0F7B79 0%, #0F477B 50%, #0F7B43 100%) fixed !important;
+}
+
+p, li, dt, dd, small, label, input, textarea, select, a,
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sm-text) !important;
+}
+
+/* Links */
+a { text-decoration-color: var(--sm-text-dim) !important; }
+a:hover { text-decoration-color: var(--sm-text) !important; }
+
+/* Header / Nav */
+header, .site-header, nav, .navbar, .topbar {
+  background: linear-gradient(135deg, var(--sm-navy), var(--sm-teal)) !important;
+  border-bottom: 1px solid var(--sm-line) !important;
+}
+
+/* Footer */
+footer, .site-footer {
+  background: linear-gradient(160deg, var(--sm-green), var(--sm-navy)) !important;
+  border-top: 1px solid var(--sm-line) !important;
+}
+
+/* Hero sections */
+.hero, .hero-section, .masthead {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(255,255,255,0.14), transparent 60%),
+              linear-gradient(120deg, var(--sm-teal), var(--sm-navy)) !important;
+  box-shadow: inset 0 -1px 0 var(--sm-line);
+}
+
+/* Section alternation for nice blending without layout changes */
+main section:nth-of-type(odd),
+section.section-odd {
+  background: linear-gradient(180deg, rgba(15,123,121,0.98), rgba(15,71,123,0.98)) !important;
+  backdrop-filter: saturate(120%);
+}
+main section:nth-of-type(even),
+section.section-even {
+  background: linear-gradient(180deg, rgba(15,71,123,0.98), rgba(15,123,67,0.98)) !important;
+}
+
+/* Cards / boxes / panels */
+.card, .box, .panel, .feature, .pricing-card, .testimonial, .cta-box, .info-box, .plan, .service-card {
+  background: var(--sm-glass) !important;
+  border: 1px solid var(--sm-line) !important;
+  color: var(--sm-text) !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+/* Buttons */
+button, .btn, .button, .cta, .cta-button, input[type="submit"] {
+  background: linear-gradient(135deg, var(--sm-teal), var(--sm-green)) !important;
+  color: var(--sm-text) !important;
+  border: 1px solid var(--sm-line) !important;
+}
+button:hover, .btn:hover, .button:hover, .cta:hover, .cta-button:hover, input[type="submit"]:hover {
+  background: linear-gradient(135deg, var(--sm-green), var(--sm-teal)) !important;
+}
+
+/* Pills / tags / badges */
+.badge, .tag, .pill {
+  background: var(--sm-glass) !important;
+  color: var(--sm-text) !important;
+  border: 1px solid var(--sm-line) !important;
+}
+
+/* Tables */
+table, th, td {
+  border-color: var(--sm-line) !important;
+  color: var(--sm-text) !important;
+}
+thead, th {
+  background: linear-gradient(135deg, var(--sm-navy), var(--sm-teal)) !important;
+}
+
+/* Forms */
+input, textarea, select {
+  background: rgba(0,0,0,0.2) !important;
+  border: 1px solid var(--sm-line) !important;
+  color: var(--sm-text) !important;
+}
+::placeholder { color: rgba(255,255,255,0.75) !important; }
+
+/* Utility helpers (non‑destructive) */
+.bg-teal    { background-color: var(--sm-teal) !important; }
+.bg-navy    { background-color: var(--sm-navy) !important; }
+.bg-green   { background-color: var(--sm-green) !important; }
+.text-white { color: var(--sm-text) !important; }
+.border-glass { border-color: var(--sm-line) !important; }
+.backdrop-glass { background: var(--sm-glass) !important; }
+
+/* Ensure any leftover white/gray blocks get themed */
+*[style*="background: #fff"],
+*[style*="background:#fff"],
+*[style*="background-color: #fff"],
+*[style*="background-color:#fff"],
+.white-box, .light, .muted, .surface, .bg-white, .bg-light, .bg-gray, .bg-surface {
+  background: var(--sm-glass) !important;
+  color: var(--sm-text) !important;
+}
+
+/* Section dividers, rules */
+hr { border-color: var(--sm-line) !important; opacity: 1 !important; }
