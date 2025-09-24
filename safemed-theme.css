@@ -185,3 +185,85 @@ input, textarea, select {
 
 /* Section dividers, rules */
 hr { border-color: var(--sm-line) !important; opacity: 1 !important; }
+
+
+
+/* === SafeMed Artistic Palette Layout (2025-09-24) === */
+/* Purpose: Assign #0F7B79 (teal), #0F477B (navy), #0F7B43 (green) artistically across
+   header, hero, sections, and footer WITHOUT changing layout. Force white text. */
+:root{
+  --sm-teal: #0F7B79;
+  --sm-navy: #0F477B;
+  --sm-green:#0F7B43;
+  --sm-text:#FFFFFF;
+  --sm-dim: rgba(255,255,255,.85);
+  --sm-glass: rgba(255,255,255,.08);
+  --sm-line: rgba(255,255,255,.18);
+}
+
+/* Reset the earlier full-page wash so sections can own their color */
+html, body { background: var(--sm-teal) !important; color: var(--sm-text) !important; }
+* { color: var(--sm-text) !important; }
+
+/* Header / Nav as solid NAVY for anchor and readability */
+header, .site-header, .header, .header-elevated, .topbar, nav, .navbar {
+  background: var(--sm-navy) !important;
+  border-bottom: 1px solid var(--sm-line) !important;
+}
+
+/* Hero as solid TEAL with a soft vignette so it pops under text */
+.hero, .hero-section, .masthead, .hero-wrap {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(255,255,255,.12), transparent 60%),
+              var(--sm-teal) !important;
+  box-shadow: inset 0 -1px 0 var(--sm-line);
+}
+
+/* Footer as solid GREEN to close the page */
+footer, .site-footer {
+  background: var(--sm-green) !important;
+  border-top: 1px solid var(--sm-line) !important;
+}
+
+/* Artistic section rhythm (uses all three colors): repeat Teal → Navy → Green */
+main > section:nth-of-type(3n+1),
+.section-teal { background: var(--sm-teal) !important; }
+main > section:nth-of-type(3n+2),
+.section-navy { background: var(--sm-navy) !important; }
+main > section:nth-of-type(3n),
+.section-green { background: var(--sm-green) !important; }
+
+/* Page-specific nudges (non-breaking; applies only if these classes/ids exist) */
+#about, .about, .story { background: var(--sm-navy) !important; }
+#services, .services { background: var(--sm-green) !important; }
+#plans, .plans, #pricing, .pricing { background: var(--sm-teal) !important; }
+#contact, .contact { background: var(--sm-navy) !important; }
+#testimonials, .testimonials { background: var(--sm-teal) !important; }
+
+/* Cards/boxes keep glass look so content stands out regardless of section color */
+.card, .box, .panel, .feature, .pricing-card, .testimonial, .cta-box, .info-box, .plan, .service-card, .grid-card {
+  background: var(--sm-glass) !important;
+  border: 1px solid var(--sm-line) !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+
+/* Buttons */
+button, .btn, .button, .cta, .cta-button, input[type="submit"] {
+  background: linear-gradient(135deg, var(--sm-teal), var(--sm-green)) !important;
+  border: 1px solid var(--sm-line) !important;
+}
+button:hover, .btn:hover, .button:hover, .cta:hover, .cta-button:hover, input[type="submit"]:hover {
+  background: linear-gradient(135deg, var(--sm-green), var(--sm-teal)) !important;
+}
+
+/* Forms */
+input, textarea, select {
+  background: rgba(0,0,0,.25) !important;
+  border: 1px solid var(--sm-line) !important;
+  color: var(--sm-text) !important;
+}
+::placeholder { color: rgba(255,255,255,.75) !important; }
+
+/* Tables and dividers */
+table, th, td { border-color: var(--sm-line) !important; }
+thead, th { background: var(--sm-navy) !important; }
+hr { border-color: var(--sm-line) !important; opacity: 1 !important; }
