@@ -395,3 +395,8 @@ html, body {
   .nav .links a{width:100%; justify-content:flex-start; padding:12px 14px; font-size:16px}
   body.no-scroll{overflow:hidden}
 }
+
+body {
+  background: url('A_digital_image_features_a_deep_red_textured_backg.png') no-repeat center center fixed;
+  background-size: cover;
+}
