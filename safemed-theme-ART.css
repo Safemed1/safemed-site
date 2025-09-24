@@ -89,3 +89,51 @@ input, textarea, select{
 table, th, td{ border-color:var(--sm-line) !important; }
 thead, th{ background:var(--sm-navy) !important; }
 hr{ border-color:var(--sm-line) !important; opacity:1 !important; }
+
+
+
+/* === Hotfix: Header bar width & corners; container backgrounds (2025-09-24) === */
+/* Make header/nav a full-width solid bar without rounded corners or inner boxes */
+header, .site-header, .header, .header-elevated, .topbar, nav, .navbar {
+  background: var(--sm-navy) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Any nested container inside header should be transparent so the bar isn't a rounded box */
+header .container, .site-header .container, nav .container, .navbar .container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Remove any stray background/border on logo area so it sits on the navy bar cleanly */
+.logo, .brand, .site-brand, .brand-wrap {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Ensure body doesn't tint the top behind header */
+html, body {
+  background: linear-gradient(180deg, #0F7B79 0%, #0F7B79 35%, #0F477B 75%, #0F7B43 100%) fixed !important;
+}
+
+/* Hero spacing surfaces stay transparent (no green/teal boxes) */
+.hero, .hero-section, .masthead, .hero-wrap, .page-hero {
+  background:
+    radial-gradient(1000px 500px at 20% -10%, rgba(255,255,255,.10), transparent 60%),
+    var(--sm-teal) !important;
+}
+
+/* Prevent pill/badge shells from turning opaque teal; keep glass look */
+.badge, .pill, .tag {
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+}
+
+/* Keep buttons readable on any section color */
+button, .btn, .button, .cta, .cta-button, input[type="submit"] {
+  color: #ffffff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
