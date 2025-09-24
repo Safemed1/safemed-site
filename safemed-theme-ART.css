@@ -1,0 +1,91 @@
+
+/* === SafeMed ART Override (2025-09-24) ===
+   Palette: #0F7B79 (teal), #0F477B (navy), #0F7B43 (green)
+   Goal: Only color changes, keep layout. Highest precedence via !important.
+*/
+:root{
+  --sm-teal:#0F7B79;
+  --sm-navy:#0F477B;
+  --sm-green:#0F7B43;
+  --sm-text:#ffffff;
+  --sm-dim:rgba(255,255,255,.85);
+  --sm-glass:rgba(255,255,255,.08);
+  --sm-line:rgba(255,255,255,.18);
+}
+
+/* Global text white & base bg fallback */
+html, body{ color:var(--sm-text) !important; background:var(--sm-teal) !important; }
+body *{ color:var(--sm-text) !important; }
+a{ color:var(--sm-text) !important; }
+a:hover{ opacity:.92; }
+
+/* Header / nav */
+header, .site-header, .header, .header-elevated, .topbar, nav, .navbar{
+  background:var(--sm-navy) !important;
+  border-bottom:1px solid var(--sm-line) !important;
+}
+
+/* Hero */
+.hero, .hero-section, .masthead, .hero-wrap, .page-hero{
+  background:
+    radial-gradient(1000px 500px at 20% -10%, rgba(255,255,255,.12), transparent 60%),
+    var(--sm-teal) !important;
+  box-shadow: inset 0 -1px 0 var(--sm-line);
+}
+
+/* Footer */
+footer, .site-footer{
+  background:var(--sm-green) !important;
+  border-top:1px solid var(--sm-line) !important;
+}
+
+/* Alternating main sections – Teal → Navy → Green */
+main > section:nth-of-type(3n+1){ background:var(--sm-teal) !important; }
+main > section:nth-of-type(3n+2){ background:var(--sm-navy) !important; }
+main > section:nth-of-type(3n){   background:var(--sm-green) !important; }
+
+/* Page-specific (only applies if present) */
+#about, .about, .story{ background:var(--sm-navy) !important; }
+#services, .services{ background:var(--sm-green) !important; }
+#plans, .plans, #pricing, .pricing{ background:var(--sm-teal) !important; }
+#contact, .contact{ background:var(--sm-navy) !important; }
+#testimonials, .testimonials{ background:var(--sm-teal) !important; }
+
+/* Neutralize lingering light surfaces so content isn't floating white */
+.white, .bg-white, .bg-light, .surface, .card-surface,
+*[style*="background: #fff"],
+*[style*="background:#fff"],
+*[style*="background-color: #fff"],
+*[style*="background-color:#fff"]{
+  background:var(--sm-glass) !important;
+  color:var(--sm-text) !important;
+}
+/* Cards / panels / boxes */
+.card, .box, .panel, .feature, .pricing-card, .testimonial,
+.cta-box, .info-box, .plan, .service-card, .grid-card{
+  background:var(--sm-glass) !important;
+  border:1px solid var(--sm-line) !important;
+  box-shadow:0 6px 24px rgba(0,0,0,.25);
+}
+
+/* Buttons */
+button, .btn, .button, .cta, .cta-button, input[type="submit"]{
+  background:linear-gradient(135deg, var(--sm-teal), var(--sm-green)) !important;
+  border:1px solid var(--sm-line) !important;
+}
+button:hover, .btn:hover, .button:hover, .cta:hover, .cta-button:hover, input[type="submit"]:hover{
+  background:linear-gradient(135deg, var(--sm-green), var(--sm-teal)) !important;
+}
+
+/* Forms */
+input, textarea, select{
+  background:rgba(0,0,0,.25) !important;
+  border:1px solid var(--sm-line) !important;
+  color:var(--sm-text) !important;
+}
+::placeholder{ color:rgba(255,255,255,.75) !important; }
+
+/* Tables and dividers */
+table, th, td{ border-color:var(--sm-line) !important; }
+thead, th{ background:var(--sm-navy) !important; }
+hr{ border-color:var(--sm-line) !important; opacity:1 !important; }
