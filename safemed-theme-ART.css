@@ -137,3 +137,140 @@ button, .btn, .button, .cta, .cta-button, input[type="submit"] {
   color: #ffffff !important;
   text-shadow: 0 1px 0 rgba(0,0,0,0.15);
 }
+
+
+
+/* === SafeMed Refined Palette v2 (2025-09-24) ===
+   Color-theory approach:
+   - Dominant: Teal (#0F7B79) for large surfaces (calm, trustworthy)
+   - Structural: Navy (#0F477B) for header/footer and strong anchors
+   - Accent: Green (#0F7B43) only for CTAs, highlights, and success
+   - Depth: Use subtle tints/shadows of palette for cards, not full blocks
+   - Readability: Headings pure white, body off-white to reduce glare
+*/
+
+:root{
+  --sm-teal:  #0F7B79; /* primary surface */
+  --sm-navy:  #0F477B; /* structure */
+  --sm-green: #0F7B43; /* accent */
+  --sm-white: #FFFFFF;
+  --sm-off:   rgba(255,255,255,0.92);
+  --sm-muted: rgba(255,255,255,0.72);
+  --sm-glass: rgba(6, 35, 45, 0.55);        /* deep teal glass */
+  --sm-edge:  rgba(255,255,255,0.16);       /* subtle borders */
+  --sm-shadow: rgba(0,0,0,0.28);
+  --sm-focus: #D8FFF4;
+}
+
+/* RESET previous heavy overrides to clean slate */
+main > section:nth-of-type(3n+1),
+main > section:nth-of-type(3n+2),
+main > section:nth-of-type(3n),
+.section-teal, .section-navy, .section-green,
+#about, .about, .story,
+#services, .services,
+#plans, .plans, #pricing, .pricing,
+#contact, .contact,
+#testimonials, .testimonials {
+  background: transparent !important;
+}
+
+/* Base canvas: soft teal field, subtle vignette for depth */
+html, body {
+  background:
+    radial-gradient(1200px 600px at 20% -15%, rgba(255,255,255,0.10), transparent 60%),
+    linear-gradient(180deg, #0F6F6D 0%, #0F7B79 40%, #0E6A69 100%);
+  color: var(--sm-off) !important;
+}
+
+/* Typography balance */
+h1, h2, h3, h4, h5, h6 { color: var(--sm-white) !important; }
+p, li, dt, dd, small, label, input, textarea, select, a, span { color: var(--sm-off) !important; }
+.muted, .subtle, .help-text { color: var(--sm-muted) !important; }
+
+/* Header/Footer as structural navy bars */
+header, .site-header, .header, .header-elevated, .topbar, nav, .navbar {
+  background: var(--sm-navy) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--sm-edge) !important;
+  box-shadow: 0 6px 22px var(--sm-shadow);
+}
+footer, .site-footer {
+  background: var(--sm-navy) !important;
+  border-top: 1px solid var(--sm-edge) !important;
+  box-shadow: 0 -4px 18px var(--sm-shadow);
+}
+header .container, nav .container { background: transparent !important; }
+
+/* Hero uses lighter teal wash; keep image/cards readable on top */
+.hero, .hero-section, .masthead, .hero-wrap, .page-hero {
+  background:
+    radial-gradient(1400px 600px at 15% -10%, rgba(255,255,255,0.12), transparent 65%),
+    linear-gradient(135deg, #12807E 0%, #0F7B79 60%);
+  box-shadow: inset 0 -1px 0 var(--sm-edge);
+}
+
+/* Section blocks: keep on teal canvas; use glass cards for contrast */
+section, .section, .content-section {
+  background: transparent !important;
+}
+
+/* Cards and panels (the primary readable surfaces) */
+.card, .box, .panel, .feature, .pricing-card, .testimonial, .cta-box, .info-box, .plan, .service-card, .grid-card {
+  background: var(--sm-glass) !important;
+  border: 1px solid var(--sm-edge) !important;
+  box-shadow: 0 10px 28px var(--sm-shadow);
+  backdrop-filter: saturate(120%) blur(2px);
+}
+
+/* Primary/secondary buttons — accent green used tastefully */
+button, .btn, .button, .cta, .cta-button, input[type="submit"] {
+  background: linear-gradient(135deg, var(--sm-green), #0E6F41) !important;
+  color: var(--sm-white) !important;
+  border: 1px solid var(--sm-edge) !important;
+  box-shadow: 0 6px 20px var(--sm-shadow);
+}
+.btn-secondary, .button.secondary, .ghost, .outline {
+  background: linear-gradient(135deg, #103C6A, var(--sm-navy)) !important;
+  color: var(--sm-white) !important;
+  border: 1px solid var(--sm-edge) !important;
+}
+
+button:hover, .btn:hover, .button:hover, .cta:hover, .cta-button:hover, input[type="submit"]:hover {
+  filter: brightness(1.04) saturate(1.05);
+}
+button:active, .btn:active { transform: translateY(1px); }
+
+/* Badges/pills — glassy, not opaque blobs */
+.badge, .pill, .tag {
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  color: var(--sm-white) !important;
+}
+
+/* Tables and forms tuned for dark-teal surfaces */
+table, th, td { border-color: var(--sm-edge) !important; color: var(--sm-off) !important; }
+thead, th { background: linear-gradient(135deg, var(--sm-navy), #103C6A) !important; color: var(--sm-white) !important; }
+
+input, textarea, select {
+  background: rgba(0,0,0,0.24) !important;
+  border: 1px solid var(--sm-edge) !important;
+  color: var(--sm-white) !important;
+}
+::placeholder { color: rgba(255,255,255,0.75) !important; }
+
+/* Links and focus states for accessibility */
+a { text-decoration-color: var(--sm-muted) !important; }
+a:hover { text-decoration-color: var(--sm-white) !important; }
+:focus-visible {
+  outline: 2px solid var(--sm-focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* Kill leftover white/light boxes from older styles */
+.white, .bg-white, .bg-light, .surface, .card-surface,
+*[style*="background: #fff"], *[style*="background:#fff"],
+*[style*="background-color: #fff"], *[style*="background-color:#fff"] {
+  background: var(--sm-glass) !important;
+  color: var(--sm-off) !important;
+}
