@@ -226,3 +226,9 @@ header.site,header,.topbar,.nav,.card,.section,.hero{
   background-size: auto, auto, 100% 100%, 100% 100%, auto;
   background-attachment: scroll;
 }
+
+
+body {
+  background: url('A_digital_image_features_a_deep_red_textured_backg.png') no-repeat center center fixed;
+  background-size: cover;
+}
