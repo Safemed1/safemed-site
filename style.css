@@ -165,10 +165,24 @@ header.site,header,.topbar,.nav,.card,.section,.hero{
   padding:clamp(16px,3vw,32px);
   box-shadow:0 8px 24px rgba(0,0,0,.05);
 }
-.testimonials-panel .testimonial-grid{
+.testimonials-panel .testimonial-panel{
   display:grid;
   gap:24px;
 }
 @media (min-width:900px){
-  .testimonials-panel .testimonial-grid{ grid-template-columns:1fr 1fr; }
+  .testimonials-panel .testimonial-panel{ grid-template-columns:1fr 1fr; }
+}
+
+#testimonials .testimonial-panel{
+  position:relative;
+}
+#testimonials .testimonial-panel::before{
+  content:"";
+  position:absolute;
+  inset:-16px;
+  background:#e8f6f4;
+  border:1px solid #bfe7e3;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+  z-index:-1;
 }
