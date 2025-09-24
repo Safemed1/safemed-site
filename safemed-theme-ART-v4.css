@@ -1,0 +1,131 @@
+
+/* === SafeMed ART v4 (final override) — targeted fixes (2025-09-24) ===
+   Palette: #0F7B79 (teal), #0F477B (navy), #0F7B43 (green)
+   Strategy: Dominant teal canvas, navy structure, green accents. Smooth chips + testimonials.
+   NOTE: This file loads LAST to ensure it wins over older rules.
+*/
+:root{
+  --sm-teal:#0F7B79; --sm-navy:#0F477B; --sm-green:#0F7B43;
+  --sm-white:#FFFFFF; --sm-off:rgba(255,255,255,.92);
+  --sm-edge:rgba(255,255,255,.18); --sm-glass:rgba(6,35,45,.55);
+  --sm-shadow:rgba(0,0,0,.28);
+}
+
+/* ========== NAV ======== */
+header, .site-header, .header, .header-elevated, nav, .navbar{
+  background: var(--sm-navy) !important;
+  border:0 !important; border-bottom:1px solid var(--sm-edge) !important;
+  box-shadow: 0 6px 22px var(--sm-shadow) !important;
+}
+/* kill any nav underline/border lines inside */
+.header *, .navbar *, nav * { text-decoration-thickness: initial; }
+.nav, .navbar, nav { border-bottom: 0 !important; }
+.nav a, .navbar a, nav a { color: var(--sm-white) !important; text-decoration: none !important; opacity:.95; }
+.nav a:hover, .navbar a:hover, nav a:hover { opacity:1; }
+.nav a.active, .navbar a.active, nav a.active, 
+.nav a[aria-current="page"], .navbar a[aria-current="page"] {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.20) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18) !important;
+  padding: .4rem .9rem !important;
+}
+/* CTA button in header */
+header .cta, header .cta-button, .nav .cta, .navbar .cta, a.button.primary {
+  background: linear-gradient(135deg, #13906D, var(--sm-green)) !important;
+  color: var(--sm-white) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.22), 0 0 0 1px rgba(255,255,255,.08) inset !important;
+  padding: .6rem 1rem !important;
+}
+
+/* ========== CANVAS / HERO ======== */
+html, body{
+  background:
+    radial-gradient(1200px 600px at 20% -15%, rgba(255,255,255,0.10), transparent 60%),
+    linear-gradient(180deg, #0F6F6D 0%, #0F7B79 40%, #0E6A69 100%) !important;
+  color: var(--sm-off) !important;
+}
+.hero, .hero-section, .masthead, .hero-wrap, .page-hero {
+  background:
+    radial-gradient(1400px 600px at 15% -10%, rgba(255,255,255,0.12), transparent 65%),
+    linear-gradient(135deg, #12807E 0%, #0F7B79 60%) !important;
+  box-shadow: inset 0 -1px 0 var(--sm-edge) !important;
+}
+
+/* Headings/body color balance */
+h1, h2, h3, h4, h5, h6 { color: var(--sm-white) !important; }
+p, li, dt, dd, small, label, input, textarea, select, a, span { color: var(--sm-off) !important; }
+
+/* ========== BADGES / BUBBLES ======== */
+.badge, .pill, .tag, .chip, .bubble, .label, .pill-badge {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.24) !important;
+  color: var(--sm-white) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18) !important;
+  padding: .45rem .9rem !important;
+  line-height: 1.15 !important;
+  display: inline-flex; align-items:center; gap:.5rem;
+}
+/* Mobile chips smaller */
+@media (max-width: 900px){
+  .badge, .pill, .tag, .chip, .bubble, .label, .pill-badge {
+    padding: .35rem .75rem !important;
+    font-size: .92rem !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,.18) !important;
+  }
+}
+
+/* ========== TESTIMONIALS ======== */
+.testimonial, .quote-card, .review-card, .testimonial-card {
+  background: linear-gradient(180deg, rgba(6,35,45,.55), rgba(6,35,45,.45)) !important;
+  border: 1px solid var(--sm-edge) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.28) !important;
+  padding: 1.1rem 1.25rem !important;
+}
+/* Remove the old navy name stripe if present */
+.testimonial .stripe, .quote-card .stripe, .review-card .stripe, .testimonial .name-strip { display:none !important; }
+/* New attribution row */
+.testimonial .attribution, .quote-card .attribution, .review-card .attribution {
+  display: inline-flex !important; align-items: center; gap: .5rem;
+  margin-top: .9rem;
+  background: transparent !important; border:0 !important; padding:0 !important;
+}
+.testimonial .attribution::before, .quote-card .attribution::before, .review-card .attribution::before {
+  content:""; width:.55rem; height:.55rem; border-radius:999px;
+  background: var(--sm-green); box-shadow: 0 0 0 2px rgba(255,255,255,.18);
+}
+.testimonial .name, .quote-card .name, .review-card .name { font-weight: 800; color: var(--sm-white) !important; }
+.testimonial .loc, .quote-card .loc, .review-card .loc { color: var(--sm-off) !important; font-weight: 600; }
+/* If names are wrapped in <strong>, style them */
+.testimonial strong, .quote-card strong, .review-card strong { color: var(--sm-white) !important; font-weight: 800; }
+
+/* Grid spacing & mobile stack */
+.testimonials .grid, .quotes .grid, .reviews .grid {
+  gap: 1.25rem !important;
+}
+@media (max-width: 900px){
+  .testimonials .grid, .quotes .grid, .reviews .grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+}
+
+/* ========== GLOBAL CARDS ======== */
+.card, .box, .panel, .feature, .pricing-card, .cta-box, .info-box, .plan, .service-card, .grid-card {
+  background: var(--sm-glass) !important;
+  border: 1px solid var(--sm-edge) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 28px var(--sm-shadow) !important;
+}
+
+/* Buttons */
+button, .btn, .button, .cta, .cta-button, input[type="submit"] {
+  background: linear-gradient(135deg, var(--sm-green), #0E6F41) !important;
+  color: var(--sm-white) !important;
+  border: 1px solid var(--sm-edge) !important;
+  box-shadow: 0 6px 20px var(--sm-shadow) !important;
+}
+button:hover, .btn:hover, .button:hover, .cta:hover, .cta-button:hover, input[type="submit"]:hover {
+  filter: brightness(1.04) saturate(1.05);
+}

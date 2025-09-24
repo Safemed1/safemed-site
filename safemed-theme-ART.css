@@ -274,3 +274,107 @@ a:hover { text-decoration-color: var(--sm-white) !important; }
   background: var(--sm-glass) !important;
   color: var(--sm-off) !important;
 }
+
+
+
+/* === Polish Pack v3 — smooth chips, testimonials, mobile (2025-09-24) === */
+
+/* NAV — remove harsh underline and blocky pill */
+.nav, .navbar, nav { border-bottom: 0 !important; }
+.nav a, .navbar a, nav a {
+  text-decoration: none !important;
+  opacity: .95;
+}
+.nav a:hover, .navbar a:hover, nav a:hover { opacity: 1; }
+.nav .active, .navbar .active, nav .active,
+.nav a[aria-current="page"], .navbar a[aria-current="page"] {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.20) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18) !important;
+  padding: .4rem .9rem !important;
+}
+
+/* Primary CTA button – softer, less blocky */
+header .cta, header .cta-button, .nav .cta, .cta-primary {
+  background: linear-gradient(135deg, #13906D, #0F7B43) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.22), 0 0 0 1px rgba(255,255,255,.08) inset !important;
+  padding: .6rem 1rem !important;
+}
+
+/* BADGE / BUBBLE chips — lighter border, softer background */
+.badge, .pill, .tag, .chip {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.24) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18) !important;
+  padding: .45rem .9rem !important;
+  line-height: 1.15 !important;
+}
+
+/* TESTIMONIALS — elegant glass cards; remove dark name strip */
+.testimonial, .quote-card, .review-card {
+  background: linear-gradient(180deg, rgba(6,35,45,.55), rgba(6,35,45,.45)) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.28) !important;
+  padding: 1.1rem 1.25rem !important;
+}
+.testimonial .attribution, .quote-card .attribution, .review-card .attribution {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .9rem;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+.testimonial .attribution::before,
+.quote-card .attribution::before,
+.review-card .attribution::before {
+  content: "";
+  width: .55rem; height: .55rem;
+  border-radius: 999px;
+  background: #0F7B43; /* green accent dot */
+  box-shadow: 0 0 0 2px rgba(255,255,255,.18);
+}
+.testimonial .name, .quote-card .name, .review-card .name {
+  font-weight: 700;
+  color: #FFFFFF !important;
+}
+.testimonial .loc, .quote-card .loc, .review-card .loc {
+  color: rgba(255,255,255,.85) !important;
+  font-weight: 500;
+}
+
+/* If old stripe element exists, hide it cleanly */
+.testimonial .stripe, .quote-card .stripe, .review-card .stripe { display:none !important; }
+
+/* LAYOUT: testimonial grid spacing & responsiveness */
+.testimonials .grid, .quotes .grid, .reviews .grid {
+  gap: 1.25rem !important;
+}
+@media (max-width: 900px) {
+  .testimonials .grid, .quotes .grid, .reviews .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .badge, .pill, .tag, .chip {
+    padding: .35rem .75rem !important;
+    font-size: .92rem !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,.18) !important;
+  }
+  header .cta, header .cta-button, .nav .cta, .cta-primary {
+    padding: .5rem .8rem !important;
+    border-radius: 12px !important;
+  }
+  .nav .active, .navbar .active, nav .active { padding: .35rem .75rem !important; }
+}
+
+/* MICRO-DETAILS: soften card corners & borders globally */
+.card, .box, .panel, .feature, .pricing-card, .cta-box, .info-box, .plan, .service-card, .grid-card {
+  border-radius: 16px !important;
+  border-color: rgba(255,255,255,.18) !important;
+}
