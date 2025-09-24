@@ -206,3 +206,23 @@ header.site,header,.topbar,.nav,.card,.section,.hero{
   background-size: auto, auto, 100% 100%, 100% 100%, auto;
   background-attachment: scroll;
 }
+
+/* ===== SafeMed teal spotlight background ===== */
+:root{
+  --sm-teal: #0F7B79;
+  --paper: #ffffff;
+}
+
+.bg-teal-spotlight{
+  background:
+    /* fine grain */
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.012) 0 1px, transparent 1px 4px),
+    /* gentle vertical teal wash */
+    linear-gradient(180deg, rgba(15,123,121,0.06) 0%, rgba(15,123,121,0.12) 100%),
+    /* soft top spotlight */
+    radial-gradient(1200px 800px at 50% -10%, rgba(15,123,121,0.22) 0%, rgba(15,123,121,0.10) 45%, transparent 70%),
+    var(--paper);
+  background-size: auto, auto, 100% 100%, 100% 100%, auto;
+  background-attachment: scroll;
+}
