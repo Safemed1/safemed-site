@@ -9,20 +9,30 @@
 </head>
 <body>
   <!-- SAME HEADER AS OTHER PAGES -->
-  <header class="container">
-    <div class="nav">
-      <a class="brand" href="index.html" aria-label="SafeMed home">
-        <img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px;vertical-align:middle" />
-      </a>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active" aria-current="page">Contact</a>
-      </nav>
-      <a class="btn cta" href="#book">Book a Consult</a>
+ <header class="site" role="banner">
+  <div class="container nav" aria-label="Primary">
+    <a href="index.html" class="logo" aria-label="SafeMed Concierge"><img src="assets/safemed-logo.svg" alt="SafeMed Concierge logo" style="height:56px; width:auto; display:block;"></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html#book">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="contact.html#book" class="btn cta">Book a Consult</a>
+      <button class="mobile-toggle" aria-label="Open Menu" aria-expanded="false"><span class="kbd">≡</span></button>
     </div>
-  </header>
+  </div>
+  <div class="mobile-panel container" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html#book">Contact</a>
+    <a href="contact.html#book" class="btn">Book a Consult</a>
+  </div>
+ </header>
 
   <main>
     <section class="section">
