@@ -338,3 +338,10 @@ header.site { position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%)
     border-radius: 10px;
   }
 }
+
+/* Page background */
+body {
+  background: linear-gradient(180deg, #f9fdfd 0%, #f1f8f8 100%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+}
