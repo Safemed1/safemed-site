@@ -73,3 +73,46 @@
 }
 .t-author .chip strong{ color:#fff; }
 .t-author .place{ opacity:.9; }
+
+
+/* === SafeMed Tweaks: header blend + gallery contain ==================== */
+
+/* Rounded, floating top bar */
+.container.header-elevated{
+  background: rgba(13, 83, 104, .92);
+  border-radius: 16px;
+  padding: 8px 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* Ensure the brand logo shows at a consistent size */
+.brand img{ height: 64px !important; }
+@media (max-width: 640px){ .brand img{ height: 52px !important; } }
+
+/* Book button trim on mobile */
+@media (max-width: 640px){
+  .container.header-elevated .btn.cta{
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+}
+
+/* Gallery: keep box frames but show full image (no cropping) */
+.gallery .item, .gallery .card, .gallery figure{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.gallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.05));
+}
+/* If fixed aspect boxes are used, make sure they have a predictable height */
+.gallery .frame{ aspect-ratio: 1 / 1; } /* square boxes */
