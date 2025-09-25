@@ -173,3 +173,19 @@
     border-bottom-left-radius: 20px;
   }
 }
+
+
+/* === Compact content polish for final deploy =========================== */
+.section .container { width:min(1100px,92%); margin-inline:auto; }
+.section h2 { margin:0 0 10px; font-weight:800; letter-spacing:.2px; }
+.section p, .section li { line-height:1.55; }
+.badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+.badges .chip { font-size:.92rem; padding:8px 12px; border-radius:12px; background:rgba(255,255,255,.9); border:1px solid rgba(0,0,0,.08); }
+.cta-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+.cta-row .btn { padding:10px 14px; border-radius:12px; font-weight:800; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+@media(max-width:900px){ .grid-3{ grid-template-columns:1fr; } }
+.faq dl { margin:0; }
+.faq dt { font-weight:800; margin-top:12px; }
+.faq dd { margin:6px 0 10px 0; }
+.smallnote { opacity:.85; font-size:.92rem; }
