@@ -1,0 +1,75 @@
+
+/* === SafeMed user-tweaks (proposed) ===================================== */
+
+/* Round & blend the top header ribbon */
+.container.header-elevated{
+  background: rgba(6,56,74,.88); /* deep teal/navy blend */
+  border-radius: 16px;
+  padding: 8px 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+  border: 1px solid rgba(255,255,255,.12);
+}
+@media (max-width: 640px){
+  .container.header-elevated{ border-radius: 14px; padding: 6px 10px; }
+}
+
+/* Make the inline logo bigger (overrides inline height) */
+.brand img{ height: 64px !important; }
+@media (max-width: 640px){
+  .brand img{ height: 52px !important; }
+}
+
+/* Subtle hover for nav links so they blend instead of looking like hard chips */
+.container.header-elevated .links a{
+  color: #eaf7f6;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+.container.header-elevated .links a:hover{
+  background: rgba(255,255,255,.10);
+  text-decoration: none;
+}
+
+/* Book a Consult button — reduce size on small screens */
+@media (max-width: 640px){
+  .container.header-elevated .btn.cta{
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border-width: 1px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.16);
+  }
+  .container.header-elevated .nav{ gap: 8px; }
+}
+
+/* ===== Testimonials redesign (cards + author chip) ===== */
+.section.testimonials h2{ color:#ffffff; }
+
+/* grid */
+.t-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+@media (max-width: 900px){ .t-grid{ grid-template-columns:1fr; } }
+
+/* card */
+.t-card{
+  position: relative;
+  padding: 22px 22px 18px;
+  border-radius: 18px;
+  background:
+    radial-gradient(130% 120% at 50% 0%, rgba(255,255,255,.075) 0%, rgba(255,255,255,0) 38%),
+    linear-gradient(180deg, rgba(15,123,121,.92) 0%, rgba(9,69,104,.90) 100%);
+  border: 1px solid rgba(255,255,255,.20);
+  box-shadow: 0 18px 48px rgba(0,0,0,.22), inset 0 -12px 24px rgba(0,0,0,.18);
+  color:#f2fbfb;
+}
+.t-quote{ font-size: 1.16rem; line-height: 1.6; margin: 0 0 18px; }
+
+/* author chip replaces the long bar */
+.t-author{ display:flex; align-items:center; gap:12px; }
+.t-author .chip{
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 8px 12px; border-radius: 12px;
+  background:#0b3a6d; color:#fff;
+  box-shadow: 0 10px 18px rgba(0,0,0,.20);
+}
+.t-author .chip strong{ color:#fff; }
+.t-author .place{ opacity:.9; }
