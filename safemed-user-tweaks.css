@@ -116,3 +116,60 @@
 }
 /* If fixed aspect boxes are used, make sure they have a predictable height */
 .gallery .frame{ aspect-ratio: 1 / 1; } /* square boxes */
+
+
+/* === Full‑bleed header capsule + logo corner ============================ */
+
+/* Make the container act as a positioning context */
+.container.header-elevated{
+  position: relative;
+  background: transparent !important; /* we'll draw bg with ::before */
+  box-shadow: none; /* shadow moves to ::before */
+}
+
+/* Draw a full‑width rounded bar that extends to both screen edges */
+.container.header-elevated::before{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  /* expand from the centered container to the viewport edges */
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+  background: linear-gradient(180deg, rgba(13,83,104,.96), rgba(9,69,104,.96));
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.12);
+  z-index: 0;
+}
+
+/* Lift actual nav content above the bar */
+.container.header-elevated > .nav{ position: relative; z-index: 1; }
+
+/* Create a bigger rounded "logo corner" at the far left */
+.container.header-elevated .brand{
+  position: relative;
+  padding-left: 8px; /* small breathing room */
+}
+.container.header-elevated .brand::before{
+  content:"";
+  position:absolute;
+  inset:-8px -16px -8px -24px; /* stretch left, create corner */
+  background: linear-gradient(180deg, rgba(15,123,121,1), rgba(9,69,104,1));
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: -1;
+  box-shadow: inset 0 8px 18px rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* Ensure no exterior background peeks on small screens */
+@media (max-width: 680px){
+  .container.header-elevated::before{ border-radius: 16px; }
+  .container.header-elevated .brand::before{
+    inset:-6px -12px -6px -20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
