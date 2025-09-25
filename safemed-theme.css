@@ -267,3 +267,24 @@ input, textarea, select {
 table, th, td { border-color: var(--sm-line) !important; }
 thead, th { background: var(--sm-navy) !important; }
 hr { border-color: var(--sm-line) !important; opacity: 1 !important; }
+
+
+/* ---- Mobile Dropdown Menu Fix ---- */
+@media (max-width: 768px) {
+  nav ul {
+    background-color: #ffffff !important; /* white background */
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  }
+
+  nav ul li a {
+    color: #0F7B79 !important; /* teal brand color */
+    font-weight: 600;
+  }
+
+  nav ul li a:hover {
+    background-color: #f0f0f0; /* light gray hover */
+    color: #0F477 !important; /* darker teal */
+  }
+}
+
