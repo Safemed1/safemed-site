@@ -47,3 +47,23 @@ header.site,header{
 
 /* No other global color overrides to avoid collateral changes */
 body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }
+
+/* ---- Mobile Dropdown Menu Fix ---- */
+@media (max-width: 768px) {
+  nav ul {
+    background-color: #ffffff !important; /* white background */
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  }
+
+  nav ul li a {
+    color: #0F7B79 !important; /* teal brand color */
+    font-weight: 600;
+  }
+
+  nav ul li a:hover {
+    background-color: #f0f0f0; /* light gray hover */
+    color: #0F477 !important; /* darker teal */
+  }
+}
+
