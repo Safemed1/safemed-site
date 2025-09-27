@@ -456,3 +456,9 @@ body.has-sticky-padding{padding-bottom:96px}
   .sticky-cta a.primary{flex:1 1 100%}
   .sticky-cta a:not(.primary){flex:1 1 calc(50% - 6px)}
 }
+
+
+/* --- Sticky CTA visibility hotfix --- */
+.sticky-cta a.primary{background:#ffffff !important;color:#0F7B79 !important;border-color:#ffffff !important}
+.sticky-cta a{background:transparent !important;color:#ffffff !important}
+.sticky-cta a *, .sticky-cta a.primary *{color:inherit !important}
