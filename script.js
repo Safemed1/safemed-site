@@ -45,3 +45,24 @@
     if(active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
   });
 })();
+
+
+// GA4 conversion events for tel/sms/calendly/buttons
+(function(){
+  function sendEvent(name, params){
+    try { gtag && gtag('event', name, params || {}); } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var href = (a.getAttribute('href')||'').toLowerCase();
+    if(href.startsWith('tel:')) sendEvent('call_click', {method:'tel', target:href});
+    if(href.startsWith('sms:')) sendEvent('sms_click', {method:'sms', target:href});
+    if(href.includes('calendly.com')) sendEvent('calendly_open', {target:href});
+    if(a.dataset.ga){ sendEvent(a.dataset.ga); }
+  });
+  // Form submits
+  document.addEventListener('submit', function(e){
+    sendEvent('form_submit', {id:e.target.id || 'form'});
+  });
+})();

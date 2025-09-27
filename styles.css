@@ -421,3 +421,10 @@ body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }
     color: #0F477 !important; /* darker teal */
   }
 }
+
+
+/* Sticky CTA */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:#0F7B79;color:#fff;display:flex;gap:12px;justify-content:center;align-items:center;padding:10px 12px;box-shadow:0 -4px 12px rgba(0,0,0,.15)}
+.sticky-cta a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.6);padding:8px 12px;border-radius:8px;font-weight:600}
+@media (min-width:900px){.sticky-cta{display:none}}
+body.has-sticky-padding{padding-bottom:64px}
