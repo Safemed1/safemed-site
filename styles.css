@@ -422,20 +422,6 @@ body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }
   }
 }
 
-
-/* Sticky CTA */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:#0F7B79;color:#fff;display:flex;gap:12px;justify-content:center;align-items:center;padding:10px 12px;box-shadow:0 -4px 12px rgba(0,0,0,.15)}
-.sticky-cta a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.6);padding:8px 12px;border-radius:8px;font-weight:600}
-@media (min-width:900px){.sticky-cta{display:none}}
-body.has-sticky-padding{padding-bottom:64px}
-
-/* Mobile safe-area refinements */
-@media (max-width: 899px){
-  .sticky-cta{ padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
-  body.has-sticky-padding{ padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
-}
-.footer { padding-bottom: 24px; }
-
 /* Service area chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef7f6;border:1px solid #cfe7e4;font-weight:600}
