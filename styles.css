@@ -440,3 +440,19 @@ body.has-sticky-padding{padding-bottom:88px}
   body.has-sticky-padding{padding-bottom:max(88px, env(safe-area-inset-bottom))}
   .sticky-cta{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
 }
+
+
+/* Sticky CTA — responsive layout */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:#0F7B79;color:#fff;display:flex;gap:12px;justify-content:center;align-items:center;padding:12px 14px;box-shadow:0 -6px 18px rgba(0,0,0,.18)}
+.sticky-cta a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.7);padding:10px 14px;border-radius:10px;font-weight:700;line-height:1.25;white-space:normal;text-align:center}
+.sticky-cta a.primary{background:#fff;color:#0F7B79;border-color:#fff}
+body.has-sticky-padding{padding-bottom:96px}
+@supports (padding: max(0px)) {
+  body.has-sticky-padding{padding-bottom:max(96px, env(safe-area-inset-bottom))}
+  .sticky-cta{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+}
+@media (max-width:640px){
+  .sticky-cta{flex-wrap:wrap}
+  .sticky-cta a.primary{flex:1 1 100%}
+  .sticky-cta a:not(.primary){flex:1 1 calc(50% - 6px)}
+}
