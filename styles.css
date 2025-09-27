@@ -429,15 +429,9 @@ body, p, h1, h2, h3, h4, h5, h6, a, li, span { color: #FFFFFF !important; }
 @media (min-width:900px){.sticky-cta{display:none}}
 body.has-sticky-padding{padding-bottom:64px}
 
-
 /* Mobile safe-area refinements */
 @media (max-width: 899px){
-  .sticky-cta{
-    padding-bottom: calc(10px + env(safe-area-inset-bottom));
-  }
-  body.has-sticky-padding{
-    padding-bottom: calc(72px + env(safe-area-inset-bottom));
-  }
+  .sticky-cta{ padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
+  body.has-sticky-padding{ padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
 }
-/* Prevent overlap with page footer buttons */
 .footer { padding-bottom: 24px; }
