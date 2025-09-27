@@ -152,36 +152,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 </footer>
-<script>
-(function(){
-  function postEvent(name, params){
-    try{
-      if (window.gtag){ window.gtag('event', name, params || {event_category:'engagement'}); }
-      if (window.dataLayer){ window.dataLayer.push(Object.assign({event:name}, params||{})); }
-    }catch(e){}
-  }
-  function bind(){
-    document.querySelectorAll('[data-ga]').forEach(function(el){
-      el.addEventListener('click', function(){
-        var name = el.getAttribute('data-ga') || 'click';
-        postEvent(name, {label: (el.getAttribute('href')||'') || (el.textContent||'').trim()});
-      }, {passive:true});
-    });
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
-      el.addEventListener('click', function(){ postEvent('call_click', {label: el.getAttribute('href')}); }, {passive:true});
-    });
-    document.querySelectorAll('a[href^="sms:"],a[href^="smsto:"]').forEach(function(el){
-      el.addEventListener('click', function(){ postEvent('sms_click', {label: el.getAttribute('href')}); }, {passive:true});
-    });
-    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(el){
-      el.addEventListener('click', function(){ postEvent('calendly_open', {label: el.getAttribute('href')}); }, {passive:true});
-    });
-    var cal = document.querySelector('.calendly-inline-widget iframe');
-    if(cal){ cal.addEventListener('load', function(){ postEvent('calendly_loaded'); }, {once:true}); }
-  }
-  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', bind); } else { bind(); }
-})();
-</script>
+
 <!-- Auto-highlight active nav (works on every page) -->
 <script>
     (function() {
@@ -198,5 +169,56 @@ document.addEventListener('DOMContentLoaded', function(){
     })();
   <script src="script.js?v=3">
   </script>
+
+<script>
+(function(){
+  var GA_ID = 'G-FXK9SQSBC2';
+  function fire(name, label){
+    try {
+      if (window.gtag) {
+        window.gtag('event', name, {"event_label": label, "send_to": GA_ID, "transport_type": "beacon"});
+      } else if (window.dataLayer) {
+        window.dataLayer.push({event: name, label: label});
+      }
+    } catch(e) {}
+  }
+  function bindOne(el, ev, name){
+    el.addEventListener(ev, function(evt){
+      var label = (el.getAttribute('href')||'') || (el.textContent||'').trim();
+      fire(name, label);
+    }, {passive:true});
+  }
+  function bind(){
+    // data-ga elements
+    document.querySelectorAll('[data-ga]').forEach(function(el){
+      var name = el.getAttribute('data-ga') || 'click';
+      ['pointerdown','click'].forEach(function(ev){ bindOne(el, ev, name); });
+    });
+    // tel:
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+      ['pointerdown','click'].forEach(function(ev){ bindOne(el, ev, 'call_click'); });
+    });
+    // sms:
+    document.querySelectorAll('a[href^="sms:"],a[href^="smsto:"]').forEach(function(el){
+      ['pointerdown','click'].forEach(function(ev){ bindOne(el, ev, 'sms_click'); });
+    });
+    // calendly link opens
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(el){
+      ['pointerdown','click'].forEach(function(ev){ bindOne(el, ev, 'calendly_open'); });
+    });
+    // calendly inline loaded
+    var cal = document.querySelector('.calendly-inline-widget iframe');
+    if (cal) {
+      cal.addEventListener('load', function(){ fire('calendly_loaded', 'inline'); }, {once:true});
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();
+</script>
+
 </body>
 </html>
