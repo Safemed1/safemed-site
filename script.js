@@ -61,7 +61,6 @@
     if(href.includes('calendly.com')) sendEvent('calendly_open', {target:href});
     if(a.dataset.ga){ sendEvent(a.dataset.ga); }
   });
-  // Form submits
   document.addEventListener('submit', function(e){
     sendEvent('form_submit', {id:e.target.id || 'form'});
   });
