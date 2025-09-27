@@ -171,14 +171,6 @@
 </div>
 <div class="container" style="margin-top:10px;font-size:.9rem;">© <span id="year"></span> SafeMed Concierge. All rights reserved.</div>
 
-<div class="sticky-cta" role="region" aria-label="Quick actions">
-  <a href="tel:+13234926837" aria-label="Call SafeMed Concierge" data-ga="call_click">Call</a>
-  <a href="sms:+13234926837" aria-label="Text SafeMed Concierge" data-ga="sms_click">Text</a>
-  <a href="contact.html#book" aria-label="Book your free 30-minute consult" data-ga="consult_click">Book your free 30-minute consult</a>
-</div>
-<script>document.addEventListener('DOMContentLoaded', function(){ try{ document.body.classList.add('has-sticky-padding'); }catch(e){} });</script>
-
-
 <section class="section" aria-label="Areas we serve">
   <div class="container">
     <h3>Areas we serve</h3>
@@ -191,6 +183,18 @@
     </div>
   </div>
 </section>
+
+
+<div class="sticky-cta" role="region" aria-label="Quick actions">
+  <a class="primary" href="contact.html#book" aria-label="Book your free 30-minute consult" data-ga="consult_click">Book your free 30-minute consult</a>
+  <a href="tel:+13234926837" aria-label="Call SafeMed Concierge" data-ga="call_click">Call</a>
+  <a href="sms:+13234926837" aria-label="Text SafeMed Concierge" data-ga="sms_click">Text</a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  try { document.body.classList.add('has-sticky-padding'); } catch(e){}
+});
+</script>
 
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
