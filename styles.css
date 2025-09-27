@@ -462,3 +462,9 @@ body.has-sticky-padding{padding-bottom:96px}
 .sticky-cta a.primary{background:#ffffff !important;color:#0F7B79 !important;border-color:#ffffff !important}
 .sticky-cta a{background:transparent !important;color:#ffffff !important}
 .sticky-cta a *, .sticky-cta a.primary *{color:inherit !important}
+
+/* Header CTA breathability */
+.header .btn, .header a[role="button"]{ padding:10px 14px; line-height:1.2; white-space:nowrap; }
+@media (max-width:380px){ .header .btn, .header a[role="button"]{ font-size:0.95rem; } }
+/* Sticky CTA focus visibility */
+.sticky-cta a:focus{ outline:2px solid #ffffff; outline-offset:2px; }
