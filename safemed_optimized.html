@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeMed Concierge - Professional Medication Management & Medical Equipment Care in Los Angeles</title>
+    <meta name="description" content="Professional medication management and medical equipment care services for families in Los Angeles. Expert pillbox organization, CPAP cleaning, and care coordination. Serving Glendale, Pasadena, Burbank.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0B5394;
+            --secondary: #00897B;
+            --accent: #43A047;
+            --dark: #1A1A1A;
+            --light: #F7F9FC;
+            --white: #FFFFFF;
+            --gradient: linear-gradient(135deg, #0B5394 0%, #00897B 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --nav-height: 72px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #424242; background: var(--white); overflow-x: hidden; }
+
+        section[id] { scroll-margin-top: var(--nav-height); }
+
+        ::selection { background: var(--secondary); color: white; }
+
+        /* Navigation */
+        nav { position: fixed; width: 100%; top: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); z-index: 1000; transition: box-shadow 0.3s ease; }
+        nav.scrolled { box-shadow: var(--shadow-md); }
+        
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo { font-size: 1.5rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease; position: relative; }
+        
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s ease; }
+        
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover::after { width: 100%; }
+        
+        .cta-btn { background: var(--gradient); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-md); }
+        
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.75rem; cursor: pointer; color: var(--dark); }
+        
+        /* Hero */
+        .hero { padding: calc(var(--nav-height) + 80px) 2rem 80px; background: linear-gradient(135deg, #F7F9FC 0%, #E8F0F7 100%); position: relative; }
+        
+        .hero-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+        
+        .hero-content h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; color: var(--dark); }
+        
+        .hero-content p { font-size: 1.15rem; color: #616161; margin-bottom: 2rem; line-height: 1.7; }
+
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
+        
+        .btn-secondary { background: white; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: var(--shadow-sm); transition: all 0.2s ease; border: 1px solid #E0E0E0; }
+        
+        .btn-secondary:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        
+        .trust-badges { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
+        
+        .badge { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 1rem; background: white; border-radius: 8px; box-shadow: var(--shadow-sm); font-size: 0.85rem; font-weight: 500; border: 1px solid #E8E8E8; }
+        
+        .badge svg { width: 20px; height: 20px; fill: var(--secondary); }
+        
+        .hero-image { width: 100%; height: 420px; border-radius: 16px; background: linear-gradient(135deg, rgba(11,83,148,0.1) 0%, rgba(0,137,123,0.1) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop') center/cover; box-shadow: var(--shadow-lg); }
+
+        /* Stats */
+        .stats { background: var(--dark); color: white; padding: 3rem 2rem; margin-top: -40px; position: relative; z-index: 10; border-radius: 16px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+        
+        .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; }
+        
+        .stat-item h3 { font-size: 2.5rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: 800; }
+        .stat-item p { font-weight: 500; opacity: 0.9; }
+
+        /* Section Styles */
+        .section { padding: 80px 2rem; }
+        .section-title { text-align: center; font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; color: var(--dark); font-weight: 800; }
+        .section-subtitle { text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3.5rem; max-width: 650px; margin-left: auto; margin-right: auto; }
+        .section-light { background: var(--light); }
+
+        /* Services */
+        .services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        
+        .service-card { background: white; border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-sm); transition: all 0.3s ease; border: 1px solid #F0F0F0; }
+        
+        .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        
+        .service-icon { width: 56px; height: 56px; background: var(--gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+        
+        .service-icon svg { width: 26px; height: 26px; stroke: white; }
+        
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--dark); font-weight: 700; }
+        
+        .service-card p { color: #616161; margin-bottom: 1.5rem; line-height: 1.6; }
+        
+        .service-features { list-style: none; }
+        .service-features li { padding: 0.5rem 0; color: #666; display: flex; align-items: start; font-size: 0.95rem; }
+        .service-features li::before { content: '✓'; color: var(--accent); font-weight: bold; margin-right: 0.75rem; flex-shrink: 0; }
+
+        /* About */
+        .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .about-content p { font-size: 1.1rem; color: #555; margin-bottom: 1.5rem; line-height: 1.75; }
+
+        /* Comparison */
+        .comparison { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); }
+        .comparison-header { background: var(--gradient); color: white; padding: 1.5rem; text-align: center; font-size: 1.3rem; font-weight: 700; }
+        .comparison-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 1.25rem; border-bottom: 1px solid #F0F0F0; align-items: center; transition: background 0.2s ease; }
+        .comparison-row:hover { background: var(--light); }
+        .comparison-row:last-child { border-bottom: none; }
+        .comparison-row div { text-align: center; font-size: 0.95rem; }
+        .comparison-row div:first-child { text-align: left; font-weight: 600; color: var(--dark); }
+        .check { color: var(--accent); font-size: 1.4rem; font-weight: bold; }
+        .cross { color: #E57373; font-size: 1.4rem; }
+
+        /* Process */
+        .process-grid { max-width: 1000px; margin: 0 auto; display: grid; gap: 2rem; }
+        .process-card { background: white; padding: 2rem; border-radius: 16px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--secondary); transition: all 0.3s ease; }
+        .process-card:hover { box-shadow: var(--shadow-md); transform: translateX(4px); }
+        .process-card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.75rem; font-weight: 700; }
+        .process-card h3::before { content: attr(data-number) '. '; color: var(--secondary); font-weight: 800; }
+
+        /* Commitment */
+        .commitment-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .commitment-card { background: white; padding: 2rem; border-radius: 16px; box-shadow: var(--shadow-sm); border: 1px solid #F0F0F0; }
+        .commitment-card h4 { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; }
+
+        /* Pricing */
+        .pricing-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .pricing-card { background: white; border-radius: 16px; padding: 2.5rem 2rem; text-align: center; box-shadow: var(--shadow-sm); transition: all 0.3s ease; border: 2px solid #F0F0F0; position: relative; }
+        .pricing-card.featured { border-color: var(--secondary); box-shadow: var(--shadow-lg); transform: scale(1.03); }
+        .pricing-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gradient); color: white; padding: 0.4rem 1.25rem; border-radius: 20px; font-size: 0.75rem; font-weight: bold; letter-spacing: 0.5px; }
+        .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .pricing-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+        .pricing-card h3 { font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700; }
+        .price { font-size: 3rem; font-weight: 800; color: var(--primary); margin: 1rem 0; }
+        .price span { font-size: 1rem; color: #888; font-weight: 500; }
+
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #E8E8E8; }
+        .faq-question { padding: 1.25rem 1rem; cursor: pointer; font-weight: 600; font-size: 1.05rem; position: relative; transition: color 0.2s ease; }
+        .faq-question:hover { color: var(--primary); }
+        .faq-question::after { content: '+'; position: absolute; right: 1rem; font-size: 1.5rem; font-weight: 300; transition: transform 0.3s ease; }
+        .faq-item.active .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer p { padding: 0 1rem 1.25rem; color: #616161; line-height: 1.7; }
+
+        /* Contact */
+        .contact-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info h3 { font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .contact-icon { width: 48px; height: 48px; background: var(--gradient); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; flex-shrink: 0; }
+        .contact-info a { color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+        .contact-info a:hover { color: var(--secondary); }
+        .contact-form { background: var(--light); padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-sm); }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--dark); }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.875rem; border: 1px solid #DDD; border-radius: 8px; font-size: 0.95rem; font-family: inherit; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(0,137,123,0.1); }
+        .submit-btn { width: 100%; padding: 1rem; background: var(--gradient); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-md); }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .submit-btn:active { transform: translateY(0); }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 3rem 2rem 2rem; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: white; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: var(--accent); }
+        footer p { opacity: 0.8; font-size: 0.9rem; margin-top: 1rem; }
+
+        /* Accessibility */
+        .sr-only { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+        :focus-visible { outline: 3px solid var(--secondary); outline-offset: 2px; }
+
+        /* Loading Optimization */
+        img { loading: lazy; }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .hero-content p { margin-left: auto; margin-right: auto; max-width: 600px; }
+            .hero-buttons, .trust-badges { justify-content: center; }
+            .contact-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            :root { --nav-height: 64px; }
+            .nav-container { padding: 1rem; }
+            .nav-toggle { display: block; }
+            .nav-links { position: fixed; top: 0; right: 0; width: 75%; max-width: 300px; height: 100vh; background: white; flex-direction: column; padding: 5rem 2rem 2rem; gap: 1.5rem; transform: translateX(100%); transition: transform 0.3s ease; box-shadow: -4px 0 20px rgba(0,0,0,0.1); align-items: flex-start; }
+            .nav-links.open { transform: translateX(0); }
+            .nav-container .cta-btn { display: none; }
+            .section-title { font-size: 2rem; }
+            .hero { padding-top: calc(var(--nav-height) + 60px); padding-bottom: 60px; }
+            .stats { margin-top: 0; border-radius: 0; }
+            .comparison-row { grid-template-columns: 1fr; gap: 0.75rem; text-align: center; }
+            .comparison-row div:first-child { text-align: center; margin-bottom: 0.5rem; }
+            .comparison-header { font-size: 1.1rem; }
+            .pricing-card.featured { transform: scale(1); }
+            .service-features li, .faq-question { font-size: 0.9rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 2rem; }
+            .section-title { font-size: 1.75rem; }
+            .price { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#services" class="sr-only">Skip to content</a>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">SafeMed</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" class="cta-btn">Book Consultation</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Professional In-Home Medication & Medical Equipment Management</h1>
+                    <p>SafeMed Concierge provides peace of mind for families by ensuring your loved ones' medications and medical equipment are managed with precision, care, and the highest professional standards.</p>
+                    <div class="hero-buttons">
+                        <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" class="cta-btn">Schedule Free Assessment</a>
+                        <a href="tel:3234926837" class="btn-secondary">Call: (323) 492-6837</a>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <svg viewBox="0 0 24 24"><path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"/></svg>
+                            <span>Certified Professional</span>
+                        </div>
+                        <div class="badge">
+                            <svg viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10-4.48 10-10S17.52,2 12,2zm-2,15l-5-5 1.41-1.41L10,14.17l7.59-7.59L19,8l-9,9z"/></svg>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                        <div class="badge">
+                            <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22S19,14.25 19,9A7,7 0 0,0 12,2Z"/></svg>
+                            <span>Serving LA County</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+        </section>
+
+        <div class="stats">
+            <div class="stats-container">
+                <div class="stat-item"><h3>100%</h3><p>Accuracy Standard</p></div>
+                <div class="stat-item"><h3>24/7</h3><p>Support Available</p></div>
+                <div class="stat-item"><h3>5+</h3><p>Years Experience</p></div>
+                <div class="stat-item"><h3>$2M</h3><p>Liability Insurance</p></div>
+            </div>
+        </div>
+
+        <section id="services" class="section section-light">
+            <h2 class="section-title">Our Professional Services</h2>
+            <p class="section-subtitle">We handle complex healthcare tasks so you can focus on spending quality time with your loved ones.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2a6 6 0 0 0 0 12h0l8-8A6 6 0 0 0 8 2z"></path><path d="m16 16-8 8a6 6 0 1 0 8-8z"></path></svg>
+                    </div>
+                    <h3>Medication Management</h3>
+                    <p>Hospital-grade accuracy in medication administration. Ensure your loved one never misses a dose or experiences dangerous drug interactions.</p>
+                    <ul class="service-features">
+                        <li>Weekly pillbox organization with photo documentation</li>
+                        <li>Medication reconciliation after hospital discharge</li>
+                        <li>Pharmacy coordination and refill management</li>
+                        <li>Healthcare provider communication</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    </div>
+                    <h3>Medical Equipment Care</h3>
+                    <p>Extend equipment life and prevent infections with hospital-grade sanitization. We maintain devices to manufacturer specifications.</p>
+                    <ul class="service-features">
+                        <li>CPAP/BiPAP complete sanitization</li>
+                        <li>Nebulizer deep cleaning and testing</li>
+                        <li>Wheelchair and walker safety inspections</li>
+                        <li>Filter replacement and compliance tracking</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1"></rect></svg>
+                    </div>
+                    <h3>Care Coordination</h3>
+                    <p>Navigate the complex healthcare system with a dedicated advocate. We eliminate stress from managing multiple providers.</p>
+                    <ul class="service-features">
+                        <li>Appointment preparation and coordination</li>
+                        <li>Insurance authorization assistance</li>
+                        <li>Provider communication and follow-ups</li>
+                        <li>Emergency planning and documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="about-content">
+                <h2 class="section-title">Your Trusted Healthcare Partner</h2>
+                <p>SafeMed Concierge was founded with a single mission: to bring hospital-level safety and precision into the homes of families who need it most. With years of healthcare experience and specialized training in medication management and medical equipment care, we understand the challenges families face managing complex health needs.</p>
+                <p>Our commitment is to provide service that is professional, discreet, and deeply compassionate. We handle the clinical details so you can focus on being a daughter, son, or spouse—not just a caregiver. Every family deserves expert support that ensures safety, maintains independence, and provides genuine peace of mind.</p>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <h2 class="section-title">The SafeMed Advantage</h2>
+            <p class="section-subtitle">Your loved one deserves expertise and professional care you can trust.</p>
+            <div class="comparison">
+                <div class="comparison-header"><h3>Professional Care Makes the Difference</h3></div>
+                <div class="comparison-row"><div><strong>Service Feature</strong></div><div><strong>SafeMed</strong></div><div><strong>Basic Care</strong></div></div>
+                <div class="comparison-row"><div>Certified Healthcare Professional</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>Clinical Medication Review</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>Direct Provider Communication</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>Hospital-Grade Equipment Cleaning</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>Insurance Navigation Support</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>HIPAA Compliance</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>$2M Liability Insurance</div><div class="check">✓</div><div class="cross">✗</div></div>
+                <div class="comparison-row"><div>24/7 Clinical Support</div><div class="check">✓</div><div class="cross">✗</div></div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="section-title">Our Professional Process</h2>
+            <p class="section-subtitle">Every step is designed for clarity, safety, and your complete peace of mind.</p>
+            <div class="process-grid">
+                <div class="process-card">
+                    <h3 data-number="1">Initial Assessment</h3>
+                    <p>A <strong>free 30-minute consultation</strong> where we evaluate needs, review medications, and inspect equipment. We develop a personalized care plan together.</p>
+                </div>
+                <div class="process-card">
+                    <h3 data-number="2">Service Setup</h3>
+                    <p><strong>Seamless onboarding</strong> includes baseline documentation, physician coordination, and pharmacy setup. Weekly visits begin immediately.</p>
+                </div>
+                <div class="process-card">
+                    <h3 data-number="3">Ongoing Care</h3>
+                    <p><strong>Consistent weekly visits</strong> ensure accuracy with photo documentation, real-time updates, and proactive management of refills and communications.</p>
+                </div>
+                <div class="process-card">
+                    <h3 data-number="4">Quality Assurance</h3>
+                    <p><strong>Monthly reviews</strong> ensure optimal outcomes. We adjust protocols as needed and provide detailed reports to the family.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <h2 class="section-title">Our Commitment to Excellence</h2>
+            <p class="section-subtitle">We're dedicated to providing care that makes a tangible difference in our clients' lives.</p>
+            <div class="commitment-grid">
+                <div class="commitment-card">
+                    <h4>Preventing Medication Errors</h4>
+                    <p>For clients managing multiple medications, thorough medication reconciliation can be life-saving. We check for dangerous interactions and coordinate with doctors to ensure the regimen is safe and effective, providing families with complete peace of mind.</p>
+                </div>
+                <div class="commitment-card">
+                    <h4>Improving Quality of Life</h4>
+                    <p>Proper medical equipment maintenance can have a profound impact. For clients using CPAPs, our hospital-grade cleaning dramatically improves sleep quality and reduces risk of respiratory infections, potentially saving thousands in equipment replacement and healthcare costs.</p>
+                </div>
+                <div class="commitment-card">
+                    <h4>Proactive Health Monitoring</h4>
+                    <p>Professional oversight can identify subtle health changes that others might miss. Noticing early warning signs during routine visits and alerting healthcare providers can prevent costly and stressful hospitalizations, ensuring better health outcomes at home.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section">
+            <h2 class="section-title">Transparent Investment in Peace of Mind</h2>
+            <p class="section-subtitle">No hidden fees. No long-term contracts. Just exceptional, professional care.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Medication Management</h3>
+                    <div class="price">$549<span>/month</span></div>
+                    <ul class="service-features">
+                        <li>Weekly Medication Setup</li>
+                        <li>Refill & Pharmacy Coordination</li>
+                        <li>Provider Communication</li>
+                        <li>Family Updates & Photo Log</li>
+                    </ul>
+                    <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 2rem; display: inline-block;">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Complete Care Bundle</h3>
+                    <div class="price">$899<span>/month</span></div>
+                    <ul class="service-features">
+                        <li>Everything in Medication Management</li>
+                        <li><strong>Medical Equipment Care (2 devices)</strong></li>
+                        <li><strong>Full Care Coordination</strong></li>
+                        <li><strong>24/7 Support Line</strong></li>
+                        <li>Monthly Health Reviews</li>
+                    </ul>
+                    <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 2rem; display: inline-block;">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Equipment Care</h3>
+                    <div class="price">$349<span>/month</span></div>
+                    <ul class="service-features">
+                        <li>Monthly Deep Cleaning</li>
+                        <li>Covers 1-2 devices (e.g. CPAP)</li>
+                        <li>Filter Replacement Included</li>
+                        <li>Safety & Function Inspection</li>
+                    </ul>
+                    <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 2rem; display: inline-block;">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="faq-container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">How is SafeMed different from a typical caregiver service?</div>
+                    <div class="faq-answer"><p>SafeMed specializes in the clinical aspects of care—medication management and medical equipment maintenance. Our team has professional healthcare training and experience that allows us to perform clinical assessments and communicate with physicians at a level that basic caregivers cannot provide.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you bill insurance or Medicare?</div>
+                    <div class="faq-answer"><p>Our services are private-pay to ensure the highest quality of dedicated care without insurance restrictions. We provide detailed receipts that families may submit for possible HSA/FSA reimbursement. Many find that preventing a single hospitalization more than justifies the investment in proactive care.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What happens if there's an urgent need outside business hours?</div>
+                    <div class="faq-answer"><p>Clients in our Complete Care Bundle have access to a 24/7 support line. Our team can provide immediate guidance, coordinate with emergency services if needed, and follow up with physicians the next business day. We maintain detailed emergency protocols for each client.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do you ensure privacy and discretion?</div>
+                    <div class="faq-answer"><p>Privacy is paramount. Our staff arrives in unmarked vehicles, wears professional attire, and undergoes comprehensive background checks. All health information is protected by military-grade encryption and strict HIPAA compliance protocols.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is there a long-term commitment?</div>
+                    <div class="faq-answer"><p>We offer a 30-day satisfaction guarantee. If you're not completely satisfied within the first month, we will refund your investment. After that, there are no long-term contracts—you can adjust or discontinue service at any time with 30 days' notice.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Start Your Journey to Better Care</h2>
+            <p class="section-subtitle">Schedule your free, no-obligation assessment today. Complete discretion is always assured.</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>We're Here to Help</h3>
+                    <p style="margin-bottom: 2rem; color: #666;">Our professionals are ready to discuss your family's unique needs. Every conversation is confidential and HIPAA-compliant.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div><strong>24/7 Support Line</strong><br><a href="tel:3234926837" style="font-size: 1.2rem;">(323) 492-6837</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div><strong>Email Us</strong><br><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📅</div>
+                        <div><strong>Schedule Online</strong><br><a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener">Book Your 30-Min Consultation</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div><strong>Service Areas</strong><br>Glendale, Pasadena, Burbank, Eagle Rock,<br>La Cañada, San Marino, Los Angeles County</div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Request Information</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <input type="hidden" name="access_key" value="fb9afb30-3b92-4236-a063-0e44ae366ff7">
+                        <input type="hidden" name="subject" value="New SafeMed Concierge Inquiry">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option>Not Sure - Need Consultation</option>
+                                <option>Medication Management</option>
+                                <option>Medical Equipment Care</option>
+                                <option>Complete Care Bundle</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Needs</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please share any specific concerns or requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Confidential Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener">Book Consultation</a>
+            </div>
+            <p style="margin-top: 2rem;">© 2025 SafeMed Concierge | HIPAA Compliant | Liability Insured</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Serving Glendale, Pasadena, Burbank, and greater Los Angeles County.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const isOpen = navLinks.classList.contains('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.textContent = isOpen ? '✕' : '☰';
+        });
+
+        // Close mobile menu when link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.textContent = '☰';
+                }
+            });
+        });
+
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
