@@ -49,6 +49,10 @@
             font-weight: 600;
             z-index: 1001;
             line-height: 1.4;
+            height: var(--disclaimer-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         nav { position: fixed; width: 100%; top: var(--disclaimer-height); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); z-index: 1000; }
@@ -143,15 +147,103 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         .faq-answer p { padding: 0 1rem 1.25rem; color: #616161; line-height: 1.7; }
 
-        .cta-section { background: var(--gradient); color: white; text-align: center; padding: 4rem 2rem; }
-        .cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .cta-section p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95; }
-        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .btn-white { background: white; color: var(--primary); padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-        .btn-outline { background: transparent; color: white; padding: 1rem 2rem; border: 2px solid white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.2s ease; }
-        .btn-outline:hover { background: white; color: var(--primary); }
-
+        /* New Contact Form Styles */
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            text-align: left;
+        }
+        .contact-info h3, .contact-form h3 {
+             font-size: 1.75rem; 
+             margin-bottom: 1rem; 
+             font-weight: 700; 
+        }
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .contact-info a:hover {
+            color: var(--secondary);
+        }
+        .contact-form {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid #DDD;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(0, 137, 123, 0.1);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-md);
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .form-security {
+            text-align: center;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
         footer { background: var(--dark); color: white; padding: 3rem 2rem 2rem; text-align: center; }
         .footer-disclaimer { max-width: 900px; margin: 0 auto 2rem; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 12px; font-size: 0.9rem; line-height: 1.6; }
         .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
@@ -171,6 +263,7 @@
             .trust-badges { justify-content: center; }
             .credentials-container { grid-template-columns: 1fr; }
             .insurance-highlight { justify-content: center; }
+            .contact-container { grid-template-columns: 1fr; gap: 2.5rem; }
         }
     </style>
 </head>
@@ -392,17 +485,55 @@
             </div>
         </section>
 
-        <section class="cta-section" id="contact">
-            <h2>Ready to Get Started?</h2>
-            <p>Book your free, no-obligation consultation today. See exactly how we can help your family.</p>
-            <div class="cta-buttons">
-                <a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" class="btn-white">📅 Book Free Consultation</a>
-                <a href="tel:+13234926837" class="btn-outline">📞 Call: (323) 492-6837</a>
+        <!-- New, combined contact section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Get Peace of Mind Today</h2>
+            <p class="section-subtitle">Schedule your free, no-obligation consultation, or send us a message with your questions.</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get Started in 2 Minutes</h3>
+                    <p style="margin-bottom: 2rem; color: #666;">The easiest way to begin is to book a free assessment directly on the calendar or call us now.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">📅</div>
+                        <div><strong>Book Online (Easiest)</strong><br><a href="https://calendly.com/safemed-joseph/30min" target="_blank" rel="noopener" style="font-size: 1.1rem;">Schedule Your Free Consultation</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div><strong>Call or Text</strong><br><a href="tel:+13234926837" style="font-size: 1.2rem;">(323) 492-6837</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div><strong>Email for Questions</strong><br><a href="mailto:safemed.joseph@gmail.com">safemed.joseph@gmail.com</a></div>
+                    </div>
+                     <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div><strong>Service Areas</strong><br>Glendale, Pasadena, Burbank, La Cañada, La Crescenta & Surrounding Areas</div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Or, Send a Message</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <input type="hidden" name="access_key" value="fb9afb30-3b92-4236-a063-0e44ae366ff7">
+                        <input type="hidden" name="subject" value="New SafeMed Website Inquiry">
+                        
+                        <input type="text" name="hp_field" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Questions or Needs</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Share any specific concerns..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Confidential Inquiry</button>
+                        <p class="form-security">🔒 Secure & HIPAA Compliant</p>
+                    </form>
+                </div>
             </div>
-            <p style="margin-top: 2rem; font-size: 0.95rem;">
-                📧 Email: safemed.joseph@gmail.com<br>
-                📍 Serving Glendale, Pasadena, Burbank & Surrounding Areas
-            </p>
         </section>
     </main>
 
@@ -469,3 +600,4 @@
     </script>
 </body>
 </html>
+
