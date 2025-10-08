@@ -10,6 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXK9SQSBC2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FXK9SQSBC2', { anonymize_ip: true });
+    </script>
     
     <style>
         :root {
@@ -597,7 +606,57 @@
                 }
             });
         });
+
+        /* ---------- GA4 EVENT TRACKING ---------- */
+
+        // Calendly clicks (all variants on the page)
+        document.querySelectorAll('a[href*="calendly.com/safemed-joseph"]').forEach(a => {
+          a.addEventListener('click', () => {
+            if (typeof gtag === 'function') {
+              gtag('event', 'book_consult_click', {
+                link_text: a.textContent.trim() || 'Calendly link',
+                link_url: a.href
+              });
+            }
+          });
+        });
+
+        // Phone clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+          a.addEventListener('click', () => {
+            if (typeof gtag === 'function') {
+              gtag('event', 'click_phone', {
+                link_text: a.textContent.trim(),
+                link_url: a.href
+              });
+            }
+          });
+        });
+
+        // Email clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+          a.addEventListener('click', () => {
+            if (typeof gtag === 'function') {
+              gtag('event', 'click_email', {
+                link_text: a.textContent.trim(),
+                link_url: a.href
+              });
+            }
+          });
+        });
+
+        // Contact form submit → GA4 recommended event
+        const contactFormEl = document.getElementById('contactForm');
+        if (contactFormEl) {
+          contactFormEl.addEventListener('submit', () => {
+            if (typeof gtag === 'function') {
+              gtag('event', 'generate_lead', {
+                form_id: 'contactForm',
+                method: 'web3forms'
+              });
+            }
+          }, { capture: true });
+        }
     </script>
 </body>
 </html>
-
