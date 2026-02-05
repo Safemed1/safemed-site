@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duldulao HQ — Our Money, Our Future</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Fraunces:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c12;
+  --bg2: #141420;
+  --bg3: #1c1c2a;
+  --bg4: #242436;
+  --green: #34d399;
+  --green-dim: #059669;
+  --green-bg: rgba(52,211,153,0.08);
+  --blue: #60a5fa;
+  --blue-bg: rgba(96,165,250,0.08);
+  --purple: #a78bfa;
+  --purple-bg: rgba(167,139,250,0.08);
+  --orange: #fb923c;
+  --orange-bg: rgba(251,146,60,0.08);
+  --red: #f87171;
+  --red-bg: rgba(248,113,113,0.08);
+  --yellow: #fbbf24;
+  --yellow-bg: rgba(251,191,36,0.08);
+  --text: #e4e4ec;
+  --text2: #9494ac;
+  --text3: #5c5c74;
+  --border: #2a2a3c;
+  --r: 14px;
+  --r-sm: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* ── HEADER ── */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(12,12,18,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.hdr-inner{max-width:1320px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--green),var(--blue));border-radius:10px;display:grid;place-items:center;font:800 15px 'Fraunces',serif;color:var(--bg)}
+.logo-name{font:700 17px 'Fraunces',serif;letter-spacing:-0.5px}
+.logo-sub{font:500 10px 'JetBrains Mono',monospace;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase}
+
+/* ── NAV ── */
+.nav{display:flex;gap:3px;background:var(--bg2);padding:3px;border-radius:var(--r-sm);overflow-x:auto}
+.nav-btn{padding:7px 14px;border:none;background:0;color:var(--text2);font:500 12.5px 'DM Sans',sans-serif;border-radius:7px;cursor:pointer;transition:.15s;white-space:nowrap}
+.nav-btn:hover{color:var(--text);background:var(--bg3)}
+.nav-btn.on{color:var(--bg);background:var(--green);font-weight:700}
+
+/* ── MAIN ── */
+.main{max-width:1320px;margin:0 auto;padding:20px;position:relative;z-index:1}
+.sec{display:none;animation:fadeUp .25s ease}.sec.on{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── EXPLAINER BOX ── */
+.explain{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px 20px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start}
+.explain-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.explain-text{font-size:13.5px;color:var(--text2);line-height:1.6}
+.explain-text strong{color:var(--text);font-weight:600}
+
+/* ── CARDS ── */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:14px;transition:.15s}
+.card:hover{border-color:var(--bg4)}
+.card-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.card-t{font:700 15px 'DM Sans',sans-serif;letter-spacing:-0.2px}
+.badge{font:600 10px 'JetBrains Mono',monospace;padding:3px 9px;border-radius:20px;letter-spacing:0.5px}
+.bg-g{background:var(--green-bg);color:var(--green)}.bg-b{background:var(--blue-bg);color:var(--blue)}
+.bg-p{background:var(--purple-bg);color:var(--purple)}.bg-o{background:var(--orange-bg);color:var(--orange)}
+.bg-r{background:var(--red-bg);color:var(--red)}.bg-y{background:var(--yellow-bg);color:var(--yellow)}
+
+/* ── GRID ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}.hdr-inner{flex-direction:column}.nav{width:100%}}
+
+/* ── STAT ── */
+.stat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px;position:relative;overflow:hidden}
+.stat::after{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.stat.sg::after{background:var(--green)}.stat.sb::after{background:var(--blue)}
+.stat.so::after{background:var(--orange)}.stat.sr::after{background:var(--red)}
+.stat.sp::after{background:var(--purple)}.stat.sy::after{background:var(--yellow)}
+.stat-l{font:500 10px 'JetBrains Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+.stat-v{font:800 26px 'DM Sans',sans-serif;letter-spacing:-1px}
+.stat-s{font-size:12px;color:var(--text2);margin-top:4px}
+.c-g{color:var(--green)}.c-r{color:var(--red)}.c-b{color:var(--blue)}.c-o{color:var(--orange)}.c-p{color:var(--purple)}.c-y{color:var(--yellow)}.c-d{color:var(--text2)}
+
+/* ── PROGRESS ── */
+.prog{background:var(--bg);border-radius:6px;height:10px;overflow:hidden;margin:6px 0}
+.prog-sm{height:6px}
+.prog-bar{height:100%;border-radius:6px;transition:width .5s ease}
+
+/* ── BIWEEKLY TRACKER ── */
+.bw-cycle{background:var(--bg3);border-radius:var(--r);padding:20px;margin-bottom:14px}
+.bw-title{font:700 14px 'DM Sans',sans-serif;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.bw-bar-wrap{position:relative;background:var(--bg);border-radius:8px;height:32px;overflow:hidden;margin:8px 0}
+.bw-bar-fill{height:100%;border-radius:8px;transition:width .4s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font:700 11px 'JetBrains Mono',monospace;color:var(--bg);min-width:40px}
+.bw-bar-fill.fill-g{background:linear-gradient(90deg,var(--green-dim),var(--green))}
+.bw-bar-fill.fill-b{background:linear-gradient(90deg,#3b82f6,var(--blue))}
+.bw-bar-fill.fill-o{background:linear-gradient(90deg,#ea580c,var(--orange))}
+.bw-labels{display:flex;justify-content:space-between;font:500 11px 'JetBrains Mono',monospace;color:var(--text3)}
+.bw-bills{margin-top:10px}
+.bw-bill-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(42,42,60,0.3);font-size:13.5px}
+.bw-bill-row:last-child{border:0}
+.bw-check{width:20px;height:20px;border-radius:6px;border:2px solid var(--border);cursor:pointer;display:grid;place-items:center;transition:.15s;flex-shrink:0}
+.bw-check.checked{background:var(--green);border-color:var(--green)}
+.bw-check.checked::after{content:'✓';color:var(--bg);font:700 12px 'DM Sans',sans-serif}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:separate;border-spacing:0}
+.tbl th{text-align:left;padding:8px 12px;font:500 9.5px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);border-bottom:1px solid var(--border)}
+.tbl td{padding:10px 12px;font-size:13.5px;border-bottom:1px solid rgba(42,42,60,0.3)}
+.tbl tr:last-child td{border:0}
+
+/* ── INPUT ── */
+.inp{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:7px 11px;border-radius:8px;font:500 13px 'JetBrains Mono',monospace;width:110px;transition:.15s;text-align:right}
+.inp:focus{outline:0;border-color:var(--green);box-shadow:0 0 0 3px var(--green-bg)}
+.inp-wide{width:100%}
+
+/* ── BUTTONS ── */
+.btn{padding:8px 16px;border:0;border-radius:8px;font:600 12.5px 'DM Sans',sans-serif;cursor:pointer;transition:.15s}
+.btn-g{background:var(--green);color:var(--bg)}.btn-g:hover{filter:brightness(0.9)}
+.btn-s{background:var(--bg3);color:var(--text);border:1px solid var(--border)}.btn-s:hover{border-color:var(--bg4)}
+.btn-r{background:var(--red-bg);color:var(--red)}.btn-r:hover{filter:brightness(1.2)}
+.btn-sm{padding:5px 12px;font-size:11px}
+
+/* ── TIMELINE ── */
+.tl{padding-left:28px;position:relative}
+.tl::before{content:'';position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--green),var(--blue),var(--purple))}
+.tl-item{position:relative;margin-bottom:20px;padding:14px 18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-sm);transition:.15s}
+.tl-item:hover{border-color:var(--bg4);transform:translateX(3px)}
+.tl-dot{position:absolute;left:-24px;top:18px;width:12px;height:12px;border-radius:50%;border:3px solid var(--bg)}
+.tl-dot.dg{background:var(--green)}.tl-dot.db{background:var(--blue)}.tl-dot.dp{background:var(--purple)}
+.tl-dot.now{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,.4)}50%{box-shadow:0 0 0 7px rgba(52,211,153,0)}}
+.tl-date{font:600 10px 'JetBrains Mono',monospace;color:var(--green);letter-spacing:.5px;margin-bottom:3px}
+.tl-title{font-weight:700;font-size:14px;margin-bottom:3px}
+.tl-desc{font-size:12.5px;color:var(--text2);line-height:1.55}
+
+/* ── PATHWAY ── */
+.pw{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid rgba(42,42,60,0.3)}
+.pw:last-child{border:0}
+.pw-yr{font:500 10px 'JetBrains Mono',monospace;color:var(--text3);width:50px;flex-shrink:0;text-align:center}
+.pw-arr{color:var(--green);flex-shrink:0;font-size:14px}
+.pw-info{flex:1;min-width:0}
+.pw-role{font-weight:700;font-size:13.5px}
+.pw-sub{font-size:11.5px;color:var(--text2)}
+.pw-pay{font:600 12px 'JetBrains Mono',monospace;color:var(--green);flex-shrink:0;text-align:right}
+
+/* ── CERT ── */
+.cert{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px;transition:.15s}
+.cert:hover{border-color:var(--bg4);transform:translateY(-2px)}
+.cert-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.cert-dot.done{background:var(--green);box-shadow:0 0 6px rgba(52,211,153,.4)}
+.cert-dot.wip{background:var(--yellow);box-shadow:0 0 6px rgba(251,191,36,.4)}
+.cert-dot.plan{background:var(--text3)}
+
+/* ── LEGEND ── */
+.legend{display:flex;flex-wrap:wrap;gap:14px;padding:12px 16px;background:var(--bg3);border-radius:var(--r-sm);margin-bottom:16px;font-size:12px;color:var(--text2)}
+.legend-item{display:flex;align-items:center;gap:6px}
+.legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+
+/* ── TOTALS BAR ── */
+.totals{background:rgba(28,28,42,.9);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+
+/* ── HELPERS ── */
+.flex{display:flex;align-items:center;gap:8px}.flex-b{display:flex;justify-content:space-between;align-items:center}
+.col{display:flex;flex-direction:column;gap:3px}
+.mt4{margin-top:4px}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}
+.mb8{margin-bottom:8px}.mb12{margin-bottom:12px}.mb16{margin-bottom:16px}.mb20{margin-bottom:20px}
+.fw6{font-weight:600}.fw7{font-weight:700}.fw8{font-weight:800}
+.fs12{font-size:12px}.fs13{font-size:13px}.fs14{font-size:14px}.fs11{font-size:11px}
+.mono{font-family:'JetBrains Mono',monospace}
+.dim{color:var(--text2)}
+.hint{background:var(--bg3);padding:10px 14px;border-radius:8px;font-size:12px;color:var(--text2);line-height:1.5;border-left:3px solid var(--green)}
+.hint-b{border-left-color:var(--blue)}.hint-y{border-left-color:var(--yellow)}.hint-r{border-left-color:var(--red)}
+
+/* ── SECTION HEADER ── */
+.sec-h{margin-bottom:20px}
+.sec-t{font:800 24px 'Fraunces',serif;letter-spacing:-0.5px}
+.sec-s{font-size:13px;color:var(--text2);margin-top:4px}
+
+/* Print */
+@media print{.hdr,.nav{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div class="logo">
+      <div class="logo-mark">D²</div>
+      <div>
+        <div class="logo-name">Duldulao HQ</div>
+        <div class="logo-sub">Our Money · Our Future</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <button class="nav-btn on" data-t="dash">Dashboard</button>
+      <button class="nav-btn" data-t="pay">Payday Tracker</button>
+      <button class="nav-btn" data-t="debt">Debt Destroyer</button>
+      <button class="nav-btn" data-t="timeline">Timeline</button>
+      <button class="nav-btn" data-t="careers">Careers</button>
+      <button class="nav-btn" data-t="invest">Investing</button>
+      <button class="nav-btn" data-t="certs">Certifications</button>
+    </nav>
+  </div>
+</header>
+
+<main class="main" id="app"></main>
+
+<script>
+// ═══════════════════════════════════════════════════
+//  STATE — All our numbers in one place
+// ═══════════════════════════════════════════════════
+const D = {
+  his: { name:"Joseph", age:27, hr:33.99, netBiweekly:2125, netMo:4604, job:"HIT Clinical Support Specialist", co:"NEVHC", start:"Feb 17, 2026" },
+  her: { name:"Wife", age:27, hr:24, netBiweekly:1500, netMo:3000, job:"Healthcare Worker", school:{ program:"MRI Technologist", start:"May or Q3 2026", length:"18 months", cost:"$12K–25K", gradDate:"Late 2027 / Early 2028", startSalary:{low:62000,mid:80000,high:97000}, peakSalary:{low:100000,mid:120000,high:150000} }},
+  
+  // BIWEEKLY BILLS — What we split each payday
+  // Each payday we each put in half. Combined per payday = half of monthly.
+  biweeklyBills: [
+    { id:1, name:"Joseph's Car (GR86)", moAmt:694, owner:"his", cat:"auto" },
+    { id:2, name:"Wife's Car", moAmt:632, owner:"her", cat:"auto" },
+    { id:3, name:"Phone", moAmt:120, owner:"split", cat:"bills" },
+    { id:4, name:"Internet", moAmt:70, owner:"split", cat:"bills" },
+    { id:5, name:"Groceries & Food", moAmt:800, owner:"split", cat:"food" },
+    { id:6, name:"Gas (Both Cars)", moAmt:300, owner:"split", cat:"transport" },
+    { id:7, name:"Misc / Fun / Other", moAmt:600, owner:"split", cat:"other" },
+    { id:8, name:"Wedding Fund", moAmt:2400, owner:"split", cat:"wedding", endsApril:true },
+    { id:9, name:"Capital One Minimum", moAmt:233, owner:"his", cat:"debt" },
+    { id:10, name:"Student Loan Minimum", moAmt:75, owner:"his", cat:"debt" },
+    { id:11, name:"Wife's Loan Minimum", moAmt:100, owner:"her", cat:"debt" },
+  ],
+  
+  // Pay cycle tracking — resets each cycle
+  payCycle: { paid: {} },
+  
+  // Debts
+  debts: [
+    { id:1, owner:"Joseph", name:"Capital One", bal:9988, apr:28.24, min:233, type:"cc" },
+    { id:2, owner:"Joseph", name:"Student Loans", bal:6865, apr:5.50, min:75, type:"loan", pastDue:900 },
+    { id:3, owner:"Wife", name:"Personal Loan", bal:5000, apr:3.00, min:100, type:"loan" },
+    { id:4, owner:"Joseph", name:"Toyota GR86", bal:29350, apr:11.84, min:694, type:"auto" },
+    { id:5, owner:"Wife", name:"Her Car", bal:25000, apr:6.00, min:632, type:"auto" },
+  ],
+  
+  wedding: { date:"April 16, 2026", gift:10000, plan:"$2K wedding costs, $8K → debt" },
+};
+
+// ═══════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const fm = n => '$'+Math.round(n).toLocaleString();
+const fmd = n => '$'+n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = (p,w) => w===0?0:Math.round(p/w*100);
+const totalMo = () => D.biweeklyBills.reduce((s,b)=>s+b.moAmt,0);
+const totalMoNoWed = () => D.biweeklyBills.filter(b=>b.cat!=='wedding').reduce((s,b)=>s+b.moAmt,0);
+const income = () => D.his.netMo + D.her.netMo;
+const consumerDebt = () => D.debts.filter(d=>d.type!=='auto').reduce((s,d)=>s+d.bal,0);
+const totalDebt = () => D.debts.reduce((s,d)=>s+d.bal,0);
+const surplus = () => income() - totalMo();
+const surplusNoWed = () => income() - totalMoNoWed();
+
+// ═══════════════════════════════════════════════════
+//  RENDER ENGINE
+// ═══════════════════════════════════════════════════
+function render(tab) {
+  const a = $('#app');
+  const views = { dash:vDash, pay:vPay, debt:vDebt, timeline:vTimeline, careers:vCareers, invest:vInvest, certs:vCerts };
+  a.innerHTML = views[tab]();
+  bind(tab);
+}
+
+// ═══════════════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════════════
+function vDash() {
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Our Dashboard</div>
+    <div class="sec-s">Everything at a glance — Joseph (${D.his.age}) & Wife (${D.her.age})</div>
+  </div>
+
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text">
+      <strong>How to read this page:</strong> This shows our combined money picture.
+      <strong style="color:var(--green)">Green = good</strong> (income, savings).
+      <strong style="color:var(--red)">Red = debt</strong> (what we owe).
+      The goal: turn everything green by August 2026.
+    </div>
+  </div>
+
+  <div class="g4 mb20">
+    <div class="stat sg">
+      <div class="stat-l">Combined Take-Home</div>
+      <div class="stat-v c-g">${fm(income())}</div>
+      <div class="stat-s">per month after taxes</div>
+    </div>
+    <div class="stat so">
+      <div class="stat-l">Monthly Bills</div>
+      <div class="stat-v">${fm(totalMo())}</div>
+      <div class="stat-s">After April: ${fm(totalMoNoWed())}</div>
+    </div>
+    <div class="stat ${surplus()>=0?'sg':'sr'}">
+      <div class="stat-l">Left Over Each Month</div>
+      <div class="stat-v ${surplus()>=0?'c-g':'c-r'}">${fm(surplus())}</div>
+      <div class="stat-s">After May: <strong class="c-g">${fm(surplusNoWed())}</strong></div>
+    </div>
+    <div class="stat sr">
+      <div class="stat-l">Total We Owe</div>
+      <div class="stat-v c-r">${fm(totalDebt())}</div>
+      <div class="stat-s">Bad debt: ${fm(consumerDebt())} · Cars: ${fm(totalDebt()-consumerDebt())}</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Income / Positive</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Debt / Expense</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Wife's career / info</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div> Ending soon / Milestone</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div> Future projections</div>
+  </div>
+
+  <div class="g2 mb20">
+    <!-- JOSEPH -->
+    <div class="card">
+      <div class="card-h">
+        <div class="card-t">👤 Joseph</div>
+        <span class="badge bg-g">$33.99/hr · NEVHC</span>
+      </div>
+      <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+        <div class="explain-icon" style="font-size:14px">💡</div>
+        <div class="explain-text fs12">Starting Feb 17 at NEVHC. Full benefits (health, dental, vision = FREE). Employer puts 5.5% into retirement automatically — no action needed.</div>
+      </div>
+      <div class="g2">
+        <div><div class="stat-l">Each Paycheck</div><div class="fw7">${fm(D.his.netBiweekly)}</div><div class="fs11 dim">every 2 weeks</div></div>
+        <div><div class="stat-l">Monthly</div><div class="fw7 c-g">${fm(D.his.netMo)}</div></div>
+      </div>
+      <div class="mt12">
+        <div class="stat-l mb8">Joseph's Debts</div>
+        ${D.debts.filter(d=>d.owner==='Joseph').map(d=>`
+          <div class="flex-b fs13" style="padding:4px 0"><span>${d.name}</span><span class="mono ${d.type!=='auto'?'c-r':'dim'}">${fm(d.bal)} · ${d.apr}%</span></div>
+        `).join('')}
+      </div>
+    </div>
+    <!-- WIFE -->
+    <div class="card">
+      <div class="card-h">
+        <div class="card-t">👤 Wife</div>
+        <span class="badge bg-b">$24/hr → MRI School</span>
+      </div>
+      <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+        <div class="explain-icon" style="font-size:14px">💡</div>
+        <div class="explain-text fs12">Currently $24/hr. Going back to school for <strong>MRI Technologist</strong> starting <strong>${D.her.school.start}</strong>. After graduation ($80K–$120K salary), our household income could reach <strong>$200K+</strong>.</div>
+      </div>
+      <div class="g2">
+        <div><div class="stat-l">Each Paycheck</div><div class="fw7">${fm(D.her.netBiweekly)}</div><div class="fs11 dim">every 2 weeks</div></div>
+        <div><div class="stat-l">Monthly</div><div class="fw7 c-b">${fm(D.her.netMo)}</div></div>
+      </div>
+      <div class="mt12">
+        <div class="stat-l mb8">Wife's Debts</div>
+        ${D.debts.filter(d=>d.owner==='Wife').map(d=>`
+          <div class="flex-b fs13" style="padding:4px 0"><span>${d.name}</span><span class="mono ${d.type!=='auto'?'c-r':'dim'}">${fm(d.bal)} · ${d.apr}%</span></div>
+        `).join('')}
+      </div>
+      <div class="mt12 hint hint-b">
+        <strong>🎓 MRI Tech = $80K–$120K/yr in LA</strong><br>
+        Entry: $30–38/hr · Experienced: $48+/hr · Top earners: $150K+<br>
+        Program: ~18 months · Top LA employers: Kaiser, UCLA, Cedars-Sinai
+      </div>
+    </div>
+  </div>
+
+  <!-- MILESTONES -->
+  <div class="card">
+    <div class="card-h"><div class="card-t">🎯 Our Big Milestones</div></div>
+    <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12">These are the key dates that change everything. Each one unlocks more money for the next goal.</div>
+    </div>
+    <div class="g4">
+      ${[
+        {icon:'💍',date:'Apr 16',title:'Wedding + $10K Gift',sub:'Unlocks $2,400/mo','color':'var(--yellow)'},
+        {icon:'🔥',date:'Aug 2026',title:'All Bad Debt = $0',sub:fm(consumerDebt())+' gone','color':'var(--red)'},
+        {icon:'🎓',date:'Late 2027',title:'Wife Finishes MRI School',sub:'$24/hr → $45+/hr','color':'var(--blue)'},
+        {icon:'🏡',date:'2028',title:'House Down Payment Ready',sub:'$75K+ saved','color':'var(--green)'},
+      ].map(m=>`
+        <div style="text-align:center;padding:14px;background:var(--bg3);border-radius:var(--r-sm)">
+          <div style="font-size:28px;margin-bottom:6px">${m.icon}</div>
+          <div class="fw7 fs14">${m.date}</div>
+          <div class="fs12 dim">${m.title}</div>
+          <div class="mono fs11 mt4" style="color:${m.color}">${m.sub}</div>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+
+  <!-- 5 YEAR -->
+  <div class="card mt16">
+    <div class="card-h">
+      <div class="card-t">📈 5-Year Household Projection</div>
+      <span class="badge bg-p">BY AGE 32</span>
+    </div>
+    <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12"><strong>How to read this table:</strong> "Combined" is what we both earn together. "Net Worth" = savings + investments − debt. The jump in 2028 is when Wife starts her MRI career.</div>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Year</th><th>Joseph</th><th>Wife</th><th>Combined</th><th>Bad Debt</th><th>Net Worth</th></tr></thead>
+      <tbody>
+      ${[
+        {y:'2026',h:70700,w:49920,d:fm(consumerDebt())+' → $0',nw:'-$40K',nwc:'c-r'},
+        {y:'2027',h:78000,w:30000,d:'$0 ✓',nw:'$15K',nwc:'c-g',wn:'school + part-time'},
+        {y:'2028',h:88000,w:80000,d:'$0 ✓',nw:'$75K',nwc:'c-g',wn:'MRI career starts!'},
+        {y:'2029',h:100000,w:95000,d:'$0 ✓',nw:'$180K',nwc:'c-g'},
+        {y:'2030',h:115000,w:110000,d:'$0 ✓',nw:'$350K',nwc:'c-g'},
+      ].map(r=>`
+        <tr>
+          <td class="fw7">${r.y}</td>
+          <td class="mono">${fm(r.h)}</td>
+          <td class="mono">${fm(r.w)}${r.wn?`<br><span class="fs11 c-b">${r.wn}</span>`:''}</td>
+          <td class="mono fw7">${fm(r.h+r.w)}</td>
+          <td class="mono ${r.d.includes('→')?'c-r':'c-g'}">${r.d}</td>
+          <td class="mono ${r.nwc}">${r.nw}</td>
+        </tr>
+      `).join('')}
+      </tbody>
+    </table>
+    <div class="hint mt16">
+      By age <strong>32</strong>, we could be a <strong class="c-g">$225K/yr household</strong> with <strong class="c-g">$350K+ net worth</strong>. That's real, generational wealth — starting from exactly where we are right now.
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  PAYDAY TRACKER — Biweekly cycle
+// ═══════════════════════════════════════════════════
+function vPay() {
+  const combined = D.his.netBiweekly + D.her.netBiweekly;
+  const halfBills = totalMo() / 2;
+  const halfBillsNoWed = totalMoNoWed() / 2;
+  const paidIds = Object.keys(D.payCycle.paid).filter(k => D.payCycle.paid[k]);
+  const paidAmount = paidIds.reduce((s,id) => {
+    const b = D.biweeklyBills.find(x=>x.id==id);
+    return s + (b ? b.moAmt/2 : 0);
+  },0);
+  const pctPaid = pct(paidAmount, halfBills);
+  const leftToPay = halfBills - paidAmount;
+
+  const cats = {};
+  D.biweeklyBills.forEach(b => {
+    if(!cats[b.cat]) cats[b.cat] = {total:0,paid:0};
+    cats[b.cat].total += b.moAmt/2;
+    if(D.payCycle.paid[b.id]) cats[b.cat].paid += b.moAmt/2;
+  });
+
+  const catColors = {auto:'var(--red)',bills:'var(--blue)',food:'var(--orange)',transport:'var(--purple)',other:'var(--text3)',wedding:'var(--yellow)',debt:'var(--red)'};
+  const catLabels = {auto:'Car Payments',bills:'Phone & Internet',food:'Groceries & Food',transport:'Gas',other:'Misc',wedding:'Wedding Fund',debt:'Debt Minimums'};
+
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Payday Tracker</div>
+    <div class="sec-s">Check off bills as you pay them each payday — watch the bar fill up!</div>
+  </div>
+
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text">
+      <strong>How this works:</strong> We get paid every 2 weeks. Each payday, we put our checks into our joint account and pay <strong>half</strong> of our monthly bills.
+      Check off each bill as you pay it. The bar shows how much of this paycheck is used up.
+      <strong style="color:var(--green)">Green leftover = money for extra debt payments or savings!</strong>
+    </div>
+  </div>
+
+  <div class="legend mb16">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Paid ✓</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--border)"></div> Not yet paid</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div> Ending soon (April)</div>
+  </div>
+
+  <div class="g3 mb20">
+    <div class="stat sg">
+      <div class="stat-l">Combined Paycheck</div>
+      <div class="stat-v c-g">${fm(combined)}</div>
+      <div class="stat-s">His: ${fm(D.his.netBiweekly)} + Hers: ${fm(D.her.netBiweekly)}</div>
+    </div>
+    <div class="stat so">
+      <div class="stat-l">Bills This Paycheck</div>
+      <div class="stat-v">${fm(halfBills)}</div>
+      <div class="stat-s">Half of ${fm(totalMo())} monthly</div>
+    </div>
+    <div class="stat ${combined-halfBills>=0?'sg':'sr'}">
+      <div class="stat-l">Leftover This Paycheck</div>
+      <div class="stat-v ${combined-halfBills>=0?'c-g':'c-r'}">${fm(combined - halfBills)}</div>
+      <div class="stat-s">After May: <strong class="c-g">${fm(combined - halfBillsNoWed)}</strong></div>
+    </div>
+  </div>
+
+  <!-- THE BIG BAR -->
+  <div class="card">
+    <div class="card-h">
+      <div class="card-t">💰 This Paycheck's Progress</div>
+      <span class="badge ${pctPaid>=100?'bg-g':'bg-o'}">${pctPaid}% PAID</span>
+    </div>
+    
+    <div class="explain" style="margin-bottom:14px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12">The bar fills up as you check off bills below. <strong class="c-g">Green part</strong> = bills paid. 
+      Once 100% is filled, everything leftover is yours to throw at debt or save.</div>
+    </div>
+
+    <!-- Main progress bar -->
+    <div style="margin-bottom:4px" class="flex-b">
+      <span class="mono fs11 dim">PAID: ${fm(paidAmount)}</span>
+      <span class="mono fs11 dim">TOTAL: ${fm(halfBills)}</span>
+    </div>
+    <div class="bw-bar-wrap" style="height:40px;border-radius:10px">
+      <div class="bw-bar-fill fill-g" style="width:${Math.min(100,pctPaid)}%;border-radius:10px;font-size:13px">${pctPaid}%</div>
+    </div>
+    <div class="flex-b mt4">
+      <span class="fs12 dim">Still owe: <span class="c-o fw6">${fm(leftToPay)}</span></span>
+      <span class="fs12 dim">Free after bills: <span class="c-g fw6">${fm(Math.max(0, combined - halfBills))}</span></span>
+    </div>
+
+    <!-- Category breakdown bars -->
+    <div class="mt16 mb8 fw7 fs14">By Category</div>
+    ${Object.entries(cats).map(([cat,v]) => {
+      const p = pct(v.paid, v.total);
+      return `
+      <div class="mb12">
+        <div class="flex-b fs12 mb4">
+          <span class="flex"><span style="width:8px;height:8px;border-radius:2px;background:${catColors[cat]}"></span> ${catLabels[cat]||cat}</span>
+          <span class="mono dim">${fm(v.paid)} / ${fm(v.total)}</span>
+        </div>
+        <div class="prog prog-sm"><div class="prog-bar" style="width:${p}%;background:${catColors[cat]}"></div></div>
+      </div>`;
+    }).join('')}
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="card">
+    <div class="card-h">
+      <div class="card-t">✅ Bill Checklist — This Paycheck</div>
+      <div class="flex" style="gap:6px">
+        <button class="btn btn-s btn-sm" onclick="resetCycle()">Reset All</button>
+        <button class="btn btn-g btn-sm" onclick="checkAll()">Check All</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:30px 2fr 80px 80px 100px;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div></div>
+      <div class="mono dim" style="font-size:9px;letter-spacing:1.5px">BILL</div>
+      <div class="mono dim" style="font-size:9px;letter-spacing:1.5px">WHO PAYS</div>
+      <div class="mono dim" style="font-size:9px;letter-spacing:1.5px;text-align:right">MONTHLY</div>
+      <div class="mono dim" style="font-size:9px;letter-spacing:1.5px;text-align:right">THIS CHECK</div>
+    </div>
+
+    ${D.biweeklyBills.map(b => {
+      const checked = D.payCycle.paid[b.id] || false;
+      const ownerLabel = b.owner==='split'?'Both 50/50':b.owner==='his'?'Joseph':'Wife';
+      return `
+      <div style="display:grid;grid-template-columns:30px 2fr 80px 80px 100px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(42,42,60,0.3);${checked?'opacity:0.5':''}">
+        <div class="bw-check ${checked?'checked':''}" onclick="toggleBill(${b.id})"></div>
+        <div class="fs13 ${checked?'dim':''}" style="${checked?'text-decoration:line-through':''}">
+          ${b.name}
+          ${b.endsApril?'<span class="badge bg-y" style="font-size:8px;margin-left:6px">ENDS APRIL</span>':''}
+        </div>
+        <div class="fs11 dim">${ownerLabel}</div>
+        <div class="mono fs12 dim" style="text-align:right">${fm(b.moAmt)}</div>
+        <div class="mono fs12 fw6 ${checked?'c-g':''}" style="text-align:right">${fm(b.moAmt/2)}</div>
+      </div>`;
+    }).join('')}
+
+    <div class="totals mt16">
+      <span class="fw7">Total This Paycheck</span>
+      <span class="fw8 mono c-o">${fm(halfBills)}</span>
+    </div>
+    <div class="totals mt8" style="border-color:var(--green)">
+      <span class="fw7">After May (no wedding fund)</span>
+      <span class="fw8 mono c-g">${fm(halfBillsNoWed)}</span>
+    </div>
+  </div>
+
+  <!-- ADD/EDIT -->
+  <div class="card">
+    <div class="card-h">
+      <div class="card-t">✏️ Edit Monthly Amounts</div>
+      <span class="badge bg-p">CHANGES SAVE INSTANTLY</span>
+    </div>
+    <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12">Change any amount below and it updates everything — the payday bar, budget, and debt calculations. You can also add new bills or remove ones that don't apply.</div>
+    </div>
+    ${D.biweeklyBills.map(b => `
+      <div class="flex-b" style="padding:6px 0;border-bottom:1px solid rgba(42,42,60,0.2)">
+        <span class="fs13">${b.name}</span>
+        <div class="flex" style="gap:6px">
+          <input class="inp" type="number" value="${b.moAmt}" data-bill="${b.id}" style="width:100px" />
+          <span class="fs11 dim">/mo</span>
+          <button class="btn btn-r btn-sm" onclick="removeBill(${b.id})" style="padding:3px 8px">✕</button>
+        </div>
+      </div>
+    `).join('')}
+    <div class="mt12 flex" style="gap:8px">
+      <button class="btn btn-g btn-sm" onclick="addBill()">+ Add New Bill</button>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  DEBT DESTROYER
+// ═══════════════════════════════════════════════════
+function vDebt() {
+  const consumer = D.debts.filter(d=>d.type!=='auto').sort((a,b)=>b.apr-a.apr);
+  const cars = D.debts.filter(d=>d.type==='auto');
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Debt Destroyer</div>
+    <div class="sec-s">Kill the most expensive debt first — log payments and watch balances drop</div>
+  </div>
+
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text">
+      <strong>The Avalanche Method:</strong> We pay off debts starting with the <strong style="color:var(--red)">highest interest rate</strong> first.
+      Why? The Capital One card at <strong>28% interest</strong> costs us ~$234/month in interest alone — that's money we're throwing away.
+      Kill it first, then move that payment to the next debt. Like a snowball rolling downhill.
+    </div>
+  </div>
+
+  <div class="legend mb16">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> High interest (pay first!)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--orange)"></div> Medium interest</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Low interest (pay last)</div>
+  </div>
+
+  <div class="g3 mb20">
+    <div class="stat sr">
+      <div class="stat-l">Bad Debt (Kill This)</div>
+      <div class="stat-v c-r">${fm(consumerDebt())}</div>
+      <div class="stat-s">Credit card + loans</div>
+    </div>
+    <div class="stat so">
+      <div class="stat-l">Car Debt (Regular Payments)</div>
+      <div class="stat-v">${fm(cars.reduce((s,d)=>s+d.bal,0))}</div>
+      <div class="stat-s">Just keep paying monthly</div>
+    </div>
+    <div class="stat sg">
+      <div class="stat-l">April Gift → Debt</div>
+      <div class="stat-v c-g">${fm(8000)}</div>
+      <div class="stat-s">$10K gift − $2K wedding costs</div>
+    </div>
+  </div>
+
+  <!-- CONSUMER DEBTS -->
+  <div class="card" style="border-left:3px solid var(--red)">
+    <div class="card-h">
+      <div class="card-t">🔥 Consumer Debt — Destroy by August 2026</div>
+      <span class="badge bg-r">HIGHEST INTEREST FIRST</span>
+    </div>
+    ${consumer.map((d,i) => {
+      const maxB = 10000;
+      const p = Math.min(100, d.bal/maxB*100);
+      const moInt = d.bal*(d.apr/100)/12;
+      const barColor = d.apr>20?'var(--red)':d.apr>5?'var(--orange)':'var(--green)';
+      return `
+      <div style="padding:14px 0;${i<consumer.length-1?'border-bottom:1px solid var(--border)':''}">
+        <div class="flex-b mb8">
+          <div class="flex">
+            <span style="background:${d.apr>20?'var(--red-bg)':d.apr>5?'var(--orange-bg)':'var(--green-bg)'};color:${barColor};padding:2px 8px;border-radius:6px;font:700 11px 'JetBrains Mono',monospace">#${i+1}</span>
+            <span class="fw7">${d.name}</span>
+            <span class="badge ${d.apr>20?'bg-r':d.apr>5?'bg-o':'bg-g'}">${d.apr}%</span>
+            <span class="fs11 dim">${d.owner}</span>
+          </div>
+          <span class="mono fw7 c-r">${fm(d.bal)}</span>
+        </div>
+        <div class="prog"><div class="prog-bar" style="width:${p}%;background:${barColor}"></div></div>
+        <div class="flex-b fs11 dim mt4">
+          <span>Minimum: ${fm(d.min)}/mo</span>
+          <span>Interest burning: <span class="c-r">${fm(moInt)}/mo</span></span>
+          ${d.pastDue?`<span class="c-r">⚠ Past due: ${fm(d.pastDue)}</span>`:''}
+        </div>
+        <div class="flex mt8" style="gap:6px">
+          <input class="inp" type="number" placeholder="Payment $" data-dpay="${d.id}" style="width:130px"/>
+          <button class="btn btn-g btn-sm" onclick="payDebt(${d.id})">Log Payment</button>
+        </div>
+      </div>`;
+    }).join('')}
+  </div>
+
+  <!-- CARS -->
+  <div class="card">
+    <div class="card-h">
+      <div class="card-t">🚗 Car Loans — Keep Paying Normally</div>
+      <span class="badge bg-o">NO EXTRA PAYMENTS</span>
+    </div>
+    <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12"><strong>Why not pay these off early?</strong> Because every extra dollar kills the 28% credit card way faster. After all bad debt is gone, we can decide whether to attack these or save for the house.</div>
+    </div>
+    ${cars.map(d => `
+      <div style="padding:10px 0">
+        <div class="flex-b mb8">
+          <span class="fw7">${d.name} <span class="fs11 dim">(${d.owner})</span></span>
+          <span class="mono">${fm(d.bal)} · ${d.apr}%</span>
+        </div>
+        <div class="prog prog-sm"><div class="prog-bar" style="width:${Math.min(100,d.bal/30000*100)}%;background:var(--orange)"></div></div>
+        <div class="fs11 dim mt4">Monthly payment: ${fm(d.min)}</div>
+      </div>
+    `).join('')}
+  </div>
+
+  <!-- STEP BY STEP -->
+  <div class="card" style="border-left:3px solid var(--green)">
+    <div class="card-h"><div class="card-t">📋 The Plan — Step by Step</div></div>
+    <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12"><strong>Simple version:</strong> Pay minimums on everything until April. In April, use the $10K gift to nuke the credit card. Then use the freed-up wedding money ($2,400/mo) to kill everything else by August.</div>
+    </div>
+    ${[
+      {step:'1',title:'Feb–April: Survival Mode',desc:'Pay minimums only. Fund the wedding. Don\'t stress about debt yet — April changes everything.','color':'var(--yellow)'},
+      {step:'2',title:'April 16: Cash the $10K Gift',desc:'$2K → last wedding costs. $8K → Capital One. Balance drops from ~$9,988 to ~$1,988.','color':'var(--green)'},
+      {step:'3',title:'May: Kill Capital One',desc:'Wedding fund is free ($2,400/mo). One month wipes out the remaining ~$1,988. Credit card = DEAD ✓','color':'var(--green)'},
+      {step:'4',title:'June–July: Kill Student Loans',desc:'$4,200+/mo available. Student loans ($6,865) gone in ~2 months. ✓','color':'var(--green)'},
+      {step:'5',title:'July–Aug: Kill Wife\'s Loan',desc:'Her personal loan ($5,000) at 3% — done in ~1 month. ✓','color':'var(--green)'},
+      {step:'6',title:'August: ALL BAD DEBT = $0',desc:'Everything freed up goes to house fund + emergency fund + investing. This is when wealth building begins.','color':'var(--green)'},
+    ].map(s => `
+      <div style="padding:10px 0;border-bottom:1px solid rgba(42,42,60,0.3);display:flex;gap:12px;align-items:flex-start">
+        <div style="width:28px;height:28px;border-radius:8px;background:${s.color==='var(--green)'?'var(--green-bg)':s.color==='var(--yellow)'?'var(--yellow-bg)':'var(--bg3)'};color:${s.color};display:grid;place-items:center;font:700 12px 'JetBrains Mono',monospace;flex-shrink:0">${s.step}</div>
+        <div><div class="fw7 fs13">${s.title}</div><div class="fs12 dim mt4">${s.desc}</div></div>
+      </div>
+    `).join('')}
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  TIMELINE
+// ═══════════════════════════════════════════════════
+function vTimeline() {
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Our Timeline</div>
+    <div class="sec-s">From right now to owning a house — every step mapped out</div>
+  </div>
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text"><strong>How to read this:</strong> Time flows top to bottom. The <strong style="color:var(--green)">green dot</strong> = where we are now. Each card shows what happens at that point and what it means for our money.</div>
+  </div>
+  <div class="tl">
+  ${[
+    {dot:'dg now',date:'FEB 17, 2026 — RIGHT NOW',title:'Joseph Starts NEVHC · $33.99/hr',desc:'Income jumps from $24 to $33.99/hr. FREE health, dental, vision. 5.5% auto-retirement contribution. Biweekly paycheck: $2,125.'},
+    {dot:'dg',date:'FEB – MAR 2026',title:'Pay Minimums + Fund Wedding',desc:'Combined income: $7,604/mo. Wedding fund: $2,400/mo. Pay only minimum on debts. Address $900 past-due student loans. Wife researches MRI Tech programs.'},
+    {dot:'dg',date:'APRIL 16 – MAY 8, 2026',title:'💍 Wedding + Honeymoon + $10K Gift',desc:'$10K gift: $2K wedding, $8K to Capital One. Credit card drops from $9,988 to ~$1,988. Wedding fund ($2,400/mo) is FREE now. This is where everything changes.'},
+    {dot:'db',date:'MAY 2026',title:'Wife May Start MRI School',desc:'If enrolling for Q3, classes could begin. She may go part-time at work. Our budget adjusts but we still have Joseph\'s income covering the debt attack.'},
+    {dot:'db',date:'MAY – JUNE 2026',title:'🔥 Capital One Dies + Start Student Loans',desc:'$4,200+/mo available for debt. May: Kill remaining ~$1,988 Capital One. Done paying 28% interest forever. June: Begin attacking student loans at $3,000+/mo.'},
+    {dot:'db',date:'JUNE – AUGUST 2026',title:'All Bad Debt = $0',desc:'Student loans ($6,865) done by July. Wife\'s loan ($5,000) done by August. ZERO consumer debt. Credit score climbing toward 700+.'},
+    {dot:'dp',date:'SEPT – DEC 2026',title:'🏠 House Fund Mode',desc:'$4,200+/mo goes to house fund + emergency fund. House fund: $0 → $17K+ by December. Emergency fund: $5K–$10K. Joseph pursues CAHIMS certification.'},
+    {dot:'dp',date:'2027',title:'The Accumulation Year',desc:'Joseph targets promotion to EHR Analyst ($42–$50/hr). House fund grows $4,500+/mo. Wife finishes MRI program late 2027 or early 2028. Combined savings: $55K+ by year-end. Start Roth IRA.'},
+    {dot:'dp',date:'2028',title:'🏡 The Breakout Year',desc:'Wife enters MRI workforce: $76K–$97K starting. Combined household: $165K–$195K. House down payment ready ($75K+). Begin house shopping. Joseph targets IT management roles.'},
+    {dot:'dp',date:'2029 – 2030',title:'🚀 Wealth Building',desc:'Joseph: $100K–$130K trajectory. Wife: $95K–$120K as experienced MRI Tech. Combined: $200K–$250K. Home equity building. Investment portfolio: $100K+. Net worth: $250K–$350K by age 32.'},
+  ].map(t => `
+    <div class="tl-item">
+      <div class="tl-dot ${t.dot}"></div>
+      <div class="tl-date">${t.date}</div>
+      <div class="tl-title">${t.title}</div>
+      <div class="tl-desc">${t.desc}</div>
+    </div>
+  `).join('')}
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  CAREERS
+// ═══════════════════════════════════════════════════
+function vCareers() {
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Our Career Paths</div>
+    <div class="sec-s">Both of our growth trajectories side by side</div>
+  </div>
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text"><strong>What this shows:</strong> Each row is a step up. The pay on the right is what that role typically pays in LA. Joseph's entire path needs <strong>zero college degree</strong> — just certifications and experience. Wife's MRI path requires an 18-month program then she's set.</div>
+  </div>
+  <div class="g2 mb20">
+    <!-- JOSEPH -->
+    <div class="card" style="border-top:3px solid var(--green)">
+      <div class="card-h">
+        <div class="card-t">👤 Joseph — Healthcare IT</div>
+        <span class="badge bg-g">NO DEGREE NEEDED</span>
+      </div>
+      ${[
+        {yr:'NOW',role:'HIT Clinical Support Specialist',sub:'NEVHC · Learning EHR systems, IT foundation',pay:'$33.99/hr','payAnn':'$70.7K',arr:'●'},
+        {yr:'YR 1-2',role:'EHR / Clinical Applications Analyst',sub:'Get CAHIMS cert · Epic training (employer-paid)',pay:'$40–50/hr','payAnn':'$83–104K',arr:'→'},
+        {yr:'YR 2-3',role:'Senior HIT Analyst / Team Lead',sub:'CPHIMS cert · Lead implementations, train staff',pay:'$50–60/hr','payAnn':'$104–125K',arr:'→'},
+        {yr:'YR 3-5',role:'IT Program Manager / HIT Director',sub:'PMP cert (no degree w/ 60mo exp) · Manage teams',pay:'$55–70/hr','payAnn':'$115–145K',arr:'→'},
+        {yr:'YR 5+',role:'Director of Health Informatics',sub:'C-suite path · CHCIO designation',pay:'$70–85/hr','payAnn':'$145–175K',arr:'🎯',highlight:true},
+      ].map(p => `
+        <div class="pw" ${p.highlight?'style="background:var(--green-bg);padding:10px;border-radius:8px;margin:4px -4px"':''}>
+          <div class="pw-yr">${p.yr}</div>
+          <div class="pw-arr">${p.arr}</div>
+          <div class="pw-info"><div class="pw-role">${p.role}</div><div class="pw-sub">${p.sub}</div></div>
+          <div class="pw-pay">${p.pay}<br><span class="fs11 dim">${p.payAnn}</span></div>
+        </div>
+      `).join('')}
+      <div class="hint mt16">
+        <strong>Total cert cost over 5 years: ~$2,500</strong><br>
+        Salary impact: <strong class="c-g">+$40–80K</strong>. NEVHC may reimburse exam costs. No classroom required — all self-study + exams.
+      </div>
+    </div>
+
+    <!-- WIFE -->
+    <div class="card" style="border-top:3px solid var(--blue)">
+      <div class="card-h">
+        <div class="card-t">👤 Wife — MRI Technologist</div>
+        <span class="badge bg-b">SCHOOL ${D.her.school.start.toUpperCase()}</span>
+      </div>
+      <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+        <div class="explain-icon" style="font-size:14px">💡</div>
+        <div class="explain-text fs12"><strong>Why MRI Tech?</strong> It's one of the highest-paying healthcare careers you can get with an 18-month program. LA average is $97K. Top MRI techs earn $150K+. Huge demand — hospitals are always hiring.</div>
+      </div>
+      ${[
+        {yr:'NOW',role:'Healthcare Worker',sub:'Current job while prepping for school',pay:'$24/hr','payAnn':'$49.9K',arr:'●'},
+        {yr:'2026-27',role:'MRI Tech Student',sub:`${D.her.school.length} program · ${D.her.school.cost} · ARRT exam`,pay:'School','payAnn':'Part-time',arr:'📚'},
+        {yr:'2028',role:'Entry-Level MRI Technologist',sub:'ARRT certified · Hospital or imaging center',pay:'$30–38/hr','payAnn':'$62–79K',arr:'→',green:true},
+        {yr:'2029-30',role:'Experienced MRI Technologist',sub:'1–4 years experience · Specialty knowledge',pay:'$38–48/hr','payAnn':'$79–100K',arr:'→',green:true},
+        {yr:'2031+',role:'Senior/Lead MRI Tech',sub:'Travel MRI, cardiac specialty, or department lead',pay:'$48–60/hr','payAnn':'$100–125K',arr:'→',green:true},
+        {yr:'PEAK',role:'MRI Manager / Travel Premium',sub:'Top 10% in LA earn $150K+',pay:'$57–72/hr','payAnn':'$118–150K',arr:'🎯',highlight:true},
+      ].map(p => `
+        <div class="pw" ${p.highlight?'style="background:var(--blue-bg);padding:10px;border-radius:8px;margin:4px -4px"':''}>
+          <div class="pw-yr">${p.yr}</div>
+          <div class="pw-arr">${p.arr}</div>
+          <div class="pw-info"><div class="pw-role">${p.role}</div><div class="pw-sub">${p.sub}</div></div>
+          <div class="pw-pay" ${p.green?'style="color:var(--green)"':''}>${p.pay}<br><span class="fs11 dim">${p.payAnn}</span></div>
+        </div>
+      `).join('')}
+      <div class="hint hint-b mt16">
+        <strong>LA MRI Tech Programs:</strong> CNI College (18mo), Casa Loma College, Gurnick Academy, Loma Linda (6mo cert if already an RT).<br>
+        <strong>Top Employers:</strong> Kaiser Permanente, UCLA Health, Cedars-Sinai, Children's Hospital LA, RadNet.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><div class="card-t">🔥 Combined Income by Year</div></div>
+    <div class="explain" style="margin-bottom:12px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12">This shows what we earn <strong>together</strong> each year. The big jump in 2028 is when Wife starts her MRI career. By 2030, we're a $225K household.</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      ${[
+        {y:'2026',h:70700,w:49920,n:'Both working'},
+        {y:'2027',h:78000,w:30000,n:'Her: school + part-time'},
+        {y:'2028',h:88000,w:80000,n:'MRI career starts!'},
+        {y:'2029',h:100000,w:95000,n:'Both climbing'},
+        {y:'2030',h:115000,w:110000,n:'Peak trajectory'},
+      ].map(r => `
+        <div style="flex:1;min-width:140px;background:var(--bg3);padding:14px;border-radius:var(--r-sm);text-align:center">
+          <div class="mono dim fs11">${r.y}</div>
+          <div class="fw8 c-g" style="font-size:18px;margin:6px 0">${fm(r.h+r.w)}</div>
+          <div class="fs11 dim">Him: ${fm(r.h)}</div>
+          <div class="fs11 dim">Her: ${fm(r.w)}</div>
+          <div class="fs11 c-y mt4">${r.n}</div>
+        </div>
+      `).join('')}
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  INVESTING
+// ═══════════════════════════════════════════════════
+function vInvest() {
+  const comp = (p,m,r,y)=>{let t=p;for(let i=0;i<y*12;i++)t=t*(1+r/12)+m;return t};
+  const e403b = comp(0, 33.99*40*52/12*0.055, 0.08, 20);
+  const roth = comp(0, 583, 0.08, 20);
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Investing Strategy</div>
+    <div class="sec-s">Start simple, stay consistent — time is our biggest weapon at age ${D.his.age}</div>
+  </div>
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text">
+      <strong>Don't overthink this.</strong> Investing = buying small pieces of big companies and letting them grow over time.
+      The S&P 500 has averaged ~10% per year over 50+ years. We don't need to pick stocks — we buy <strong>one fund (VOO)</strong> and let it grow.
+      The magic is <strong>compound interest</strong>: your money makes money, and that money makes money too. Starting at ${D.his.age} gives us 35+ years of growth.
+    </div>
+  </div>
+  <div class="g3 mb20">
+    <div class="stat sg">
+      <div class="stat-l">403(b) — FREE from NEVHC</div>
+      <div class="stat-v c-g">${fm(e403b)}</div>
+      <div class="stat-s">In 20 years · Joseph puts in $0</div>
+    </div>
+    <div class="stat sb">
+      <div class="stat-l">Roth IRA — $7K/yr each</div>
+      <div class="stat-v c-b">${fm(roth)}</div>
+      <div class="stat-s">In 20 years · Tax-free withdrawals</div>
+    </div>
+    <div class="stat sp">
+      <div class="stat-l">Combined at Age 47</div>
+      <div class="stat-v c-g">${fm(e403b + roth)}</div>
+      <div class="stat-s">Just these two accounts alone</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><div class="card-t">📋 Investment Order (Do This in Order)</div></div>
+    <div class="explain" style="margin-bottom:14px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12"><strong>Simple rule:</strong> Don't invest until all bad debt is paid off (August 2026) and we have $10K emergency fund. The 403(b) is already happening automatically — that's our head start.</div>
+    </div>
+    ${[
+      {n:'1',title:'NEVHC 403(b) — Already Happening',desc:'NEVHC auto-contributes 5.5% of Joseph\'s salary. That\'s ~$3,900/year of FREE money going into retirement right now. No action needed.','badge':'FREE $$','bc':'bg-g',val:fm(3889)+'/yr free'},
+      {n:'2',title:'Emergency Fund — $10K',desc:'3 months of expenses in a high-yield savings account (4.5%+ interest). Build this Aug–Oct 2026 after bad debt is gone. Try: Marcus by Goldman Sachs, Ally Bank, or Wealthfront.','badge':'SAFETY NET','bc':'bg-y',val:'$10K target'},
+      {n:'3',title:'Roth IRA — Both of Us',desc:'$7,000 each per year ($14K combined). Open at Fidelity or Charles Schwab. Buy VOO or VTI. Set up automatic $583/mo. Start in 2027. Money grows TAX-FREE.','badge':'TAX FREE','bc':'bg-b',val:'$14K/yr combined'},
+      {n:'4',title:'Extra 403(b) Contributions',desc:'Once Roth IRA is maxed, add your own money to the 403(b) on top of the employer\'s 5.5%. Reduces taxable income. Target this in 2028+ when household is $165K+.','badge':'2028+','bc':'bg-p',val:'Up to $23,500/yr'},
+      {n:'5',title:'Taxable Brokerage Account',desc:'After maxing tax-advantaged accounts. Same funds (VOO/VTI). This becomes the house fund and wealth accelerator. Open at Fidelity or Schwab.','badge':'GROWTH','bc':'bg-p',val:'Unlimited'},
+    ].map(s => `
+      <div style="padding:12px 0;border-bottom:1px solid rgba(42,42,60,0.3);display:flex;gap:14px;align-items:flex-start">
+        <div style="width:30px;height:30px;border-radius:8px;background:var(--bg3);display:grid;place-items:center;font:700 14px 'JetBrains Mono',monospace;color:var(--green);flex-shrink:0">${s.n}</div>
+        <div style="flex:1">
+          <div class="flex-b mb4"><span class="fw7 fs14">${s.title}</span><span class="badge ${s.bc}">${s.badge}</span></div>
+          <div class="fs12 dim">${s.desc}</div>
+        </div>
+        <div class="mono fs12 c-g" style="flex-shrink:0;text-align:right;min-width:100px">${s.val}</div>
+      </div>
+    `).join('')}
+  </div>
+
+  <div class="card mt16">
+    <div class="card-h"><div class="card-t">🧮 Growth Calculator</div></div>
+    <div class="explain" style="margin-bottom:14px;padding:10px 14px">
+      <div class="explain-icon" style="font-size:14px">💡</div>
+      <div class="explain-text fs12">Play with the numbers below to see how much your money grows. Change the monthly amount, return %, or years and hit Calculate.</div>
+    </div>
+    <div class="g3 mb12">
+      <div><div class="stat-l mb4">Monthly Investment</div><input class="inp inp-wide" id="cM" type="number" value="1000"/></div>
+      <div><div class="stat-l mb4">Avg Return %</div><input class="inp inp-wide" id="cR" type="number" value="8"/></div>
+      <div><div class="stat-l mb4">Years</div><input class="inp inp-wide" id="cY" type="number" value="20"/></div>
+    </div>
+    <button class="btn btn-g" onclick="calc()">Calculate</button>
+    <div id="cRes" class="mt16" style="font-size:24px;font-weight:800"></div>
+    <div id="cDet" class="mt8 fs13 dim"></div>
+  </div>
+
+  <div class="card mt16">
+    <div class="card-h"><div class="card-t">💡 What to Buy & Where</div></div>
+    <div class="g2 mt8">
+      <div>
+        <div class="fw7 mb8">What to Buy (Keep It Simple)</div>
+        <div class="fs13 dim" style="line-height:2">
+          <strong>VOO</strong> — S&P 500 (top 500 US companies) · 0.03% fee<br>
+          <strong>VTI</strong> — Total US Stock Market · 0.03% fee<br>
+          <strong class="dim">That's literally it. Just pick one. Done.</strong>
+        </div>
+      </div>
+      <div>
+        <div class="fw7 mb8">Where to Open Accounts</div>
+        <div class="fs13 dim" style="line-height:2">
+          <strong>Fidelity</strong> — Best overall, $0 minimums<br>
+          <strong>Charles Schwab</strong> — Great customer service<br>
+          <strong>High-Yield Savings:</strong> Marcus, Ally, or Wealthfront (4.5%+)
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  CERTIFICATIONS
+// ═══════════════════════════════════════════════════
+function vCerts() {
+  const certs = [
+    {name:'CompTIA A+',cost:350,time:'2–3 mo',impact:'+$5–10K',st:'wip',who:'Joseph',desc:'Foundation IT cert. Hardware, networking, OS troubleshooting. Study free with Professor Messer on YouTube.', p:1},
+    {name:'CAHIMS',cost:200,time:'1–2 mo',impact:'+$8–15K',st:'plan',who:'Joseph',desc:'Healthcare info management. Only needs HS diploma + healthcare experience. The cert that opens the door to $80K+ roles.', p:2},
+    {name:'Epic/Cerner Training',cost:0,time:'3–6 mo',impact:'+$10–20K',st:'plan',who:'Joseph',desc:'Employer-paid EHR system certification. Ask Olga about training after probation ends. Major career booster.', p:3},
+    {name:'CompTIA Network+',cost:350,time:'2–3 mo',impact:'+$5–8K',st:'plan',who:'Joseph',desc:'Networking fundamentals. Builds on A+. Also free study via Professor Messer.', p:4},
+    {name:'CompTIA Security+',cost:400,time:'2–3 mo',impact:'+$8–15K',st:'plan',who:'Joseph',desc:'Cybersecurity foundation. Huge in healthcare (HIPAA). Completes the CompTIA trifecta.', p:5},
+    {name:'CPHIMS',cost:350,time:'2–3 mo',impact:'+$12–20K',st:'plan',who:'Joseph',desc:'The gold standard for healthcare IT. Requires CAHIMS + experience. Unlocks $100K+ roles.', p:6},
+    {name:'PMP',cost:555,time:'3–6 mo',impact:'+$20–30K',st:'plan',who:'Joseph',desc:'Project Management Professional. No degree needed with 60 months experience. Average PMP salary: $115K+.', p:7},
+    {name:'ARRT MRI Certification',cost:225,time:'After program',impact:'Required for MRI',st:'plan',who:'Wife',desc:'American Registry of Radiologic Technologists. Must pass to work as MRI Tech in California.', p:1},
+  ];
+  return `
+  <div class="sec-h">
+    <div class="sec-t">Certification Roadmap</div>
+    <div class="sec-s">Every cert below needs NO college degree · Total: ~$2,500 over 5 years · Impact: +$40–80K</div>
+  </div>
+  <div class="explain">
+    <div class="explain-icon">📖</div>
+    <div class="explain-text">
+      <strong>What are certifications?</strong> They're professional exams that prove you know a skill. Unlike college, you study on your own time and just take the test.
+      Most cost $200–$555 and take 1–3 months of studying. NEVHC may reimburse the exam fees. Each one makes Joseph more valuable and higher-paid.
+    </div>
+  </div>
+  <div class="legend mb16">
+    <div class="legend-item"><div class="cert-dot wip"></div> In Progress</div>
+    <div class="legend-item"><div class="cert-dot done"></div> Complete</div>
+    <div class="legend-item"><div class="cert-dot plan"></div> Planned</div>
+  </div>
+  <div class="fw7 fs14 mb12">Joseph's Certifications</div>
+  <div class="g2 mb20">
+    ${certs.filter(c=>c.who==='Joseph').map(c => `
+      <div class="cert">
+        <div class="flex-b mb8">
+          <div class="flex"><span class="cert-dot ${c.st}"></span><span class="fw7">${c.name}</span></div>
+          <span class="badge ${c.st==='wip'?'bg-y':c.st==='done'?'bg-g':'bg-b'}">${c.st==='wip'?'IN PROGRESS':c.st==='done'?'DONE':'PRIORITY '+c.p}</span>
+        </div>
+        <div class="fs12 dim mb8">${c.desc}</div>
+        <div class="flex-b mono fs11">
+          <span>Cost: ${c.cost===0?'<span class="c-g">FREE</span>':fm(c.cost)}</span>
+          <span>Study: ${c.time}</span>
+          <span>Salary: <span class="c-g">${c.impact}</span></span>
+        </div>
+      </div>
+    `).join('')}
+  </div>
+  <div class="fw7 fs14 mb12">Wife's Certification</div>
+  <div class="g2 mb20">
+    ${certs.filter(c=>c.who==='Wife').map(c => `
+      <div class="cert" style="border-top:2px solid var(--blue)">
+        <div class="flex-b mb8">
+          <div class="flex"><span class="cert-dot ${c.st}"></span><span class="fw7">${c.name}</span></div>
+          <span class="badge bg-b">REQUIRED</span>
+        </div>
+        <div class="fs12 dim mb8">${c.desc}</div>
+        <div class="flex-b mono fs11">
+          <span>Cost: ${fm(c.cost)}</span>
+          <span>When: ${c.time}</span>
+          <span>${c.impact}</span>
+        </div>
+      </div>
+    `).join('')}
+  </div>
+  <div class="card">
+    <div class="card-h"><div class="card-t">📚 Free Study Resources</div></div>
+    <div class="g2 mt8">
+      <div>
+        <div class="fw7 mb8">CompTIA (A+, Net+, Sec+)</div>
+        <div class="fs13 dim" style="line-height:1.8">
+          • <strong>Professor Messer</strong> — Free video courses (YouTube)<br>
+          • <strong>Jason Dion (Udemy)</strong> — Practice exams ($12–15 on sale)<br>
+          • <strong>r/CompTIA</strong> — Reddit study community
+        </div>
+      </div>
+      <div>
+        <div class="fw7 mb8">Healthcare IT</div>
+        <div class="fs13 dim" style="line-height:1.8">
+          • <strong>HIMSS.org</strong> — CAHIMS/CPHIMS official resources<br>
+          • <strong>HealthIT.gov</strong> — Free federal learning resources<br>
+          • <strong>NEVHC</strong> — Ask about employer-paid training
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  EVENT BINDING
+// ═══════════════════════════════════════════════════
+function bind(tab) {
+  // Bill amount edits
+  $$('[data-bill]').forEach(el => {
+    el.addEventListener('change', e => {
+      const id = +e.target.dataset.bill;
+      const b = D.biweeklyBills.find(x=>x.id===id);
+      if(b) { b.moAmt = +e.target.value||0; render(tab); }
+    });
+  });
+}
+
+function toggleBill(id) {
+  D.payCycle.paid[id] = !D.payCycle.paid[id];
+  render('pay');
+}
+
+function resetCycle() {
+  D.payCycle.paid = {};
+  render('pay');
+}
+
+function checkAll() {
+  D.biweeklyBills.forEach(b => D.payCycle.paid[b.id] = true);
+  render('pay');
+}
+
+function addBill() {
+  const name = prompt('Bill name:');
+  if(!name) return;
+  const amt = parseFloat(prompt('Monthly amount:'));
+  if(isNaN(amt)) return;
+  const id = Math.max(...D.biweeklyBills.map(b=>b.id))+1;
+  D.biweeklyBills.push({id,name,moAmt:amt,owner:'split',cat:'other'});
+  render('pay');
+}
+
+function removeBill(id) {
+  D.biweeklyBills = D.biweeklyBills.filter(b=>b.id!==id);
+  delete D.payCycle.paid[id];
+  render('pay');
+}
+
+function payDebt(id) {
+  const el = $(`[data-dpay="${id}"]`);
+  const amt = parseFloat(el.value);
+  if(isNaN(amt)||amt<=0) return;
+  const d = D.debts.find(x=>x.id===id);
+  if(d) { d.bal = Math.max(0, d.bal-amt); el.value=''; render('debt'); }
+}
+
+function calc() {
+  const m=+$('#cM').value||0, r=(+$('#cR').value||0)/100, y=+$('#cY').value||0;
+  let t=0; for(let i=0;i<y*12;i++) t=t*(1+r/12)+m;
+  const c=m*12*y, g=t-c;
+  $('#cRes').innerHTML=`<span class="c-g">${fm(t)}</span>`;
+  $('#cDet').innerHTML=`You put in: ${fm(c)} · Market grows it by: <span class="c-g">${fm(g)}</span> · That's ${Math.round(g/Math.max(1,c)*100)}% growth on your money.`;
+}
+
+// ═══════════════════════════════════════════════════
+//  NAV
+// ═══════════════════════════════════════════════════
+$$('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    $$('.nav-btn').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    render(btn.dataset.t);
+  });
+});
+
+// ═══════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════
+render('dash');
+</script>
+</body>
+</html>
